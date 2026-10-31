@@ -1,0 +1,220 @@
+{
+  "source": "output/rank-frontier-20261031/comparison/result.json",
+  "summary": {
+    "old-aligned": {
+      "positions": 128,
+      "cp_positions": 120,
+      "mean_cp_regret": 42.075,
+      "median_cp_regret": 4.0,
+      "cp_blunders_100": 14,
+      "mean_value_regret": 0.07028124999999999,
+      "median_seconds": 0.11806563650316093,
+      "mean_large_positions": 31.0703125
+    },
+    "wdl": {
+      "positions": 128,
+      "cp_positions": 120,
+      "mean_cp_regret": 35.666666666666664,
+      "median_cp_regret": 1.0,
+      "cp_blunders_100": 10,
+      "mean_value_regret": 0.0714921875,
+      "median_seconds": 0.11847853899234906,
+      "mean_large_positions": 31.140625
+    },
+    "cp": {
+      "positions": 128,
+      "cp_positions": 120,
+      "mean_cp_regret": 35.025,
+      "median_cp_regret": 2.5,
+      "cp_blunders_100": 12,
+      "mean_value_regret": 0.06950781249999999,
+      "median_seconds": 0.11853789300221251,
+      "mean_large_positions": 31.1953125
+    },
+    "cp-rank": {
+      "positions": 128,
+      "cp_positions": 120,
+      "mean_cp_regret": 33.4,
+      "median_cp_regret": 2.0,
+      "cp_blunders_100": 11,
+      "mean_value_regret": 0.05521875,
+      "median_seconds": 0.11935035049828002,
+      "mean_large_positions": 31.1484375
+    },
+    "puct-31": {
+      "positions": 128,
+      "cp_positions": 120,
+      "mean_cp_regret": 28.6,
+      "median_cp_regret": 0.0,
+      "cp_blunders_100": 11,
+      "mean_value_regret": 0.0587421875,
+      "median_seconds": 0.06769891249859938,
+      "mean_large_positions": 31.0625
+    },
+    "puct-128": {
+      "positions": 128,
+      "cp_positions": 120,
+      "mean_cp_regret": 28.35,
+      "median_cp_regret": 0.0,
+      "cp_blunders_100": 12,
+      "mean_value_regret": 0.0570859375,
+      "median_seconds": 0.1565989634982543,
+      "mean_large_positions": 123.984375
+    },
+    "puct-512": {
+      "positions": 128,
+      "cp_positions": 120,
+      "mean_cp_regret": 31.208333333333332,
+      "median_cp_regret": 0.0,
+      "cp_blunders_100": 12,
+      "mean_value_regret": 0.0584140625,
+      "median_seconds": 0.5032639224955346,
+      "mean_large_positions": 484.0390625
+    },
+    "direct": {
+      "positions": 128,
+      "cp_positions": 120,
+      "mean_cp_regret": 33.95,
+      "median_cp_regret": 0.0,
+      "cp_blunders_100": 14,
+      "mean_value_regret": 0.08728125,
+      "median_seconds": 0.005203586995776277,
+      "mean_large_positions": 1.0
+    }
+  },
+  "cp_roots": 120,
+  "mate_roots": 8,
+  "paired": {
+    "cp minus wdl": {
+      "positions": 120,
+      "mean_cp_delta": -0.6416666666666667,
+      "mean_cp_delta_bootstrap95": [
+        -9.275416666666667,
+        6.3335416666666635
+      ],
+      "blunder_rate_delta": 0.016666666666666666,
+      "blunder_rate_delta_bootstrap95": [
+        -0.016666666666666666,
+        0.05
+      ],
+      "fixed_blunders": 1,
+      "new_blunders": 3,
+      "discordant_exact_two_sided_p": 0.625
+    },
+    "cp-rank minus wdl": {
+      "positions": 120,
+      "mean_cp_delta": -2.2666666666666666,
+      "mean_cp_delta_bootstrap95": [
+        -10.55,
+        3.925
+      ],
+      "blunder_rate_delta": 0.008333333333333333,
+      "blunder_rate_delta_bootstrap95": [
+        -0.016666666666666666,
+        0.041666666666666664
+      ],
+      "fixed_blunders": 1,
+      "new_blunders": 2,
+      "discordant_exact_two_sided_p": 1.0
+    },
+    "cp-rank minus cp": {
+      "positions": 120,
+      "mean_cp_delta": -1.625,
+      "mean_cp_delta_bootstrap95": [
+        -6.35,
+        2.05
+      ],
+      "blunder_rate_delta": -0.008333333333333333,
+      "blunder_rate_delta_bootstrap95": [
+        -0.025,
+        0.0
+      ],
+      "fixed_blunders": 1,
+      "new_blunders": 0,
+      "discordant_exact_two_sided_p": 1.0
+    },
+    "cp-rank minus old-aligned": {
+      "positions": 120,
+      "mean_cp_delta": -8.675,
+      "mean_cp_delta_bootstrap95": [
+        -21.275,
+        0.6666666666666666
+      ],
+      "blunder_rate_delta": -0.025,
+      "blunder_rate_delta_bootstrap95": [
+        -0.06666666666666667,
+        0.008333333333333333
+      ],
+      "fixed_blunders": 4,
+      "new_blunders": 1,
+      "discordant_exact_two_sided_p": 0.375
+    },
+    "cp-rank minus puct-31": {
+      "positions": 120,
+      "mean_cp_delta": 4.8,
+      "mean_cp_delta_bootstrap95": [
+        -4.958541666666666,
+        14.60062499999999
+      ],
+      "blunder_rate_delta": 0.0,
+      "blunder_rate_delta_bootstrap95": [
+        -0.058333333333333334,
+        0.058333333333333334
+      ],
+      "fixed_blunders": 6,
+      "new_blunders": 6,
+      "discordant_exact_two_sided_p": 1.0
+    },
+    "cp-rank minus puct-512": {
+      "positions": 120,
+      "mean_cp_delta": 2.191666666666667,
+      "mean_cp_delta_bootstrap95": [
+        -8.258541666666666,
+        12.6
+      ],
+      "blunder_rate_delta": -0.008333333333333333,
+      "blunder_rate_delta_bootstrap95": [
+        -0.06666666666666667,
+        0.05
+      ],
+      "fixed_blunders": 7,
+      "new_blunders": 6,
+      "discordant_exact_two_sided_p": 1.0
+    }
+  },
+  "mate_events": {
+    "old-aligned": {
+      "winning_mate_missed": 1,
+      "avoidable_mate_loss": 0
+    },
+    "wdl": {
+      "winning_mate_missed": 0,
+      "avoidable_mate_loss": 1
+    },
+    "cp": {
+      "winning_mate_missed": 0,
+      "avoidable_mate_loss": 1
+    },
+    "cp-rank": {
+      "winning_mate_missed": 0,
+      "avoidable_mate_loss": 1
+    },
+    "puct-31": {
+      "winning_mate_missed": 1,
+      "avoidable_mate_loss": 1
+    },
+    "puct-128": {
+      "winning_mate_missed": 0,
+      "avoidable_mate_loss": 1
+    },
+    "puct-512": {
+      "winning_mate_missed": 0,
+      "avoidable_mate_loss": 0
+    },
+    "direct": {
+      "winning_mate_missed": 1,
+      "avoidable_mate_loss": 1
+    }
+  },
+  "note": "Fixed 128 source-game roots; finite-node candidate-union labels, not exact chess truth. Primary comparison preregistered CP+rank versus matched WDL. Exploratory comparisons are not multiplicity corrected."
+}

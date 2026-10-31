@@ -1,0 +1,2127 @@
+{
+  "args": {
+    "audit": "output/search-diagnosis-20261031/old-game-audit/result.json",
+    "suite": "output/rank-frontier-20261031/suite.json",
+    "checkpoint": "output/eval-multihead-20261031/model/best.pt",
+    "stockfish": "local/stockfish/stockfish/stockfish-ubuntu-x86-64-avx2",
+    "out": "output/rank-frontier-20261031/known-failures"
+  },
+  "cases": [
+    {
+      "game": 0,
+      "ply": 8,
+      "fen": "r1bqkb1r/ppp2ppp/8/8/2ppP3/2N5/PPP1QPPP/R1B1K2R w KQkq - 0 9",
+      "methods": [
+        {
+          "method": "old-aligned",
+          "move": "c3d5",
+          "root": {
+            "move": "c3d5",
+            "value": -0.216576,
+            "selected_value": -0.541111,
+            "decision_score": -0.63792,
+            "final_candidate_checked": true,
+            "proven_value": null,
+            "stats": {
+              "expanded_nodes": 512,
+              "cheap_evaluations": 19067,
+              "correction_positions": 32,
+              "nodes": 19068,
+              "terminal_nodes": 1,
+              "max_depth": 13,
+              "quiescence_nodes": 0,
+              "verification_queries": 0,
+              "node_limit_hit": false
+            },
+            "leaders": [
+              {
+                "move": "c3d5",
+                "value": -0.541111,
+                "decision_score": -0.63792,
+                "prior": 0.379807,
+                "expansions": 301,
+                "corrected": true
+              },
+              {
+                "move": "c3b5",
+                "value": -0.425614,
+                "decision_score": -0.666908,
+                "prior": 0.0895518,
+                "expansions": 115,
+                "corrected": true
+              },
+              {
+                "move": "e2c4",
+                "value": -0.635217,
+                "decision_score": -0.798875,
+                "prior": 0.194644,
+                "expansions": 60,
+                "corrected": true
+              },
+              {
+                "move": "e1g1",
+                "value": -0.559891,
+                "decision_score": -0.844424,
+                "prior": 0.0581147,
+                "expansions": 1,
+                "corrected": true
+              },
+              {
+                "move": "e2f3",
+                "value": -0.307959,
+                "decision_score": -0.845227,
+                "prior": 0.00464168,
+                "expansions": 1,
+                "corrected": false
+              },
+              {
+                "move": "c3b1",
+                "value": -0.741967,
+                "decision_score": -0.937711,
+                "prior": 0.141219,
+                "expansions": 0,
+                "corrected": true
+              },
+              {
+                "move": "e2d2",
+                "value": -0.473899,
+                "decision_score": -0.955698,
+                "prior": 0.008083,
+                "expansions": 1,
+                "corrected": false
+              },
+              {
+                "move": "c1d2",
+                "value": -0.342097,
+                "decision_score": -0.96374,
+                "prior": 0.00199636,
+                "expansions": 1,
+                "corrected": false
+              }
+            ]
+          },
+          "teacher": {
+            "cp": -185,
+            "mate": null,
+            "pv": [
+              "c3d5",
+              "c7c6",
+              "d5f4",
+              "f8b4",
+              "c1d2",
+              "b4d2",
+              "e2d2",
+              "e8g8",
+              "e1g1",
+              "c6c5"
+            ]
+          },
+          "cp_regret": 0
+        },
+        {
+          "method": "wdl",
+          "move": "c3d5",
+          "root": {
+            "move": "c3d5",
+            "value": -0.263396,
+            "selected_value": -0.498786,
+            "decision_score": -0.595595,
+            "final_candidate_checked": true,
+            "proven_value": null,
+            "stats": {
+              "expanded_nodes": 512,
+              "cheap_evaluations": 18416,
+              "correction_positions": 32,
+              "nodes": 18433,
+              "terminal_nodes": 17,
+              "max_depth": 13,
+              "quiescence_nodes": 0,
+              "verification_queries": 0,
+              "node_limit_hit": false
+            },
+            "leaders": [
+              {
+                "move": "c3d5",
+                "value": -0.498786,
+                "decision_score": -0.595595,
+                "prior": 0.379807,
+                "expansions": 442,
+                "corrected": true
+              },
+              {
+                "move": "c3b5",
+                "value": -0.482912,
+                "decision_score": -0.724206,
+                "prior": 0.0895518,
+                "expansions": 13,
+                "corrected": true
+              },
+              {
+                "move": "e2c4",
+                "value": -0.649104,
+                "decision_score": -0.812762,
+                "prior": 0.194644,
+                "expansions": 2,
+                "corrected": true
+              },
+              {
+                "move": "c3a4",
+                "value": -0.41812,
+                "decision_score": -0.852654,
+                "prior": 0.0129671,
+                "expansions": 2,
+                "corrected": false
+              },
+              {
+                "move": "e1g1",
+                "value": -0.633888,
+                "decision_score": -0.918422,
+                "prior": 0.0581147,
+                "expansions": 2,
+                "corrected": false
+              },
+              {
+                "move": "c3b1",
+                "value": -0.727547,
+                "decision_score": -0.923291,
+                "prior": 0.141219,
+                "expansions": 1,
+                "corrected": true
+              },
+              {
+                "move": "c3d1",
+                "value": -0.748861,
+                "decision_score": -1.01803,
+                "prior": 0.0677642,
+                "expansions": 19,
+                "corrected": true
+              },
+              {
+                "move": "c1f4",
+                "value": -0.736786,
+                "decision_score": -1.16819,
+                "prior": 0.0133788,
+                "expansions": 1,
+                "corrected": false
+              }
+            ]
+          },
+          "teacher": {
+            "cp": -185,
+            "mate": null,
+            "pv": [
+              "c3d5",
+              "c7c6",
+              "d5f4",
+              "f8b4",
+              "c1d2",
+              "b4d2",
+              "e2d2",
+              "e8g8",
+              "e1g1",
+              "c6c5"
+            ]
+          },
+          "cp_regret": 0
+        },
+        {
+          "method": "cp",
+          "move": "c3d5",
+          "root": {
+            "move": "c3d5",
+            "value": -0.279514,
+            "selected_value": -0.482868,
+            "decision_score": -0.579677,
+            "final_candidate_checked": true,
+            "proven_value": null,
+            "stats": {
+              "expanded_nodes": 512,
+              "cheap_evaluations": 17321,
+              "correction_positions": 32,
+              "nodes": 17326,
+              "terminal_nodes": 5,
+              "max_depth": 17,
+              "quiescence_nodes": 0,
+              "verification_queries": 0,
+              "node_limit_hit": false
+            },
+            "leaders": [
+              {
+                "move": "c3d5",
+                "value": -0.482868,
+                "decision_score": -0.579677,
+                "prior": 0.379807,
+                "expansions": 456,
+                "corrected": true
+              },
+              {
+                "move": "c3b5",
+                "value": -0.482594,
+                "decision_score": -0.723888,
+                "prior": 0.0895518,
+                "expansions": 2,
+                "corrected": true
+              },
+              {
+                "move": "e2c4",
+                "value": -0.64734,
+                "decision_score": -0.810998,
+                "prior": 0.194644,
+                "expansions": 2,
+                "corrected": true
+              },
+              {
+                "move": "e1g1",
+                "value": -0.63769,
+                "decision_score": -0.922224,
+                "prior": 0.0581147,
+                "expansions": 2,
+                "corrected": true
+              },
+              {
+                "move": "c3b1",
+                "value": -0.753614,
+                "decision_score": -0.949359,
+                "prior": 0.141219,
+                "expansions": 2,
+                "corrected": true
+              },
+              {
+                "move": "c3d1",
+                "value": -0.759081,
+                "decision_score": -1.02825,
+                "prior": 0.0677642,
+                "expansions": 16,
+                "corrected": true
+              },
+              {
+                "move": "e4e5",
+                "value": -0.766527,
+                "decision_score": -1.29208,
+                "prior": 0.00521878,
+                "expansions": 1,
+                "corrected": false
+              },
+              {
+                "move": "c1f4",
+                "value": -0.88581,
+                "decision_score": -1.31722,
+                "prior": 0.0133788,
+                "expansions": 1,
+                "corrected": false
+              }
+            ]
+          },
+          "teacher": {
+            "cp": -185,
+            "mate": null,
+            "pv": [
+              "c3d5",
+              "c7c6",
+              "d5f4",
+              "f8b4",
+              "c1d2",
+              "b4d2",
+              "e2d2",
+              "e8g8",
+              "e1g1",
+              "c6c5"
+            ]
+          },
+          "cp_regret": 0
+        },
+        {
+          "method": "cp-rank",
+          "move": "c3d5",
+          "root": {
+            "move": "c3d5",
+            "value": -0.27945,
+            "selected_value": -0.482336,
+            "decision_score": -0.579145,
+            "final_candidate_checked": true,
+            "proven_value": null,
+            "stats": {
+              "expanded_nodes": 512,
+              "cheap_evaluations": 18701,
+              "correction_positions": 32,
+              "nodes": 18702,
+              "terminal_nodes": 1,
+              "max_depth": 12,
+              "quiescence_nodes": 0,
+              "verification_queries": 0,
+              "node_limit_hit": false
+            },
+            "leaders": [
+              {
+                "move": "c3d5",
+                "value": -0.482336,
+                "decision_score": -0.579145,
+                "prior": 0.379807,
+                "expansions": 301,
+                "corrected": true
+              },
+              {
+                "move": "c3b5",
+                "value": -0.482891,
+                "decision_score": -0.724185,
+                "prior": 0.0895518,
+                "expansions": 175,
+                "corrected": true
+              },
+              {
+                "move": "e2c4",
+                "value": -0.661073,
+                "decision_score": -0.824731,
+                "prior": 0.194644,
+                "expansions": 1,
+                "corrected": true
+              },
+              {
+                "move": "c3b1",
+                "value": -0.725365,
+                "decision_score": -0.92111,
+                "prior": 0.141219,
+                "expansions": 1,
+                "corrected": true
+              },
+              {
+                "move": "c3d1",
+                "value": -0.72664,
+                "decision_score": -0.995812,
+                "prior": 0.0677642,
+                "expansions": 1,
+                "corrected": true
+              },
+              {
+                "move": "e1g1",
+                "value": -0.768627,
+                "decision_score": -1.05316,
+                "prior": 0.0581147,
+                "expansions": 1,
+                "corrected": false
+              },
+              {
+                "move": "c1f4",
+                "value": -0.805338,
+                "decision_score": -1.23675,
+                "prior": 0.0133788,
+                "expansions": 1,
+                "corrected": false
+              },
+              {
+                "move": "e2d2",
+                "value": -0.807547,
+                "decision_score": -1.28935,
+                "prior": 0.008083,
+                "expansions": 1,
+                "corrected": false
+              }
+            ]
+          },
+          "teacher": {
+            "cp": -185,
+            "mate": null,
+            "pv": [
+              "c3d5",
+              "c7c6",
+              "d5f4",
+              "f8b4",
+              "c1d2",
+              "b4d2",
+              "e2d2",
+              "e8g8",
+              "e1g1",
+              "c6c5"
+            ]
+          },
+          "cp_regret": 0
+        },
+        {
+          "method": "puct-31",
+          "move": "c3d5",
+          "teacher": {
+            "cp": -185,
+            "mate": null,
+            "pv": [
+              "c3d5",
+              "c7c6",
+              "d5f4",
+              "f8b4",
+              "c1d2",
+              "b4d2",
+              "e2d2",
+              "e8g8",
+              "e1g1",
+              "c6c5"
+            ]
+          },
+          "cp_regret": 0
+        },
+        {
+          "method": "puct-128",
+          "move": "c3d5",
+          "teacher": {
+            "cp": -185,
+            "mate": null,
+            "pv": [
+              "c3d5",
+              "c7c6",
+              "d5f4",
+              "f8b4",
+              "c1d2",
+              "b4d2",
+              "e2d2",
+              "e8g8",
+              "e1g1",
+              "c6c5"
+            ]
+          },
+          "cp_regret": 0
+        },
+        {
+          "method": "puct-512",
+          "move": "c3d5",
+          "teacher": {
+            "cp": -185,
+            "mate": null,
+            "pv": [
+              "c3d5",
+              "c7c6",
+              "d5f4",
+              "f8b4",
+              "c1d2",
+              "b4d2",
+              "e2d2",
+              "e8g8",
+              "e1g1",
+              "c6c5"
+            ]
+          },
+          "cp_regret": 0
+        },
+        {
+          "method": "direct",
+          "move": "c3d5",
+          "teacher": {
+            "cp": -185,
+            "mate": null,
+            "pv": [
+              "c3d5",
+              "c7c6",
+              "d5f4",
+              "f8b4",
+              "c1d2",
+              "b4d2",
+              "e2d2",
+              "e8g8",
+              "e1g1",
+              "c6c5"
+            ]
+          },
+          "cp_regret": 0
+        }
+      ],
+      "teacher_candidates": {
+        "c3d5": {
+          "cp": -185,
+          "mate": null,
+          "pv": [
+            "c3d5",
+            "c7c6",
+            "d5f4",
+            "f8b4",
+            "c1d2",
+            "b4d2",
+            "e2d2",
+            "e8g8",
+            "e1g1",
+            "c6c5"
+          ]
+        },
+        "c3b5": {
+          "cp": -319,
+          "mate": null,
+          "pv": [
+            "c3b5",
+            "c7c6",
+            "b5a3",
+            "d8a5",
+            "e1f1",
+            "b7b5",
+            "a3b1",
+            "f8e7",
+            "b1d2",
+            "c6c5"
+          ]
+        }
+      }
+    },
+    {
+      "game": 1,
+      "ply": 23,
+      "fen": "r3k2r/1pp1bppp/p1n5/8/3P1N2/1bP5/3N1PPP/R1B1R1K1 b kq - 1 16",
+      "methods": [
+        {
+          "method": "old-aligned",
+          "move": "b3c2",
+          "root": {
+            "move": "b3c2",
+            "value": -0.028208,
+            "selected_value": -0.0441982,
+            "decision_score": -0.110688,
+            "final_candidate_checked": true,
+            "proven_value": null,
+            "stats": {
+              "expanded_nodes": 512,
+              "cheap_evaluations": 17282,
+              "correction_positions": 32,
+              "nodes": 17282,
+              "terminal_nodes": 0,
+              "max_depth": 20,
+              "quiescence_nodes": 0,
+              "verification_queries": 0,
+              "node_limit_hit": false
+            },
+            "leaders": [
+              {
+                "move": "b3c2",
+                "value": -0.0441982,
+                "decision_score": -0.110688,
+                "prior": 0.514324,
+                "expansions": 472,
+                "corrected": true
+              },
+              {
+                "move": "b3e6",
+                "value": -0.322262,
+                "decision_score": -0.414819,
+                "prior": 0.396305,
+                "expansions": 2,
+                "corrected": true
+              },
+              {
+                "move": "c6d4",
+                "value": -0.292744,
+                "decision_score": -0.753127,
+                "prior": 0.0100134,
+                "expansions": 2,
+                "corrected": false
+              },
+              {
+                "move": "e8c8",
+                "value": -0.416276,
+                "decision_score": -0.830174,
+                "prior": 0.0159391,
+                "expansions": 2,
+                "corrected": false
+              },
+              {
+                "move": "a8d8",
+                "value": -0.408134,
+                "decision_score": -0.956017,
+                "prior": 0.00417423,
+                "expansions": 2,
+                "corrected": true
+              },
+              {
+                "move": "b3c4",
+                "value": -0.593304,
+                "decision_score": -1.07712,
+                "prior": 0.00792129,
+                "expansions": 1,
+                "corrected": false
+              },
+              {
+                "move": "b3a4",
+                "value": -0.575843,
+                "decision_score": -1.09638,
+                "prior": 0.00548692,
+                "expansions": 1,
+                "corrected": true
+              },
+              {
+                "move": "e8d7",
+                "value": -0.604204,
+                "decision_score": -1.09896,
+                "prior": 0.0071006,
+                "expansions": 1,
+                "corrected": false
+              }
+            ]
+          },
+          "teacher": {
+            "cp": -270,
+            "mate": null,
+            "pv": [
+              "b3c2",
+              "d4d5"
+            ]
+          },
+          "cp_regret": 72
+        },
+        {
+          "method": "wdl",
+          "move": "b3c2",
+          "root": {
+            "move": "b3c2",
+            "value": -0.0285411,
+            "selected_value": -0.0455309,
+            "decision_score": -0.112021,
+            "final_candidate_checked": true,
+            "proven_value": null,
+            "stats": {
+              "expanded_nodes": 512,
+              "cheap_evaluations": 16689,
+              "correction_positions": 32,
+              "nodes": 16689,
+              "terminal_nodes": 0,
+              "max_depth": 16,
+              "quiescence_nodes": 0,
+              "verification_queries": 0,
+              "node_limit_hit": false
+            },
+            "leaders": [
+              {
+                "move": "b3c2",
+                "value": -0.0455309,
+                "decision_score": -0.112021,
+                "prior": 0.514324,
+                "expansions": 419,
+                "corrected": true
+              },
+              {
+                "move": "b3e6",
+                "value": -0.286378,
+                "decision_score": -0.378935,
+                "prior": 0.396305,
+                "expansions": 54,
+                "corrected": true
+              },
+              {
+                "move": "e8d7",
+                "value": -0.347354,
+                "decision_score": -0.842111,
+                "prior": 0.0071006,
+                "expansions": 2,
+                "corrected": true
+              },
+              {
+                "move": "e8c8",
+                "value": -0.596445,
+                "decision_score": -1.01034,
+                "prior": 0.0159391,
+                "expansions": 2,
+                "corrected": false
+              },
+              {
+                "move": "c6d4",
+                "value": -0.784387,
+                "decision_score": -1.24477,
+                "prior": 0.0100134,
+                "expansions": 2,
+                "corrected": false
+              },
+              {
+                "move": "b3c4",
+                "value": -0.803661,
+                "decision_score": -1.28748,
+                "prior": 0.00792129,
+                "expansions": 2,
+                "corrected": false
+              },
+              {
+                "move": "b3a4",
+                "value": -0.785368,
+                "decision_score": -1.30591,
+                "prior": 0.00548692,
+                "expansions": 2,
+                "corrected": false
+              },
+              {
+                "move": "b3d1",
+                "value": -0.624833,
+                "decision_score": -1.32115,
+                "prior": 0.000946063,
+                "expansions": 2,
+                "corrected": true
+              }
+            ]
+          },
+          "teacher": {
+            "cp": -270,
+            "mate": null,
+            "pv": [
+              "b3c2",
+              "d4d5"
+            ]
+          },
+          "cp_regret": 72
+        },
+        {
+          "method": "cp",
+          "move": "b3c2",
+          "root": {
+            "move": "b3c2",
+            "value": -0.0285406,
+            "selected_value": -0.0455288,
+            "decision_score": -0.112019,
+            "final_candidate_checked": true,
+            "proven_value": null,
+            "stats": {
+              "expanded_nodes": 512,
+              "cheap_evaluations": 17280,
+              "correction_positions": 32,
+              "nodes": 17280,
+              "terminal_nodes": 0,
+              "max_depth": 16,
+              "quiescence_nodes": 0,
+              "verification_queries": 0,
+              "node_limit_hit": false
+            },
+            "leaders": [
+              {
+                "move": "b3c2",
+                "value": -0.0455288,
+                "decision_score": -0.112019,
+                "prior": 0.514324,
+                "expansions": 421,
+                "corrected": true
+              },
+              {
+                "move": "b3e6",
+                "value": -0.317949,
+                "decision_score": -0.410506,
+                "prior": 0.396305,
+                "expansions": 47,
+                "corrected": true
+              },
+              {
+                "move": "e8g8",
+                "value": -0.495138,
+                "decision_score": -1.01411,
+                "prior": 0.00557332,
+                "expansions": 2,
+                "corrected": false
+              },
+              {
+                "move": "e8c8",
+                "value": -0.611556,
+                "decision_score": -1.02545,
+                "prior": 0.0159391,
+                "expansions": 2,
+                "corrected": false
+              },
+              {
+                "move": "c6d4",
+                "value": -0.601502,
+                "decision_score": -1.06188,
+                "prior": 0.0100134,
+                "expansions": 2,
+                "corrected": false
+              },
+              {
+                "move": "c6b4",
+                "value": -0.527808,
+                "decision_score": -1.14913,
+                "prior": 0.00200282,
+                "expansions": 2,
+                "corrected": true
+              },
+              {
+                "move": "e8d8",
+                "value": -0.531089,
+                "decision_score": -1.15866,
+                "prior": 0.00188147,
+                "expansions": 2,
+                "corrected": true
+              },
+              {
+                "move": "b3a4",
+                "value": -0.639815,
+                "decision_score": -1.16035,
+                "prior": 0.00548692,
+                "expansions": 2,
+                "corrected": false
+              }
+            ]
+          },
+          "teacher": {
+            "cp": -270,
+            "mate": null,
+            "pv": [
+              "b3c2",
+              "d4d5"
+            ]
+          },
+          "cp_regret": 72
+        },
+        {
+          "method": "cp-rank",
+          "move": "b3c2",
+          "root": {
+            "move": "b3c2",
+            "value": -0.0285411,
+            "selected_value": -0.0455306,
+            "decision_score": -0.112021,
+            "final_candidate_checked": true,
+            "proven_value": null,
+            "stats": {
+              "expanded_nodes": 512,
+              "cheap_evaluations": 17033,
+              "correction_positions": 32,
+              "nodes": 17033,
+              "terminal_nodes": 0,
+              "max_depth": 16,
+              "quiescence_nodes": 0,
+              "verification_queries": 0,
+              "node_limit_hit": false
+            },
+            "leaders": [
+              {
+                "move": "b3c2",
+                "value": -0.0455306,
+                "decision_score": -0.112021,
+                "prior": 0.514324,
+                "expansions": 415,
+                "corrected": true
+              },
+              {
+                "move": "b3e6",
+                "value": -0.285371,
+                "decision_score": -0.377928,
+                "prior": 0.396305,
+                "expansions": 58,
+                "corrected": true
+              },
+              {
+                "move": "e8d7",
+                "value": -0.361616,
+                "decision_score": -0.856374,
+                "prior": 0.0071006,
+                "expansions": 2,
+                "corrected": true
+              },
+              {
+                "move": "a8d8",
+                "value": -0.430809,
+                "decision_score": -0.978692,
+                "prior": 0.00417423,
+                "expansions": 2,
+                "corrected": true
+              },
+              {
+                "move": "e8c8",
+                "value": -0.745222,
+                "decision_score": -1.15912,
+                "prior": 0.0159391,
+                "expansions": 2,
+                "corrected": false
+              },
+              {
+                "move": "c6d4",
+                "value": -0.705847,
+                "decision_score": -1.16623,
+                "prior": 0.0100134,
+                "expansions": 2,
+                "corrected": false
+              },
+              {
+                "move": "b3a4",
+                "value": -0.811133,
+                "decision_score": -1.33167,
+                "prior": 0.00548692,
+                "expansions": 2,
+                "corrected": false
+              },
+              {
+                "move": "b3d5",
+                "value": -0.912307,
+                "decision_score": -1.37113,
+                "prior": 0.0101711,
+                "expansions": 1,
+                "corrected": false
+              }
+            ]
+          },
+          "teacher": {
+            "cp": -270,
+            "mate": null,
+            "pv": [
+              "b3c2",
+              "d4d5"
+            ]
+          },
+          "cp_regret": 72
+        },
+        {
+          "method": "puct-31",
+          "move": "b3c2",
+          "teacher": {
+            "cp": -270,
+            "mate": null,
+            "pv": [
+              "b3c2",
+              "d4d5"
+            ]
+          },
+          "cp_regret": 72
+        },
+        {
+          "method": "puct-128",
+          "move": "b3c2",
+          "teacher": {
+            "cp": -270,
+            "mate": null,
+            "pv": [
+              "b3c2",
+              "d4d5"
+            ]
+          },
+          "cp_regret": 72
+        },
+        {
+          "method": "puct-512",
+          "move": "b3c2",
+          "teacher": {
+            "cp": -270,
+            "mate": null,
+            "pv": [
+              "b3c2",
+              "d4d5"
+            ]
+          },
+          "cp_regret": 72
+        },
+        {
+          "method": "direct",
+          "move": "b3c2",
+          "teacher": {
+            "cp": -270,
+            "mate": null,
+            "pv": [
+              "b3c2",
+              "d4d5"
+            ]
+          },
+          "cp_regret": 72
+        }
+      ],
+      "teacher_candidates": {
+        "g7g5": {
+          "cp": -198,
+          "mate": null,
+          "pv": [
+            "g7g5",
+            "d2b3",
+            "g5f4",
+            "d4d5",
+            "c6a7",
+            "b3c5",
+            "a6a5",
+            "c5b7",
+            "e8d7",
+            "c1f4"
+          ]
+        },
+        "b3c2": {
+          "cp": -270,
+          "mate": null,
+          "pv": [
+            "b3c2",
+            "d4d5"
+          ]
+        }
+      }
+    },
+    {
+      "game": 2,
+      "ply": 16,
+      "fen": "2k1rb1r/1ppb2pp/p4n2/2p2p2/4P3/2N1BP2/PPP1N1PP/2KR3R w - - 2 13",
+      "methods": [
+        {
+          "method": "old-aligned",
+          "move": "e3g5",
+          "root": {
+            "move": "e3g5",
+            "value": 0.0252158,
+            "selected_value": 0.0366084,
+            "decision_score": -0.11662,
+            "final_candidate_checked": true,
+            "proven_value": null,
+            "stats": {
+              "expanded_nodes": 512,
+              "cheap_evaluations": 14513,
+              "correction_positions": 32,
+              "nodes": 14513,
+              "terminal_nodes": 0,
+              "max_depth": 11,
+              "quiescence_nodes": 0,
+              "verification_queries": 0,
+              "node_limit_hit": false
+            },
+            "leaders": [
+              {
+                "move": "e3g5",
+                "value": 0.0366084,
+                "decision_score": -0.11662,
+                "prior": 0.216042,
+                "expansions": 361,
+                "corrected": true
+              },
+              {
+                "move": "e3f4",
+                "value": -0.0402259,
+                "decision_score": -0.208661,
+                "prior": 0.185564,
+                "expansions": 109,
+                "corrected": true
+              },
+              {
+                "move": "e2f4",
+                "value": -0.054119,
+                "decision_score": -0.325569,
+                "prior": 0.066238,
+                "expansions": 2,
+                "corrected": true
+              },
+              {
+                "move": "e2g3",
+                "value": -0.0861927,
+                "decision_score": -0.356795,
+                "prior": 0.0668018,
+                "expansions": 1,
+                "corrected": true
+              },
+              {
+                "move": "b2b3",
+                "value": 0.0638534,
+                "decision_score": -0.380253,
+                "prior": 0.0117834,
+                "expansions": 2,
+                "corrected": false
+              },
+              {
+                "move": "h1e1",
+                "value": -0.169551,
+                "decision_score": -0.390048,
+                "prior": 0.110254,
+                "expansions": 1,
+                "corrected": true
+              },
+              {
+                "move": "h2h3",
+                "value": -0.0903113,
+                "decision_score": -0.486761,
+                "prior": 0.0189775,
+                "expansions": 1,
+                "corrected": false
+              },
+              {
+                "move": "e3f2",
+                "value": -0.167218,
+                "decision_score": -0.501949,
+                "prior": 0.0351787,
+                "expansions": 1,
+                "corrected": false
+              }
+            ]
+          },
+          "teacher": {
+            "cp": -181,
+            "mate": null,
+            "pv": [
+              "e3g5",
+              "f5e4",
+              "g5f6",
+              "e4f3",
+              "g2f3",
+              "g7f6",
+              "e2g3",
+              "f6f5",
+              "c3d5",
+              "f8h6"
+            ]
+          },
+          "cp_regret": 167
+        },
+        {
+          "method": "wdl",
+          "move": "e3g5",
+          "root": {
+            "move": "e3g5",
+            "value": 0.0722841,
+            "selected_value": 0.0580668,
+            "decision_score": -0.0951613,
+            "final_candidate_checked": true,
+            "proven_value": null,
+            "stats": {
+              "expanded_nodes": 512,
+              "cheap_evaluations": 16807,
+              "correction_positions": 32,
+              "nodes": 16807,
+              "terminal_nodes": 0,
+              "max_depth": 11,
+              "quiescence_nodes": 0,
+              "verification_queries": 0,
+              "node_limit_hit": false
+            },
+            "leaders": [
+              {
+                "move": "e3g5",
+                "value": 0.0580668,
+                "decision_score": -0.0951613,
+                "prior": 0.216042,
+                "expansions": 350,
+                "corrected": true
+              },
+              {
+                "move": "e2f4",
+                "value": 0.131394,
+                "decision_score": -0.140056,
+                "prior": 0.066238,
+                "expansions": 58,
+                "corrected": true
+              },
+              {
+                "move": "h1e1",
+                "value": 0.0196771,
+                "decision_score": -0.20082,
+                "prior": 0.110254,
+                "expansions": 2,
+                "corrected": true
+              },
+              {
+                "move": "e3f4",
+                "value": -0.0696522,
+                "decision_score": -0.238088,
+                "prior": 0.185564,
+                "expansions": 1,
+                "corrected": true
+              },
+              {
+                "move": "h1f1",
+                "value": 0.0776424,
+                "decision_score": -0.329745,
+                "prior": 0.0170113,
+                "expansions": 53,
+                "corrected": true
+              },
+              {
+                "move": "e2g3",
+                "value": -0.0911341,
+                "decision_score": -0.361737,
+                "prior": 0.0668018,
+                "expansions": 1,
+                "corrected": true
+              },
+              {
+                "move": "h2h4",
+                "value": -0.051167,
+                "decision_score": -0.43043,
+                "prior": 0.0225363,
+                "expansions": 1,
+                "corrected": false
+              },
+              {
+                "move": "h2h3",
+                "value": -0.0458671,
+                "decision_score": -0.442317,
+                "prior": 0.0189775,
+                "expansions": 1,
+                "corrected": true
+              }
+            ]
+          },
+          "teacher": {
+            "cp": -181,
+            "mate": null,
+            "pv": [
+              "e3g5",
+              "f5e4",
+              "g5f6",
+              "e4f3",
+              "g2f3",
+              "g7f6",
+              "e2g3",
+              "f6f5",
+              "c3d5",
+              "f8h6"
+            ]
+          },
+          "cp_regret": 167
+        },
+        {
+          "method": "cp",
+          "move": "e3g5",
+          "root": {
+            "move": "e3g5",
+            "value": 0.0997264,
+            "selected_value": 0.0462167,
+            "decision_score": -0.107011,
+            "final_candidate_checked": true,
+            "proven_value": null,
+            "stats": {
+              "expanded_nodes": 512,
+              "cheap_evaluations": 16384,
+              "correction_positions": 32,
+              "nodes": 16386,
+              "terminal_nodes": 2,
+              "max_depth": 12,
+              "quiescence_nodes": 0,
+              "verification_queries": 0,
+              "node_limit_hit": false
+            },
+            "leaders": [
+              {
+                "move": "e3g5",
+                "value": 0.0462167,
+                "decision_score": -0.107011,
+                "prior": 0.216042,
+                "expansions": 241,
+                "corrected": true
+              },
+              {
+                "move": "e3f4",
+                "value": 0.048074,
+                "decision_score": -0.120361,
+                "prior": 0.185564,
+                "expansions": 2,
+                "corrected": true
+              },
+              {
+                "move": "e2f4",
+                "value": 0.139307,
+                "decision_score": -0.132143,
+                "prior": 0.066238,
+                "expansions": 107,
+                "corrected": true
+              },
+              {
+                "move": "h1e1",
+                "value": 0.0146026,
+                "decision_score": -0.205894,
+                "prior": 0.110254,
+                "expansions": 59,
+                "corrected": true
+              },
+              {
+                "move": "h1f1",
+                "value": 0.101603,
+                "decision_score": -0.305784,
+                "prior": 0.0170113,
+                "expansions": 60,
+                "corrected": true
+              },
+              {
+                "move": "e2g3",
+                "value": -0.0385198,
+                "decision_score": -0.309122,
+                "prior": 0.0668018,
+                "expansions": 2,
+                "corrected": true
+              },
+              {
+                "move": "e4f5",
+                "value": -0.15585,
+                "decision_score": -0.415597,
+                "prior": 0.0744617,
+                "expansions": 1,
+                "corrected": false
+              },
+              {
+                "move": "f3f4",
+                "value": 0.361896,
+                "decision_score": -0.417367,
+                "prior": 0.000412767,
+                "expansions": 2,
+                "corrected": false
+              }
+            ]
+          },
+          "teacher": {
+            "cp": -181,
+            "mate": null,
+            "pv": [
+              "e3g5",
+              "f5e4",
+              "g5f6",
+              "e4f3",
+              "g2f3",
+              "g7f6",
+              "e2g3",
+              "f6f5",
+              "c3d5",
+              "f8h6"
+            ]
+          },
+          "cp_regret": 167
+        },
+        {
+          "method": "cp-rank",
+          "move": "e3g5",
+          "root": {
+            "move": "e3g5",
+            "value": 0.0417832,
+            "selected_value": -0.0130152,
+            "decision_score": -0.166243,
+            "final_candidate_checked": true,
+            "proven_value": null,
+            "stats": {
+              "expanded_nodes": 512,
+              "cheap_evaluations": 16471,
+              "correction_positions": 32,
+              "nodes": 16487,
+              "terminal_nodes": 16,
+              "max_depth": 11,
+              "quiescence_nodes": 0,
+              "verification_queries": 0,
+              "node_limit_hit": false
+            },
+            "leaders": [
+              {
+                "move": "e3g5",
+                "value": -0.0130152,
+                "decision_score": -0.166243,
+                "prior": 0.216042,
+                "expansions": 298,
+                "corrected": true
+              },
+              {
+                "move": "e2f4",
+                "value": 0.0759209,
+                "decision_score": -0.195529,
+                "prior": 0.066238,
+                "expansions": 112,
+                "corrected": true
+              },
+              {
+                "move": "h1e1",
+                "value": 0.0220446,
+                "decision_score": -0.198452,
+                "prior": 0.110254,
+                "expansions": 57,
+                "corrected": true
+              },
+              {
+                "move": "e3f4",
+                "value": -0.0696522,
+                "decision_score": -0.238088,
+                "prior": 0.185564,
+                "expansions": 1,
+                "corrected": true
+              },
+              {
+                "move": "a2a4",
+                "value": 0.130123,
+                "decision_score": -0.347577,
+                "prior": 0.00842121,
+                "expansions": 2,
+                "corrected": false
+              },
+              {
+                "move": "e2g3",
+                "value": -0.0805351,
+                "decision_score": -0.351138,
+                "prior": 0.0668018,
+                "expansions": 1,
+                "corrected": true
+              },
+              {
+                "move": "h1f1",
+                "value": -0.00376293,
+                "decision_score": -0.411151,
+                "prior": 0.0170113,
+                "expansions": 2,
+                "corrected": true
+              },
+              {
+                "move": "a2a3",
+                "value": -0.0767846,
+                "decision_score": -0.499797,
+                "prior": 0.0145505,
+                "expansions": 1,
+                "corrected": true
+              }
+            ]
+          },
+          "teacher": {
+            "cp": -181,
+            "mate": null,
+            "pv": [
+              "e3g5",
+              "f5e4",
+              "g5f6",
+              "e4f3",
+              "g2f3",
+              "g7f6",
+              "e2g3",
+              "f6f5",
+              "c3d5",
+              "f8h6"
+            ]
+          },
+          "cp_regret": 167
+        },
+        {
+          "method": "puct-31",
+          "move": "e3g5",
+          "teacher": {
+            "cp": -181,
+            "mate": null,
+            "pv": [
+              "e3g5",
+              "f5e4",
+              "g5f6",
+              "e4f3",
+              "g2f3",
+              "g7f6",
+              "e2g3",
+              "f6f5",
+              "c3d5",
+              "f8h6"
+            ]
+          },
+          "cp_regret": 167
+        },
+        {
+          "method": "puct-128",
+          "move": "e3g5",
+          "teacher": {
+            "cp": -181,
+            "mate": null,
+            "pv": [
+              "e3g5",
+              "f5e4",
+              "g5f6",
+              "e4f3",
+              "g2f3",
+              "g7f6",
+              "e2g3",
+              "f6f5",
+              "c3d5",
+              "f8h6"
+            ]
+          },
+          "cp_regret": 167
+        },
+        {
+          "method": "puct-512",
+          "move": "e3g5",
+          "teacher": {
+            "cp": -181,
+            "mate": null,
+            "pv": [
+              "e3g5",
+              "f5e4",
+              "g5f6",
+              "e4f3",
+              "g2f3",
+              "g7f6",
+              "e2g3",
+              "f6f5",
+              "c3d5",
+              "f8h6"
+            ]
+          },
+          "cp_regret": 167
+        },
+        {
+          "method": "direct",
+          "move": "e3g5",
+          "teacher": {
+            "cp": -181,
+            "mate": null,
+            "pv": [
+              "e3g5",
+              "f5e4",
+              "g5f6",
+              "e4f3",
+              "g2f3",
+              "g7f6",
+              "e2g3",
+              "f6f5",
+              "c3d5",
+              "f8h6"
+            ]
+          },
+          "cp_regret": 167
+        }
+      ],
+      "teacher_candidates": {
+        "e2g3": {
+          "cp": -14,
+          "mate": null,
+          "pv": [
+            "e2g3"
+          ]
+        },
+        "e3g5": {
+          "cp": -181,
+          "mate": null,
+          "pv": [
+            "e3g5",
+            "f5e4",
+            "g5f6",
+            "e4f3",
+            "g2f3",
+            "g7f6",
+            "e2g3",
+            "f6f5",
+            "c3d5",
+            "f8h6"
+          ]
+        }
+      }
+    },
+    {
+      "game": 3,
+      "ply": 57,
+      "fen": "1k6/2pr1bN1/1p3p2/p6p/1n2P2P/1P3PR1/2P1N1P1/2K5 b - - 0 33",
+      "methods": [
+        {
+          "method": "old-aligned",
+          "move": "b8b7",
+          "root": {
+            "move": "b8b7",
+            "value": -0.382747,
+            "selected_value": -0.231994,
+            "decision_score": -0.435764,
+            "final_candidate_checked": true,
+            "proven_value": null,
+            "stats": {
+              "expanded_nodes": 512,
+              "cheap_evaluations": 11274,
+              "correction_positions": 32,
+              "nodes": 11276,
+              "terminal_nodes": 2,
+              "max_depth": 19,
+              "quiescence_nodes": 0,
+              "verification_queries": 0,
+              "node_limit_hit": false
+            },
+            "leaders": [
+              {
+                "move": "b8b7",
+                "value": -0.231994,
+                "decision_score": -0.435764,
+                "prior": 0.130329,
+                "expansions": 455,
+                "corrected": true
+              },
+              {
+                "move": "a5a4",
+                "value": -0.412849,
+                "decision_score": -0.587208,
+                "prior": 0.174892,
+                "expansions": 15,
+                "corrected": true
+              },
+              {
+                "move": "b6b5",
+                "value": -0.407847,
+                "decision_score": -0.645604,
+                "prior": 0.0927755,
+                "expansions": 2,
+                "corrected": false
+              },
+              {
+                "move": "b8c8",
+                "value": -0.415901,
+                "decision_score": -0.668861,
+                "prior": 0.0796911,
+                "expansions": 2,
+                "corrected": true
+              },
+              {
+                "move": "d7d8",
+                "value": -0.376404,
+                "decision_score": -0.708856,
+                "prior": 0.0359898,
+                "expansions": 2,
+                "corrected": true
+              },
+              {
+                "move": "b4a2",
+                "value": -0.498483,
+                "decision_score": -0.727047,
+                "prior": 0.10171,
+                "expansions": 2,
+                "corrected": true
+              },
+              {
+                "move": "d7e7",
+                "value": -0.341061,
+                "decision_score": -0.811013,
+                "prior": 0.00909965,
+                "expansions": 2,
+                "corrected": false
+              },
+              {
+                "move": "b8a8",
+                "value": -0.287748,
+                "decision_score": -0.8202,
+                "prior": 0.00487069,
+                "expansions": 2,
+                "corrected": false
+              }
+            ]
+          },
+          "teacher": {
+            "cp": -179,
+            "mate": null,
+            "pv": [
+              "b8b7",
+              "g7f5"
+            ]
+          },
+          "cp_regret": 90
+        },
+        {
+          "method": "wdl",
+          "move": "f7b3",
+          "root": {
+            "move": "f7b3",
+            "value": -0.351231,
+            "selected_value": -0.105931,
+            "decision_score": -0.493852,
+            "final_candidate_checked": true,
+            "proven_value": null,
+            "stats": {
+              "expanded_nodes": 512,
+              "cheap_evaluations": 12036,
+              "correction_positions": 32,
+              "nodes": 12036,
+              "terminal_nodes": 0,
+              "max_depth": 11,
+              "quiescence_nodes": 0,
+              "verification_queries": 0,
+              "node_limit_hit": false
+            },
+            "leaders": [
+              {
+                "move": "f7b3",
+                "value": -0.105931,
+                "decision_score": -0.493852,
+                "prior": 0.0206672,
+                "expansions": 2,
+                "corrected": true
+              },
+              {
+                "move": "b8b7",
+                "value": -0.339435,
+                "decision_score": -0.543204,
+                "prior": 0.130329,
+                "expansions": 301,
+                "corrected": true
+              },
+              {
+                "move": "a5a4",
+                "value": -0.426365,
+                "decision_score": -0.600724,
+                "prior": 0.174892,
+                "expansions": 118,
+                "corrected": true
+              },
+              {
+                "move": "b4a2",
+                "value": -0.509061,
+                "decision_score": -0.737624,
+                "prior": 0.10171,
+                "expansions": 25,
+                "corrected": true
+              },
+              {
+                "move": "b8c8",
+                "value": -0.49103,
+                "decision_score": -0.74399,
+                "prior": 0.0796911,
+                "expansions": 2,
+                "corrected": true
+              },
+              {
+                "move": "b6b5",
+                "value": -0.515759,
+                "decision_score": -0.753516,
+                "prior": 0.0927755,
+                "expansions": 2,
+                "corrected": true
+              },
+              {
+                "move": "b4a6",
+                "value": -0.414654,
+                "decision_score": -0.7807,
+                "prior": 0.0257208,
+                "expansions": 2,
+                "corrected": false
+              },
+              {
+                "move": "d7d8",
+                "value": -0.452949,
+                "decision_score": -0.785401,
+                "prior": 0.0359898,
+                "expansions": 2,
+                "corrected": true
+              }
+            ]
+          },
+          "teacher": {
+            "cp": -259,
+            "mate": null,
+            "pv": [
+              "f7b3",
+              "c2b3",
+              "b4a2",
+              "c1c2",
+              "a2b4",
+              "c2c3",
+              "d7d3",
+              "c3c4",
+              "d3d2",
+              "g7h5"
+            ]
+          },
+          "cp_regret": 170
+        },
+        {
+          "method": "cp",
+          "move": "b8b7",
+          "root": {
+            "move": "b8b7",
+            "value": -0.379533,
+            "selected_value": -0.326858,
+            "decision_score": -0.530628,
+            "final_candidate_checked": true,
+            "proven_value": null,
+            "stats": {
+              "expanded_nodes": 512,
+              "cheap_evaluations": 11488,
+              "correction_positions": 32,
+              "nodes": 11488,
+              "terminal_nodes": 0,
+              "max_depth": 12,
+              "quiescence_nodes": 0,
+              "verification_queries": 0,
+              "node_limit_hit": false
+            },
+            "leaders": [
+              {
+                "move": "b8b7",
+                "value": -0.326858,
+                "decision_score": -0.530628,
+                "prior": 0.130329,
+                "expansions": 353,
+                "corrected": true
+              },
+              {
+                "move": "a5a4",
+                "value": -0.420937,
+                "decision_score": -0.595296,
+                "prior": 0.174892,
+                "expansions": 8,
+                "corrected": true
+              },
+              {
+                "move": "f7b3",
+                "value": -0.219139,
+                "decision_score": -0.607059,
+                "prior": 0.0206672,
+                "expansions": 2,
+                "corrected": true
+              },
+              {
+                "move": "b8c8",
+                "value": -0.410922,
+                "decision_score": -0.663881,
+                "prior": 0.0796911,
+                "expansions": 2,
+                "corrected": true
+              },
+              {
+                "move": "b6b5",
+                "value": -0.465468,
+                "decision_score": -0.703226,
+                "prior": 0.0927755,
+                "expansions": 2,
+                "corrected": false
+              },
+              {
+                "move": "d7d8",
+                "value": -0.38821,
+                "decision_score": -0.720662,
+                "prior": 0.0359898,
+                "expansions": 2,
+                "corrected": true
+              },
+              {
+                "move": "b4a2",
+                "value": -0.505958,
+                "decision_score": -0.734521,
+                "prior": 0.10171,
+                "expansions": 9,
+                "corrected": true
+              },
+              {
+                "move": "c7c5",
+                "value": -0.57609,
+                "decision_score": -0.763338,
+                "prior": 0.153742,
+                "expansions": 45,
+                "corrected": true
+              }
+            ]
+          },
+          "teacher": {
+            "cp": -179,
+            "mate": null,
+            "pv": [
+              "b8b7",
+              "g7f5"
+            ]
+          },
+          "cp_regret": 90
+        },
+        {
+          "method": "cp-rank",
+          "move": "a5a4",
+          "root": {
+            "move": "a5a4",
+            "value": -0.379505,
+            "selected_value": -0.427583,
+            "decision_score": -0.601941,
+            "final_candidate_checked": true,
+            "proven_value": null,
+            "stats": {
+              "expanded_nodes": 512,
+              "cheap_evaluations": 12311,
+              "correction_positions": 32,
+              "nodes": 12311,
+              "terminal_nodes": 0,
+              "max_depth": 14,
+              "quiescence_nodes": 0,
+              "verification_queries": 0,
+              "node_limit_hit": false
+            },
+            "leaders": [
+              {
+                "move": "a5a4",
+                "value": -0.427583,
+                "decision_score": -0.601941,
+                "prior": 0.174892,
+                "expansions": 419,
+                "corrected": true
+              },
+              {
+                "move": "f7b3",
+                "value": -0.219027,
+                "decision_score": -0.606948,
+                "prior": 0.0206672,
+                "expansions": 2,
+                "corrected": true
+              },
+              {
+                "move": "b8c8",
+                "value": -0.466703,
+                "decision_score": -0.719663,
+                "prior": 0.0796911,
+                "expansions": 2,
+                "corrected": true
+              },
+              {
+                "move": "b4a2",
+                "value": -0.52856,
+                "decision_score": -0.757123,
+                "prior": 0.10171,
+                "expansions": 26,
+                "corrected": true
+              },
+              {
+                "move": "c7c5",
+                "value": -0.582516,
+                "decision_score": -0.769763,
+                "prior": 0.153742,
+                "expansions": 30,
+                "corrected": true
+              },
+              {
+                "move": "d7d8",
+                "value": -0.467322,
+                "decision_score": -0.799774,
+                "prior": 0.0359898,
+                "expansions": 2,
+                "corrected": true
+              },
+              {
+                "move": "b6b5",
+                "value": -0.569715,
+                "decision_score": -0.807472,
+                "prior": 0.0927755,
+                "expansions": 2,
+                "corrected": true
+              },
+              {
+                "move": "b8b7",
+                "value": -0.639843,
+                "decision_score": -0.843612,
+                "prior": 0.130329,
+                "expansions": 1,
+                "corrected": false
+              }
+            ]
+          },
+          "teacher": {
+            "cp": -308,
+            "mate": null,
+            "pv": [
+              "a5a4",
+              "b3a4",
+              "b4a2",
+              "c1b2",
+              "d7d2",
+              "e2f4",
+              "a2b4",
+              "b2c3",
+              "d2c2",
+              "c3b4"
+            ]
+          },
+          "cp_regret": 219
+        },
+        {
+          "method": "puct-31",
+          "move": "b8b7",
+          "teacher": {
+            "cp": -179,
+            "mate": null,
+            "pv": [
+              "b8b7",
+              "g7f5"
+            ]
+          },
+          "cp_regret": 90
+        },
+        {
+          "method": "puct-128",
+          "move": "b4a2",
+          "teacher": {
+            "cp": -89,
+            "mate": null,
+            "pv": [
+              "b4a2",
+              "c1b1",
+              "a2b4",
+              "g7f5",
+              "d7d2",
+              "e2d4",
+              "a5a4",
+              "b3a4",
+              "c7c5",
+              "g3g7"
+            ]
+          },
+          "cp_regret": 0
+        },
+        {
+          "method": "puct-512",
+          "move": "a5a4",
+          "teacher": {
+            "cp": -308,
+            "mate": null,
+            "pv": [
+              "a5a4",
+              "b3a4",
+              "b4a2",
+              "c1b2",
+              "d7d2",
+              "e2f4",
+              "a2b4",
+              "b2c3",
+              "d2c2",
+              "c3b4"
+            ]
+          },
+          "cp_regret": 219
+        },
+        {
+          "method": "direct",
+          "move": "a5a4",
+          "teacher": {
+            "cp": -308,
+            "mate": null,
+            "pv": [
+              "a5a4",
+              "b3a4",
+              "b4a2",
+              "c1b2",
+              "d7d2",
+              "e2f4",
+              "a2b4",
+              "b2c3",
+              "d2c2",
+              "c3b4"
+            ]
+          },
+          "cp_regret": 219
+        }
+      ],
+      "teacher_candidates": {
+        "b4a2": {
+          "cp": -89,
+          "mate": null,
+          "pv": [
+            "b4a2",
+            "c1b1",
+            "a2b4",
+            "g7f5",
+            "d7d2",
+            "e2d4",
+            "a5a4",
+            "b3a4",
+            "c7c5",
+            "g3g7"
+          ]
+        },
+        "b8b7": {
+          "cp": -179,
+          "mate": null,
+          "pv": [
+            "b8b7",
+            "g7f5"
+          ]
+        },
+        "f7b3": {
+          "cp": -259,
+          "mate": null,
+          "pv": [
+            "f7b3",
+            "c2b3",
+            "b4a2",
+            "c1c2",
+            "a2b4",
+            "c2c3",
+            "d7d3",
+            "c3c4",
+            "d3d2",
+            "g7h5"
+          ]
+        },
+        "a5a4": {
+          "cp": -308,
+          "mate": null,
+          "pv": [
+            "a5a4",
+            "b3a4",
+            "b4a2",
+            "c1b2",
+            "d7d2",
+            "e2f4",
+            "a2b4",
+            "b2c3",
+            "d2c2",
+            "c3b4"
+          ]
+        }
+      }
+    }
+  ],
+  "note": "Known diagnostic cases, not independent final evaluation. Full histories preserved; fresh shared candidate-union teacher grades."
+}

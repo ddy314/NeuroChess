@@ -1,0 +1,37 @@
+{
+  "source": "output/cheap-minimax-20261031/student-gpu-long-tail/best.pt",
+  "selected_stage_step": 12500,
+  "selected_cumulative_additional_step": 87500,
+  "additional_steps_completed": 100000,
+  "additional_position_presentations": 409500288,
+  "selection_validation": {
+    "positions": 20000,
+    "mse": 0.1617986800244087,
+    "mae": 0.2675616963830893,
+    "absolute_error_p90": 0.6813998162746432,
+    "material_mse": 0.3354726196929717,
+    "material_mae": 0.38713446519197897,
+    "note": "Position-hash holdout; not game/source independent or a calibrated error bound."
+  },
+  "full_validation": {
+    "positions": 51086,
+    "mse": 0.17795309356389588,
+    "mae": 0.28665922491845824,
+    "absolute_error_p90": 0.7116542160511017,
+    "material_mse": 0.3524708518149901,
+    "material_mae": 0.4046676933547065,
+    "note": "Position-hash holdout; not game/source independent or a calibrated error bound."
+  },
+  "parameters": 107073,
+  "bytes": 428308,
+  "sha256": "204628c0b60e1b71951c74ffee89b1f61bad693c0b76fc59db83696500dccc89",
+  "interruption": {
+    "completed_stage_steps": 75000,
+    "planned_stage_steps": 100000,
+    "exit_code": 143,
+    "signal": "SIGTERM",
+    "source": "unknown",
+    "last_checkpoint": "student-gpu-long/last.pt",
+    "recovery": "student-gpu-long-tail: 25000 steps, weights-only initialization; optimizer and schedule restarted"
+  }
+}

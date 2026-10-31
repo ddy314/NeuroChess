@@ -1,0 +1,2382 @@
+{
+  "args": {
+    "audit": "output/search-diagnosis-20261031/old-game-audit/result.json",
+    "cheap": "output/cheap-minimax-20261031/student-selected/best.bin",
+    "checkpoint": "output/eval-multihead-20261031/model/best.pt",
+    "stockfish": "local/stockfish/stockfish/stockfish-ubuntu-x86-64-avx2",
+    "out": "output/search-diagnosis-20261031/game-failure-replays"
+  },
+  "cases": [
+    {
+      "game": 0,
+      "ply": 8,
+      "fen": "r1bqkb1r/ppp2ppp/8/8/2ppP3/2N5/PPP1QPPP/R1B1K2R w KQkq - 0 9",
+      "original_move": "c3b5",
+      "baseline_reproduced": true,
+      "methods": [
+        {
+          "method": "baseline",
+          "move": "c3b5",
+          "root": {
+            "move": "c3b5",
+            "value": -0.258875,
+            "selected_value": -0.400035,
+            "decision_score": -0.400035,
+            "proven_value": null,
+            "stats": {
+              "expanded_nodes": 512,
+              "cheap_evaluations": 18924,
+              "correction_positions": 32,
+              "nodes": 18924,
+              "terminal_nodes": 0,
+              "max_depth": 12,
+              "quiescence_nodes": 0,
+              "node_limit_hit": false
+            },
+            "leaders": [
+              {
+                "move": "c3b5",
+                "value": -0.400035,
+                "decision_score": -0.400035,
+                "prior": 0.0895518,
+                "expansions": 256,
+                "corrected": true
+              },
+              {
+                "move": "e2c4",
+                "value": -0.483336,
+                "decision_score": -0.483336,
+                "prior": 0.194644,
+                "expansions": 2,
+                "corrected": true
+              },
+              {
+                "move": "c3d5",
+                "value": -0.495266,
+                "decision_score": -0.495266,
+                "prior": 0.379807,
+                "expansions": 47,
+                "corrected": true
+              },
+              {
+                "move": "e1g1",
+                "value": -0.560816,
+                "decision_score": -0.560816,
+                "prior": 0.0581147,
+                "expansions": 2,
+                "corrected": true
+              },
+              {
+                "move": "c1f4",
+                "value": -0.577736,
+                "decision_score": -0.577736,
+                "prior": 0.0133788,
+                "expansions": 61,
+                "corrected": true
+              },
+              {
+                "move": "c3a4",
+                "value": -0.599533,
+                "decision_score": -0.599533,
+                "prior": 0.0129671,
+                "expansions": 2,
+                "corrected": false
+              },
+              {
+                "move": "c1e3",
+                "value": -0.609039,
+                "decision_score": -0.609039,
+                "prior": 0.00132986,
+                "expansions": 3,
+                "corrected": false
+              },
+              {
+                "move": "g2g3",
+                "value": -0.64819,
+                "decision_score": -0.64819,
+                "prior": 7.86263e-05,
+                "expansions": 2,
+                "corrected": false
+              }
+            ]
+          },
+          "teacher": {
+            "cp": -345,
+            "mate": null,
+            "value": -1.0,
+            "pv": [
+              "c3b5",
+              "c7c6",
+              "b5a3",
+              "d8a5",
+              "e1f1",
+              "b7b5",
+              "e2d1",
+              "a5d8",
+              "c2c3",
+              "d4d3"
+            ]
+          },
+          "cp_regret": 155
+        },
+        {
+          "method": "guarded",
+          "move": "c3d5",
+          "root": {
+            "move": "c3d5",
+            "value": -0.258875,
+            "selected_value": -0.495266,
+            "decision_score": -0.592075,
+            "proven_value": null,
+            "stats": {
+              "expanded_nodes": 512,
+              "cheap_evaluations": 18924,
+              "correction_positions": 32,
+              "nodes": 18924,
+              "terminal_nodes": 0,
+              "max_depth": 12,
+              "quiescence_nodes": 0,
+              "node_limit_hit": false
+            },
+            "leaders": [
+              {
+                "move": "c3d5",
+                "value": -0.495266,
+                "decision_score": -0.592075,
+                "prior": 0.379807,
+                "expansions": 47,
+                "corrected": true
+              },
+              {
+                "move": "c3b5",
+                "value": -0.400035,
+                "decision_score": -0.641329,
+                "prior": 0.0895518,
+                "expansions": 256,
+                "corrected": true
+              },
+              {
+                "move": "e2c4",
+                "value": -0.483336,
+                "decision_score": -0.646994,
+                "prior": 0.194644,
+                "expansions": 2,
+                "corrected": true
+              },
+              {
+                "move": "e1g1",
+                "value": -0.560816,
+                "decision_score": -0.84535,
+                "prior": 0.0581147,
+                "expansions": 2,
+                "corrected": true
+              },
+              {
+                "move": "c3b1",
+                "value": -0.691094,
+                "decision_score": -0.886838,
+                "prior": 0.141219,
+                "expansions": 7,
+                "corrected": true
+              },
+              {
+                "move": "c3d1",
+                "value": -0.734713,
+                "decision_score": -1.00388,
+                "prior": 0.0677642,
+                "expansions": 1,
+                "corrected": true
+              },
+              {
+                "move": "c1f4",
+                "value": -0.577736,
+                "decision_score": -1.00914,
+                "prior": 0.0133788,
+                "expansions": 61,
+                "corrected": true
+              },
+              {
+                "move": "c3a4",
+                "value": -0.599533,
+                "decision_score": -1.03407,
+                "prior": 0.0129671,
+                "expansions": 2,
+                "corrected": false
+              }
+            ]
+          },
+          "teacher": {
+            "cp": -190,
+            "mate": null,
+            "value": -0.994,
+            "pv": [
+              "c3d5",
+              "c7c6",
+              "d5f4",
+              "f8b4",
+              "c1d2",
+              "b4d2",
+              "e2d2",
+              "e8g8",
+              "e1g1",
+              "f8e8"
+            ]
+          },
+          "cp_regret": 0
+        },
+        {
+          "method": "aligned",
+          "move": "c3d5",
+          "root": {
+            "move": "c3d5",
+            "value": -0.216576,
+            "selected_value": -0.541111,
+            "decision_score": -0.63792,
+            "proven_value": null,
+            "stats": {
+              "expanded_nodes": 512,
+              "cheap_evaluations": 19067,
+              "correction_positions": 32,
+              "nodes": 19068,
+              "terminal_nodes": 1,
+              "max_depth": 13,
+              "quiescence_nodes": 0,
+              "node_limit_hit": false
+            },
+            "leaders": [
+              {
+                "move": "c3d5",
+                "value": -0.541111,
+                "decision_score": -0.63792,
+                "prior": 0.379807,
+                "expansions": 301,
+                "corrected": true
+              },
+              {
+                "move": "c3b5",
+                "value": -0.425614,
+                "decision_score": -0.666908,
+                "prior": 0.0895518,
+                "expansions": 115,
+                "corrected": true
+              },
+              {
+                "move": "e2c4",
+                "value": -0.635217,
+                "decision_score": -0.798875,
+                "prior": 0.194644,
+                "expansions": 60,
+                "corrected": true
+              },
+              {
+                "move": "e1g1",
+                "value": -0.559891,
+                "decision_score": -0.844424,
+                "prior": 0.0581147,
+                "expansions": 1,
+                "corrected": true
+              },
+              {
+                "move": "e2f3",
+                "value": -0.307959,
+                "decision_score": -0.845227,
+                "prior": 0.00464168,
+                "expansions": 1,
+                "corrected": false
+              },
+              {
+                "move": "c3b1",
+                "value": -0.741967,
+                "decision_score": -0.937711,
+                "prior": 0.141219,
+                "expansions": 0,
+                "corrected": true
+              },
+              {
+                "move": "e2d2",
+                "value": -0.473899,
+                "decision_score": -0.955698,
+                "prior": 0.008083,
+                "expansions": 1,
+                "corrected": false
+              },
+              {
+                "move": "c1d2",
+                "value": -0.342097,
+                "decision_score": -0.96374,
+                "prior": 0.00199636,
+                "expansions": 1,
+                "corrected": false
+              }
+            ]
+          },
+          "teacher": {
+            "cp": -190,
+            "mate": null,
+            "value": -0.994,
+            "pv": [
+              "c3d5",
+              "c7c6",
+              "d5f4",
+              "f8b4",
+              "c1d2",
+              "b4d2",
+              "e2d2",
+              "e8g8",
+              "e1g1",
+              "f8e8"
+            ]
+          },
+          "cp_regret": 0
+        },
+        {
+          "method": "oracle-WDL",
+          "move": "e1d2",
+          "root": {
+            "move": "e1d2",
+            "value": -0.92091,
+            "selected_value": -0.713639,
+            "decision_score": -0.713639,
+            "proven_value": null,
+            "stats": {
+              "expanded_nodes": 512,
+              "cheap_evaluations": 18085,
+              "correction_positions": 32,
+              "nodes": 18085,
+              "terminal_nodes": 0,
+              "max_depth": 12,
+              "quiescence_nodes": 0,
+              "node_limit_hit": false
+            },
+            "leaders": [
+              {
+                "move": "e1d2",
+                "value": -0.713639,
+                "decision_score": -0.713639,
+                "prior": 3.48902e-05,
+                "expansions": 2,
+                "corrected": false
+              },
+              {
+                "move": "b2b4",
+                "value": -0.731791,
+                "decision_score": -0.731791,
+                "prior": 1.28354e-05,
+                "expansions": 4,
+                "corrected": false
+              },
+              {
+                "move": "c3d5",
+                "value": -0.7952,
+                "decision_score": -0.7952,
+                "prior": 0.379807,
+                "expansions": 47,
+                "corrected": true
+              },
+              {
+                "move": "c1f4",
+                "value": -0.799289,
+                "decision_score": -0.799289,
+                "prior": 0.0133788,
+                "expansions": 61,
+                "corrected": true
+              },
+              {
+                "move": "e2c4",
+                "value": -0.799889,
+                "decision_score": -0.799889,
+                "prior": 0.194644,
+                "expansions": 2,
+                "corrected": true
+              },
+              {
+                "move": "e1d1",
+                "value": -0.801639,
+                "decision_score": -0.801639,
+                "prior": 0.000545774,
+                "expansions": 2,
+                "corrected": false
+              },
+              {
+                "move": "c1h6",
+                "value": -0.802713,
+                "decision_score": -0.802713,
+                "prior": 3.38167e-05,
+                "expansions": 65,
+                "corrected": true
+              },
+              {
+                "move": "e2h5",
+                "value": -0.832264,
+                "decision_score": -0.832264,
+                "prior": 0.0118529,
+                "expansions": 46,
+                "corrected": true
+              }
+            ]
+          },
+          "teacher": {
+            "cp": -502,
+            "mate": null,
+            "value": -1.0,
+            "pv": [
+              "e1d2",
+              "d4c3",
+              "d2e1",
+              "c8e6",
+              "b2b4",
+              "d8e7",
+              "f2f4",
+              "e6d7",
+              "f4f5",
+              "e8c8"
+            ]
+          },
+          "cp_regret": 312
+        },
+        {
+          "method": "puct-31",
+          "move": "c3d5",
+          "teacher": {
+            "cp": -190,
+            "mate": null,
+            "value": -0.994,
+            "pv": [
+              "c3d5",
+              "c7c6",
+              "d5f4",
+              "f8b4",
+              "c1d2",
+              "b4d2",
+              "e2d2",
+              "e8g8",
+              "e1g1",
+              "f8e8"
+            ]
+          },
+          "cp_regret": 0
+        },
+        {
+          "method": "puct-512",
+          "move": "c3d5",
+          "teacher": {
+            "cp": -190,
+            "mate": null,
+            "value": -0.994,
+            "pv": [
+              "c3d5",
+              "c7c6",
+              "d5f4",
+              "f8b4",
+              "c1d2",
+              "b4d2",
+              "e2d2",
+              "e8g8",
+              "e1g1",
+              "f8e8"
+            ]
+          },
+          "cp_regret": 0
+        }
+      ],
+      "comparisons": [
+        {
+          "move": "c3b5",
+          "cheap_root_value": -0.3890206217765808,
+          "large_root_value": -0.44491374492645264,
+          "search_root_value": -0.400034785,
+          "teacher": {
+            "cp": -345,
+            "mate": null,
+            "value": -1.0,
+            "pv": [
+              "c3b5",
+              "c7c6",
+              "b5a3",
+              "d8a5",
+              "e1f1",
+              "b7b5",
+              "e2d1",
+              "a5d8",
+              "c2c3",
+              "d4d3"
+            ]
+          },
+          "root_node": {
+            "id": 19,
+            "parent": 0,
+            "move": "c3b5",
+            "depth": 1,
+            "value": 0.400034785,
+            "cheap": 0.389019608,
+            "anchor": 0.448767543,
+            "anchor_weight": 0.75,
+            "prior": 0.0895517692,
+            "effective_anchor_weight": 0.75,
+            "visits": 256,
+            "solved": 2,
+            "expanded": true,
+            "corrected": true
+          },
+          "teacher_pv_coverage": [
+            {
+              "move": "c3b5",
+              "present": true,
+              "visits": 256,
+              "expanded": true,
+              "corrected": true,
+              "value": 0.400034785
+            },
+            {
+              "move": "c7c6",
+              "present": true,
+              "visits": 26,
+              "expanded": true,
+              "corrected": false,
+              "value": -0.102487586
+            },
+            {
+              "move": "b5a3",
+              "present": true,
+              "visits": 0,
+              "expanded": false,
+              "corrected": false,
+              "value": 0.360877782
+            },
+            {
+              "move": "d8a5",
+              "present": false
+            }
+          ]
+        },
+        {
+          "move": "c3d5",
+          "cheap_root_value": -0.3322235345840454,
+          "large_root_value": -0.5929895639419556,
+          "search_root_value": -0.495265573,
+          "teacher": {
+            "cp": -190,
+            "mate": null,
+            "value": -0.994,
+            "pv": [
+              "c3d5",
+              "c7c6",
+              "d5f4",
+              "f8b4",
+              "c1d2",
+              "b4d2",
+              "e2d2",
+              "e8g8",
+              "e1g1",
+              "f8e8"
+            ]
+          },
+          "root_node": {
+            "id": 20,
+            "parent": 0,
+            "move": "c3d5",
+            "depth": 1,
+            "value": 0.495265573,
+            "cheap": 0.332222968,
+            "anchor": 0.592989564,
+            "anchor_weight": 0.75,
+            "prior": 0.379806608,
+            "effective_anchor_weight": 0.75,
+            "visits": 47,
+            "solved": 2,
+            "expanded": true,
+            "corrected": true
+          },
+          "teacher_pv_coverage": [
+            {
+              "move": "c3d5",
+              "present": true,
+              "visits": 47,
+              "expanded": true,
+              "corrected": true,
+              "value": 0.495265573
+            },
+            {
+              "move": "c7c6",
+              "present": true,
+              "visits": 24,
+              "expanded": true,
+              "corrected": false,
+              "value": -0.202093571
+            },
+            {
+              "move": "d5f4",
+              "present": true,
+              "visits": 0,
+              "expanded": false,
+              "corrected": false,
+              "value": 0.500352681
+            },
+            {
+              "move": "f8b4",
+              "present": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 1,
+      "ply": 23,
+      "fen": "r3k2r/1pp1bppp/p1n5/8/3P1N2/1bP5/3N1PPP/R1B1R1K1 b kq - 1 16",
+      "original_move": "b3c2",
+      "baseline_reproduced": true,
+      "methods": [
+        {
+          "method": "baseline",
+          "move": "b3c2",
+          "root": {
+            "move": "b3c2",
+            "value": -0.0301612,
+            "selected_value": -0.0520113,
+            "decision_score": -0.0520113,
+            "proven_value": null,
+            "stats": {
+              "expanded_nodes": 512,
+              "cheap_evaluations": 16935,
+              "correction_positions": 32,
+              "nodes": 16935,
+              "terminal_nodes": 0,
+              "max_depth": 22,
+              "quiescence_nodes": 0,
+              "node_limit_hit": false
+            },
+            "leaders": [
+              {
+                "move": "b3c2",
+                "value": -0.0520113,
+                "decision_score": -0.0520113,
+                "prior": 0.514324,
+                "expansions": 448,
+                "corrected": true
+              },
+              {
+                "move": "g7g5",
+                "value": -0.198296,
+                "decision_score": -0.198296,
+                "prior": 0.00454881,
+                "expansions": 2,
+                "corrected": false
+              },
+              {
+                "move": "c6d4",
+                "value": -0.258334,
+                "decision_score": -0.258334,
+                "prior": 0.0100134,
+                "expansions": 2,
+                "corrected": true
+              },
+              {
+                "move": "b3e6",
+                "value": -0.309559,
+                "decision_score": -0.309559,
+                "prior": 0.396305,
+                "expansions": 2,
+                "corrected": true
+              },
+              {
+                "move": "a6a5",
+                "value": -0.415737,
+                "decision_score": -0.415737,
+                "prior": 0.0012339,
+                "expansions": 2,
+                "corrected": true
+              },
+              {
+                "move": "e8c8",
+                "value": -0.416276,
+                "decision_score": -0.416276,
+                "prior": 0.0159391,
+                "expansions": 2,
+                "corrected": false
+              },
+              {
+                "move": "b3a2",
+                "value": -0.489533,
+                "decision_score": -0.489533,
+                "prior": 0.00325089,
+                "expansions": 2,
+                "corrected": false
+              },
+              {
+                "move": "c6a7",
+                "value": -0.489649,
+                "decision_score": -0.489649,
+                "prior": 0.000539051,
+                "expansions": 2,
+                "corrected": false
+              }
+            ]
+          },
+          "teacher": {
+            "cp": -291,
+            "mate": null,
+            "value": -1.0,
+            "pv": [
+              "b3c2",
+              "d4d5",
+              "c6e5",
+              "e1e5",
+              "e8d7",
+              "c1a3",
+              "e7a3",
+              "a1a3",
+              "h8e8",
+              "e5e3"
+            ]
+          },
+          "cp_regret": 93
+        },
+        {
+          "method": "guarded",
+          "move": "b3c2",
+          "root": {
+            "move": "b3c2",
+            "value": -0.0301612,
+            "selected_value": -0.0520113,
+            "decision_score": -0.118501,
+            "proven_value": null,
+            "stats": {
+              "expanded_nodes": 512,
+              "cheap_evaluations": 16935,
+              "correction_positions": 32,
+              "nodes": 16935,
+              "terminal_nodes": 0,
+              "max_depth": 22,
+              "quiescence_nodes": 0,
+              "node_limit_hit": false
+            },
+            "leaders": [
+              {
+                "move": "b3c2",
+                "value": -0.0520113,
+                "decision_score": -0.118501,
+                "prior": 0.514324,
+                "expansions": 448,
+                "corrected": true
+              },
+              {
+                "move": "b3e6",
+                "value": -0.309559,
+                "decision_score": -0.402116,
+                "prior": 0.396305,
+                "expansions": 2,
+                "corrected": true
+              },
+              {
+                "move": "c6d4",
+                "value": -0.258334,
+                "decision_score": -0.718717,
+                "prior": 0.0100134,
+                "expansions": 2,
+                "corrected": true
+              },
+              {
+                "move": "g7g5",
+                "value": -0.198296,
+                "decision_score": -0.737585,
+                "prior": 0.00454881,
+                "expansions": 2,
+                "corrected": false
+              },
+              {
+                "move": "e8c8",
+                "value": -0.416276,
+                "decision_score": -0.830174,
+                "prior": 0.0159391,
+                "expansions": 2,
+                "corrected": false
+              },
+              {
+                "move": "b3a2",
+                "value": -0.489533,
+                "decision_score": -1.06242,
+                "prior": 0.00325089,
+                "expansions": 2,
+                "corrected": false
+              },
+              {
+                "move": "b3c4",
+                "value": -0.589652,
+                "decision_score": -1.07347,
+                "prior": 0.00792129,
+                "expansions": 2,
+                "corrected": false
+              },
+              {
+                "move": "a6a5",
+                "value": -0.415737,
+                "decision_score": -1.08549,
+                "prior": 0.0012339,
+                "expansions": 2,
+                "corrected": true
+              }
+            ]
+          },
+          "teacher": {
+            "cp": -291,
+            "mate": null,
+            "value": -1.0,
+            "pv": [
+              "b3c2",
+              "d4d5",
+              "c6e5",
+              "e1e5",
+              "e8d7",
+              "c1a3",
+              "e7a3",
+              "a1a3",
+              "h8e8",
+              "e5e3"
+            ]
+          },
+          "cp_regret": 93
+        },
+        {
+          "method": "aligned",
+          "move": "b3c2",
+          "root": {
+            "move": "b3c2",
+            "value": -0.028208,
+            "selected_value": -0.0441982,
+            "decision_score": -0.110688,
+            "proven_value": null,
+            "stats": {
+              "expanded_nodes": 512,
+              "cheap_evaluations": 17282,
+              "correction_positions": 32,
+              "nodes": 17282,
+              "terminal_nodes": 0,
+              "max_depth": 20,
+              "quiescence_nodes": 0,
+              "node_limit_hit": false
+            },
+            "leaders": [
+              {
+                "move": "b3c2",
+                "value": -0.0441982,
+                "decision_score": -0.110688,
+                "prior": 0.514324,
+                "expansions": 472,
+                "corrected": true
+              },
+              {
+                "move": "b3e6",
+                "value": -0.322262,
+                "decision_score": -0.414819,
+                "prior": 0.396305,
+                "expansions": 2,
+                "corrected": true
+              },
+              {
+                "move": "c6d4",
+                "value": -0.292744,
+                "decision_score": -0.753127,
+                "prior": 0.0100134,
+                "expansions": 2,
+                "corrected": false
+              },
+              {
+                "move": "e8c8",
+                "value": -0.416276,
+                "decision_score": -0.830174,
+                "prior": 0.0159391,
+                "expansions": 2,
+                "corrected": false
+              },
+              {
+                "move": "a8d8",
+                "value": -0.408134,
+                "decision_score": -0.956017,
+                "prior": 0.00417423,
+                "expansions": 2,
+                "corrected": true
+              },
+              {
+                "move": "b3c4",
+                "value": -0.593304,
+                "decision_score": -1.07712,
+                "prior": 0.00792129,
+                "expansions": 1,
+                "corrected": false
+              },
+              {
+                "move": "b3a4",
+                "value": -0.575843,
+                "decision_score": -1.09638,
+                "prior": 0.00548692,
+                "expansions": 1,
+                "corrected": true
+              },
+              {
+                "move": "e8d7",
+                "value": -0.604204,
+                "decision_score": -1.09896,
+                "prior": 0.0071006,
+                "expansions": 1,
+                "corrected": false
+              }
+            ]
+          },
+          "teacher": {
+            "cp": -291,
+            "mate": null,
+            "value": -1.0,
+            "pv": [
+              "b3c2",
+              "d4d5",
+              "c6e5",
+              "e1e5",
+              "e8d7",
+              "c1a3",
+              "e7a3",
+              "a1a3",
+              "h8e8",
+              "e5e3"
+            ]
+          },
+          "cp_regret": 93
+        },
+        {
+          "method": "oracle-WDL",
+          "move": "b3e6",
+          "root": {
+            "move": "b3e6",
+            "value": -0.899485,
+            "selected_value": -0.78694,
+            "decision_score": -0.78694,
+            "proven_value": null,
+            "stats": {
+              "expanded_nodes": 512,
+              "cheap_evaluations": 17364,
+              "correction_positions": 32,
+              "nodes": 17364,
+              "terminal_nodes": 0,
+              "max_depth": 9,
+              "quiescence_nodes": 0,
+              "node_limit_hit": false
+            },
+            "leaders": [
+              {
+                "move": "b3e6",
+                "value": -0.78694,
+                "decision_score": -0.78694,
+                "prior": 0.396305,
+                "expansions": 18,
+                "corrected": true
+              },
+              {
+                "move": "f7f5",
+                "value": -0.817928,
+                "decision_score": -0.817928,
+                "prior": 0.000522466,
+                "expansions": 23,
+                "corrected": false
+              },
+              {
+                "move": "b3c2",
+                "value": -0.819808,
+                "decision_score": -0.819808,
+                "prior": 0.514324,
+                "expansions": 38,
+                "corrected": true
+              },
+              {
+                "move": "a8a7",
+                "value": -0.819896,
+                "decision_score": -0.819896,
+                "prior": 0.000159343,
+                "expansions": 8,
+                "corrected": false
+              },
+              {
+                "move": "b3d5",
+                "value": -0.820518,
+                "decision_score": -0.820518,
+                "prior": 0.0101711,
+                "expansions": 7,
+                "corrected": false
+              },
+              {
+                "move": "c6d4",
+                "value": -0.826028,
+                "decision_score": -0.826028,
+                "prior": 0.0100134,
+                "expansions": 3,
+                "corrected": true
+              },
+              {
+                "move": "g7g5",
+                "value": -0.850902,
+                "decision_score": -0.850902,
+                "prior": 0.00454881,
+                "expansions": 55,
+                "corrected": true
+              },
+              {
+                "move": "b3d1",
+                "value": -0.877604,
+                "decision_score": -0.877604,
+                "prior": 0.000946063,
+                "expansions": 24,
+                "corrected": true
+              }
+            ]
+          },
+          "teacher": {
+            "cp": -299,
+            "mate": null,
+            "value": -1.0,
+            "pv": [
+              "b3e6",
+              "d4d5",
+              "e6d5",
+              "f4d5",
+              "e8d7",
+              "d2c4",
+              "e7d8",
+              "c1f4",
+              "b7b5",
+              "c4d2"
+            ]
+          },
+          "cp_regret": 101
+        },
+        {
+          "method": "puct-31",
+          "move": "b3c2",
+          "teacher": {
+            "cp": -291,
+            "mate": null,
+            "value": -1.0,
+            "pv": [
+              "b3c2",
+              "d4d5",
+              "c6e5",
+              "e1e5",
+              "e8d7",
+              "c1a3",
+              "e7a3",
+              "a1a3",
+              "h8e8",
+              "e5e3"
+            ]
+          },
+          "cp_regret": 93
+        },
+        {
+          "method": "puct-512",
+          "move": "b3c2",
+          "teacher": {
+            "cp": -291,
+            "mate": null,
+            "value": -1.0,
+            "pv": [
+              "b3c2",
+              "d4d5",
+              "c6e5",
+              "e1e5",
+              "e8d7",
+              "c1a3",
+              "e7a3",
+              "a1a3",
+              "h8e8",
+              "e5e3"
+            ]
+          },
+          "cp_regret": 93
+        }
+      ],
+      "comparisons": [
+        {
+          "move": "b3c2",
+          "cheap_root_value": 0.26273515820503235,
+          "large_root_value": -0.03328369930386543,
+          "search_root_value": -0.0520113483,
+          "teacher": {
+            "cp": -291,
+            "mate": null,
+            "value": -1.0,
+            "pv": [
+              "b3c2",
+              "d4d5",
+              "c6e5",
+              "e1e5",
+              "e8d7",
+              "c1a3",
+              "e7a3",
+              "a1a3",
+              "h8e8",
+              "e5e3"
+            ]
+          },
+          "root_node": {
+            "id": 24,
+            "parent": 0,
+            "move": "b3c2",
+            "depth": 1,
+            "value": 0.0520113483,
+            "cheap": -0.262735873,
+            "anchor": 0.0329244249,
+            "anchor_weight": 0.75,
+            "prior": 0.514324307,
+            "effective_anchor_weight": 0.75,
+            "visits": 448,
+            "solved": 2,
+            "expanded": true,
+            "corrected": true
+          },
+          "teacher_pv_coverage": [
+            {
+              "move": "b3c2",
+              "present": true,
+              "visits": 448,
+              "expanded": true,
+              "corrected": true,
+              "value": 0.0520113483
+            },
+            {
+              "move": "d4d5",
+              "present": true,
+              "visits": 1,
+              "expanded": true,
+              "corrected": false,
+              "value": 0.368474245
+            },
+            {
+              "move": "c6e5",
+              "present": true,
+              "visits": 0,
+              "expanded": false,
+              "corrected": false,
+              "value": -0.00172507588
+            },
+            {
+              "move": "e1e5",
+              "present": false
+            }
+          ]
+        },
+        {
+          "move": "g7g5",
+          "cheap_root_value": -0.04596623405814171,
+          "large_root_value": -0.1119920089840889,
+          "search_root_value": -0.198296309,
+          "teacher": {
+            "cp": -198,
+            "mate": null,
+            "value": -0.996,
+            "pv": [
+              "g7g5",
+              "d2b3",
+              "g5f4",
+              "d4d5",
+              "c6a7",
+              "b3c5",
+              "e8f8",
+              "c5b7",
+              "a7b5",
+              "c1f4"
+            ]
+          },
+          "root_node": {
+            "id": 13,
+            "parent": 0,
+            "move": "g7g5",
+            "depth": 1,
+            "value": 0.198296309,
+            "cheap": 0.0459657423,
+            "anchor": 0,
+            "anchor_weight": 0,
+            "prior": 0.00454881461,
+            "effective_anchor_weight": 0,
+            "visits": 2,
+            "solved": 2,
+            "expanded": true,
+            "corrected": false
+          },
+          "teacher_pv_coverage": [
+            {
+              "move": "g7g5",
+              "present": true,
+              "visits": 2,
+              "expanded": true,
+              "corrected": false,
+              "value": 0.198296309
+            },
+            {
+              "move": "d2b3",
+              "present": true,
+              "visits": 1,
+              "expanded": true,
+              "corrected": false,
+              "value": -0.124965236
+            },
+            {
+              "move": "g5f4",
+              "present": true,
+              "visits": 0,
+              "expanded": false,
+              "corrected": false,
+              "value": 0.124965236
+            },
+            {
+              "move": "d4d5",
+              "present": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 2,
+      "ply": 16,
+      "fen": "2k1rb1r/1ppb2pp/p4n2/2p2p2/4P3/2N1BP2/PPP1N1PP/2KR3R w - - 2 13",
+      "original_move": "e3g5",
+      "baseline_reproduced": true,
+      "methods": [
+        {
+          "method": "baseline",
+          "move": "e3g5",
+          "root": {
+            "move": "e3g5",
+            "value": 0.0067246,
+            "selected_value": -0.0101113,
+            "decision_score": -0.0101113,
+            "proven_value": null,
+            "stats": {
+              "expanded_nodes": 512,
+              "cheap_evaluations": 15872,
+              "correction_positions": 32,
+              "nodes": 15872,
+              "terminal_nodes": 0,
+              "max_depth": 10,
+              "quiescence_nodes": 0,
+              "node_limit_hit": false
+            },
+            "leaders": [
+              {
+                "move": "e3g5",
+                "value": -0.0101113,
+                "decision_score": -0.0101113,
+                "prior": 0.216042,
+                "expansions": 2,
+                "corrected": true
+              },
+              {
+                "move": "e2f4",
+                "value": -0.0172943,
+                "decision_score": -0.0172943,
+                "prior": 0.066238,
+                "expansions": 358,
+                "corrected": true
+              },
+              {
+                "move": "e4e5",
+                "value": -0.0292806,
+                "decision_score": -0.0292806,
+                "prior": 0.013669,
+                "expansions": 19,
+                "corrected": true
+              },
+              {
+                "move": "h1f1",
+                "value": -0.035305,
+                "decision_score": -0.035305,
+                "prior": 0.0170113,
+                "expansions": 20,
+                "corrected": true
+              },
+              {
+                "move": "h1e1",
+                "value": -0.0543203,
+                "decision_score": -0.0543203,
+                "prior": 0.110254,
+                "expansions": 32,
+                "corrected": true
+              },
+              {
+                "move": "e3f4",
+                "value": -0.0696522,
+                "decision_score": -0.0696522,
+                "prior": 0.185564,
+                "expansions": 2,
+                "corrected": true
+              },
+              {
+                "move": "h2h3",
+                "value": -0.0725267,
+                "decision_score": -0.0725267,
+                "prior": 0.0189775,
+                "expansions": 2,
+                "corrected": true
+              },
+              {
+                "move": "b2b3",
+                "value": -0.0774765,
+                "decision_score": -0.0774765,
+                "prior": 0.0117834,
+                "expansions": 2,
+                "corrected": true
+              }
+            ]
+          },
+          "teacher": {
+            "cp": -181,
+            "mate": null,
+            "value": -0.99,
+            "pv": [
+              "e3g5",
+              "f5e4",
+              "g5f6",
+              "e4f3",
+              "g2f3",
+              "g7f6",
+              "e2g3",
+              "f6f5",
+              "c3d5",
+              "f8h6"
+            ]
+          },
+          "cp_regret": 167
+        },
+        {
+          "method": "guarded",
+          "move": "e3g5",
+          "root": {
+            "move": "e3g5",
+            "value": 0.0067246,
+            "selected_value": -0.0101113,
+            "decision_score": -0.163339,
+            "proven_value": null,
+            "stats": {
+              "expanded_nodes": 512,
+              "cheap_evaluations": 15872,
+              "correction_positions": 32,
+              "nodes": 15872,
+              "terminal_nodes": 0,
+              "max_depth": 10,
+              "quiescence_nodes": 0,
+              "node_limit_hit": false
+            },
+            "leaders": [
+              {
+                "move": "e3g5",
+                "value": -0.0101113,
+                "decision_score": -0.163339,
+                "prior": 0.216042,
+                "expansions": 2,
+                "corrected": true
+              },
+              {
+                "move": "e3f4",
+                "value": -0.0696522,
+                "decision_score": -0.238088,
+                "prior": 0.185564,
+                "expansions": 2,
+                "corrected": true
+              },
+              {
+                "move": "h1e1",
+                "value": -0.0543203,
+                "decision_score": -0.274817,
+                "prior": 0.110254,
+                "expansions": 32,
+                "corrected": true
+              },
+              {
+                "move": "e2f4",
+                "value": -0.0172943,
+                "decision_score": -0.288744,
+                "prior": 0.066238,
+                "expansions": 358,
+                "corrected": true
+              },
+              {
+                "move": "e2g3",
+                "value": -0.0861927,
+                "decision_score": -0.356795,
+                "prior": 0.0668018,
+                "expansions": 2,
+                "corrected": true
+              },
+              {
+                "move": "h1f1",
+                "value": -0.035305,
+                "decision_score": -0.442693,
+                "prior": 0.0170113,
+                "expansions": 20,
+                "corrected": true
+              },
+              {
+                "move": "e4e5",
+                "value": -0.0292806,
+                "decision_score": -0.458543,
+                "prior": 0.013669,
+                "expansions": 19,
+                "corrected": true
+              },
+              {
+                "move": "h2h3",
+                "value": -0.0725267,
+                "decision_score": -0.468977,
+                "prior": 0.0189775,
+                "expansions": 2,
+                "corrected": true
+              }
+            ]
+          },
+          "teacher": {
+            "cp": -181,
+            "mate": null,
+            "value": -0.99,
+            "pv": [
+              "e3g5",
+              "f5e4",
+              "g5f6",
+              "e4f3",
+              "g2f3",
+              "g7f6",
+              "e2g3",
+              "f6f5",
+              "c3d5",
+              "f8h6"
+            ]
+          },
+          "cp_regret": 167
+        },
+        {
+          "method": "aligned",
+          "move": "e3g5",
+          "root": {
+            "move": "e3g5",
+            "value": 0.0252158,
+            "selected_value": 0.0366084,
+            "decision_score": -0.11662,
+            "proven_value": null,
+            "stats": {
+              "expanded_nodes": 512,
+              "cheap_evaluations": 14513,
+              "correction_positions": 32,
+              "nodes": 14513,
+              "terminal_nodes": 0,
+              "max_depth": 11,
+              "quiescence_nodes": 0,
+              "node_limit_hit": false
+            },
+            "leaders": [
+              {
+                "move": "e3g5",
+                "value": 0.0366084,
+                "decision_score": -0.11662,
+                "prior": 0.216042,
+                "expansions": 361,
+                "corrected": true
+              },
+              {
+                "move": "e3f4",
+                "value": -0.0402259,
+                "decision_score": -0.208661,
+                "prior": 0.185564,
+                "expansions": 109,
+                "corrected": true
+              },
+              {
+                "move": "e2f4",
+                "value": -0.054119,
+                "decision_score": -0.325569,
+                "prior": 0.066238,
+                "expansions": 2,
+                "corrected": true
+              },
+              {
+                "move": "e2g3",
+                "value": -0.0861927,
+                "decision_score": -0.356795,
+                "prior": 0.0668018,
+                "expansions": 1,
+                "corrected": true
+              },
+              {
+                "move": "b2b3",
+                "value": 0.0638534,
+                "decision_score": -0.380253,
+                "prior": 0.0117834,
+                "expansions": 2,
+                "corrected": false
+              },
+              {
+                "move": "h1e1",
+                "value": -0.169551,
+                "decision_score": -0.390048,
+                "prior": 0.110254,
+                "expansions": 1,
+                "corrected": true
+              },
+              {
+                "move": "h2h3",
+                "value": -0.0903113,
+                "decision_score": -0.486761,
+                "prior": 0.0189775,
+                "expansions": 1,
+                "corrected": false
+              },
+              {
+                "move": "e3f2",
+                "value": -0.167218,
+                "decision_score": -0.501949,
+                "prior": 0.0351787,
+                "expansions": 1,
+                "corrected": false
+              }
+            ]
+          },
+          "teacher": {
+            "cp": -181,
+            "mate": null,
+            "value": -0.99,
+            "pv": [
+              "e3g5",
+              "f5e4",
+              "g5f6",
+              "e4f3",
+              "g2f3",
+              "g7f6",
+              "e2g3",
+              "f6f5",
+              "c3d5",
+              "f8h6"
+            ]
+          },
+          "cp_regret": 167
+        },
+        {
+          "method": "oracle-WDL",
+          "move": "e2g3",
+          "root": {
+            "move": "e2g3",
+            "value": -0.0109403,
+            "selected_value": -0.00176117,
+            "decision_score": -0.00176117,
+            "proven_value": null,
+            "stats": {
+              "expanded_nodes": 512,
+              "cheap_evaluations": 18515,
+              "correction_positions": 32,
+              "nodes": 18515,
+              "terminal_nodes": 0,
+              "max_depth": 9,
+              "quiescence_nodes": 0,
+              "node_limit_hit": false
+            },
+            "leaders": [
+              {
+                "move": "e2g3",
+                "value": -0.00176117,
+                "decision_score": -0.00176117,
+                "prior": 0.0668018,
+                "expansions": 305,
+                "corrected": true
+              },
+              {
+                "move": "e3g5",
+                "value": -0.141122,
+                "decision_score": -0.141122,
+                "prior": 0.216042,
+                "expansions": 2,
+                "corrected": false
+              },
+              {
+                "move": "c3b5",
+                "value": -0.148957,
+                "decision_score": -0.148957,
+                "prior": 4.26511e-07,
+                "expansions": 2,
+                "corrected": false
+              },
+              {
+                "move": "e3g1",
+                "value": -0.159207,
+                "decision_score": -0.159207,
+                "prior": 0.00345606,
+                "expansions": 2,
+                "corrected": false
+              },
+              {
+                "move": "f3f4",
+                "value": -0.175843,
+                "decision_score": -0.175843,
+                "prior": 0.000412767,
+                "expansions": 2,
+                "corrected": false
+              },
+              {
+                "move": "c3b1",
+                "value": -0.200534,
+                "decision_score": -0.200534,
+                "prior": 0.000156669,
+                "expansions": 2,
+                "corrected": false
+              },
+              {
+                "move": "b2b4",
+                "value": -0.200759,
+                "decision_score": -0.200759,
+                "prior": 3.60672e-05,
+                "expansions": 2,
+                "corrected": false
+              },
+              {
+                "move": "d1d7",
+                "value": -0.202327,
+                "decision_score": -0.202327,
+                "prior": 0.00345606,
+                "expansions": 2,
+                "corrected": false
+              }
+            ]
+          },
+          "teacher": {
+            "cp": -14,
+            "mate": null,
+            "value": -0.008,
+            "pv": [
+              "e2g3"
+            ]
+          },
+          "cp_regret": 0
+        },
+        {
+          "method": "puct-31",
+          "move": "e3g5",
+          "teacher": {
+            "cp": -181,
+            "mate": null,
+            "value": -0.99,
+            "pv": [
+              "e3g5",
+              "f5e4",
+              "g5f6",
+              "e4f3",
+              "g2f3",
+              "g7f6",
+              "e2g3",
+              "f6f5",
+              "c3d5",
+              "f8h6"
+            ]
+          },
+          "cp_regret": 167
+        },
+        {
+          "method": "puct-512",
+          "move": "e3g5",
+          "teacher": {
+            "cp": -181,
+            "mate": null,
+            "value": -0.99,
+            "pv": [
+              "e3g5",
+              "f5e4",
+              "g5f6",
+              "e4f3",
+              "g2f3",
+              "g7f6",
+              "e2g3",
+              "f6f5",
+              "c3d5",
+              "f8h6"
+            ]
+          },
+          "cp_regret": 167
+        }
+      ],
+      "comparisons": [
+        {
+          "move": "e3g5",
+          "cheap_root_value": 0.054058950394392014,
+          "large_root_value": 0.004565747454762459,
+          "search_root_value": -0.010111304,
+          "teacher": {
+            "cp": -181,
+            "mate": null,
+            "value": -0.99,
+            "pv": [
+              "e3g5",
+              "f5e4",
+              "g5f6",
+              "e4f3",
+              "g2f3",
+              "g7f6",
+              "e2g3",
+              "f6f5",
+              "c3d5",
+              "f8h6"
+            ]
+          },
+          "root_node": {
+            "id": 28,
+            "parent": 0,
+            "move": "e3g5",
+            "depth": 1,
+            "value": 0.010111304,
+            "cheap": -0.0540591888,
+            "anchor": -0.00441410486,
+            "anchor_weight": 0.75,
+            "prior": 0.21604228,
+            "effective_anchor_weight": 0.75,
+            "visits": 2,
+            "solved": 2,
+            "expanded": true,
+            "corrected": true
+          },
+          "teacher_pv_coverage": [
+            {
+              "move": "e3g5",
+              "present": true,
+              "visits": 2,
+              "expanded": true,
+              "corrected": true,
+              "value": 0.010111304
+            },
+            {
+              "move": "f5e4",
+              "present": true,
+              "visits": 0,
+              "expanded": false,
+              "corrected": true,
+              "value": -0.0536875315
+            },
+            {
+              "move": "g5f6",
+              "present": false
+            }
+          ]
+        },
+        {
+          "move": "e2g3",
+          "cheap_root_value": 0.14889676868915558,
+          "large_root_value": -0.1214561015367508,
+          "search_root_value": -0.0861927047,
+          "teacher": {
+            "cp": -14,
+            "mate": null,
+            "value": -0.008,
+            "pv": [
+              "e2g3"
+            ]
+          },
+          "root_node": {
+            "id": 15,
+            "parent": 0,
+            "move": "e2g3",
+            "depth": 1,
+            "value": 0.0861927047,
+            "cheap": -0.148895934,
+            "anchor": 0.118528329,
+            "anchor_weight": 0.75,
+            "prior": 0.0668017864,
+            "effective_anchor_weight": 0.75,
+            "visits": 2,
+            "solved": 2,
+            "expanded": true,
+            "corrected": true
+          },
+          "teacher_pv_coverage": [
+            {
+              "move": "e2g3",
+              "present": true,
+              "visits": 2,
+              "expanded": true,
+              "corrected": true,
+              "value": 0.0861927047
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": 3,
+      "ply": 57,
+      "fen": "1k6/2pr1bN1/1p3p2/p6p/1n2P2P/1P3PR1/2P1N1P1/2K5 b - - 0 33",
+      "original_move": "f7b3",
+      "baseline_reproduced": true,
+      "methods": [
+        {
+          "method": "baseline",
+          "move": "f7b3",
+          "root": {
+            "move": "f7b3",
+            "value": -0.381159,
+            "selected_value": -0.225643,
+            "decision_score": -0.225643,
+            "proven_value": null,
+            "stats": {
+              "expanded_nodes": 512,
+              "cheap_evaluations": 12002,
+              "correction_positions": 32,
+              "nodes": 12005,
+              "terminal_nodes": 3,
+              "max_depth": 12,
+              "quiescence_nodes": 0,
+              "node_limit_hit": false
+            },
+            "leaders": [
+              {
+                "move": "f7b3",
+                "value": -0.225643,
+                "decision_score": -0.225643,
+                "prior": 0.0206672,
+                "expansions": 123,
+                "corrected": true
+              },
+              {
+                "move": "b8b7",
+                "value": -0.269898,
+                "decision_score": -0.269898,
+                "prior": 0.130329,
+                "expansions": 282,
+                "corrected": true
+              },
+              {
+                "move": "d7d8",
+                "value": -0.376404,
+                "decision_score": -0.376404,
+                "prior": 0.0359898,
+                "expansions": 2,
+                "corrected": true
+              },
+              {
+                "move": "a5a4",
+                "value": -0.401107,
+                "decision_score": -0.401107,
+                "prior": 0.174892,
+                "expansions": 14,
+                "corrected": true
+              },
+              {
+                "move": "b4c2",
+                "value": -0.407601,
+                "decision_score": -0.407601,
+                "prior": 0.00587517,
+                "expansions": 21,
+                "corrected": true
+              },
+              {
+                "move": "b8c8",
+                "value": -0.415901,
+                "decision_score": -0.415901,
+                "prior": 0.0796911,
+                "expansions": 2,
+                "corrected": true
+              },
+              {
+                "move": "b4a2",
+                "value": -0.498483,
+                "decision_score": -0.498483,
+                "prior": 0.10171,
+                "expansions": 2,
+                "corrected": true
+              },
+              {
+                "move": "b8a7",
+                "value": -0.510879,
+                "decision_score": -0.510879,
+                "prior": 0.0332851,
+                "expansions": 26,
+                "corrected": true
+              }
+            ]
+          },
+          "teacher": {
+            "cp": -245,
+            "mate": null,
+            "value": -1.0,
+            "pv": [
+              "f7b3",
+              "c2b3"
+            ]
+          },
+          "cp_regret": 154
+        },
+        {
+          "method": "guarded",
+          "move": "b8b7",
+          "root": {
+            "move": "b8b7",
+            "value": -0.381159,
+            "selected_value": -0.269898,
+            "decision_score": -0.473668,
+            "proven_value": null,
+            "stats": {
+              "expanded_nodes": 512,
+              "cheap_evaluations": 12002,
+              "correction_positions": 32,
+              "nodes": 12005,
+              "terminal_nodes": 3,
+              "max_depth": 12,
+              "quiescence_nodes": 0,
+              "node_limit_hit": false
+            },
+            "leaders": [
+              {
+                "move": "b8b7",
+                "value": -0.269898,
+                "decision_score": -0.473668,
+                "prior": 0.130329,
+                "expansions": 282,
+                "corrected": true
+              },
+              {
+                "move": "a5a4",
+                "value": -0.401107,
+                "decision_score": -0.575466,
+                "prior": 0.174892,
+                "expansions": 14,
+                "corrected": true
+              },
+              {
+                "move": "f7b3",
+                "value": -0.225643,
+                "decision_score": -0.613564,
+                "prior": 0.0206672,
+                "expansions": 123,
+                "corrected": true
+              },
+              {
+                "move": "b8c8",
+                "value": -0.415901,
+                "decision_score": -0.668861,
+                "prior": 0.0796911,
+                "expansions": 2,
+                "corrected": true
+              },
+              {
+                "move": "d7d8",
+                "value": -0.376404,
+                "decision_score": -0.708856,
+                "prior": 0.0359898,
+                "expansions": 2,
+                "corrected": true
+              },
+              {
+                "move": "b4a2",
+                "value": -0.498483,
+                "decision_score": -0.727047,
+                "prior": 0.10171,
+                "expansions": 2,
+                "corrected": true
+              },
+              {
+                "move": "b6b5",
+                "value": -0.514666,
+                "decision_score": -0.752423,
+                "prior": 0.0927755,
+                "expansions": 2,
+                "corrected": true
+              },
+              {
+                "move": "c7c5",
+                "value": -0.653076,
+                "decision_score": -0.840323,
+                "prior": 0.153742,
+                "expansions": 2,
+                "corrected": true
+              }
+            ]
+          },
+          "teacher": {
+            "cp": -226,
+            "mate": null,
+            "value": -0.999,
+            "pv": [
+              "b8b7",
+              "g7f5",
+              "b6b5",
+              "e2c3",
+              "c7c6",
+              "g3g7",
+              "b7c7",
+              "g2g4",
+              "f7e6",
+              "g7d7"
+            ]
+          },
+          "cp_regret": 135
+        },
+        {
+          "method": "aligned",
+          "move": "b8b7",
+          "root": {
+            "move": "b8b7",
+            "value": -0.382747,
+            "selected_value": -0.231994,
+            "decision_score": -0.435764,
+            "proven_value": null,
+            "stats": {
+              "expanded_nodes": 512,
+              "cheap_evaluations": 11274,
+              "correction_positions": 32,
+              "nodes": 11276,
+              "terminal_nodes": 2,
+              "max_depth": 19,
+              "quiescence_nodes": 0,
+              "node_limit_hit": false
+            },
+            "leaders": [
+              {
+                "move": "b8b7",
+                "value": -0.231994,
+                "decision_score": -0.435764,
+                "prior": 0.130329,
+                "expansions": 455,
+                "corrected": true
+              },
+              {
+                "move": "a5a4",
+                "value": -0.412849,
+                "decision_score": -0.587208,
+                "prior": 0.174892,
+                "expansions": 15,
+                "corrected": true
+              },
+              {
+                "move": "b6b5",
+                "value": -0.407847,
+                "decision_score": -0.645604,
+                "prior": 0.0927755,
+                "expansions": 2,
+                "corrected": false
+              },
+              {
+                "move": "b8c8",
+                "value": -0.415901,
+                "decision_score": -0.668861,
+                "prior": 0.0796911,
+                "expansions": 2,
+                "corrected": true
+              },
+              {
+                "move": "d7d8",
+                "value": -0.376404,
+                "decision_score": -0.708856,
+                "prior": 0.0359898,
+                "expansions": 2,
+                "corrected": true
+              },
+              {
+                "move": "b4a2",
+                "value": -0.498483,
+                "decision_score": -0.727047,
+                "prior": 0.10171,
+                "expansions": 2,
+                "corrected": true
+              },
+              {
+                "move": "d7e7",
+                "value": -0.341061,
+                "decision_score": -0.811013,
+                "prior": 0.00909965,
+                "expansions": 2,
+                "corrected": false
+              },
+              {
+                "move": "b8a8",
+                "value": -0.287748,
+                "decision_score": -0.8202,
+                "prior": 0.00487069,
+                "expansions": 2,
+                "corrected": false
+              }
+            ]
+          },
+          "teacher": {
+            "cp": -226,
+            "mate": null,
+            "value": -0.999,
+            "pv": [
+              "b8b7",
+              "g7f5",
+              "b6b5",
+              "e2c3",
+              "c7c6",
+              "g3g7",
+              "b7c7",
+              "g2g4",
+              "f7e6",
+              "g7d7"
+            ]
+          },
+          "cp_regret": 135
+        },
+        {
+          "method": "oracle-WDL",
+          "move": "b4a2",
+          "root": {
+            "move": "b4a2",
+            "value": -0.170395,
+            "selected_value": -0.28558,
+            "decision_score": -0.28558,
+            "proven_value": null,
+            "stats": {
+              "expanded_nodes": 512,
+              "cheap_evaluations": 12179,
+              "correction_positions": 32,
+              "nodes": 12180,
+              "terminal_nodes": 1,
+              "max_depth": 10,
+              "quiescence_nodes": 0,
+              "node_limit_hit": false
+            },
+            "leaders": [
+              {
+                "move": "b4a2",
+                "value": -0.28558,
+                "decision_score": -0.28558,
+                "prior": 0.10171,
+                "expansions": 361,
+                "corrected": true
+              },
+              {
+                "move": "b6b5",
+                "value": -0.573672,
+                "decision_score": -0.573672,
+                "prior": 0.0927755,
+                "expansions": 2,
+                "corrected": true
+              },
+              {
+                "move": "f7b3",
+                "value": -0.756967,
+                "decision_score": -0.756967,
+                "prior": 0.0206672,
+                "expansions": 2,
+                "corrected": true
+              },
+              {
+                "move": "b8b7",
+                "value": -0.763945,
+                "decision_score": -0.763945,
+                "prior": 0.130329,
+                "expansions": 27,
+                "corrected": true
+              },
+              {
+                "move": "b8a7",
+                "value": -0.790426,
+                "decision_score": -0.790426,
+                "prior": 0.0332851,
+                "expansions": 61,
+                "corrected": true
+              },
+              {
+                "move": "d7d8",
+                "value": -0.791584,
+                "decision_score": -0.791584,
+                "prior": 0.0359898,
+                "expansions": 2,
+                "corrected": true
+              },
+              {
+                "move": "b8c8",
+                "value": -0.801825,
+                "decision_score": -0.801825,
+                "prior": 0.0796911,
+                "expansions": 2,
+                "corrected": true
+              },
+              {
+                "move": "a5a4",
+                "value": -0.80555,
+                "decision_score": -0.80555,
+                "prior": 0.174892,
+                "expansions": 14,
+                "corrected": true
+              }
+            ]
+          },
+          "teacher": {
+            "cp": -91,
+            "mate": null,
+            "value": -0.417,
+            "pv": [
+              "b4a2",
+              "c1b1",
+              "a2b4",
+              "g7f5",
+              "d7d2",
+              "e2d4",
+              "a5a4",
+              "b3a4",
+              "c7c5",
+              "g3g7"
+            ]
+          },
+          "cp_regret": 0
+        },
+        {
+          "method": "puct-31",
+          "move": "b8b7",
+          "teacher": {
+            "cp": -226,
+            "mate": null,
+            "value": -0.999,
+            "pv": [
+              "b8b7",
+              "g7f5",
+              "b6b5",
+              "e2c3",
+              "c7c6",
+              "g3g7",
+              "b7c7",
+              "g2g4",
+              "f7e6",
+              "g7d7"
+            ]
+          },
+          "cp_regret": 135
+        },
+        {
+          "method": "puct-512",
+          "move": "a5a4",
+          "teacher": {
+            "cp": -291,
+            "mate": null,
+            "value": -1.0,
+            "pv": [
+              "a5a4",
+              "b3a4",
+              "b4a2",
+              "c1b2",
+              "a2b4",
+              "e2f4",
+              "d7d1",
+              "g7f5",
+              "d1e1",
+              "b2c3"
+            ]
+          },
+          "cp_regret": 200
+        }
+      ],
+      "comparisons": [
+        {
+          "move": "f7b3",
+          "cheap_root_value": 0.37484240531921387,
+          "large_root_value": -0.11313420534133911,
+          "search_root_value": -0.225643069,
+          "teacher": {
+            "cp": -245,
+            "mate": null,
+            "value": -1.0,
+            "pv": [
+              "f7b3",
+              "c2b3"
+            ]
+          },
+          "root_node": {
+            "id": 16,
+            "parent": 0,
+            "move": "f7b3",
+            "depth": 1,
+            "value": 0.225643069,
+            "cheap": -0.374843568,
+            "anchor": 0.112178087,
+            "anchor_weight": 0.75,
+            "prior": 0.0206672102,
+            "effective_anchor_weight": 0.75,
+            "visits": 123,
+            "solved": 2,
+            "expanded": true,
+            "corrected": true
+          },
+          "teacher_pv_coverage": [
+            {
+              "move": "f7b3",
+              "present": true,
+              "visits": 123,
+              "expanded": true,
+              "corrected": true,
+              "value": 0.225643069
+            },
+            {
+              "move": "c2b3",
+              "present": true,
+              "visits": 122,
+              "expanded": true,
+              "corrected": true,
+              "value": -0.566038013
+            }
+          ]
+        },
+        {
+          "move": "b4a2",
+          "cheap_root_value": -0.3076600134372711,
+          "large_root_value": -0.5943797826766968,
+          "search_root_value": -0.498483479,
+          "teacher": {
+            "cp": -91,
+            "mate": null,
+            "value": -0.417,
+            "pv": [
+              "b4a2",
+              "c1b1",
+              "a2b4",
+              "g7f5",
+              "d7d2",
+              "e2d4",
+              "a5a4",
+              "b3a4",
+              "c7c5",
+              "g3g7"
+            ]
+          },
+          "root_node": {
+            "id": 10,
+            "parent": 0,
+            "move": "b4a2",
+            "depth": 1,
+            "value": 0.498483479,
+            "cheap": 0.307659954,
+            "anchor": 0.594379783,
+            "anchor_weight": 0.75,
+            "prior": 0.101709865,
+            "effective_anchor_weight": 0.75,
+            "visits": 2,
+            "solved": 2,
+            "expanded": true,
+            "corrected": true
+          },
+          "teacher_pv_coverage": [
+            {
+              "move": "b4a2",
+              "present": true,
+              "visits": 2,
+              "expanded": true,
+              "corrected": true,
+              "value": 0.498483479
+            },
+            {
+              "move": "c1b1",
+              "present": true,
+              "visits": 0,
+              "expanded": false,
+              "corrected": false,
+              "value": -0.210794568
+            },
+            {
+              "move": "a2b4",
+              "present": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "note": "Cold replays with full histories; teacher oracle is diagnostic only; timings not used."
+}

@@ -1,0 +1,44 @@
+{
+  "name": "curriculum-v3",
+  "additional_optimizer_steps": 8000,
+  "stage_a": 4000,
+  "stage_b": 4000,
+  "hard_training_positions": 200000,
+  "hard_validation_positions": 2000,
+  "hard_candidate_pool": 600000,
+  "teacher_nodes": 200000,
+  "teacher_coarse_nodes": 20000,
+  "teacher_workers": 16,
+  "stage_b_mixture": {
+    "core": 0.7,
+    "hard": 0.2,
+    "human_policy_only": 0.1
+  },
+  "evaluation": {
+    "stockfish_version": 18,
+    "nodes": 1000,
+    "skill": 20,
+    "limit_strength": false,
+    "pairs": 32,
+    "games_per_mode": 64,
+    "simulations": 512
+  },
+  "label_contract": {
+    "temperature_cp": 100,
+    "wdl_model": "sf16",
+    "ply": 32,
+    "side_to_move": true
+  },
+  "automatic_release": "Only after both training stages, both verified 64-game evaluations, and persistent artifact readback succeed",
+  "hard_waves": 4,
+  "hard_wave_training_positions": 50000,
+  "hard_wave_updates": 1000,
+  "annotation_location": "cloud-cpu-concurrent-with-gpu",
+  "teacher_instances": 2,
+  "teacher_workers_per_instance": 8,
+  "teacher_partition_boundaries": [
+    0,
+    101000,
+    202000
+  ]
+}

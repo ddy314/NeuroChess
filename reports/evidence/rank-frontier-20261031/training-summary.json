@@ -1,0 +1,215 @@
+{
+  "wdl": {
+    "best": {
+      "step": 3000,
+      "epoch": 30,
+      "seen": 3766290,
+      "seconds": 6.996639193996089,
+      "lr": 0.0004754925108177488,
+      "train": {
+        "loss": 0.2090272307395935,
+        "wdl": 0.2090272307395935,
+        "cp": 0.0932929515838623,
+        "rank": 0.633297324180603
+      },
+      "validation": {
+        "states": 31350,
+        "wdl_mse": 0.361005996631093,
+        "cp_states": 30623,
+        "cp_mae": 191.0400026124155,
+        "cp_rmse": 264.776021892577,
+        "rank_pairs": 21747,
+        "rank_accuracy": 0.6951763461626891,
+        "rank_bce": 0.605973285519129,
+        "candidate_groups": 6321,
+        "mean_sibling_cp_regret": 35.74877392817592,
+        "sibling_blunders_100": 656
+      },
+      "selection_score": 0.4822006537349188,
+      "phase": "training"
+    },
+    "last": {
+      "step": 20000,
+      "epoch": 200,
+      "seen": 25108600,
+      "seconds": 46.46953364000365,
+      "lr": 5.000000277582625e-05,
+      "train": {
+        "loss": 0.06418977677822113,
+        "wdl": 0.06418977677822113,
+        "cp": 0.09782132506370544,
+        "rank": 0.5867928862571716
+      },
+      "validation": {
+        "states": 31350,
+        "wdl_mse": 0.48169240267082836,
+        "cp_states": 30623,
+        "cp_mae": 191.0400026124155,
+        "cp_rmse": 264.776021892577,
+        "rank_pairs": 21747,
+        "rank_accuracy": 0.6766910378443004,
+        "rank_bce": 0.6621783045416246,
+        "candidate_groups": 6321,
+        "mean_sibling_cp_regret": 41.223382376206295,
+        "sibling_blunders_100": 763
+      },
+      "selection_score": 0.6141280635791533,
+      "phase": "complete"
+    },
+    "initial": {
+      "states": 31350,
+      "wdl_mse": 0.4362856992389977,
+      "cp_states": 30623,
+      "cp_mae": 191.0400026124155,
+      "cp_rmse": 264.776021892577,
+      "rank_pairs": 21747,
+      "rank_accuracy": 0.49809169080792753,
+      "rank_bce": 0.6228206663694789,
+      "candidate_groups": 6321,
+      "mean_sibling_cp_regret": 20.94921689606075,
+      "sibling_blunders_100": 369
+    }
+  },
+  "cp": {
+    "best": {
+      "step": 3000,
+      "epoch": 30,
+      "seen": 3766290,
+      "seconds": 6.952708418990369,
+      "lr": 0.0004754925108177488,
+      "train": {
+        "loss": 0.2224949449300766,
+        "wdl": 0.20003756880760193,
+        "cp": 0.044914763420820236,
+        "rank": 0.6291858553886414
+      },
+      "validation": {
+        "states": 31350,
+        "wdl_mse": 0.36169280957187,
+        "cp_states": 30623,
+        "cp_mae": 174.38681250612285,
+        "cp_rmse": 237.23755020330103,
+        "rank_pairs": 21747,
+        "rank_accuracy": 0.6965558467834644,
+        "rank_bce": 0.606990061138133,
+        "candidate_groups": 6321,
+        "mean_sibling_cp_regret": 35.3921847808891,
+        "sibling_blunders_100": 641
+      },
+      "selection_score": 0.4830908217994966,
+      "phase": "training"
+    },
+    "last": {
+      "step": 20000,
+      "epoch": 200,
+      "seen": 25108600,
+      "seconds": 47.20495088498865,
+      "lr": 5.000000277582625e-05,
+      "train": {
+        "loss": 0.06792934238910675,
+        "wdl": 0.056352175772190094,
+        "cp": 0.02315434068441391,
+        "rank": 0.5794146060943604
+      },
+      "validation": {
+        "states": 31350,
+        "wdl_mse": 0.47964051947829445,
+        "cp_states": 30623,
+        "cp_mae": 183.2711661781994,
+        "cp_rmse": 250.67978427376715,
+        "rank_pairs": 21747,
+        "rank_accuracy": 0.6674943670391318,
+        "rank_bce": 0.658899808558189,
+        "candidate_groups": 6321,
+        "mean_sibling_cp_regret": 42.09017560512577,
+        "sibling_blunders_100": 791
+      },
+      "selection_score": 0.6114204811899322,
+      "phase": "complete"
+    },
+    "initial": {
+      "states": 31350,
+      "wdl_mse": 0.4362856992389977,
+      "cp_states": 30623,
+      "cp_mae": 191.0400026124155,
+      "cp_rmse": 264.776021892577,
+      "rank_pairs": 21747,
+      "rank_accuracy": 0.49809169080792753,
+      "rank_bce": 0.6228206663694789,
+      "candidate_groups": 6321,
+      "mean_sibling_cp_regret": 20.94921689606075,
+      "sibling_blunders_100": 369
+    }
+  },
+  "cp-rank": {
+    "best": {
+      "step": 3000,
+      "epoch": 30,
+      "seen": 3766290,
+      "seconds": 7.387714456010144,
+      "lr": 0.0004754925108177488,
+      "train": {
+        "loss": 0.3633951246738434,
+        "wdl": 0.2148275375366211,
+        "cp": 0.046200964599847794,
+        "rank": 0.6273355484008789
+      },
+      "validation": {
+        "states": 31350,
+        "wdl_mse": 0.35976714357805023,
+        "cp_states": 30623,
+        "cp_mae": 173.84313873559088,
+        "cp_rmse": 237.97950180886141,
+        "rank_pairs": 21747,
+        "rank_accuracy": 0.6977514139881363,
+        "rank_bce": 0.6051273003262355,
+        "candidate_groups": 6321,
+        "mean_sibling_cp_regret": 35.34662236987818,
+        "sibling_blunders_100": 640
+      },
+      "selection_score": 0.48079260364329734,
+      "phase": "training"
+    },
+    "last": {
+      "step": 20000,
+      "epoch": 200,
+      "seen": 25108600,
+      "seconds": 46.497805395003525,
+      "lr": 5.000000277582625e-05,
+      "train": {
+        "loss": 0.18349409103393555,
+        "wdl": 0.062525175511837,
+        "cp": 0.02214132994413376,
+        "rank": 0.5494912266731262
+      },
+      "validation": {
+        "states": 31350,
+        "wdl_mse": 0.46705813272527913,
+        "cp_states": 30623,
+        "cp_mae": 184.31414704633772,
+        "cp_rmse": 251.23413242556725,
+        "rank_pairs": 21747,
+        "rank_accuracy": 0.6776566882788431,
+        "rank_bce": 0.6437577960814268,
+        "candidate_groups": 6321,
+        "mean_sibling_cp_regret": 40.21294099034963,
+        "sibling_blunders_100": 750
+      },
+      "selection_score": 0.5958096919415645,
+      "phase": "complete"
+    },
+    "initial": {
+      "states": 31350,
+      "wdl_mse": 0.4362856992389977,
+      "cp_states": 30623,
+      "cp_mae": 191.0400026124155,
+      "cp_rmse": 264.776021892577,
+      "rank_pairs": 21747,
+      "rank_accuracy": 0.49809169080792753,
+      "rank_bce": 0.6228206663694789,
+      "candidate_groups": 6321,
+      "mean_sibling_cp_regret": 20.94921689606075,
+      "sibling_blunders_100": 369
+    }
+  }
+}

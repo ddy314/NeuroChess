@@ -1,0 +1,74 @@
+{
+  "original": {
+    "core_full_validation": {
+      "positions": 51086,
+      "mse": 0.17795309356389588,
+      "mae": 0.28665922491845824,
+      "absolute_error_p90": 0.7116542160511017,
+      "material_mse": 0.3524708518149901,
+      "material_mae": 0.4046676933547065,
+      "note": "Position-hash holdout; not game/source independent or a calibrated error bound."
+    },
+    "frontier_validation": {
+      "positions": 512,
+      "mse": 0.5530071791222129,
+      "mae": 0.5699166465101371,
+      "absolute_error_p90": 1.2730821490287787,
+      "material_mse": 0.5167551096455152,
+      "material_mae": 0.5859151640825075,
+      "note": "Position-hash holdout; not game/source independent or a calibrated error bound."
+    },
+    "frontier_train": {
+      "positions": 2048,
+      "mse": 0.5707883556604952
+    }
+  },
+  "control": {
+    "core_full_validation": {
+      "positions": 51086,
+      "mse": 0.1778456682264769,
+      "mae": 0.28627548611471604,
+      "absolute_error_p90": 0.71172896027565,
+      "material_mse": 0.3524708518149901,
+      "material_mae": 0.4046676933547065,
+      "note": "Position-hash holdout; not game/source independent or a calibrated error bound."
+    },
+    "frontier_validation": {
+      "positions": 512,
+      "mse": 0.5536144452008411,
+      "mae": 0.5697714374227871,
+      "absolute_error_p90": 1.276519775390625,
+      "material_mse": 0.5167551096455152,
+      "material_mae": 0.5859151640825075,
+      "note": "Position-hash holdout; not game/source independent or a calibrated error bound."
+    },
+    "frontier_train": {
+      "positions": 2048,
+      "mse": 0.5704175789857097
+    }
+  },
+  "frontier": {
+    "core_full_validation": {
+      "positions": 51086,
+      "mse": 0.18653090875698314,
+      "mae": 0.29387580504660826,
+      "absolute_error_p90": 0.7262637615203857,
+      "material_mse": 0.3524708518149901,
+      "material_mae": 0.4046676933547065,
+      "note": "Position-hash holdout; not game/source independent or a calibrated error bound."
+    },
+    "frontier_validation": {
+      "positions": 512,
+      "mse": 0.526314016612165,
+      "mae": 0.5465013488269506,
+      "absolute_error_p90": 1.2898592472076418,
+      "material_mse": 0.5167551096455152,
+      "material_mae": 0.5859151640825075,
+      "note": "Position-hash holdout; not game/source independent or a calibrated error bound."
+    },
+    "frontier_train": {
+      "positions": 2048,
+      "mse": 0.0425980030504485
+    }
+  }
+}

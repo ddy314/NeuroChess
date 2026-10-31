@@ -1,0 +1,16 @@
+{
+  "primary": "cp-rank-local minus cp-rank",
+  "secondary": [
+    "wdl-local minus wdl",
+    "old-aligned-local minus old-aligned",
+    "cp-rank-local versus original PUCT-512 and budget-matched PUCT-31"
+  ],
+  "roots": 64,
+  "source_games": "47254..63643, after all training/validation/first-evaluation game groups",
+  "new_frontier_key_overlap": 0,
+  "change": "every 16 visits at each node, explore least-visited children; prioritize their policy priors among unvisited siblings",
+  "model_changes": false,
+  "selection": "same previously selected checkpoints; no retuning on previous 128 roots",
+  "motivation": "diagnostic root36 Qxf7+ has prior .549 but zero expansions inside a branch visited479 times",
+  "note": "Follow-up cohort; retain first-stage negative CP/ranking result separately. Not a replacement for a multi-seed study."
+}

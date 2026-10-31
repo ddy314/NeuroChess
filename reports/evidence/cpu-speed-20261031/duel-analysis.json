@@ -1,0 +1,224 @@
+{
+  "fast": {
+    "puct-31": {
+      "scheduled": 64,
+      "attempted": 64,
+      "completed": 64,
+      "truncated": 0,
+      "wins": 11,
+      "draws": 8,
+      "losses": 45,
+      "independent_completed_pairs": 32,
+      "paired_score": 0.234375,
+      "score_bootstrap95": [
+        0.15625,
+        0.3125
+      ],
+      "relative_elo": -205.64192838913294,
+      "relative_elo_bootstrap95": [
+        -292.9575039291874,
+        -136.9690723288825
+      ],
+      "score_hoeffding95": [
+        0.0,
+        0.4744556978299802
+      ],
+      "relative_elo_hoeffding95": [
+        null,
+        -17.765466159829742
+      ],
+      "pentanomial": [
+        14,
+        6,
+        12,
+        0,
+        0
+      ],
+      "rating_note": "Relative to this opponent, budgets and opening distribution only. Bootstrap pairs, not individual games. Null Elo endpoints mean unbounded; identical pair outcomes make bootstrap degenerate; consult conservative interval.",
+      "work": {
+        "optimized": {
+          "choices": 2561,
+          "large_model_positions": 63905,
+          "mean_large_positions": 24.95314330339711,
+          "seconds": 100.60308993147919,
+          "seconds_per_choice": 0.03928273718527106
+        },
+        "puct-31": {
+          "choices": 2575,
+          "large_model_positions": 71029,
+          "mean_large_positions": 27.584077669902914,
+          "seconds": 145.07360375086137,
+          "seconds_per_choice": 0.05633926359256752
+        }
+      }
+    },
+    "puct-512": {
+      "scheduled": 64,
+      "attempted": 64,
+      "completed": 64,
+      "truncated": 0,
+      "wins": 1,
+      "draws": 7,
+      "losses": 56,
+      "independent_completed_pairs": 32,
+      "paired_score": 0.0703125,
+      "score_bootstrap95": [
+        0.0234375,
+        0.125
+      ],
+      "relative_elo": -448.52178078128236,
+      "relative_elo_bootstrap95": [
+        -647.9155033153576,
+        -338.03921600570277
+      ],
+      "score_hoeffding95": [
+        0.0,
+        0.3103931978299802
+      ],
+      "relative_elo_hoeffding95": [
+        null,
+        -138.67573655435578
+      ],
+      "pentanomial": [
+        25,
+        5,
+        2,
+        0,
+        0
+      ],
+      "rating_note": "Relative to this opponent, budgets and opening distribution only. Bootstrap pairs, not individual games. Null Elo endpoints mean unbounded; identical pair outcomes make bootstrap degenerate; consult conservative interval.",
+      "work": {
+        "optimized": {
+          "choices": 2431,
+          "large_model_positions": 63256,
+          "mean_large_positions": 26.02056766762649,
+          "seconds": 98.60834287539183,
+          "seconds_per_choice": 0.04056287242920273
+        },
+        "puct-512": {
+          "choices": 2459,
+          "large_model_positions": 1133122,
+          "mean_large_positions": 460.8060187067914,
+          "seconds": 1090.7237509252736,
+          "seconds_per_choice": 0.44356394913593883
+        }
+      }
+    }
+  },
+  "original-budget": {
+    "puct-512": {
+      "scheduled": 32,
+      "attempted": 32,
+      "completed": 32,
+      "truncated": 0,
+      "wins": 0,
+      "draws": 7,
+      "losses": 25,
+      "independent_completed_pairs": 16,
+      "paired_score": 0.109375,
+      "score_bootstrap95": [
+        0.046875,
+        0.1875
+      ],
+      "relative_elo": -364.3107262632938,
+      "relative_elo_bootstrap95": [
+        -523.2834321164419,
+        -254.72883903486974
+      ],
+      "score_hoeffding95": [
+        0.0,
+        0.4489003789351549
+      ],
+      "relative_elo_hoeffding95": [
+        null,
+        -35.63205615916165
+      ],
+      "pentanomial": [
+        10,
+        5,
+        1,
+        0,
+        0
+      ],
+      "rating_note": "Relative to this opponent, budgets and opening distribution only. Bootstrap pairs, not individual games. Null Elo endpoints mean unbounded; identical pair outcomes make bootstrap degenerate; consult conservative interval.",
+      "work": {
+        "kernel512": {
+          "choices": 1174,
+          "large_model_positions": 31872,
+          "mean_large_positions": 27.148211243611584,
+          "seconds": 92.34541764798632,
+          "seconds_per_choice": 0.07865878845654713
+        },
+        "puct-512": {
+          "choices": 1186,
+          "large_model_positions": 564759,
+          "mean_large_positions": 476.18802698145026,
+          "seconds": 544.2911668341258,
+          "seconds_per_choice": 0.45893015753298966
+        }
+      }
+    },
+    "puct-31": {
+      "scheduled": 32,
+      "attempted": 32,
+      "completed": 32,
+      "truncated": 0,
+      "wins": 7,
+      "draws": 5,
+      "losses": 20,
+      "independent_completed_pairs": 16,
+      "paired_score": 0.296875,
+      "score_bootstrap95": [
+        0.15625,
+        0.4375
+      ],
+      "relative_elo": -149.7835651290059,
+      "relative_elo_bootstrap95": [
+        -292.9575039291874,
+        -43.65778777002721
+      ],
+      "score_hoeffding95": [
+        0.0,
+        0.6364003789351549
+      ],
+      "relative_elo_hoeffding95": [
+        null,
+        97.24280305214658
+      ],
+      "pentanomial": [
+        7,
+        2,
+        4,
+        3,
+        0
+      ],
+      "rating_note": "Relative to this opponent, budgets and opening distribution only. Bootstrap pairs, not individual games. Null Elo endpoints mean unbounded; identical pair outcomes make bootstrap degenerate; consult conservative interval.",
+      "work": {
+        "kernel512": {
+          "choices": 1379,
+          "large_model_positions": 30856,
+          "mean_large_positions": 22.375634517766496,
+          "seconds": 89.41703522896569,
+          "seconds_per_choice": 0.06484193997749506
+        },
+        "puct-31": {
+          "choices": 1385,
+          "large_model_positions": 35514,
+          "mean_large_positions": 25.641877256317688,
+          "seconds": 73.2144693240698,
+          "seconds_per_choice": 0.05286243272496014
+        }
+      }
+    }
+  },
+  "matched_opening_control": {
+    "pairs": 16,
+    "original_budget_minus_fast_score": 0.046875,
+    "bootstrap95": [
+      -0.015625,
+      0.109375
+    ],
+    "note": "Same initial opening pairs versus PUCT512; exploratory budget-control comparison, not extra independent games."
+  },
+  "note": "All relative Elo estimates are conditional on these budgets, frozen model, opening selection and draw rules; no absolute Elo calibration. Game timing is descriptive; dedicated heldout benchmark supplies controlled latency."
+}

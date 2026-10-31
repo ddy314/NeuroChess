@@ -1,0 +1,50 @@
+{
+  "name": "fresh-v4-500k",
+  "seed": 20261101,
+  "parent_sha256": "e4ed8978db91eeef8360c4dea87faf7a4f826325bce45aa7efc024692d585ef7",
+  "training_positions": 500000,
+  "validation_positions": 10000,
+  "test_positions": 2000,
+  "category_fraction": {
+    "tactical": 0.6,
+    "endgame": 0.3,
+    "opening": 0.1
+  },
+  "minimum_rating": 1600,
+  "minimum_popularity": 70,
+  "minimum_plays": 100,
+  "teacher_nodes": 100000,
+  "teacher_coarse_nodes": 10000,
+  "teacher_workers": 8,
+  "training_updates_per_arm": 2000,
+  "batch_size": 64,
+  "accum": 16,
+  "lr": 6e-06,
+  "warmup": 100,
+  "mixture": {
+    "core": 0.5,
+    "fresh": 0.4,
+    "human_policy_only": 0.09,
+    "opening_policy_only": 0.01
+  },
+  "initialization": "same selected.pt weights, optimizer reset equally in both arms",
+  "label_contract": "existing STM softmax CP / sf16 ply32 WDL / annotated-only Q",
+  "evaluation": {
+    "stockfish_nodes": 1000,
+    "pairs": 32,
+    "simulations": 512
+  },
+  "sources": {
+    "puzzles": "https://database.lichess.org/lichess_db_puzzle.csv.zst",
+    "openings": "https://github.com/lichess-org/chess-openings"
+  },
+  "success": "No default promotion from reference loss alone; compare frozen heldout puzzles, blunder metrics and paired terminal games",
+  "automatic_release": "Persist data and all checkpoints, verify SHA256 readback and evaluation results before successful release; persist failure diagnostics before releasing failed jobs",
+  "teacher_workers_per_instance": 8,
+  "teacher_instances_after_selection": 2,
+  "test_protocol": {
+    "first_move_direct_positions": 2000,
+    "first_move_puct512_positions": 256,
+    "source_game_group_bootstrap": true
+  }
+}

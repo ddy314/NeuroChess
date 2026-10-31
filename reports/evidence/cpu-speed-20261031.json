@@ -1,0 +1,2300 @@
+{
+  "date": "2026-10-31",
+  "report": "reports/CPU_SPEED_20261031.md",
+  "conclusions": {
+    "cpu": "Fixed synthetic-correction profiling:84.55ms to21.84ms,3.87x speedup;48/48 same choices;actual trained-student prediction error<=2e-6.",
+    "heldout": "Fast51.5ms vs original PUCT31 67.2ms,but15 vs6 blunders. Matched-batch PUCT31 is45.6ms with7 blunders. Same-budget superiority not achieved.",
+    "direct_games": "192 complete games,no truncation. Stable original-budget agent scores7W5D20L vs PUCT31 and0W7D25L vs PUCT512;conditional relative Elo about-150 and-364.",
+    "adoption": "Retain kernel implementation speedup; do not promote reduced-search configuration as a strength improvement. PUCT remains unchanged."
+  },
+  "kernel": {
+    "parity": {
+      "positions": 96,
+      "max_prediction_error": 1.996755599975586e-06,
+      "max_accumulator_error": 0.0
+    },
+    "training_key_overlap": 0,
+    "cpu_before": 0.08454802299820585,
+    "cpu_after": 0.02184072250383906,
+    "cpu_speedup": 3.8711184111855452,
+    "probe_before": 3.6600480998458808e-06,
+    "probe_after": 1.6667365503963084e-06,
+    "profiling_move_changes": 0,
+    "profiling_cases": 48,
+    "note": "Synthetic fixed corrections; CPU timings exclude GPU and are not an end-to-end strength claim. Float summation order changes; separate heldout quality and direct games used."
+  },
+  "plans": {
+    "initial": {
+      "development": "First32 roots of prior correction-safety run; explicitly reused for development, never final holdout.",
+      "selection": "Among non-PUCT variants with development median_seconds <=1.10*PUCT31 median and neural cap32, choose fewest>=100cp losses, then lowest mean CP regret. If none, record unmet speed goal and choose best regret.",
+      "final_holdout": "96 fresh roots after independently frozen32 game openings; no tuning on final outcomes",
+      "matches": "Direct swapped-color games,32 opening pairs per opponent:64 vsPUCT31 and64 vsoriginalPUCT512; relative scores and paired uncertainty, no absolute Elo."
+    },
+    "final": {
+      "development": "First32 roots of prior correction-safety run; explicitly reused for development, never final holdout.",
+      "selection": "Among non-PUCT variants with development median_seconds <=1.10*PUCT31 median and neural cap32, choose fewest>=100cp losses, then lowest mean CP regret. If none, record unmet speed goal and choose best regret.",
+      "final_holdout": "96 fresh roots after independently frozen32 game openings; no tuning on final outcomes",
+      "matches": "Direct swapped-color games,32 opening pairs per opponent:64 vsPUCT31 and64 vsoriginalPUCT512; relative scores and paired uncertainty, no absolute Elo.",
+      "selection_amendment": {
+        "quality_development_name": "batch8-512",
+        "speed_development_name": "batch16-128",
+        "quality": {
+          "positions": 32,
+          "cp_positions": 32,
+          "mean_cp_regret": 10.8125,
+          "median_cp_regret": 0.0,
+          "cp_blunders_100": 0,
+          "mean_value_regret": 0.02109375,
+          "median_seconds": 0.07400115350174019,
+          "mean_large_positions": 32.0
+        },
+        "speed": {
+          "positions": 32,
+          "cp_positions": 32,
+          "mean_cp_regret": 11.875,
+          "median_cp_regret": 0.0,
+          "cp_blunders_100": 0,
+          "mean_value_regret": 0.022406250000000003,
+          "median_seconds": 0.05170245400222484,
+          "mean_large_positions": 31.8125
+        },
+        "note": "Original quality-selection rule retained as conservative control. Added fastest Pareto point with equal dev blunder count and mean CP regret within2cp of quality choice. Both frozen before final holdout or direct games; optimized speed point is the fixed duel contender."
+      },
+      "stable_control_match": "Original-budget kernel512 control,first16 fixed opening pairs:32 games each versus PUCT31 and original PUCT512. Kept separate from fast128-game sample; no parameter changes."
+    },
+    "selection": {
+      "quality_development_name": "batch8-512",
+      "speed_development_name": "batch16-128",
+      "quality": {
+        "positions": 32,
+        "cp_positions": 32,
+        "mean_cp_regret": 10.8125,
+        "median_cp_regret": 0.0,
+        "cp_blunders_100": 0,
+        "mean_value_regret": 0.02109375,
+        "median_seconds": 0.07400115350174019,
+        "mean_large_positions": 32.0
+      },
+      "speed": {
+        "positions": 32,
+        "cp_positions": 32,
+        "mean_cp_regret": 11.875,
+        "median_cp_regret": 0.0,
+        "cp_blunders_100": 0,
+        "mean_value_regret": 0.022406250000000003,
+        "median_seconds": 0.05170245400222484,
+        "mean_large_positions": 31.8125
+      },
+      "note": "Original quality-selection rule retained as conservative control. Added fastest Pareto point with equal dev blunder count and mean CP regret within2cp of quality choice. Both frozen before final holdout or direct games; optimized speed point is the fixed duel contender."
+    },
+    "openings": {
+      "args": {
+        "pgn": "data/source/lichess-2013-01.pgn.zst",
+        "stockfish": "local/stockfish/stockfish/stockfish-ubuntu-x86-64-avx2",
+        "key_db": "data/evals-v2-5m/keys.sqlite",
+        "out": "output/cpu-speed-20261031/openings",
+        "after_game": 96659,
+        "pairs": 32,
+        "seed": 713031
+      },
+      "roots": [
+        {
+          "game": 96695,
+          "ply": 16,
+          "fen": "rn1qk2r/1p1bppbp/p2p1np1/1B4B1/3NP3/2N5/PPP2PPP/R2Q1RK1 w kq - 0 9",
+          "key": "51d111540f2b611228a6a00bf1662501",
+          "teacher_cp": -5
+        },
+        {
+          "game": 96701,
+          "ply": 17,
+          "fen": "rnbq1rk1/pp2bppp/2p2n2/6B1/2BP4/2N2N2/PP3PPP/R2Q1RK1 b - - 2 9",
+          "key": "ad6370d663d09720ab5bff813a6f54f6",
+          "teacher_cp": -54
+        },
+        {
+          "game": 96723,
+          "ply": 20,
+          "fen": "r1bqrnk1/pp1nppbp/2p3p1/3pN3/3P1P2/2PBPQ2/PP1N2PP/R1B2RK1 w - - 5 11",
+          "key": "bfdfb1206d328713dc1176ff7cd47719",
+          "teacher_cp": 87
+        },
+        {
+          "game": 96751,
+          "ply": 16,
+          "fen": "r1bq1rk1/ppp1bppp/3p1n2/4n1B1/2BNP3/8/PPP2PPP/RN1QR1K1 w - - 3 9",
+          "key": "f17f635c12dc16acce360c37a8c77bdc",
+          "teacher_cp": 34
+        },
+        {
+          "game": 96922,
+          "ply": 21,
+          "fen": "r2qnrk1/pp1bbppp/2n1p3/2ppP3/5P2/3PB1PP/PPP3BN/RN1Q1RK1 b - - 2 11",
+          "key": "3bfa6e1906286467f792c786c3cbd790",
+          "teacher_cp": 47
+        },
+        {
+          "game": 96934,
+          "ply": 22,
+          "fen": "r1b2rk1/pp1nbppp/1qp2n2/4pP2/4P3/6PP/PPP3BN/RNBQ1RK1 w - - 3 12",
+          "key": "4267cef4dd0b3cd6f39be9135b41c1f3",
+          "teacher_cp": 62
+        },
+        {
+          "game": 96939,
+          "ply": 21,
+          "fen": "rnb1k2r/p3n1pp/2p2p2/1p2p3/4P3/1BP1BP2/P1P3PP/R2K2NR b kq - 1 11",
+          "key": "323554879e387e2cfc71d74362165041",
+          "teacher_cp": -89
+        },
+        {
+          "game": 96950,
+          "ply": 23,
+          "fen": "r1bqr1k1/pp2nppp/2n5/3pP3/2pP2B1/2P5/PP4PP/RNBQ1RK1 b - - 2 12",
+          "key": "c23f73bb145869fbe4cd3e04a8173492",
+          "teacher_cp": -98
+        },
+        {
+          "game": 96960,
+          "ply": 19,
+          "fen": "r2qk1nr/pb1nbppp/1p6/2pp4/5B2/2PP1N1P/PP2BPP1/RN1QR1K1 b kq - 3 10",
+          "key": "5ea6da2434129484d7cb7b082ac21550",
+          "teacher_cp": -56
+        },
+        {
+          "game": 96988,
+          "ply": 24,
+          "fen": "r1bqk2r/4npb1/p1n1p2p/1p1pP3/2pP2pP/2P2NB1/PPQNBPP1/R3K2R w KQkq - 0 13",
+          "key": "61a1b299a79e74b1eb7c9453452346d8",
+          "teacher_cp": -92
+        },
+        {
+          "game": 97006,
+          "ply": 22,
+          "fen": "2r1k2r/1pqbbppp/p1n1pn2/3p4/1P1P4/P1NBPN2/5PPP/R1BQ1RK1 w k - 2 12",
+          "key": "159ceb3300ad7292e343a42b2ae639dd",
+          "teacher_cp": 36
+        },
+        {
+          "game": 97009,
+          "ply": 16,
+          "fen": "rn1q1rk1/pp2nppp/2pb4/3p2B1/6b1/2NP1N2/PPPQBPPP/R3K2R w KQ - 6 9",
+          "key": "7eb547ad0b358ca8e30e82fbb098f2c1",
+          "teacher_cp": -51
+        },
+        {
+          "game": 97013,
+          "ply": 17,
+          "fen": "r1bqk1nr/pp2bpp1/2n1p3/2p1P3/3pNP1p/3P1N1P/PPP1B1P1/R1BQK2R b KQkq - 0 9",
+          "key": "72981a41f2c01f11eb44d0ad1d777fa4",
+          "teacher_cp": 2
+        },
+        {
+          "game": 97017,
+          "ply": 23,
+          "fen": "r6r/1pp1k1pp/p1nbbn2/4ppN1/2P5/2N1P3/PP1BBPPP/1K1R3R b - - 1 12",
+          "key": "509afc9d26df379edbef2f7f9da2f71e",
+          "teacher_cp": 28
+        },
+        {
+          "game": 97029,
+          "ply": 18,
+          "fen": "r2qkb1r/1p1bpp1p/p5p1/2p5/8/2N5/PPPP1PPP/R1BQ1RK1 w kq - 0 10",
+          "key": "d5fb72715a32032232dd29a965f94e11",
+          "teacher_cp": -18
+        },
+        {
+          "game": 97031,
+          "ply": 19,
+          "fen": "rn3rk1/pppq1ppp/3b1n2/5bB1/2BP4/2N2N2/PP3PPP/R2Q1RK1 b - - 0 10",
+          "key": "98ae4de01bc0a09609694482ca85fe19",
+          "teacher_cp": -36
+        },
+        {
+          "game": 97051,
+          "ply": 21,
+          "fen": "r3k2r/ppqnbppp/2p1pn2/5bB1/3P4/2N2N2/PPPQBPPP/3RR1K1 b kq - 7 11",
+          "key": "12bd49d0ab2866c29826967193eb15a1",
+          "teacher_cp": -16
+        },
+        {
+          "game": 97055,
+          "ply": 18,
+          "fen": "r1bq1rk1/pp2bppp/2n2n2/3p4/3P4/2N1BN2/PPQ2PPP/R3KB1R w KQ - 6 10",
+          "key": "4d803101078bb1deff82ac2f1b5749ed",
+          "teacher_cp": -21
+        },
+        {
+          "game": 97065,
+          "ply": 16,
+          "fen": "rnbq1rk1/pp2bpp1/2p2n1p/2Pp4/3P1B2/2N2N2/PP3PPP/R2QKB1R w KQ - 2 9",
+          "key": "65b4a67c6a8be301d878e25ef46e7495",
+          "teacher_cp": 36
+        },
+        {
+          "game": 97071,
+          "ply": 17,
+          "fen": "rnbqk2r/pp2npbp/2p1p1p1/8/3pP3/N2P1P2/PPPBN1PP/R1Q1KB1R b KQkq - 1 9",
+          "key": "6eabb401fd4c1548938d982bf893a99c",
+          "teacher_cp": 47
+        },
+        {
+          "game": 97080,
+          "ply": 22,
+          "fen": "rn1qk2r/4n1bp/p2p2p1/1ppP1b2/5P2/P1N2N2/1PQ3PP/R1B1KB1R w KQkq - 0 12",
+          "key": "9920e7be4246681efd28aecf22d51e4a",
+          "teacher_cp": -72
+        },
+        {
+          "game": 97085,
+          "ply": 19,
+          "fen": "rn1qnrk1/pbp1ppbp/1p4p1/4P3/2PP4/2NBBN2/PP4PP/R2QK2R b KQ - 2 10",
+          "key": "a7b8dfec3be15addb418ad243e3a96f2",
+          "teacher_cp": -76
+        },
+        {
+          "game": 97094,
+          "ply": 20,
+          "fen": "r1bqk2r/pp3pbp/3p1np1/4p3/4P3/2PQBN2/PP3PPP/RN3RK1 w kq - 2 11",
+          "key": "f7398526e54ba5d31672fc0d2f73b2b0",
+          "teacher_cp": 96
+        },
+        {
+          "game": 97098,
+          "ply": 16,
+          "fen": "r1bq1rk1/pp1n1pbp/2pppnp1/8/2PPPP2/2NBBN2/PP4PP/R2QK2R w KQ - 0 9",
+          "key": "683420991291d30ab902a30ba4f1d625",
+          "teacher_cp": 94
+        },
+        {
+          "game": 97099,
+          "ply": 17,
+          "fen": "r1bqk2r/pp2ppbp/2np1np1/2p5/4P1PP/2NPBP2/PPPQB3/R3K1NR b KQkq h3 0 9",
+          "key": "52391730c5d7d20c6e5934bee0ce541e",
+          "teacher_cp": 87
+        },
+        {
+          "game": 97112,
+          "ply": 16,
+          "fen": "r2qk2r/pp1nbppp/2p1pn2/5b2/P1N5/6P1/1P1PPPBP/RNBQ1RK1 w kq - 1 9",
+          "key": "04d4369303670eb66062b38670905409",
+          "teacher_cp": 53
+        },
+        {
+          "game": 97113,
+          "ply": 17,
+          "fen": "r1bq1rk1/ppppnppp/5n2/3P4/4P3/2NB4/PP1Q1PPP/R3K1NR b KQ - 4 9",
+          "key": "a325c30c04552a573fef1df53ff085fc",
+          "teacher_cp": -50
+        },
+        {
+          "game": 97123,
+          "ply": 20,
+          "fen": "2kr1b1r/pp1qnpp1/2n1b3/4P2p/3p4/3B1N2/PP1B1PPP/RN1Q1RK1 w - h6 0 11",
+          "key": "41fbede7aa555e4c5cd9072eadf6c4cc",
+          "teacher_cp": 52
+        },
+        {
+          "game": 97126,
+          "ply": 22,
+          "fen": "r2qk2r/ppp2pbp/2npb1p1/5n2/4NP2/P2P1N2/1PPBB1PP/R2Q1RK1 w kq - 3 12",
+          "key": "0c981c21fdf44307d71cbb0db2ee4d04",
+          "teacher_cp": 1
+        },
+        {
+          "game": 97136,
+          "ply": 24,
+          "fen": "r2q1rk1/p4ppp/2p5/3np3/2Bb2b1/1QN5/PPPP1PPP/R1B2RK1 w - - 4 13",
+          "key": "26c5c465ff96967e877a0207cc9fd578",
+          "teacher_cp": 13
+        },
+        {
+          "game": 97140,
+          "ply": 22,
+          "fen": "rn1k3r/p4ppp/2p2b2/1p3b2/2B1p3/2P5/PP1NNPPP/R3K2R w KQ b6 0 12",
+          "key": "bb27acf4adafe4929d1f5747e40fbbe6",
+          "teacher_cp": 3
+        },
+        {
+          "game": 97145,
+          "ply": 21,
+          "fen": "r3k1nr/pppqp1b1/2npbp2/6p1/4P2p/2NP1N1P/PPP1BPPB/R2QK2R b KQkq - 1 11",
+          "key": "b5d76ad36277d7563d0322e2ae2cd03f",
+          "teacher_cp": -29
+        }
+      ],
+      "sha256": "67c7f4ff5e354bfcc09c308c5a9938b82526ff0c50a786b521bab56581350d23",
+      "note": "One new source game per opening; ply16..24,teacher50k abs cp<=100,old base exact keys excluded. Both colors. Selection never uses tested-player outputs."
+    },
+    "heldout": {
+      "args": {
+        "pgn": "data/source/lichess-2013-01.pgn.zst",
+        "key_db": "data/evals-v2-5m/keys.sqlite",
+        "after_game": 97145,
+        "exclude": [
+          "output/cpu-speed-20261031/openings/openings.fen",
+          "output/correction-safety-20261031/roots/roots.fen",
+          "output/correction-safety-20261031/confirm-roots/roots.fen"
+        ],
+        "out": "output/cpu-speed-20261031/heldout-roots",
+        "roots": 96,
+        "seed": 713047,
+        "min_elo": 1800
+      },
+      "roots": [
+        {
+          "game": 97150,
+          "fen": "r1b1k1nr/pp3ppp/2n1p3/2bpP3/8/q3BN2/P2N1PPP/2RQKB1R w Kkq - 2 10",
+          "key": "1c276ae1f7b34e6db4d7afe51cf3804d"
+        },
+        {
+          "game": 97152,
+          "fen": "r2qnrk1/pp2b1pp/4Pp2/2pp1P2/5BQ1/2N4P/PPP3P1/R4RK1 b - - 1 17",
+          "key": "bb49bd2ea9c4a17149748df94723b3bc"
+        },
+        {
+          "game": 97154,
+          "fen": "r1b1k2r/ppp2ppp/2n1p3/8/4PP2/2N1bN1P/PPP1B1P1/3RK2R b Kkq - 1 12",
+          "key": "99dbcd467cb3b0e4ab4329ce42043b0f"
+        },
+        {
+          "game": 97164,
+          "fen": "2r1k2r/pp1b1pp1/2nPp3/4N3/3q3p/3B3P/1P1Q2P1/R4RK1 w k - 0 22",
+          "key": "212cd5cfc173aa62792e8eea2bc5cfa0"
+        },
+        {
+          "game": 97167,
+          "fen": "r1b5/n4k1p/1p2ppp1/pP6/2n1P3/P1N2P2/2P1N1PP/2KR3R w - - 2 20",
+          "key": "15453a0e08dfd4387b51384ba252d82c"
+        },
+        {
+          "game": 97169,
+          "fen": "1r2k2r/1bqnbp2/pp5p/2p1N3/2P2B2/2Q3P1/PP5P/2KR3R b k - 0 20",
+          "key": "500007b69f4651815e44a83c0df6d8e3"
+        },
+        {
+          "game": 97172,
+          "fen": "r4b1r/pp1knbpp/1qn2p2/3pp3/8/1BNP1QB1/PPP2PPP/2KR3R b - - 1 15",
+          "key": "28391121b965bfa29fc0231598e7e678"
+        },
+        {
+          "game": 97180,
+          "fen": "3rnrk1/pp4pp/2p3p1/2BnP3/1P3P2/P5Pq/N4R1P/R2Q2K1 b - - 1 21",
+          "key": "3a98e622fec5c4113a023b02b6a6af58"
+        },
+        {
+          "game": 97183,
+          "fen": "r3k2r/2pqn1pp/p1p1bp2/4p3/1b2P1P1/P1NPBN1P/1PP1Q3/R4RK1 b kq - 0 14",
+          "key": "dcceaa2cedc93538627413c212b628a2"
+        },
+        {
+          "game": 97186,
+          "fen": "3rk1nr/ppp1qpbp/4b1p1/4n3/4P3/2P1BP2/P1P1NKPP/R2Q1B1R w k - 4 13",
+          "key": "25280eb6a352bdfde3399a1c1734f9ec"
+        },
+        {
+          "game": 97189,
+          "fen": "3rk3/p3qrp1/2p5/1p2P2Q/1n4P1/4B3/1PP5/1K1R1R2 w - - 3 28",
+          "key": "6077b1b29269fafb85d5e7910ba088d6"
+        },
+        {
+          "game": 97192,
+          "fen": "r4b1r/pp2kp1p/3pbnp1/1Bp5/4P1P1/2N1BP2/PPP4P/2KR3R b - g3 0 13",
+          "key": "dcc6fd2705fe0c4d4ca5e73af3726de4"
+        },
+        {
+          "game": 97193,
+          "fen": "8/pp4k1/2p5/3p4/P7/KP6/2B3r1/8 b - - 3 39",
+          "key": "b71cc88abd417ca0df76c415572df6fe"
+        },
+        {
+          "game": 97194,
+          "fen": "r3k2r/2q1bppb/p1n1p2p/2pnP3/2Np1P2/3P1N1P/PP1BB1P1/2RQ1RK1 b kq - 0 16",
+          "key": "2d6ba427e3621de5d3cfc631e805d047"
+        },
+        {
+          "game": 97195,
+          "fen": "r4r1k/1bq1b2p/p1p1p3/2Pp4/Q2PpPB1/4P2P/P5K1/R1B2R2 b - - 2 22",
+          "key": "bf4eb6fcc961c64daa7c79b28d22efdd"
+        },
+        {
+          "game": 97198,
+          "fen": "r1b1k1nr/ppp3pp/3b4/3Nn3/5B2/8/PP3PPP/R3KBNR b KQkq - 2 10",
+          "key": "ac3c8ed3636883ca59f175781a2e42cb"
+        },
+        {
+          "game": 97200,
+          "fen": "8/3k2r1/1p2p3/1bp1P3/2P1p3/2P3p1/4Q1P1/6K1 w - - 0 45",
+          "key": "c9b5b2f29f004da8e3a82f91d935c64d"
+        },
+        {
+          "game": 97204,
+          "fen": "r2q1r2/pppb1kbp/2n1p1p1/5n2/3PBP2/2P2QP1/PP5P/RNB2RK1 b - - 2 13",
+          "key": "f4699003ecf16aff39f2e05f733831f0"
+        },
+        {
+          "game": 97206,
+          "fen": "3q2k1/4br1p/1p2p1pB/3pPp2/1r6/7Q/6PP/4RRK1 b - - 3 29",
+          "key": "eb8aca92c208b2d744e87075ca38dd78"
+        },
+        {
+          "game": 97209,
+          "fen": "4r2k/r1q4p/2p1P3/p1Q3p1/1p2Rp2/1P3P1P/P2P2P1/4R1K1 b - - 1 32",
+          "key": "6abeb3fe5f732030946f56db962914f4"
+        },
+        {
+          "game": 97210,
+          "fen": "3r1qk1/1p1b2r1/p1nPp1Bp/2p3p1/2P2pP1/5N1P/PPQ5/3R1RK1 w - - 4 28",
+          "key": "370a2111a29098e7a7319a02601142a4"
+        },
+        {
+          "game": 97214,
+          "fen": "1k2rr2/1p4pp/p1p5/2P1p3/1P1b4/P2P1P1q/3BQ2P/1R3R1K b - - 6 31",
+          "key": "e3403198ffd418a8053832c6a041b927"
+        },
+        {
+          "game": 97219,
+          "fen": "1r6/6p1/8/4p3/7p/1pk1K2P/6P1/1R6 b - - 7 47",
+          "key": "f23c025871cbc23000487a670adb0957"
+        },
+        {
+          "game": 97225,
+          "fen": "r4q1r/2pb2k1/1pn2p1p/1p2pPpB/3pP3/PN1P2P1/2PQ1KPR/7R w - - 12 26",
+          "key": "09831c0475a8fa29dc5a91bc854f8f23"
+        },
+        {
+          "game": 97229,
+          "fen": "2k5/1pp2p1p/3p4/P7/1P1QP1q1/2P5/4KBrr/R4R2 w - - 3 26",
+          "key": "1a451ed163930ed2c731bfb3344f1870"
+        },
+        {
+          "game": 97234,
+          "fen": "8/1p6/p4k2/3P4/1P2p2p/2P1P2N/2PK4/8 w - - 0 40",
+          "key": "cad78965ab0bab19a362685ec1c3761c"
+        },
+        {
+          "game": 97243,
+          "fen": "6r1/1pk2p1p/p4p2/P1pPb3/4N3/2P4K/1P5P/3R4 b - - 2 29",
+          "key": "89a85cdc0e4b1b2ee6afc24f95c0e796"
+        },
+        {
+          "game": 97248,
+          "fen": "5rr1/pk1n1p2/1p2pBp1/3pP2p/1P1N4/2q5/P3Q1PP/R4RK1 w - - 0 22",
+          "key": "a4ccf966931301f0d84e0b17f747cbcb"
+        },
+        {
+          "game": 97252,
+          "fen": "1k2r2r/1p2b1pp/1BpNbn2/8/Q7/3B2P1/1P5P/1K1R4 b - - 8 32",
+          "key": "0985413768357ff2cbf966b9f55a0b14"
+        },
+        {
+          "game": 97259,
+          "fen": "2r2k1r/2q1bpp1/2p1B2p/7P/pp1P2P1/1P6/P3Q3/2KR2NR b - - 0 22",
+          "key": "84f8446326e77f40625f1ee679efb605"
+        },
+        {
+          "game": 97264,
+          "fen": "r3kb1r/1ppq1ppp/p1np1n2/3N4/Q3P3/4BP2/PPP2P1P/2KR1B1R b kq - 5 10",
+          "key": "85da55fc648401377dd91ee5b2194059"
+        },
+        {
+          "game": 97270,
+          "fen": "r3k2r/ppqb1pp1/1np1p1n1/3pP1P1/3P4/2PBB3/PP1NQ2P/R2K3R w q - 1 17",
+          "key": "6a21f52033bc3ca221814dcc9edc439f"
+        },
+        {
+          "game": 97292,
+          "fen": "7r/pp3kp1/5pp1/1PPp4/1n1P1P2/6B1/1KP4P/4R3 b - - 2 26",
+          "key": "a5231de35611bc47b3150c02e8134895"
+        },
+        {
+          "game": 97344,
+          "fen": "rb1q1rk1/pp1n1ppp/8/1NpP4/5n2/4BB1P/PP3PP1/2RQ1RK1 w - - 1 17",
+          "key": "f0ef41b69c446bee4536b13bf7c5df0f"
+        },
+        {
+          "game": 97362,
+          "fen": "r2q1r2/2pb2bk/1p1p1npp/2nP1p2/p1P1p3/P1N1B1PP/1PQNPPB1/3RR1K1 w - - 2 23",
+          "key": "6e4a57aeb853f2f6b1679ac1bcf1420e"
+        },
+        {
+          "game": 97430,
+          "fen": "4k3/5p1p/4pB2/1P4P1/2P3r1/2K5/8/8 b - - 0 45",
+          "key": "8e029aaccc3e4ec1b6fcfb7831628cf8"
+        },
+        {
+          "game": 97440,
+          "fen": "3rk2r/2p2ppp/p1Nb1n2/8/4P1b1/2P5/PP3PPP/RNB2RK1 b k - 0 11",
+          "key": "b64423ac19f6b0aacb483952a6b59f97"
+        },
+        {
+          "game": 97490,
+          "fen": "r1bq1rk1/ppp2pb1/3p1nnp/3Pp3/2P1P1pP/2N2NB1/PP2BPP1/R2Q1RK1 w - - 0 13",
+          "key": "ea2dcd9ae6941aaa9f70e414606be838"
+        },
+        {
+          "game": 97491,
+          "fen": "r2q1rk1/4bppp/2bp1n2/ppp1p3/4P1P1/1P1P1N2/PBPNQP1P/2KR3R w - a6 0 12",
+          "key": "e960997b6c8bfb2437c4504c31833bac"
+        },
+        {
+          "game": 97529,
+          "fen": "3r1r2/8/1p1b1k2/p1pPp1p1/P1P1BpPp/1P3P1P/5K2/2R4R b - - 2 34",
+          "key": "3a091511de75b61fdab083bf131dd8e2"
+        },
+        {
+          "game": 97536,
+          "fen": "r1b2rk1/pppn1ppp/1q6/3nP1B1/2BP4/2P5/PP1Q2PP/RN2K2R b KQ - 3 13",
+          "key": "3f0d9eb2f37a06505b8a261ef60ccf81"
+        },
+        {
+          "game": 97562,
+          "fen": "8/1bP2p1k/5p2/5N2/1P3P2/5rPp/P1R1K2P/8 w - - 1 46",
+          "key": "958231e88dca7d3c65c282686336ffca"
+        },
+        {
+          "game": 97568,
+          "fen": "r1b1k2r/ppp2ppp/2n2n2/8/1b3B2/2NP4/PPP1B1PP/2KR2NR b kq - 2 10",
+          "key": "8e2e77c74ecad8e89ae4e294a17616a5"
+        },
+        {
+          "game": 97576,
+          "fen": "r2qkbnr/pp1n1ppp/2pp4/8/2BQP3/2N2P1P/PPP2P2/R1B2RK1 b kq - 0 9",
+          "key": "b576dfedb93b41d6c8d9f4cb238f4a9e"
+        },
+        {
+          "game": 97597,
+          "fen": "r3r1k1/pp1n1pp1/2p1n3/4P2p/2N2P2/2P2K1P/P1B2P2/R3R3 b - - 0 23",
+          "key": "d2ac86e0a20d51c2ac3206fdb5de0d35"
+        },
+        {
+          "game": 97600,
+          "fen": "r2q1rk1/pp3pbp/2nP2p1/4pb2/2B5/2N1B3/PP3PPP/R2QR1K1 w - - 3 15",
+          "key": "805347a600e0ab9cb06e4149586d5ec0"
+        },
+        {
+          "game": 97604,
+          "fen": "rr4k1/4bppp/1q2p1b1/p2pP3/3P4/1P2PNN1/1Q4PP/R3R1K1 w - - 6 22",
+          "key": "f5eb95c00eb31d6f43c0e366c3ec8111"
+        },
+        {
+          "game": 97679,
+          "fen": "r3kbnr/pp2pppp/8/q2P4/6b1/2N2B2/PP3PPP/R1BQK2R b KQkq - 0 10",
+          "key": "4d3596eb2de0361062146dc84a2800da"
+        },
+        {
+          "game": 97694,
+          "fen": "1r1r2k1/p2N1bpp/B3p3/3p4/1b1P4/2n1B2P/5PP1/R4RK1 w - - 8 26",
+          "key": "962cbd7c30a0bd62ab9df9085cd8b9c9"
+        },
+        {
+          "game": 97696,
+          "fen": "3rr1k1/ppb2pp1/2p5/2Pp1bqp/1P1Bn3/P2NP1P1/5PBP/R2Q1RK1 w - h6 0 20",
+          "key": "ece46ab7726818b32ea2e583b92f59b6"
+        },
+        {
+          "game": 97706,
+          "fen": "3r1bk1/pb3p1p/2pPp1p1/2q5/2P2BP1/3P2QP/1P3P2/1R2R1K1 w - - 1 25",
+          "key": "cfe44a6b451b24a0634dc41c957ca424"
+        },
+        {
+          "game": 97709,
+          "fen": "r4k2/p4p1p/2p3pP/1p6/2p1R3/r4P1R/1KP5/8 b - - 3 30",
+          "key": "20453dc2e04b74086f70fda563bf9f3c"
+        },
+        {
+          "game": 97712,
+          "fen": "r4rk1/ppq1bppp/2n1pnb1/2pp4/3P4/2P1PN1P/PP1NBPP1/R1BQ1RK1 w - - 7 12",
+          "key": "e55f961c4d16ffa3e9d165644ae8439e"
+        },
+        {
+          "game": 97714,
+          "fen": "r4rk1/1bq1bppp/p2ppn2/1p2n3/3NP3/2PB1P2/PP2NBPP/R2QR1K1 b - - 0 14",
+          "key": "a03c86e6e6b65a7bb56ff848f3bfbcc9"
+        },
+        {
+          "game": 97721,
+          "fen": "3rr1k1/5ppp/pp6/2q5/3bn3/1P3QP1/P4PBP/1RB2RK1 w - - 1 23",
+          "key": "e5fb2c3354419120259afe14da608edb"
+        },
+        {
+          "game": 97731,
+          "fen": "4kb1r/1p1nppp1/6p1/r2P4/P7/2N1B2P/1P3P2/R3K2R b KQk a3 0 20",
+          "key": "2e4effb1df41bb4cf8d76a487116329f"
+        },
+        {
+          "game": 97732,
+          "fen": "r2q1rk1/1pbb2pp/p1p1p3/2Pn1p2/PPBPpP2/4P3/2QBN1PP/1R3RK1 b - - 1 16",
+          "key": "4436dcd1308175c8a32adf4bf5e0c5fa"
+        },
+        {
+          "game": 97737,
+          "fen": "3r4/6p1/4k3/1P6/3rN3/2R1K3/8/8 b - - 0 45",
+          "key": "d4bdca8f0b7b9cc8505c873522c4538f"
+        },
+        {
+          "game": 97741,
+          "fen": "r2q1rk1/pp2nbpp/2pb1p2/3p4/3P2PN/P1NQ1B1P/1PP2P2/R3R1K1 w - - 1 17",
+          "key": "5f03bbc129c214bd31f8e7e8115dd6a7"
+        },
+        {
+          "game": 97744,
+          "fen": "8/6p1/5p2/2pp3p/5PkP/r2K2P1/8/4B3 w - - 2 51",
+          "key": "6306c07e146bedf7f0b660416d8b5e5e"
+        },
+        {
+          "game": 97751,
+          "fen": "r4r1k/1bq3pp/p3pp2/1pp5/4NP2/2P3N1/PP2n2P/2R1QRK1 w - - 0 23",
+          "key": "7ba72e2d7ff01cb27cb61d638777a78b"
+        },
+        {
+          "game": 97753,
+          "fen": "r2qk2r/pp1nb1pp/4pn2/2pp1p2/5P2/1P2PN2/PBPP2PP/RN1Q1RK1 w kq - 2 9",
+          "key": "a193242e6bfd4a8a63e7523a4248313c"
+        },
+        {
+          "game": 97768,
+          "fen": "r4bk1/p4rp1/7p/8/5P2/3N2P1/P5PK/4RR2 b - - 0 28",
+          "key": "acf595875d231ac3505e3e381a25f9a9"
+        },
+        {
+          "game": 97776,
+          "fen": "1k1r3r/ppq2p1p/2p3b1/4p3/P1nP3P/2P1BQ2/1P3PBP/R4RK1 b - - 0 17",
+          "key": "217666a26b697c84b30c421a2470244a"
+        },
+        {
+          "game": 97779,
+          "fen": "r2q1bnr/p1p2kpp/2p2p2/3pP3/3P2b1/5N2/PP3PPP/RNBQK2R w KQ - 0 9",
+          "key": "097fee52e1596ffa2e4dd8002b4d6786"
+        },
+        {
+          "game": 97785,
+          "fen": "8/p3p1k1/1p1rP1p1/2p2p2/2P4P/1P3PK1/P3R3/8 w - - 0 32",
+          "key": "e3e0f47fa5d64068dc807c27704a58d2"
+        },
+        {
+          "game": 97796,
+          "fen": "1r6/8/2K5/1P2kp2/8/3R3P/8/8 w - - 5 49",
+          "key": "166cd3153aedb295c5501554d88addd5"
+        },
+        {
+          "game": 97803,
+          "fen": "r1bqr1k1/bp2nppp/p1p2n2/2Pp4/1P1P4/P1N3PP/4NPB1/R1BQ1RK1 w - - 0 14",
+          "key": "97c0ace409850f4156d3caa0dd62da46"
+        },
+        {
+          "game": 97805,
+          "fen": "r4r2/p2Q2k1/1p3qp1/2p5/8/2P5/P4PPP/R4RK1 b - - 0 19",
+          "key": "f7616a05f02fd3c59699fdaf5d8a34f5"
+        },
+        {
+          "game": 97808,
+          "fen": "r2q1rk1/1p3pp1/p1p1b2n/2bpP1Np/3p1P2/1B1P3P/PPPB2P1/R2Q1R1K b - - 2 16",
+          "key": "2fbbbfa44b8401066ad56c5f04dc1189"
+        },
+        {
+          "game": 97821,
+          "fen": "rn1qkb1r/p3pppp/b1p2n2/4N3/P1pP4/1pN1P3/1P3PPP/R1BQKB1R b KQkq - 3 9",
+          "key": "022f12ea6db58d4f174fa0072747292b"
+        },
+        {
+          "game": 97827,
+          "fen": "r1bqrk2/p2n2pB/2p2p2/3p4/1b3B2/2N2Q1P/PPP2PP1/R3R1K1 w - - 1 15",
+          "key": "b53c75b0b491a42203a6ca94fdf31bd5"
+        },
+        {
+          "game": 97832,
+          "fen": "3b4/5k2/p4p2/1p1N4/2pP3n/2P3BP/PP2KP2/8 b - - 2 37",
+          "key": "9730682c7bbccd9af89217df78de47ee"
+        },
+        {
+          "game": 97841,
+          "fen": "4r1k1/6p1/1P1p4/2pqrb1p/2Q1p2P/2P1R1P1/5PB1/1R4K1 w - - 0 33",
+          "key": "8b922890ed4ee13603586e5687a39f6e"
+        },
+        {
+          "game": 97919,
+          "fen": "r4rk1/5pb1/3p3p/pp1P2pP/2p1P1P1/4N3/PqB1QP2/R4RK1 w - - 0 22",
+          "key": "fd2ab1a0005e813a06e8392b05405b57"
+        },
+        {
+          "game": 97951,
+          "fen": "r1bq1rk1/pp2bppp/2p1pn2/3n4/3P4/PP2PN2/1B1N1PPP/RB1Q1RK1 w - - 1 13",
+          "key": "49c167e910248e2eb15ec8a126ec39c4"
+        },
+        {
+          "game": 97956,
+          "fen": "4nrk1/R4pp1/4b2p/2ppP3/B7/3P1N1P/2P2PP1/6K1 w - c6 0 22",
+          "key": "3afb1627a01750a1e95e5f267bb0883c"
+        },
+        {
+          "game": 97969,
+          "fen": "1r1r2k1/2p1qpp1/2np1n1p/pp2p3/3PP2N/1PP1P2P/P1QN2P1/4RRK1 b - - 1 17",
+          "key": "c9f9b43313ff464727439107b14c78be"
+        },
+        {
+          "game": 98039,
+          "fen": "r1bq1rk1/p4pbp/2pp2p1/4p1B1/2B1P1n1/2N5/PPPQ1PPP/R4RK1 b - - 1 12",
+          "key": "d0f7680a8d31b01812b2bdb1570fd7d0"
+        },
+        {
+          "game": 98049,
+          "fen": "2r3k1/p1p1RRpp/1p4r1/8/2P5/3P3P/P1P3P1/6K1 w - - 1 22",
+          "key": "13787a10ca5c73aed9dd63ac1a7d1951"
+        },
+        {
+          "game": 98059,
+          "fen": "r1b2rk1/pp3ppp/5q2/3pp3/6Q1/1R1B1P2/P1P3PP/5RK1 b - - 0 16",
+          "key": "b39895ceb805cb1a896febb47d3087dc"
+        },
+        {
+          "game": 98066,
+          "fen": "r2q1rk1/ppp2pp1/3pbn1p/2b1p1B1/4P3/1PNP1N1P/1PP2PP1/R2Q1RK1 w - - 0 11",
+          "key": "9dba9c9c8a861ff4194e90fdf5bb5381"
+        },
+        {
+          "game": 98074,
+          "fen": "3rr1k1/p1q2pb1/4pnp1/2p3N1/1pB1P3/4P1N1/PPP1Q3/1K4R1 w - - 0 24",
+          "key": "3c3be3a4b3f538fbb67f20aa7d5be418"
+        },
+        {
+          "game": 98081,
+          "fen": "8/p7/1pQp1qkp/6p1/8/PP6/K1P5/8 b - - 2 43",
+          "key": "ce2528c3295d3ef612a413f2d6543921"
+        },
+        {
+          "game": 98090,
+          "fen": "R7/P3nkpp/4pp2/8/4P3/2p5/r5PP/5K2 w - - 0 31",
+          "key": "0be07376c3a5b1370da5d29e72194678"
+        },
+        {
+          "game": 98099,
+          "fen": "r1b2rk1/1p3ppp/p1pb4/3n4/B2P3q/2P5/PP3PPP/RNBQR1K1 w - - 3 13",
+          "key": "d5fe81876607ae4a325f64d45f249d8c"
+        },
+        {
+          "game": 98106,
+          "fen": "r1bq1rk1/pp3ppp/2N1p3/3n4/1b6/2NBBP2/PPP3PP/R2QK2R b KQ - 0 10",
+          "key": "a267c21502ca7724f43f4d6d69c10e23"
+        },
+        {
+          "game": 98113,
+          "fen": "5rk1/pppb4/3p3p/2PPp1p1/1P2Pn2/5NKP/P5P1/R4B2 w - - 0 29",
+          "key": "90c6b5c8e2665f52c7802f1118059cee"
+        },
+        {
+          "game": 98122,
+          "fen": "r4rk1/p5pp/bq2p3/2p1n3/3p4/8/PPPQBBPP/R4RK1 w - - 2 20",
+          "key": "4f17f150bdd7e8554feeed36b7ee653d"
+        },
+        {
+          "game": 98178,
+          "fen": "r2q1rk1/ppp2pp1/3p4/4n3/4PN2/5P2/PPP4Q/2KR3R b - - 0 20",
+          "key": "3d7ff9b728b4a7d4dbccc28044886212"
+        },
+        {
+          "game": 98188,
+          "fen": "r1bq1rk1/pp4pp/2nbp3/3pNp2/3PnP2/2PBB3/PP1N2PP/R2Q1RK1 b - - 3 11",
+          "key": "9788e3d7b68d68558541086b620866a3"
+        },
+        {
+          "game": 98194,
+          "fen": "rn1qkb1r/pp3ppp/2p1p3/8/4B1b1/5N2/PPPBQPPP/2KR3R b kq - 1 10",
+          "key": "98a9601349c02d27a91eb7b7a6eeabd9"
+        },
+        {
+          "game": 98204,
+          "fen": "r3kb1r/p4ppp/2p1p1n1/q1ppP3/P7/1P1P1P2/1BPNQP1P/R3K2R b KQkq a3 0 12",
+          "key": "c5bcaee4e3731f4bbb987b5e0b5a43bf"
+        },
+        {
+          "game": 98207,
+          "fen": "1r1qkb1r/pp3ppp/2n1b3/3pPp2/3P4/PQ3N2/1P3PPP/RNB2RK1 b k - 5 11",
+          "key": "878b23961d7f1405685ad7002f75279e"
+        },
+        {
+          "game": 98237,
+          "fen": "3r2k1/3r1ppp/8/4P2b/4RP2/2B5/PP4PP/5RK1 w - - 1 27",
+          "key": "1d5f94a860f6b00b664df9bc45894960"
+        },
+        {
+          "game": 98261,
+          "fen": "3r1r1k/ppp2ppp/8/5N2/6q1/2Q1B2b/PP2BR2/2K5 b - - 1 32",
+          "key": "98c57a9ff31742829870373ff47fe9b3"
+        }
+      ],
+      "sha256": "c51030bb484dbc0b6dce22b24519571eb2c979e45c966628c5192ad4ec7860a8",
+      "note": "Later, disjoint augmentation/evaluation game groups; exact base keys excluded. Original base source/game overlap remains unknown."
+    }
+  },
+  "development_summary": {
+    "kernel512": {
+      "positions": 32,
+      "cp_positions": 32,
+      "mean_cp_regret": 10.6875,
+      "median_cp_regret": 0.0,
+      "cp_blunders_100": 0,
+      "mean_value_regret": 0.021000000000000005,
+      "median_seconds": 0.09172005450091092,
+      "mean_large_positions": 32.0
+    },
+    "batch8-512": {
+      "positions": 32,
+      "cp_positions": 32,
+      "mean_cp_regret": 10.8125,
+      "median_cp_regret": 0.0,
+      "cp_blunders_100": 0,
+      "mean_value_regret": 0.02109375,
+      "median_seconds": 0.07400115350174019,
+      "mean_large_positions": 32.0
+    },
+    "batch8-256": {
+      "positions": 32,
+      "cp_positions": 32,
+      "mean_cp_regret": 21.59375,
+      "median_cp_regret": 0.0,
+      "cp_blunders_100": 1,
+      "mean_value_regret": 0.06753124999999999,
+      "median_seconds": 0.06348944050114369,
+      "mean_large_positions": 31.96875
+    },
+    "batch8-128": {
+      "positions": 32,
+      "cp_positions": 32,
+      "mean_cp_regret": 12.1875,
+      "median_cp_regret": 2.5,
+      "cp_blunders_100": 0,
+      "mean_value_regret": 0.024156250000000004,
+      "median_seconds": 0.06090503849554807,
+      "mean_large_positions": 32.0
+    },
+    "batch8-128-4k": {
+      "positions": 32,
+      "cp_positions": 32,
+      "mean_cp_regret": 11.8125,
+      "median_cp_regret": 0.0,
+      "cp_blunders_100": 0,
+      "mean_value_regret": 0.022687500000000006,
+      "median_seconds": 0.05756946000474272,
+      "mean_large_positions": 32.0
+    },
+    "batch8-64": {
+      "positions": 32,
+      "cp_positions": 32,
+      "mean_cp_regret": 21.4375,
+      "median_cp_regret": 0.0,
+      "cp_blunders_100": 1,
+      "mean_value_regret": 0.06621874999999999,
+      "median_seconds": 0.05629531999875326,
+      "mean_large_positions": 32.0
+    },
+    "batch16-128": {
+      "positions": 32,
+      "cp_positions": 32,
+      "mean_cp_regret": 11.875,
+      "median_cp_regret": 0.0,
+      "cp_blunders_100": 0,
+      "mean_value_regret": 0.022406250000000003,
+      "median_seconds": 0.05170245400222484,
+      "mean_large_positions": 31.8125
+    },
+    "puct-31": {
+      "positions": 32,
+      "cp_positions": 32,
+      "mean_cp_regret": 10.75,
+      "median_cp_regret": 0.0,
+      "cp_blunders_100": 1,
+      "mean_value_regret": 0.029593750000000002,
+      "median_seconds": 0.0673998424972524,
+      "mean_large_positions": 31.78125
+    },
+    "puct-512": {
+      "positions": 32,
+      "cp_positions": 32,
+      "mean_cp_regret": 30.34375,
+      "median_cp_regret": 0.0,
+      "cp_blunders_100": 1,
+      "mean_value_regret": 0.07796875,
+      "median_seconds": 0.49926718800270464,
+      "mean_large_positions": 466.34375
+    }
+  },
+  "heldout_analysis": {
+    "positions": 96,
+    "cp_positions": 96,
+    "summary": {
+      "optimized": {
+        "positions": 96,
+        "cp_positions": 96,
+        "mean_cp_regret": 44.333333333333336,
+        "median_cp_regret": 8.5,
+        "cp_blunders_100": 15,
+        "mean_value_regret": 0.09667708333333332,
+        "median_seconds": 0.05153680900548352,
+        "mean_large_positions": 31.145833333333332,
+        "mean_native_seconds": 0.009316914342737922,
+        "mean_inference_seconds": 0.04057572995846689,
+        "mean_inference_batches": 3.0,
+        "p95_seconds": 0.05484978750246228,
+        "mate_events": {
+          "winning_mate_missed": 0,
+          "avoidable_mate_loss": 0
+        }
+      },
+      "conservative": {
+        "positions": 96,
+        "cp_positions": 96,
+        "mean_cp_regret": 39.583333333333336,
+        "median_cp_regret": 0.0,
+        "cp_blunders_100": 12,
+        "mean_value_regret": 0.10427083333333333,
+        "median_seconds": 0.07297518999985186,
+        "mean_large_positions": 31.791666666666668,
+        "mean_native_seconds": 0.021985431115505587,
+        "mean_inference_seconds": 0.05045782012242247,
+        "mean_inference_batches": 5.0,
+        "p95_seconds": 0.08279480175406206,
+        "mate_events": {
+          "winning_mate_missed": 0,
+          "avoidable_mate_loss": 0
+        }
+      },
+      "kernel512": {
+        "positions": 96,
+        "cp_positions": 96,
+        "mean_cp_regret": 38.645833333333336,
+        "median_cp_regret": 0.0,
+        "cp_blunders_100": 12,
+        "mean_value_regret": 0.09638541666666667,
+        "median_seconds": 0.09066303750296356,
+        "mean_large_positions": 31.96875,
+        "mean_native_seconds": 0.022506175621704944,
+        "mean_inference_seconds": 0.06795583035454911,
+        "mean_inference_batches": 9.0,
+        "p95_seconds": 0.10075846099789487,
+        "mate_events": {
+          "winning_mate_missed": 0,
+          "avoidable_mate_loss": 0
+        }
+      },
+      "puct-31": {
+        "positions": 96,
+        "cp_positions": 96,
+        "mean_cp_regret": 26.395833333333332,
+        "median_cp_regret": 0.0,
+        "cp_blunders_100": 6,
+        "mean_value_regret": 0.05559375,
+        "median_seconds": 0.0672294289979618,
+        "mean_large_positions": 31.520833333333332,
+        "mean_native_seconds": 0.00030413267980596476,
+        "mean_inference_seconds": 0.06596752891664437,
+        "mean_inference_batches": 8.895833333333334,
+        "p95_seconds": 0.06777932349723415,
+        "mate_events": {
+          "winning_mate_missed": 0,
+          "avoidable_mate_loss": 0
+        }
+      },
+      "puct-512": {
+        "positions": 96,
+        "cp_positions": 96,
+        "mean_cp_regret": 34.40625,
+        "median_cp_regret": 0.0,
+        "cp_blunders_100": 8,
+        "mean_value_regret": 0.06411458333333332,
+        "median_seconds": 0.5007161554967752,
+        "mean_large_positions": 484.96875,
+        "mean_native_seconds": 0.00155332232376774,
+        "mean_inference_seconds": 0.4736516266810516,
+        "mean_inference_batches": 10.208333333333334,
+        "p95_seconds": 0.5065493682523083,
+        "mate_events": {
+          "winning_mate_missed": 0,
+          "avoidable_mate_loss": 0
+        }
+      },
+      "puct-31-b16": {
+        "positions": 96,
+        "cp_positions": 96,
+        "mean_cp_regret": 29.302083333333332,
+        "median_cp_regret": 0.0,
+        "cp_blunders_100": 7,
+        "mean_value_regret": 0.054322916666666665,
+        "median_seconds": 0.04563025000243215,
+        "mean_large_positions": 30.96875,
+        "mean_native_seconds": 0.0001680791985260536,
+        "mean_inference_seconds": 0.04370099727081348,
+        "mean_inference_batches": 3.8229166666666665,
+        "p95_seconds": 0.046382961994822836,
+        "mate_events": {
+          "winning_mate_missed": 0,
+          "avoidable_mate_loss": 0
+        }
+      }
+    },
+    "paired": {
+      "optimized minus conservative": {
+        "positions": 96,
+        "mean_cp_delta": 4.75,
+        "mean_cp_delta_bootstrap95": [
+          -0.9276041666666662,
+          11.489583333333334
+        ],
+        "blunder_rate_delta": 0.03125,
+        "blunder_rate_delta_bootstrap95": [
+          0.0,
+          0.07291666666666667
+        ],
+        "fixed_blunders": 0,
+        "new_blunders": 3,
+        "discordant_exact_two_sided_p": 0.25
+      },
+      "optimized minus kernel512": {
+        "positions": 96,
+        "mean_cp_delta": 5.6875,
+        "mean_cp_delta_bootstrap95": [
+          1.0416666666666667,
+          11.28125
+        ],
+        "blunder_rate_delta": 0.03125,
+        "blunder_rate_delta_bootstrap95": [
+          0.0,
+          0.07291666666666667
+        ],
+        "fixed_blunders": 0,
+        "new_blunders": 3,
+        "discordant_exact_two_sided_p": 0.25
+      },
+      "optimized minus puct-31": {
+        "positions": 96,
+        "mean_cp_delta": 17.9375,
+        "mean_cp_delta_bootstrap95": [
+          8.479166666666666,
+          28.614843749999995
+        ],
+        "blunder_rate_delta": 0.09375,
+        "blunder_rate_delta_bootstrap95": [
+          0.041666666666666664,
+          0.15625
+        ],
+        "fixed_blunders": 0,
+        "new_blunders": 9,
+        "discordant_exact_two_sided_p": 0.00390625
+      },
+      "optimized minus puct-31-b16": {
+        "positions": 96,
+        "mean_cp_delta": 15.03125,
+        "mean_cp_delta_bootstrap95": [
+          4.572916666666667,
+          26.177343749999995
+        ],
+        "blunder_rate_delta": 0.08333333333333333,
+        "blunder_rate_delta_bootstrap95": [
+          0.020833333333333332,
+          0.14583333333333334
+        ],
+        "fixed_blunders": 1,
+        "new_blunders": 9,
+        "discordant_exact_two_sided_p": 0.021484375
+      },
+      "optimized minus puct-512": {
+        "positions": 96,
+        "mean_cp_delta": 9.927083333333334,
+        "mean_cp_delta_bootstrap95": [
+          -11.437760416666666,
+          25.4375
+        ],
+        "blunder_rate_delta": 0.07291666666666667,
+        "blunder_rate_delta_bootstrap95": [
+          0.010416666666666666,
+          0.13541666666666666
+        ],
+        "fixed_blunders": 2,
+        "new_blunders": 9,
+        "discordant_exact_two_sided_p": 0.0654296875
+      }
+    },
+    "note": "Fresh frozen roots, finite-node unified candidate union, not Elo. Fast and conservative points chosen only on old development roots. Matched-batch PUCT is an additional efficiency control, not the original PUCT-31 configuration."
+  },
+  "heldout_fingerprints": {
+    "checkpoint_sha256": "9f197a12be729e70f8d7824ef6de1e743b3dce2033c7cc5bb06ce6a6d8832e5c",
+    "openings_sha256": "c51030bb484dbc0b6dce22b24519571eb2c979e45c966628c5192ad4ec7860a8",
+    "student_hashes": {
+      "output/rank-frontier-20261031/cp-rank/best.bin": "65c74283e4ca8585110fafd3b6f4f736ea69c6b93691eee1103c0e078c3f9450"
+    },
+    "native_library_sha256": "c606a96554a73f661de7267485737e5927a9ad0d02bc1050f648c81a77cf3fdf",
+    "source_hashes": {
+      "neurochess/native/best_first.cpp": "d8c419776dbdc9364a0d6a3ed24f187a997631a565d4b6ae9bc9c84fb070b083",
+      "neurochess/best_first.py": "ec0702f47496228434e78eca816315d4baf14b5f53c8f31dafaa779ae7c0c239",
+      "neurochess/cheap.py": "94d5702a2b48cb292b15e958b76fb42327b335307ff2d3975d2019cddb652e2f",
+      "neurochess/native/mcts.cpp": "615429aaff6c562404c367df5c4b416e4aef2a59459d4b753d03da484dd5338d",
+      "scripts/compare_search_variants.py": "bfe95c1fe985b821f28f2b094528ad4b5e5d21b22e336ed474bc743c1c69d04e"
+    }
+  },
+  "duels": {
+    "fast": {
+      "puct-31": {
+        "scheduled": 64,
+        "attempted": 64,
+        "completed": 64,
+        "truncated": 0,
+        "wins": 11,
+        "draws": 8,
+        "losses": 45,
+        "independent_completed_pairs": 32,
+        "paired_score": 0.234375,
+        "score_bootstrap95": [
+          0.15625,
+          0.3125
+        ],
+        "relative_elo": -205.64192838913294,
+        "relative_elo_bootstrap95": [
+          -292.9575039291874,
+          -136.9690723288825
+        ],
+        "score_hoeffding95": [
+          0.0,
+          0.4744556978299802
+        ],
+        "relative_elo_hoeffding95": [
+          null,
+          -17.765466159829742
+        ],
+        "pentanomial": [
+          14,
+          6,
+          12,
+          0,
+          0
+        ],
+        "rating_note": "Relative to this opponent, budgets and opening distribution only. Bootstrap pairs, not individual games. Null Elo endpoints mean unbounded; identical pair outcomes make bootstrap degenerate; consult conservative interval.",
+        "work": {
+          "optimized": {
+            "choices": 2561,
+            "large_model_positions": 63905,
+            "mean_large_positions": 24.95314330339711,
+            "seconds": 100.60308993147919,
+            "seconds_per_choice": 0.03928273718527106
+          },
+          "puct-31": {
+            "choices": 2575,
+            "large_model_positions": 71029,
+            "mean_large_positions": 27.584077669902914,
+            "seconds": 145.07360375086137,
+            "seconds_per_choice": 0.05633926359256752
+          }
+        }
+      },
+      "puct-512": {
+        "scheduled": 64,
+        "attempted": 64,
+        "completed": 64,
+        "truncated": 0,
+        "wins": 1,
+        "draws": 7,
+        "losses": 56,
+        "independent_completed_pairs": 32,
+        "paired_score": 0.0703125,
+        "score_bootstrap95": [
+          0.0234375,
+          0.125
+        ],
+        "relative_elo": -448.52178078128236,
+        "relative_elo_bootstrap95": [
+          -647.9155033153576,
+          -338.03921600570277
+        ],
+        "score_hoeffding95": [
+          0.0,
+          0.3103931978299802
+        ],
+        "relative_elo_hoeffding95": [
+          null,
+          -138.67573655435578
+        ],
+        "pentanomial": [
+          25,
+          5,
+          2,
+          0,
+          0
+        ],
+        "rating_note": "Relative to this opponent, budgets and opening distribution only. Bootstrap pairs, not individual games. Null Elo endpoints mean unbounded; identical pair outcomes make bootstrap degenerate; consult conservative interval.",
+        "work": {
+          "optimized": {
+            "choices": 2431,
+            "large_model_positions": 63256,
+            "mean_large_positions": 26.02056766762649,
+            "seconds": 98.60834287539183,
+            "seconds_per_choice": 0.04056287242920273
+          },
+          "puct-512": {
+            "choices": 2459,
+            "large_model_positions": 1133122,
+            "mean_large_positions": 460.8060187067914,
+            "seconds": 1090.7237509252736,
+            "seconds_per_choice": 0.44356394913593883
+          }
+        }
+      }
+    },
+    "original-budget": {
+      "puct-512": {
+        "scheduled": 32,
+        "attempted": 32,
+        "completed": 32,
+        "truncated": 0,
+        "wins": 0,
+        "draws": 7,
+        "losses": 25,
+        "independent_completed_pairs": 16,
+        "paired_score": 0.109375,
+        "score_bootstrap95": [
+          0.046875,
+          0.1875
+        ],
+        "relative_elo": -364.3107262632938,
+        "relative_elo_bootstrap95": [
+          -523.2834321164419,
+          -254.72883903486974
+        ],
+        "score_hoeffding95": [
+          0.0,
+          0.4489003789351549
+        ],
+        "relative_elo_hoeffding95": [
+          null,
+          -35.63205615916165
+        ],
+        "pentanomial": [
+          10,
+          5,
+          1,
+          0,
+          0
+        ],
+        "rating_note": "Relative to this opponent, budgets and opening distribution only. Bootstrap pairs, not individual games. Null Elo endpoints mean unbounded; identical pair outcomes make bootstrap degenerate; consult conservative interval.",
+        "work": {
+          "kernel512": {
+            "choices": 1174,
+            "large_model_positions": 31872,
+            "mean_large_positions": 27.148211243611584,
+            "seconds": 92.34541764798632,
+            "seconds_per_choice": 0.07865878845654713
+          },
+          "puct-512": {
+            "choices": 1186,
+            "large_model_positions": 564759,
+            "mean_large_positions": 476.18802698145026,
+            "seconds": 544.2911668341258,
+            "seconds_per_choice": 0.45893015753298966
+          }
+        }
+      },
+      "puct-31": {
+        "scheduled": 32,
+        "attempted": 32,
+        "completed": 32,
+        "truncated": 0,
+        "wins": 7,
+        "draws": 5,
+        "losses": 20,
+        "independent_completed_pairs": 16,
+        "paired_score": 0.296875,
+        "score_bootstrap95": [
+          0.15625,
+          0.4375
+        ],
+        "relative_elo": -149.7835651290059,
+        "relative_elo_bootstrap95": [
+          -292.9575039291874,
+          -43.65778777002721
+        ],
+        "score_hoeffding95": [
+          0.0,
+          0.6364003789351549
+        ],
+        "relative_elo_hoeffding95": [
+          null,
+          97.24280305214658
+        ],
+        "pentanomial": [
+          7,
+          2,
+          4,
+          3,
+          0
+        ],
+        "rating_note": "Relative to this opponent, budgets and opening distribution only. Bootstrap pairs, not individual games. Null Elo endpoints mean unbounded; identical pair outcomes make bootstrap degenerate; consult conservative interval.",
+        "work": {
+          "kernel512": {
+            "choices": 1379,
+            "large_model_positions": 30856,
+            "mean_large_positions": 22.375634517766496,
+            "seconds": 89.41703522896569,
+            "seconds_per_choice": 0.06484193997749506
+          },
+          "puct-31": {
+            "choices": 1385,
+            "large_model_positions": 35514,
+            "mean_large_positions": 25.641877256317688,
+            "seconds": 73.2144693240698,
+            "seconds_per_choice": 0.05286243272496014
+          }
+        }
+      }
+    },
+    "matched_opening_control": {
+      "pairs": 16,
+      "original_budget_minus_fast_score": 0.046875,
+      "bootstrap95": [
+        -0.015625,
+        0.109375
+      ],
+      "note": "Same initial opening pairs versus PUCT512; exploratory budget-control comparison, not extra independent games."
+    },
+    "note": "All relative Elo estimates are conditional on these budgets, frozen model, opening selection and draw rules; no absolute Elo calibration. Game timing is descriptive; dedicated heldout benchmark supplies controlled latency."
+  },
+  "match_plans": {
+    "fast": {
+      "args": {
+        "suite": "output/cpu-speed-20261031/final-suite.json",
+        "contender": "optimized",
+        "opponents": "puct-31,puct-512",
+        "openings": "output/cpu-speed-20261031/openings/openings.fen",
+        "checkpoint": "output/eval-multihead-20261031/model/best.pt",
+        "out": "output/cpu-speed-20261031/duel",
+        "pairs": 32,
+        "max_plies": 1000
+      },
+      "variants": {
+        "optimized": {
+          "name": "optimized",
+          "kind": "best-first",
+          "cheap": "output/rank-frontier-20261031/cp-rank/best.bin",
+          "options": {
+            "expansions": 128,
+            "neural_budget": 32,
+            "correction_batch": 16,
+            "root_policy_weight": 0.1,
+            "align_root_objective": true,
+            "local_exploration": true,
+            "mate_nodes": 8192,
+            "tactical_nodes": 8192
+          }
+        },
+        "puct-31": {
+          "name": "puct-31",
+          "kind": "puct",
+          "options": {
+            "simulations": 31,
+            "leaf_batch_size": 4
+          }
+        },
+        "puct-512": {
+          "name": "puct-512",
+          "kind": "puct",
+          "options": {
+            "simulations": 512,
+            "leaf_batch_size": 64
+          }
+        }
+      },
+      "openings": [
+        "rn1qk2r/1p1bppbp/p2p1np1/1B4B1/3NP3/2N5/PPP2PPP/R2Q1RK1 w kq - 0 9",
+        "rnbq1rk1/pp2bppp/2p2n2/6B1/2BP4/2N2N2/PP3PPP/R2Q1RK1 b - - 2 9",
+        "r1bqrnk1/pp1nppbp/2p3p1/3pN3/3P1P2/2PBPQ2/PP1N2PP/R1B2RK1 w - - 5 11",
+        "r1bq1rk1/ppp1bppp/3p1n2/4n1B1/2BNP3/8/PPP2PPP/RN1QR1K1 w - - 3 9",
+        "r2qnrk1/pp1bbppp/2n1p3/2ppP3/5P2/3PB1PP/PPP3BN/RN1Q1RK1 b - - 2 11",
+        "r1b2rk1/pp1nbppp/1qp2n2/4pP2/4P3/6PP/PPP3BN/RNBQ1RK1 w - - 3 12",
+        "rnb1k2r/p3n1pp/2p2p2/1p2p3/4P3/1BP1BP2/P1P3PP/R2K2NR b kq - 1 11",
+        "r1bqr1k1/pp2nppp/2n5/3pP3/2pP2B1/2P5/PP4PP/RNBQ1RK1 b - - 2 12",
+        "r2qk1nr/pb1nbppp/1p6/2pp4/5B2/2PP1N1P/PP2BPP1/RN1QR1K1 b kq - 3 10",
+        "r1bqk2r/4npb1/p1n1p2p/1p1pP3/2pP2pP/2P2NB1/PPQNBPP1/R3K2R w KQkq - 0 13",
+        "2r1k2r/1pqbbppp/p1n1pn2/3p4/1P1P4/P1NBPN2/5PPP/R1BQ1RK1 w k - 2 12",
+        "rn1q1rk1/pp2nppp/2pb4/3p2B1/6b1/2NP1N2/PPPQBPPP/R3K2R w KQ - 6 9",
+        "r1bqk1nr/pp2bpp1/2n1p3/2p1P3/3pNP1p/3P1N1P/PPP1B1P1/R1BQK2R b KQkq - 0 9",
+        "r6r/1pp1k1pp/p1nbbn2/4ppN1/2P5/2N1P3/PP1BBPPP/1K1R3R b - - 1 12",
+        "r2qkb1r/1p1bpp1p/p5p1/2p5/8/2N5/PPPP1PPP/R1BQ1RK1 w kq - 0 10",
+        "rn3rk1/pppq1ppp/3b1n2/5bB1/2BP4/2N2N2/PP3PPP/R2Q1RK1 b - - 0 10",
+        "r3k2r/ppqnbppp/2p1pn2/5bB1/3P4/2N2N2/PPPQBPPP/3RR1K1 b kq - 7 11",
+        "r1bq1rk1/pp2bppp/2n2n2/3p4/3P4/2N1BN2/PPQ2PPP/R3KB1R w KQ - 6 10",
+        "rnbq1rk1/pp2bpp1/2p2n1p/2Pp4/3P1B2/2N2N2/PP3PPP/R2QKB1R w KQ - 2 9",
+        "rnbqk2r/pp2npbp/2p1p1p1/8/3pP3/N2P1P2/PPPBN1PP/R1Q1KB1R b KQkq - 1 9",
+        "rn1qk2r/4n1bp/p2p2p1/1ppP1b2/5P2/P1N2N2/1PQ3PP/R1B1KB1R w KQkq - 0 12",
+        "rn1qnrk1/pbp1ppbp/1p4p1/4P3/2PP4/2NBBN2/PP4PP/R2QK2R b KQ - 2 10",
+        "r1bqk2r/pp3pbp/3p1np1/4p3/4P3/2PQBN2/PP3PPP/RN3RK1 w kq - 2 11",
+        "r1bq1rk1/pp1n1pbp/2pppnp1/8/2PPPP2/2NBBN2/PP4PP/R2QK2R w KQ - 0 9",
+        "r1bqk2r/pp2ppbp/2np1np1/2p5/4P1PP/2NPBP2/PPPQB3/R3K1NR b KQkq h3 0 9",
+        "r2qk2r/pp1nbppp/2p1pn2/5b2/P1N5/6P1/1P1PPPBP/RNBQ1RK1 w kq - 1 9",
+        "r1bq1rk1/ppppnppp/5n2/3P4/4P3/2NB4/PP1Q1PPP/R3K1NR b KQ - 4 9",
+        "2kr1b1r/pp1qnpp1/2n1b3/4P2p/3p4/3B1N2/PP1B1PPP/RN1Q1RK1 w - h6 0 11",
+        "r2qk2r/ppp2pbp/2npb1p1/5n2/4NP2/P2P1N2/1PPBB1PP/R2Q1RK1 w kq - 3 12",
+        "r2q1rk1/p4ppp/2p5/3np3/2Bb2b1/1QN5/PPPP1PPP/R1B2RK1 w - - 4 13",
+        "rn1k3r/p4ppp/2p2b2/1p3b2/2B1p3/2P5/PP1NNPPP/R3K2R w KQ b6 0 12",
+        "r3k1nr/pppqp1b1/2npbp2/6p1/4P2p/2NP1N1P/PPP1BPPB/R2QK2R b KQkq - 1 11"
+      ],
+      "checkpoint_sha256": "9f197a12be729e70f8d7824ef6de1e743b3dce2033c7cc5bb06ce6a6d8832e5c",
+      "students": {
+        "output/rank-frontier-20261031/cp-rank/best.bin": "65c74283e4ca8585110fafd3b6f4f736ea69c6b93691eee1103c0e078c3f9450"
+      },
+      "native_sha256": {
+        "libbestfirst.so": "c606a96554a73f661de7267485737e5927a9ad0d02bc1050f648c81a77cf3fdf",
+        "libmcts.so": "5d78a3c5ea33c9e3452afd0d763a9931188591ff4ca51aa8f1cc12f11dd9622f"
+      },
+      "source_sha256": {
+        "neurochess/native/best_first.cpp": "d8c419776dbdc9364a0d6a3ed24f187a997631a565d4b6ae9bc9c84fb070b083",
+        "neurochess/native/mcts.cpp": "615429aaff6c562404c367df5c4b416e4aef2a59459d4b753d03da484dd5338d",
+        "neurochess/best_first.py": "ec0702f47496228434e78eca816315d4baf14b5f53c8f31dafaa779ae7c0c239",
+        "scripts/search_duel.py": "64f75c28dde9dbdf349585e421866fe78410981dd43647cf9907339d96b7d415"
+      },
+      "rules": "Direct play, swapped colors, fresh players per game; original PUCT subtree reuse retained. Full python-chess history and claimable draws. Unfinished games excluded, never counted as draws."
+    },
+    "stable512": {
+      "args": {
+        "suite": "output/cpu-speed-20261031/final-suite.json",
+        "contender": "kernel512",
+        "opponents": "puct-512",
+        "openings": "output/cpu-speed-20261031/openings/openings.fen",
+        "checkpoint": "output/eval-multihead-20261031/model/best.pt",
+        "out": "output/cpu-speed-20261031/stable-duel",
+        "pairs": 16,
+        "max_plies": 1000
+      },
+      "variants": {
+        "kernel512": {
+          "name": "kernel512",
+          "kind": "best-first",
+          "cheap": "output/rank-frontier-20261031/cp-rank/best.bin",
+          "options": {
+            "expansions": 512,
+            "neural_budget": 32,
+            "correction_batch": 4,
+            "root_policy_weight": 0.1,
+            "align_root_objective": true,
+            "local_exploration": true,
+            "mate_nodes": 16384,
+            "tactical_nodes": 16384
+          }
+        },
+        "puct-512": {
+          "name": "puct-512",
+          "kind": "puct",
+          "options": {
+            "simulations": 512,
+            "leaf_batch_size": 64
+          }
+        }
+      },
+      "openings": [
+        "rn1qk2r/1p1bppbp/p2p1np1/1B4B1/3NP3/2N5/PPP2PPP/R2Q1RK1 w kq - 0 9",
+        "rnbq1rk1/pp2bppp/2p2n2/6B1/2BP4/2N2N2/PP3PPP/R2Q1RK1 b - - 2 9",
+        "r1bqrnk1/pp1nppbp/2p3p1/3pN3/3P1P2/2PBPQ2/PP1N2PP/R1B2RK1 w - - 5 11",
+        "r1bq1rk1/ppp1bppp/3p1n2/4n1B1/2BNP3/8/PPP2PPP/RN1QR1K1 w - - 3 9",
+        "r2qnrk1/pp1bbppp/2n1p3/2ppP3/5P2/3PB1PP/PPP3BN/RN1Q1RK1 b - - 2 11",
+        "r1b2rk1/pp1nbppp/1qp2n2/4pP2/4P3/6PP/PPP3BN/RNBQ1RK1 w - - 3 12",
+        "rnb1k2r/p3n1pp/2p2p2/1p2p3/4P3/1BP1BP2/P1P3PP/R2K2NR b kq - 1 11",
+        "r1bqr1k1/pp2nppp/2n5/3pP3/2pP2B1/2P5/PP4PP/RNBQ1RK1 b - - 2 12",
+        "r2qk1nr/pb1nbppp/1p6/2pp4/5B2/2PP1N1P/PP2BPP1/RN1QR1K1 b kq - 3 10",
+        "r1bqk2r/4npb1/p1n1p2p/1p1pP3/2pP2pP/2P2NB1/PPQNBPP1/R3K2R w KQkq - 0 13",
+        "2r1k2r/1pqbbppp/p1n1pn2/3p4/1P1P4/P1NBPN2/5PPP/R1BQ1RK1 w k - 2 12",
+        "rn1q1rk1/pp2nppp/2pb4/3p2B1/6b1/2NP1N2/PPPQBPPP/R3K2R w KQ - 6 9",
+        "r1bqk1nr/pp2bpp1/2n1p3/2p1P3/3pNP1p/3P1N1P/PPP1B1P1/R1BQK2R b KQkq - 0 9",
+        "r6r/1pp1k1pp/p1nbbn2/4ppN1/2P5/2N1P3/PP1BBPPP/1K1R3R b - - 1 12",
+        "r2qkb1r/1p1bpp1p/p5p1/2p5/8/2N5/PPPP1PPP/R1BQ1RK1 w kq - 0 10",
+        "rn3rk1/pppq1ppp/3b1n2/5bB1/2BP4/2N2N2/PP3PPP/R2Q1RK1 b - - 0 10"
+      ],
+      "checkpoint_sha256": "9f197a12be729e70f8d7824ef6de1e743b3dce2033c7cc5bb06ce6a6d8832e5c",
+      "students": {
+        "output/rank-frontier-20261031/cp-rank/best.bin": "65c74283e4ca8585110fafd3b6f4f736ea69c6b93691eee1103c0e078c3f9450"
+      },
+      "native_sha256": {
+        "libbestfirst.so": "c606a96554a73f661de7267485737e5927a9ad0d02bc1050f648c81a77cf3fdf",
+        "libmcts.so": "5d78a3c5ea33c9e3452afd0d763a9931188591ff4ca51aa8f1cc12f11dd9622f"
+      },
+      "source_sha256": {
+        "neurochess/native/best_first.cpp": "d8c419776dbdc9364a0d6a3ed24f187a997631a565d4b6ae9bc9c84fb070b083",
+        "neurochess/native/mcts.cpp": "615429aaff6c562404c367df5c4b416e4aef2a59459d4b753d03da484dd5338d",
+        "neurochess/best_first.py": "ec0702f47496228434e78eca816315d4baf14b5f53c8f31dafaa779ae7c0c239",
+        "scripts/search_duel.py": "64f75c28dde9dbdf349585e421866fe78410981dd43647cf9907339d96b7d415"
+      },
+      "rules": "Direct play, swapped colors, fresh players per game; original PUCT subtree reuse retained. Full python-chess history and claimable draws. Unfinished games excluded, never counted as draws."
+    },
+    "stable31": {
+      "args": {
+        "suite": "output/cpu-speed-20261031/final-suite.json",
+        "contender": "kernel512",
+        "opponents": "puct-31",
+        "openings": "output/cpu-speed-20261031/openings/openings.fen",
+        "checkpoint": "output/eval-multihead-20261031/model/best.pt",
+        "out": "output/cpu-speed-20261031/stable31-duel",
+        "pairs": 16,
+        "max_plies": 1000
+      },
+      "variants": {
+        "kernel512": {
+          "name": "kernel512",
+          "kind": "best-first",
+          "cheap": "output/rank-frontier-20261031/cp-rank/best.bin",
+          "options": {
+            "expansions": 512,
+            "neural_budget": 32,
+            "correction_batch": 4,
+            "root_policy_weight": 0.1,
+            "align_root_objective": true,
+            "local_exploration": true,
+            "mate_nodes": 16384,
+            "tactical_nodes": 16384
+          }
+        },
+        "puct-31": {
+          "name": "puct-31",
+          "kind": "puct",
+          "options": {
+            "simulations": 31,
+            "leaf_batch_size": 4
+          }
+        }
+      },
+      "openings": [
+        "rn1qk2r/1p1bppbp/p2p1np1/1B4B1/3NP3/2N5/PPP2PPP/R2Q1RK1 w kq - 0 9",
+        "rnbq1rk1/pp2bppp/2p2n2/6B1/2BP4/2N2N2/PP3PPP/R2Q1RK1 b - - 2 9",
+        "r1bqrnk1/pp1nppbp/2p3p1/3pN3/3P1P2/2PBPQ2/PP1N2PP/R1B2RK1 w - - 5 11",
+        "r1bq1rk1/ppp1bppp/3p1n2/4n1B1/2BNP3/8/PPP2PPP/RN1QR1K1 w - - 3 9",
+        "r2qnrk1/pp1bbppp/2n1p3/2ppP3/5P2/3PB1PP/PPP3BN/RN1Q1RK1 b - - 2 11",
+        "r1b2rk1/pp1nbppp/1qp2n2/4pP2/4P3/6PP/PPP3BN/RNBQ1RK1 w - - 3 12",
+        "rnb1k2r/p3n1pp/2p2p2/1p2p3/4P3/1BP1BP2/P1P3PP/R2K2NR b kq - 1 11",
+        "r1bqr1k1/pp2nppp/2n5/3pP3/2pP2B1/2P5/PP4PP/RNBQ1RK1 b - - 2 12",
+        "r2qk1nr/pb1nbppp/1p6/2pp4/5B2/2PP1N1P/PP2BPP1/RN1QR1K1 b kq - 3 10",
+        "r1bqk2r/4npb1/p1n1p2p/1p1pP3/2pP2pP/2P2NB1/PPQNBPP1/R3K2R w KQkq - 0 13",
+        "2r1k2r/1pqbbppp/p1n1pn2/3p4/1P1P4/P1NBPN2/5PPP/R1BQ1RK1 w k - 2 12",
+        "rn1q1rk1/pp2nppp/2pb4/3p2B1/6b1/2NP1N2/PPPQBPPP/R3K2R w KQ - 6 9",
+        "r1bqk1nr/pp2bpp1/2n1p3/2p1P3/3pNP1p/3P1N1P/PPP1B1P1/R1BQK2R b KQkq - 0 9",
+        "r6r/1pp1k1pp/p1nbbn2/4ppN1/2P5/2N1P3/PP1BBPPP/1K1R3R b - - 1 12",
+        "r2qkb1r/1p1bpp1p/p5p1/2p5/8/2N5/PPPP1PPP/R1BQ1RK1 w kq - 0 10",
+        "rn3rk1/pppq1ppp/3b1n2/5bB1/2BP4/2N2N2/PP3PPP/R2Q1RK1 b - - 0 10"
+      ],
+      "checkpoint_sha256": "9f197a12be729e70f8d7824ef6de1e743b3dce2033c7cc5bb06ce6a6d8832e5c",
+      "students": {
+        "output/rank-frontier-20261031/cp-rank/best.bin": "65c74283e4ca8585110fafd3b6f4f736ea69c6b93691eee1103c0e078c3f9450"
+      },
+      "native_sha256": {
+        "libbestfirst.so": "c606a96554a73f661de7267485737e5927a9ad0d02bc1050f648c81a77cf3fdf",
+        "libmcts.so": "5d78a3c5ea33c9e3452afd0d763a9931188591ff4ca51aa8f1cc12f11dd9622f"
+      },
+      "source_sha256": {
+        "neurochess/native/best_first.cpp": "d8c419776dbdc9364a0d6a3ed24f187a997631a565d4b6ae9bc9c84fb070b083",
+        "neurochess/native/mcts.cpp": "615429aaff6c562404c367df5c4b416e4aef2a59459d4b753d03da484dd5338d",
+        "neurochess/best_first.py": "ec0702f47496228434e78eca816315d4baf14b5f53c8f31dafaa779ae7c0c239",
+        "scripts/search_duel.py": "64f75c28dde9dbdf349585e421866fe78410981dd43647cf9907339d96b7d415"
+      },
+      "rules": "Direct play, swapped colors, fresh players per game; original PUCT subtree reuse retained. Full python-chess history and claimable draws. Unfinished games excluded, never counted as draws."
+    }
+  },
+  "audits": {
+    "fast": {
+      "passed": true,
+      "checked_games": 128,
+      "summary": {
+        "puct-31": {
+          "scheduled": 64,
+          "attempted": 64,
+          "completed": 64,
+          "truncated": 0,
+          "wins": 11,
+          "draws": 8,
+          "losses": 45,
+          "independent_completed_pairs": 32,
+          "paired_score": 0.234375,
+          "score_bootstrap95": [
+            0.15625,
+            0.3125
+          ],
+          "relative_elo": -205.64192838913294,
+          "relative_elo_bootstrap95": [
+            -292.9575039291874,
+            -136.9690723288825
+          ],
+          "score_hoeffding95": [
+            0.0,
+            0.4744556978299802
+          ],
+          "relative_elo_hoeffding95": [
+            null,
+            -17.765466159829742
+          ],
+          "pentanomial": [
+            14,
+            6,
+            12,
+            0,
+            0
+          ],
+          "rating_note": "Relative to this opponent, budgets and opening distribution only. Bootstrap pairs, not individual games. Null Elo endpoints mean unbounded; identical pair outcomes make bootstrap degenerate; consult conservative interval."
+        },
+        "puct-512": {
+          "scheduled": 64,
+          "attempted": 64,
+          "completed": 64,
+          "truncated": 0,
+          "wins": 1,
+          "draws": 7,
+          "losses": 56,
+          "independent_completed_pairs": 32,
+          "paired_score": 0.0703125,
+          "score_bootstrap95": [
+            0.0234375,
+            0.125
+          ],
+          "relative_elo": -448.52178078128236,
+          "relative_elo_bootstrap95": [
+            -647.9155033153576,
+            -338.03921600570277
+          ],
+          "score_hoeffding95": [
+            0.0,
+            0.3103931978299802
+          ],
+          "relative_elo_hoeffding95": [
+            null,
+            -138.67573655435578
+          ],
+          "pentanomial": [
+            25,
+            5,
+            2,
+            0,
+            0
+          ],
+          "rating_note": "Relative to this opponent, budgets and opening distribution only. Bootstrap pairs, not individual games. Null Elo endpoints mean unbounded; identical pair outcomes make bootstrap degenerate; consult conservative interval."
+        }
+      },
+      "sha256": {
+        "puct-31/000-0.json": "718355aace65ab343a451212951797b49fadc6b0eddd0885b17488f51eba9105",
+        "puct-31/000-0.pgn": "333fddab73ea9c352a526261ae3520a565d80a20e1a58a3c03b6394d97df91e3",
+        "puct-31/000-1.json": "4bc3fcebdd18fe51dfbe4a2328ecdabe8cbb3fe15d8c3acf3a22000ff4cfb5e1",
+        "puct-31/000-1.pgn": "278b591d48f118beb4a3f5cd2caaebcf03592b147d483f3c07f92e9b23e4a4ca",
+        "puct-31/001-0.json": "1c1926356489e3a111fcd095581ac0acff62fe4002e475ccd60ba1ded0c126a9",
+        "puct-31/001-0.pgn": "013b7ab1e3e43ddbc53b524ed39fdd235bbeeccf5203aa7e2cca33ce8c5e6be9",
+        "puct-31/001-1.json": "8db341b48d419132ed4716125f6fb6db9a6b8e1c9c13d2893aa1e28dcc62d728",
+        "puct-31/001-1.pgn": "a97b14fc5394406ea42e64ef96bd5fa2e3fb13a3dc8a7dd94257e35aaa81d094",
+        "puct-31/002-0.json": "e082bf050304c4e17c962adb4350c1743f33e7734deed540a89f0fe79ad834e7",
+        "puct-31/002-0.pgn": "e85121cb8222e3ab10f63d3e3b5636614441e07bc68f1dbeddcf294973771cfe",
+        "puct-31/002-1.json": "64ce0470f638f4eb8273eeace4de26f6a23e3fb29e12406b5d3e821f87d3050c",
+        "puct-31/002-1.pgn": "f490c14c98c7ffe8a6b40b0c8285ba901db9781655c3e3e012ecf73bdf97096c",
+        "puct-31/003-0.json": "34b10bfbb28d3932148a0e42f96b5c4ff98bdfb13bccf9673450c3fc3bee7d92",
+        "puct-31/003-0.pgn": "6786707810243bfce5f555f3eef2d61e919ecbb69caa4e6def37ba66e041ef18",
+        "puct-31/003-1.json": "9aa8ad61b7cb04c8b60182457169597bb5599f26fcb19b5504f7879b4a8bb13d",
+        "puct-31/003-1.pgn": "d990f27e1d43443266a8173215e126660d955b59e0934fd7e93e59de2e33bbc8",
+        "puct-31/004-0.json": "cd0fa272266f39462be309d8fac64006bd5e23bacb3cc56c4e16760ef667ab82",
+        "puct-31/004-0.pgn": "51030cdf0a461c802269f61702dbf12f930142997d45ff70f7fc8a9af4dea4ac",
+        "puct-31/004-1.json": "fa689f7c65af4c05fb12ff5f0e3ada964d067041c93c772b9339f6b4708b92d0",
+        "puct-31/004-1.pgn": "c6afe4176c5189e86f753172a44bb911c576659e807e8a7ef634af8b9b033630",
+        "puct-31/005-0.json": "6d02c80e164516a07b8b951164eb35bae3c03bf53463575853017dd6e6be41de",
+        "puct-31/005-0.pgn": "cb6489d74316d59a93900ff959b288f42ed8fd88f8682e89eac068a161d5505a",
+        "puct-31/005-1.json": "b90d7ee64ab3b84c722303440baee7502cba4917d4c6ee0cfe41fc592789c0dc",
+        "puct-31/005-1.pgn": "6263a388ad045078295b09609b0a452997289bce9352219f04811d08aff51cd8",
+        "puct-31/006-0.json": "548a94967e3fb8f97e7cdd44a1069416d6447ed4f30a68bbe5a943bb2476a68d",
+        "puct-31/006-0.pgn": "21e4e7011aa2dc53e91d9eae3234b55ac53a5c3a56ab7eb5febf11e8d8dd3cd7",
+        "puct-31/006-1.json": "74a0d33570278527f330a7029673aa098826c0793168bb1463ddbc43bf5a1f53",
+        "puct-31/006-1.pgn": "ca9fd9ca7346e073b90e81b248f39e40204fe8dd73428fdf62d3b24296cbeefd",
+        "puct-31/007-0.json": "4f93f5d7d555bc6662a904611f264869670b8d3ad02636fb05d9a64d2a043db2",
+        "puct-31/007-0.pgn": "ecc8178636f7a57f634e9ae33d7fea95af41a863cecf510d5e7d972484c3d2b4",
+        "puct-31/007-1.json": "bf8de71581fb034a75c5aae95d185a93e2a4331f2d69aee7fbf23adf60fef884",
+        "puct-31/007-1.pgn": "2c4477b5ce3884a49733a1fb11ab55eaf3923147f8c34a67e854e4df559b996a",
+        "puct-31/008-0.json": "71c17fa682742d664a7775daa1f97c996d50bc0c4f75025e90b9206f345d5d53",
+        "puct-31/008-0.pgn": "50c03718e6bd314e02d191f972b2983d4501e4df75bc7dc724a416f5d4d2efda",
+        "puct-31/008-1.json": "0d6345431840ac10da87678a2cb442e4fce58a6b0652ebd648c1058ef5317720",
+        "puct-31/008-1.pgn": "7f7232708947f0acb3bcacb61d175e96701a614268a9356d2ecb1d48c93d4115",
+        "puct-31/009-0.json": "f9378d2ed567c97807f630274fc94baa2c0bc64fe8e6c48cf8dd8acb2f0b29d2",
+        "puct-31/009-0.pgn": "3f8c931efd0ac58091e394f0a0104910d4425585e58393dae404c082e55ad44a",
+        "puct-31/009-1.json": "99c2c21af334eaf67e3ab5cbcb366b707754fbdc05f133a69a21bbe510841696",
+        "puct-31/009-1.pgn": "3e19b53060f3b1c4d6973edf057327fbb12639f0bbf5191accd7ef072f3da17d",
+        "puct-31/010-0.json": "cf9aa275af7f581a5e70d08144a1df2d40edcceed3c58a67485e69c8f31662ae",
+        "puct-31/010-0.pgn": "48ec0ed266de67139d689bb143b7157a1957fe22b20b85df3faa87041e6abe39",
+        "puct-31/010-1.json": "414e17400c2e90c6492a0c99cdd3847656a22cc81eaf885b0818961dc6d44445",
+        "puct-31/010-1.pgn": "b69d2f4a8f90fc6661aac7574bb3cadf9502ed69e7226d63ea90c3721cd9f612",
+        "puct-31/011-0.json": "8eb5d96abbf7e937fb1ca6ce2b84a1a5878cd68ddee4f37cfe751ed4bcca87b5",
+        "puct-31/011-0.pgn": "b730ee4155c78efa4d09228acc5acb3dd0683bef1a3d421426471513178728da",
+        "puct-31/011-1.json": "b46d61781bb9db046a8f056a9521550955f895243263005cb6db37c61061acc4",
+        "puct-31/011-1.pgn": "d6ceb4cbda6f5190b17743b92e26272a94160ebc966d322bd7476f53bdc0325d",
+        "puct-31/012-0.json": "0d8e157b8add1aab18cfa1a15f917f88045ca013ebb5e5a4151c3b8b66203d06",
+        "puct-31/012-0.pgn": "ff3142b7b1433639662d0918339758ef6630ee6bf9dfd7fd8c93796053768c87",
+        "puct-31/012-1.json": "6883b3409da213f07a0ac778ff5ec606e327fd19b1a517aaf6fa37e65ba9fa50",
+        "puct-31/012-1.pgn": "7767994a8504ac31883723ddbb3776d42f9e38dfb9d81cfa7e7ba8bea3f0a543",
+        "puct-31/013-0.json": "47ebf15f1b1b11b1207f4ff021196f1b0c3490b0bd7bc773c3421410273cd86b",
+        "puct-31/013-0.pgn": "09bd3b7f859f2228cebe8d9a3be185d36e4f92e54d9d7467524dbcbf6d078f19",
+        "puct-31/013-1.json": "7705ac9267ba23b21896d441935cee04d47372ca576b8f19b1f0cb8955e1102a",
+        "puct-31/013-1.pgn": "bd3b555eb805074e5cc725f6d33c419f23cdbe04e084bdf6ef45903dda2cecdc",
+        "puct-31/014-0.json": "b155813e366a4ff86e299d040d24a73d4f7751164c63fad9e641be25c115661f",
+        "puct-31/014-0.pgn": "16597b4fd3e6d375d62350173bb1db1b367aa59ed332e2b997c72bcbebdc91e8",
+        "puct-31/014-1.json": "18bf8b3bb86fa54dd51632519504ef2f198e4cbd8c3272ba24ce0737e7ebdcd3",
+        "puct-31/014-1.pgn": "631f9be044df72f3e3eeffbaebe2211fb1e08b54769f8fa06f86f09e8db8a623",
+        "puct-31/015-0.json": "f1cf3cb630389582a1a5aa6d08d4bd1b8d2bbad9dc1acb5adddc622d3a7b4d88",
+        "puct-31/015-0.pgn": "f74cffda8ff026d0fe97fecdfbb3006a37ebaa3a89e481d65fc7ee5154384525",
+        "puct-31/015-1.json": "9de5890cd61a9afe76b017dafbf4284b5d7a08e17a25a7a83f96802a919ec9e8",
+        "puct-31/015-1.pgn": "aa8b29d81c8e7595c6cfdb19534d3e1a76ee09c9707b04b67f332a6b63a191eb",
+        "puct-31/016-0.json": "2fda34126734303b4206c7700852f1b4bc07070097a0a66bead86bba05793055",
+        "puct-31/016-0.pgn": "ce807a342ec84a15f85bd9acbdef714b9b5c9e1da15d2d8db8084c035e825b10",
+        "puct-31/016-1.json": "1a41b028a8c271906f123ad5a5034d1fab1f47c71af3104f84a97d0b2d59730b",
+        "puct-31/016-1.pgn": "5f81890540989ac927afcab0ae628a7e1a128c00084ece9501ac62cb76bef076",
+        "puct-31/017-0.json": "2fb15e82a55baefc4a40e7988e609206d61caa5e99e47e06a2b33604acb823be",
+        "puct-31/017-0.pgn": "1d2b1da3e9dee6e0b3f0a74128911caff8cc1102839a820cef78ff686a7f6512",
+        "puct-31/017-1.json": "ad37ffef2b7f708182c32085a626dc368b18cae78b697251a401d3bb3de95369",
+        "puct-31/017-1.pgn": "694f8c0b9ec93131f138f0651c44ae5c0959447e4614ab3b9a7cc669b7581ac7",
+        "puct-31/018-0.json": "a0d9af5f74e1686989447e54fc4653678c58c981c8d66cfbbb39b46f52a593d5",
+        "puct-31/018-0.pgn": "f0f52978b96ab9d5ffc5a3670dd2fca5de2b655cc8cf3b0681700a85f982942b",
+        "puct-31/018-1.json": "de8b9e5e7efb28b60ff6eafc0d540c0c67133396ee91d782e1d291fb6c771758",
+        "puct-31/018-1.pgn": "765c3b8ada6dda98cc6beeac56edd413e69c97daa2819d770d589dc4ec82b70e",
+        "puct-31/019-0.json": "14d9e841e23a71fe519e0c57b477620f6fda6d108bf493df01597a1912bd8dc1",
+        "puct-31/019-0.pgn": "fdacd486a85f80becc3fbdc3df7c3e8fc79898c07a52f867adfb43359b1a1993",
+        "puct-31/019-1.json": "76d5ee314f4e8a35755ccc05fe2d093af2386c4428f8a4cf16e488e817fd32a6",
+        "puct-31/019-1.pgn": "bbc3a526e72f03c3d96c34bd7b537e7ea6d85e84a2dd1c06bc0c6959cf62b8d3",
+        "puct-31/020-0.json": "ddc840ae7b74d0ca62afbc2c1ab0981a2eac50b0edf5241df07d41604d5adda4",
+        "puct-31/020-0.pgn": "48662e2fbf41383d7ddb7327164aacc1c542f6e91f4f328d33d4595c1fe84788",
+        "puct-31/020-1.json": "48fcf5995b3dd8965c1853364c679d96b241f9527944e24fd1719fb52b863c98",
+        "puct-31/020-1.pgn": "23ca7f0f5f6c6544f47e56a7ffbc77d9a33b9f32b5e955a92d5ea017b440c896",
+        "puct-31/021-0.json": "d48205947efb3017e6cd7b62ef0f80870d37e9a022e9236e909b3074cbb5c09f",
+        "puct-31/021-0.pgn": "93968a1f3d771a8812bae48e16e6bde16439a9b9bb6db0c1a4c7300fc4c95cca",
+        "puct-31/021-1.json": "2ab1c5ddaa0dad97749ccec086349bedc3c4745023e5475263826601e6655201",
+        "puct-31/021-1.pgn": "44c54cddbf262b24bac8c7a100dce4a92d47a71e3060db718ed7a3d4a33a037d",
+        "puct-31/022-0.json": "dc9a58a32ebbe6291bf327d07a014347ff7ae1f7ad36870a43d040f267a51d31",
+        "puct-31/022-0.pgn": "f54b808ae11e4f9da247a47c2399ec64eacb763b50e9f4ac0d4b97b9b1205ebe",
+        "puct-31/022-1.json": "1cffdc8bc13f8db29268a9dd331fa5759de2fb86021868bc97b97dc39932efef",
+        "puct-31/022-1.pgn": "3aa8e63180ebe77c17e2e6cbdac0d56090a7a7ded4f216ff1501ed0cb3854d60",
+        "puct-31/023-0.json": "cf6fdfcf23fc4e9d3a0176fb5509f5d2f891b91a098562ee711e303c276ebda0",
+        "puct-31/023-0.pgn": "14d90b2033e88dd681eb0937eef5c2855cf040640e15e2752b620e9dac7ebf27",
+        "puct-31/023-1.json": "ef69a81bec91fafd972a17e1d8ae06ae06df81f0e3ba7f8c1a34b59ec77ccdfe",
+        "puct-31/023-1.pgn": "6258e0f0588825d3e4499fdbb7401208d85d2d41cfedcfbacd816aeb7bd7e530",
+        "puct-31/024-0.json": "044f644905e72812ab23374916da0a0679887d2e917deb753dc06c5029c5777e",
+        "puct-31/024-0.pgn": "2947aed9ce5def6898c1fe79e984fffd55e61a9b0fc0f6b6dfadfe793832a4cd",
+        "puct-31/024-1.json": "44b5c27b0d05d3716b95b2435b324d3a1bff2a85f9285122a2f735400aa827a5",
+        "puct-31/024-1.pgn": "d5385c3715d8aa1b2254004d1d65578355ced702a56abefc895135985c9daa51",
+        "puct-31/025-0.json": "d29ad18da6e8fbaba250b7a1a01bce3d4e030c1a52adc28dd12655e896f55857",
+        "puct-31/025-0.pgn": "c5da323cd91ce20f98dd9772bc9afea8562359d354a51dc136c69b39d3d1b21f",
+        "puct-31/025-1.json": "25103471bcdead88cdc3bd348c3fe3fa5583e274a4208cfb086c6af3db073d34",
+        "puct-31/025-1.pgn": "fc060439d713e2b7a4c3b877379e51082e41e4998276485a6994dd0c281753c6",
+        "puct-31/026-0.json": "92dbdc1403468b7813e11de053b2c3e437b8a0e4cea59e5a9874089e59d892be",
+        "puct-31/026-0.pgn": "7a451d87c196d1dde164455eb2e0c3c41c77944e3cad172aff479c178250ca7d",
+        "puct-31/026-1.json": "e11d9d5b3a2a2839ccb0ee636042264159c5c186420ad1ebe8fdb6c789c87b6e",
+        "puct-31/026-1.pgn": "0332bb87012d05e192d10367502732d39716641bc993d4451008a1533394246a",
+        "puct-31/027-0.json": "913f803940635f3baa599a359e399ebb020f973f14f619f40595727fe039c3fd",
+        "puct-31/027-0.pgn": "d42e0fa0650eeecc951f12e85f0af7b12367f07a8e5c34fedb1f59f9cf0a748b",
+        "puct-31/027-1.json": "6830f536e7c532c39db6dfa1ed00e8b33c0c5f953e9a3ba628e98a45a882a5bb",
+        "puct-31/027-1.pgn": "97c9a2ea1ab23b5e3f36a952f95e0ee5d11b37b39809bce6a10490e8086e6671",
+        "puct-31/028-0.json": "ddbbc1db3682ed447ef0a98b61d6f236164fb0ae4d91f443a287465552b80799",
+        "puct-31/028-0.pgn": "41c75994fdce4f43d96bc654780dff5b09c5afaa2b0603cb0f8d8b3bb7a3ed89",
+        "puct-31/028-1.json": "9d363897d11686510026beba3491ef0719294f7ce2a3d0c6552728edd0bce7b7",
+        "puct-31/028-1.pgn": "51aeb0e38bb67d21f0bb209f9ccd55654e7c5a5718c924aff95143e0df6f2546",
+        "puct-31/029-0.json": "de67688b95c3f7853df80b492c7f323176e72cfea7eee944b9d54d5ca3c1d1a2",
+        "puct-31/029-0.pgn": "0b968013a8371372bcad343c4e414825d6169be0b2eadee3566556ec4f4c0a87",
+        "puct-31/029-1.json": "205a302ecd2abaf5ee64d6effdeafe39b2e3663dba2de68f3d50c3664c88a7ee",
+        "puct-31/029-1.pgn": "f63187e3c73b42130194e9f9e18a2f397114d6f0b496df8c0ac55b809123266b",
+        "puct-31/030-0.json": "7ace9e6f1b3606c3f53eea9b2ccdc9ff45999862efb4b45ccf82f8784c0128fa",
+        "puct-31/030-0.pgn": "0ddf368fa9ccd0146e204175d6e7ef97251182fbf883a58a82e90068ce3368ad",
+        "puct-31/030-1.json": "c9455a1eeebedcdd84835a59abfbd70c77d1a97908449d40d25a053a68856e17",
+        "puct-31/030-1.pgn": "5705a099e374b732a5a65dcdddf26829f50513486e7a29f398a42343914f0549",
+        "puct-31/031-0.json": "59f16245ebb09d3aa4c6524120ce274cd0373d225accf7da5f33ba59bd2831c3",
+        "puct-31/031-0.pgn": "75f396b60ca1591392254739ad764074534fd828385cf0e33ed0f82736bd4c7b",
+        "puct-31/031-1.json": "bdb86b3f57757eb468983613b52140cf8d485ef1d21c202c3440da63296f0673",
+        "puct-31/031-1.pgn": "5c780810f440486c2b4377d7daf6936d3b984de17391088547c8f2f25be3096a",
+        "puct-512/000-0.json": "159c9e1102eb6a02a54920f5bdc30955bc767d31e4c46615c8d4d3d0f1ac8833",
+        "puct-512/000-0.pgn": "1aa70c33f8c964bee84176b37cfd5e377a9aaf2fa5910fb3aca823431d2f6460",
+        "puct-512/000-1.json": "5ccbc3e3e3091da5cdff8db9c307a85a0c6a708793fb452385741fd555bae846",
+        "puct-512/000-1.pgn": "7747a19bf0f20e0ec05700d0acb9835054412c8220932a482a471bcb1bc80bcd",
+        "puct-512/001-0.json": "5beb7e140ea1cb14ac8e0c46ec8c7dcf73a32f18091513fb09522e19e1be23f2",
+        "puct-512/001-0.pgn": "8ffe294bc8d5a7c7d5047130928bd98494be89685e35293d8e7a162a7ceca945",
+        "puct-512/001-1.json": "bb26fbfcdacbd2c6dfbe2ac2a983f4f59a66c0ee013786c2ed553aef58924127",
+        "puct-512/001-1.pgn": "2f62e8460b41a5e33660fd1076eb7de684c9999c962fe68d0cf78e386f0b80ef",
+        "puct-512/002-0.json": "b9d47620f6ca96ca9c42b4f8213a2badf2a0471cfb5dab86ac84df7a58db6e19",
+        "puct-512/002-0.pgn": "7c69a6d7853cbfdf11856dc21db30d9dd8ab69fff30003c3e3f2379714d8f896",
+        "puct-512/002-1.json": "1f1d2fef50ccd55c02d57b26f11166121c175b4a1ba74cca543a9e3ebbe21a80",
+        "puct-512/002-1.pgn": "b24bea0a874eeb33678b8c725777043161f0179e19c55cd05b4421f5097f0e78",
+        "puct-512/003-0.json": "1910f1d7fb76127e127b56d0b73978898d8143ddd93a3694c4b00019dc484855",
+        "puct-512/003-0.pgn": "d3453778a157aa68af5fe206fc86e32ad55374a832724c6f0d939d337486ca79",
+        "puct-512/003-1.json": "c255d01232f085f39409e4067d6d6b4d7770f5ed289fcc6595c09202c10dd605",
+        "puct-512/003-1.pgn": "c85c4bc44f26c927bd361c0f04c1b69fd5409e9bdfec4f38fcf8c0ca79d40c6a",
+        "puct-512/004-0.json": "c46cdbb200751ce386dccfac7aa8fcf2460cd3c78a89f3ecb57747236e2b7697",
+        "puct-512/004-0.pgn": "97534189d7d126a1dbc2f0a650454b3e267d0c5db86a74df02c695f526c83c80",
+        "puct-512/004-1.json": "f4e8de1d29b4aada78e23741741040109057086fa0cbdd7924f7e7c9f992f598",
+        "puct-512/004-1.pgn": "a829c0bef0088b719ac4d0b482ba01cd75cfefc1a273c80b07d0f78ebc5d8897",
+        "puct-512/005-0.json": "f77a73d62238128d2880ca9331c28de160c2ce69c0c2cdaa0ba7ac29d028b749",
+        "puct-512/005-0.pgn": "8e88ba24f413ec3c3163d871922f935158b1e565b80a203e03461fb42c00659e",
+        "puct-512/005-1.json": "2b7122e3eccd76f49e6e5dcd305c5a09fce5410b00420f41821d3017dc7396cc",
+        "puct-512/005-1.pgn": "11af7551514fda35f14b6dd0e44a527ea46319c49022992b89519457f8057d29",
+        "puct-512/006-0.json": "2cf4045a256d0747aaec9c124edfa0ccdf191be0cf44ad02e1177dcb4d1b52b4",
+        "puct-512/006-0.pgn": "7d504b73a0b5c6463d2d622d7cdbdfb6d6b8ec1127dfe02596b73e5bdcfab74e",
+        "puct-512/006-1.json": "f8cdbfb8917c4777b30d42be20dc0ea95ba34ef915f52b08ca1ed4ade352c4ba",
+        "puct-512/006-1.pgn": "d8c85cb1f9d4cc8be8dd4ac89b92bc5fa289f2d872afc2d910d165280928ba90",
+        "puct-512/007-0.json": "8460f48b071786aa1b4595c4c780973d4257e6979c43dec3aaf78c94ff1ab7fe",
+        "puct-512/007-0.pgn": "0cd29b4c192ab4d765c7dc3ab8948c68ffe0627c8b939db6c3124584b464919d",
+        "puct-512/007-1.json": "f07526426cb33a6a9332593cff4e9890d41e3ea910f57602ece9e63c5142d973",
+        "puct-512/007-1.pgn": "ef3319ca0de05b517c8ce6f12dcaadedf92a293503684441ae263d5bb607982a",
+        "puct-512/008-0.json": "b1ae200890354993cf23095b4378dd9dece30b0fe7b7eb7a4de634976109e870",
+        "puct-512/008-0.pgn": "c4a0c7c1b834c857868ae2da9993863539fa509882d3c9e8109184fd8aace3ca",
+        "puct-512/008-1.json": "c22b9b9bd5a9bce01c7e8dcf65fb2b921d9b274ef84b25f582d21c90e7da405a",
+        "puct-512/008-1.pgn": "ce5db283e49be6079ae9f87564da598471c120ac13debf5449ed142d08d96566",
+        "puct-512/009-0.json": "556c949ad1aecc6c6e843f6f2e8839613b256cdf5dd11ea4f73426e3cf6156f0",
+        "puct-512/009-0.pgn": "530469812145b7d2411fbf64d8ca1ca9a77cf1d888fe68d64f18b4ba700d0a07",
+        "puct-512/009-1.json": "ce3134b1d6bf5ddc88c0438f77047eadbc744823106ba7ad80da8290ffbfa679",
+        "puct-512/009-1.pgn": "84693931e57224f5c0540b1d2243b8a7faa9e47ad61f7a75467f1be860493829",
+        "puct-512/010-0.json": "8efe8b0e5767c5eb2ada6093fc7ba94ab327d001b5a72a3337dc31161f9a2b46",
+        "puct-512/010-0.pgn": "af2b5c554bc1cc3e81ab108594a3e5f497aa19fd8d372b8ffa1f2d11b6bf8a7d",
+        "puct-512/010-1.json": "ef4f5bfc975c00ff3feb1b42dd030dd73683a2c234b60d93aca53cd15096418e",
+        "puct-512/010-1.pgn": "228662a22d3d1b9edd1693705ccf3246b6378d2b26aaeeac7a8794dded4dd55b",
+        "puct-512/011-0.json": "5aff191ab27137d980a861863a2715dc8a18dea1e77087f389137aba5e17cecc",
+        "puct-512/011-0.pgn": "51f66d80e423b80f4f6c67b20457c908bb1e5e831fa480af8b35e751628df9a8",
+        "puct-512/011-1.json": "0f0fbb045b914b64d9bc0b96a11325b9590ca02c65e47c9da80d9e8b74d01744",
+        "puct-512/011-1.pgn": "52533d079bf775f92f0e61689178db80955aad8268f8c423b056a499fc334832",
+        "puct-512/012-0.json": "93d39cab49b301c640b1dc430f903fd2a090cdef545217bd80fdcfb588960b48",
+        "puct-512/012-0.pgn": "44cad333579a013b67cded79351ee7091de4f8777ee61b392fb5a31962a7fafc",
+        "puct-512/012-1.json": "b7f8954b3cf6260c591e0c3e6da66203834087ffefa3783539f09fcf6b5552a9",
+        "puct-512/012-1.pgn": "8897f2df18e51b0a26508a13f640a7379156d751f2041ad067e501ab7850530b",
+        "puct-512/013-0.json": "370bce4687a3dbd84774358a6bc04742691da0eb34ea4d2df91487ff1ea70fa7",
+        "puct-512/013-0.pgn": "a86ff841ae226d7ea282e2bb4f04f5760c9d1f4ea2b07ae31354527c3b76c36e",
+        "puct-512/013-1.json": "3db5373add696bbada0744730003929908020953f1c065bc4c321845070b6c97",
+        "puct-512/013-1.pgn": "6bd9e06afe757a086ad0054384f4d95d0d15ff79cdc7385987d43b86a42885fe",
+        "puct-512/014-0.json": "943ed4886802b81cc7c7c29f3116ff93f71c11d25193825061cbd1c7d768081b",
+        "puct-512/014-0.pgn": "d1f0c1e2ff9c4cfc3f709c031841999ea7e9bf10c81765f8cdfa7c8f89d15162",
+        "puct-512/014-1.json": "2abb869a8ebd401854c788f25323d60a25ee1a4ae3116889a30978ba3415a0e0",
+        "puct-512/014-1.pgn": "b0883814fbaeff13c3d2321b5872820ee878eeb64b4cbda1f202c63ef93a9f8c",
+        "puct-512/015-0.json": "37b12ed50124a2694c1378bfa67ca58828eda92420c0318cb4dccde5b9409762",
+        "puct-512/015-0.pgn": "5089142bd296b52bc5db9beec3d7e9b1088e45cfa718f8d0d3968980664295d0",
+        "puct-512/015-1.json": "8e1bb9548379a854899c19d922a4b13d09ee9082c6ae201dc2805523eef96dd5",
+        "puct-512/015-1.pgn": "f1c27b0d2636f00d95cbd8fff668bf69d5821b10142fc4cf9fee9f77d10a7feb",
+        "puct-512/016-0.json": "ed70829bbe00ae99432399b56986d20e032aad24c28b18e5ed881e1fbba79085",
+        "puct-512/016-0.pgn": "1bb32c5222a9f3fd271c73f30ec91481b0d8784d13493c19ecb509483ea1d686",
+        "puct-512/016-1.json": "2b8d0ce3555b03781db309e397d3336642577d7c9d76f749433f7d1a5f2d0e15",
+        "puct-512/016-1.pgn": "fb027b81a32a184e5bfb67b8dfac70608bed9339d4cc4f5465eb22bcb2ed3234",
+        "puct-512/017-0.json": "8f7a8cefbc1520ddc869cfe470c48fd07f5734ff0d84c4e281a0853a49405799",
+        "puct-512/017-0.pgn": "69ef48056c033409023e2b4ea4d44eea7cedc6e09f92f27812b11a445e7cc3d4",
+        "puct-512/017-1.json": "73c968e3851157a33ea5e5802c884edd832176280e5ef9131455d9f6f23d4c30",
+        "puct-512/017-1.pgn": "cde1a5fae01ac1d67303346d227535a86137a51b2a4e6230ce3cfb6aa2ad1543",
+        "puct-512/018-0.json": "091b63b14142f031c38dc5f081fb86c876d34cd377357668afece3db54969f0e",
+        "puct-512/018-0.pgn": "d0d9d7b268c6fa1ae976a857d5a2120ed7be19db194855a5919c44241a66278d",
+        "puct-512/018-1.json": "728c9c69926fc1a13f9be4d6e1441ca766ffbf3c6cee60e281864d20070328f1",
+        "puct-512/018-1.pgn": "50765e74c9df7eb39b1c4b4679a2c5070683a84a47d2b5b6ca87dd449e8d657c",
+        "puct-512/019-0.json": "b48aaccb8ad3b2e78ac9f13eed5965dc56db51384eeccb9f46aad20d02ef6544",
+        "puct-512/019-0.pgn": "505a4df78d1325a6ff1192dc0c6e14cc8d6d046c8c7d518288d75f7d8b9f156e",
+        "puct-512/019-1.json": "50d328db4ae5435ab777177f75ff14861adcfd9ef2eef845353cc3f6e52fbf74",
+        "puct-512/019-1.pgn": "34fc27636d0f4af300bf05ed61f9cc6af593a37ad50357661c101925ed8ad4a0",
+        "puct-512/020-0.json": "975c555cde7d0d769d7749585b94d841d7656b3953e2097b90de841ebd15b583",
+        "puct-512/020-0.pgn": "579b68fbde00edf42890a605a4e96efb40c7e884bc86e9761942279dad8f84c5",
+        "puct-512/020-1.json": "9aa58b5017b155a16d4061ca8290af4af62eed9d8bf625ed89d9aa27b3acace4",
+        "puct-512/020-1.pgn": "1f693b8f984834a8a6ec9a843be16f2a78aeb6bbb2a2bde302361b64257fd009",
+        "puct-512/021-0.json": "15f346e0ad2e65e70e1bd9e942bcd5875c845227f5b0aeadd8f729a3bad50ed4",
+        "puct-512/021-0.pgn": "be054642b92efb0dbc05e3d48270f16d59cacc5ff95ac497ecb42fc0ddb4dbee",
+        "puct-512/021-1.json": "41d91474282f0d4c5b5599ffe2597f182ecefe02eec58b5f2bd14c5d69885ff6",
+        "puct-512/021-1.pgn": "0d44e3cd0b290fdfaddb67398575be69a93df3e87071a0e93dc954915fcf1b73",
+        "puct-512/022-0.json": "601cf7336dc3bbcfa1e6e8d39bfa9936e2f771400a8375c55c337b416f3a17f2",
+        "puct-512/022-0.pgn": "91f009decd1462b3b4751067e7977c61c9f21c9800425d2ca742213a1296c557",
+        "puct-512/022-1.json": "ae252186f6b7c2b73a8e6808a7711edc46a0970f0c472dc3d20fc922ab89a5c5",
+        "puct-512/022-1.pgn": "d960153b2c7561b5b299df77719bde9a3daa74b86282cd28abee54e670739d2a",
+        "puct-512/023-0.json": "e272bcf4667f4525762050914e010720e7df2c184f165164eba97129c2726450",
+        "puct-512/023-0.pgn": "b9a82e2e247db39ee8ef6e60a0a1a49a8412f72c9726e28669bee289ab402e29",
+        "puct-512/023-1.json": "a5651d407a88a284135b646b2a0da6c1298862737be594a5dc99a56297663f92",
+        "puct-512/023-1.pgn": "92fcc8e33fab210cb64558701d15a89d933b43314d0ab3735e15f62459038057",
+        "puct-512/024-0.json": "e271e71be90c816645487175e6b418b18e58272fd82f4e84b23f2907bc69a6e7",
+        "puct-512/024-0.pgn": "d4077bf83490a24c90b848ae9c9cb21904676f40c26242e2d7f73fca7b385825",
+        "puct-512/024-1.json": "905f55bdcdec03e15b3b5c5f3dee85d6a255d859495cf1e466c855448617c0ac",
+        "puct-512/024-1.pgn": "e022df0e4155d0e5448a04d90a8f719e37f723bd5e160eb254873e165ccc7957",
+        "puct-512/025-0.json": "42c6f2fdc8e70bedbf2acf6bfdd85b5941fb4a0affe1527b146975ee9dd86064",
+        "puct-512/025-0.pgn": "fcb52210f1e9ee5145482db12e7fc3a64e344400b23a3a81764ea212836fbfd1",
+        "puct-512/025-1.json": "ac1281cc1d8ffcee91b30a69122ff6632f95cbaf006123aa1f482750d231f362",
+        "puct-512/025-1.pgn": "cf666d28ca87229fddf613bd745162769c00f66e6b8d66c26c6017ce2e1a05c5",
+        "puct-512/026-0.json": "07e72ed304025ae868bf416d1c200d7c3bf3b59392edd257bb33e3e2b4130b80",
+        "puct-512/026-0.pgn": "f95404f777c17f9d7a9db30dbae97777605898827bb602955cb22961027e0ca1",
+        "puct-512/026-1.json": "d046dd3e12b5303ad4a79edff623609578604b98e0a76e7ffa35156e8b0a2dbc",
+        "puct-512/026-1.pgn": "f76e29a2969ae22161b1926b117f0246a6642c781d8d14f07df980a5bf9a7c10",
+        "puct-512/027-0.json": "e3ad9b85ecf946245003b5c26290013e1d66d695bda4a95f514e9516430c211f",
+        "puct-512/027-0.pgn": "6073d58337293029b97989ea3ed37337a1c40644a2c1a08b414c1eba7942381b",
+        "puct-512/027-1.json": "70e226ead83bad19de0e11ad48290861be6f338d1436ab21c90065b2a83f8d1c",
+        "puct-512/027-1.pgn": "a3f9d8f56d6f4fc747c902b462d3225f4ab6c7e2e02299580e6c43b53db4ce8c",
+        "puct-512/028-0.json": "ac608b0662fe36ef000eaf00da9d3b2d9556d276f8bd9018668fafd8739a01e7",
+        "puct-512/028-0.pgn": "5c0373386f4a997458ed121f5ff3deeeef5b8e59db731b1c7bc98c6cb55c2803",
+        "puct-512/028-1.json": "2c4b0f705a8e7d2380589256fd7b5771866af84caebba54767799763b177c5f9",
+        "puct-512/028-1.pgn": "6d0e821ed7ee2e77d0914bc63555e4c6d4e14ee531dd56b843948b8188a58d62",
+        "puct-512/029-0.json": "344144f7559b01e4a9eb862bd1135457cc4560140cbad385103550679704a4f0",
+        "puct-512/029-0.pgn": "c248e7b936eaa8c7e5e34fb01d8910c37d69312c24df52cb0e28f23d5beeae8c",
+        "puct-512/029-1.json": "056f6daa9422fc755480fcd63bf94a3401d932d8830be32ee20e7b0f68f8c2e2",
+        "puct-512/029-1.pgn": "23e49f8918ddf9eccb1596a925ab71f4b3a87372bc12bf00e80fdc2b9451a608",
+        "puct-512/030-0.json": "42972eb1ba6c880dfbadba7034a9bf053628bd14743a0d55dbfd522c79654b6b",
+        "puct-512/030-0.pgn": "fc29f219deb07a6e3b47223da21739e88869f32e75299b85e386e8f009df4c26",
+        "puct-512/030-1.json": "8725ab800469a42f87a97c4f5cc2512ecc1b6c139e0ecb0419f3cca30ceeb26f",
+        "puct-512/030-1.pgn": "79dfd8b673f8b5c5da7e0a517fe067b2e06630fb53dae3bc6948314c65b88bef",
+        "puct-512/031-0.json": "b97b055f7b8bbe3bfc473da88ad3fa40d827e65ecd5679f70504183e7fe07184",
+        "puct-512/031-0.pgn": "0c0f68803929e7776e0c58f83fae5439e67b590915edad78678785e90b8a0218",
+        "puct-512/031-1.json": "bdd413e93eaa830adc49b575f1ff8219949502973c2fab69238bc7e784c7cce0",
+        "puct-512/031-1.pgn": "c103ab281652d5707cec5974799aa3fe262693ee3afd0a173232bb01954ab3e3"
+      },
+      "note": "All saved complete game records replayed legally; unfinished results remain excluded, not draws. Actual neural positions checked against aggregate per-game caps."
+    },
+    "stable512": {
+      "passed": true,
+      "checked_games": 32,
+      "summary": {
+        "puct-512": {
+          "scheduled": 32,
+          "attempted": 32,
+          "completed": 32,
+          "truncated": 0,
+          "wins": 0,
+          "draws": 7,
+          "losses": 25,
+          "independent_completed_pairs": 16,
+          "paired_score": 0.109375,
+          "score_bootstrap95": [
+            0.046875,
+            0.1875
+          ],
+          "relative_elo": -364.3107262632938,
+          "relative_elo_bootstrap95": [
+            -523.2834321164419,
+            -254.72883903486974
+          ],
+          "score_hoeffding95": [
+            0.0,
+            0.4489003789351549
+          ],
+          "relative_elo_hoeffding95": [
+            null,
+            -35.63205615916165
+          ],
+          "pentanomial": [
+            10,
+            5,
+            1,
+            0,
+            0
+          ],
+          "rating_note": "Relative to this opponent, budgets and opening distribution only. Bootstrap pairs, not individual games. Null Elo endpoints mean unbounded; identical pair outcomes make bootstrap degenerate; consult conservative interval."
+        }
+      },
+      "sha256": {
+        "puct-512/000-0.json": "45054e9ec451b9ad9ec5517730d87c4214669e4aa4d67f0a932575794a3454c5",
+        "puct-512/000-0.pgn": "7beb420db796e4eeaef5b9c41127c2e29bf3eb69242570a236df847f0f16e7ea",
+        "puct-512/000-1.json": "f38b3da5e446838eb4a5ee077881eee926db6875aeabbdfcf73fec64696398c3",
+        "puct-512/000-1.pgn": "467dd48f65adb7fd13e5439f3d0bb920bc6c1d33ec6b18788380d52f79347292",
+        "puct-512/001-0.json": "0f3b468f25f2d16422748685b4c0daed8c553be94c09fcb1bad3188bf3c7a095",
+        "puct-512/001-0.pgn": "7362982830308b8c96d5b23792bfb564c315f3528c941658bb7651191702ac5c",
+        "puct-512/001-1.json": "bf9978822f31c861c460047540cad99ed25d79762ac298ea4f40e48c8992ecee",
+        "puct-512/001-1.pgn": "6edf72b4fa242f564bc4cf27ff258106d5b8fe1d0f1de93ea981d7d39b78ab0b",
+        "puct-512/002-0.json": "0cef07b4ba9342c4a850c67975b6158b874920e595916c85c2bbaa60579a13eb",
+        "puct-512/002-0.pgn": "aa68f38c6f2483dd0b4bbb262f52922f8d2ce98f76bc3f7a9c0d52748d83d59c",
+        "puct-512/002-1.json": "d603b90a7ea328f33c89566ef2589fdc2448c4c23e3387a2496c7efbcd00c71e",
+        "puct-512/002-1.pgn": "43c26375c97570b8e785f9018a67fbf489000c7a9471b8639ffad904bb2caf66",
+        "puct-512/003-0.json": "6402b038b03c520eced6e432a9516c51582e653aa12a051daf450d2e98b6cb77",
+        "puct-512/003-0.pgn": "eb5c22bcee5510ed1a0f91b340022f1aaec21235c457f91610888ad215bc76f5",
+        "puct-512/003-1.json": "49101abe221ec06586f41a6a1447ac0762d7290727c0172f484740c65fa9eea8",
+        "puct-512/003-1.pgn": "c90b3b461a4c2acb577571d61ce62f1497e20bdebc1fce1855709c0ae0025dba",
+        "puct-512/004-0.json": "1a301c8a9e5eb614c973ea3b588b424a8a8190fcd160f2c54e0f150a04c1b7e7",
+        "puct-512/004-0.pgn": "bfc8722a0b98d89fac397c904fed489cf21711ac8f986f24a57a7d575d868009",
+        "puct-512/004-1.json": "c3c275e6e9bd5247309afabbde0efd90e31e20ad8176f1585352c4738561e45f",
+        "puct-512/004-1.pgn": "cc596568292e3b7c22702f36cfe57134b4fc0cdfdb656ca80ba586be93cc2359",
+        "puct-512/005-0.json": "bae05453d79d75020c9c44673e37e90173420e15c609f94769c4ce3c2bfb5a23",
+        "puct-512/005-0.pgn": "6982ebcd7ca8d044d9006615e8c9ae3ee46e4673a2bfd70c1fdcd5ddf69d5814",
+        "puct-512/005-1.json": "7a006f019efab99460cb31c655e14a994d1e6457b250935b8db385d0c47c1d51",
+        "puct-512/005-1.pgn": "60a19f882828da230adf2af24003dbbebca70c0d1d032e77a24d4a43ecdeaec2",
+        "puct-512/006-0.json": "31a5389eb1477fd6f466243a49dd053cc0abb6ce6bc61129fc4e5f50c922b5cb",
+        "puct-512/006-0.pgn": "494e6a20de6d049158f5803ab7ceca5ce35a8dd28b4972c601ab03f017c7e330",
+        "puct-512/006-1.json": "f98fb14ceafbf6ed50227b30d3a21d70869c998f9d8ea04a902e81be08a6f5eb",
+        "puct-512/006-1.pgn": "e42c990350891b8330971a95c2e781dae36ded0c6a26e0c4cfde6faadaaed178",
+        "puct-512/007-0.json": "086d14036338faed6aba510348c3babeb9ee1d68fe2aa281b13a18f38304d3e0",
+        "puct-512/007-0.pgn": "89bcb5dcd5fdc5d646fab71cca297a017d5cfdb4bd915e8dac29d7aec5ef66b7",
+        "puct-512/007-1.json": "448944ac547808e32c6a20d21f296c1f96ffa931396b44f839b8b6a25ebcf7d5",
+        "puct-512/007-1.pgn": "178f51f0206576862c5b9c17247049b648c606155b60a7120cc52265099e6d84",
+        "puct-512/008-0.json": "98a1e3f4fa5b25aa06f9540c8b2db01d1973eaf456a97c2190b04004bc09c09c",
+        "puct-512/008-0.pgn": "415b2e7df0b0f319467528b3f2f4b9d14fe76bdd4b818b600c82fa51cb341be2",
+        "puct-512/008-1.json": "f09a75f85b52b6cbac5a49dba421e4ec6234747367cb4194264e06eb84b0db18",
+        "puct-512/008-1.pgn": "ee2cc5073ca8118c6ee4dd707c57fde5d63c3cf09d287f8fad4db00fa68dca23",
+        "puct-512/009-0.json": "32ea50997ad9d69772beadb3c55f99656806f1320de66d621d17668fa0df8534",
+        "puct-512/009-0.pgn": "4aa6ab9e6ad016d990b62af7cccf65c3d0c65c29c04893bf94a835465a186ce9",
+        "puct-512/009-1.json": "6aa3edc2f6a9ca6f0ac47163b6767b4756aed5b816fd99a1c4a1bf28f2a4d4a9",
+        "puct-512/009-1.pgn": "2ce2fb791a917988b58289c8dde80ee1d7320e69883bfa7bee8a215d3e2a686d",
+        "puct-512/010-0.json": "0b943f9c43f5eeb1ee8a934a17bab715b816b5bf9ef01dcd89ad81d537c693bc",
+        "puct-512/010-0.pgn": "71553692912613f8683cd90955caea37e4c3dc6024c5c6c3e7030505f5b75c40",
+        "puct-512/010-1.json": "4d7a382b74ce0dac40be9ace3aff9e7ef4128f254cee04525ae39741717cc168",
+        "puct-512/010-1.pgn": "28fac20ab6ef61c8e2dc9b3029ac2e0e181248dcda028434fd7ec58d4fd9c9af",
+        "puct-512/011-0.json": "3150d14c88d6f4d4bc5f794c5804830bb7a6f33e99f29949bf2b8de64dc7dcd3",
+        "puct-512/011-0.pgn": "07806e479c1702fa6357fd2f4c03ef8dec34e483e1110832c7772c20d26bc8ea",
+        "puct-512/011-1.json": "d6e3c6c80c26cdff336dc185123fe297d4f2a6ed25499b92bb2836d1c59d24f3",
+        "puct-512/011-1.pgn": "d51f50b529826019ebcc29a5a7657625248770d762e3665e4b57dafe6a32608d",
+        "puct-512/012-0.json": "ff62bc28954a556674f4b8972fe6867b8d70acdb364746184fd85c056cee3b10",
+        "puct-512/012-0.pgn": "764624048c9d1357b5c7468bad379d18f1d6c62886b42e7427ac73f8dcbf7cd7",
+        "puct-512/012-1.json": "45f4c624af84ef949ad014fb0ea32485de0d81514464cefae9b89a9ff46e5b85",
+        "puct-512/012-1.pgn": "99b492a400a866e103fbb7b9bc5d34e6922040b9a340395c62008b75debf8159",
+        "puct-512/013-0.json": "33bd08217f232cd181d70b3a0bedd856f8023f26d763e1f7421d5c7ed6ab3232",
+        "puct-512/013-0.pgn": "f16ab639d7c5f5826cdad8512712321912870ca3801353520a5c55720cbafe90",
+        "puct-512/013-1.json": "3dcfe94e54cd63b29e64dcd946ef01e68566a8c4d9bdf4c0db51674072f2af20",
+        "puct-512/013-1.pgn": "3f909f5220e28f2decd7774502900edaf455d586f0b53930d9d169fa836ee296",
+        "puct-512/014-0.json": "c2aeb90d14cce8fcd72376c64527afb0e52f827f6f0b1c596d9fa96ccb42b60c",
+        "puct-512/014-0.pgn": "9b9dadd0eebe29958b3bba2d9374e262df5e07e6063b9e7695f0d6cecb841b75",
+        "puct-512/014-1.json": "131b8e4c393bc1044e0c2ac6ffb498cc973bb4990175407651884b632553b98d",
+        "puct-512/014-1.pgn": "38e37252a09d0401fd45a83217d4273e1d74523c169fd820eda9cea6ff981109",
+        "puct-512/015-0.json": "34b435a8ec08dea1bc002dd10bd305ed16b89e50d3eedbba0f6f9cfb4bc163e5",
+        "puct-512/015-0.pgn": "5bb85128cef7e28ce5843913051914119cba2b962433d9797da66b6a1bb2152a",
+        "puct-512/015-1.json": "3caadc6dbe8e97d6d574ac8e355b64bc432c0b396d4c25522c4fc64736040faf",
+        "puct-512/015-1.pgn": "dcd7e2e5d068134babbdf739d8a7921117aa3b41b8c1f64fb916adfa73722d6f"
+      },
+      "note": "All saved complete game records replayed legally; unfinished results remain excluded, not draws. Actual neural positions checked against aggregate per-game caps."
+    },
+    "stable31": {
+      "passed": true,
+      "checked_games": 32,
+      "summary": {
+        "puct-31": {
+          "scheduled": 32,
+          "attempted": 32,
+          "completed": 32,
+          "truncated": 0,
+          "wins": 7,
+          "draws": 5,
+          "losses": 20,
+          "independent_completed_pairs": 16,
+          "paired_score": 0.296875,
+          "score_bootstrap95": [
+            0.15625,
+            0.4375
+          ],
+          "relative_elo": -149.7835651290059,
+          "relative_elo_bootstrap95": [
+            -292.9575039291874,
+            -43.65778777002721
+          ],
+          "score_hoeffding95": [
+            0.0,
+            0.6364003789351549
+          ],
+          "relative_elo_hoeffding95": [
+            null,
+            97.24280305214658
+          ],
+          "pentanomial": [
+            7,
+            2,
+            4,
+            3,
+            0
+          ],
+          "rating_note": "Relative to this opponent, budgets and opening distribution only. Bootstrap pairs, not individual games. Null Elo endpoints mean unbounded; identical pair outcomes make bootstrap degenerate; consult conservative interval."
+        }
+      },
+      "sha256": {
+        "puct-31/000-0.json": "e21b7cde2463f3d593b16f8ab1682937b337ecbe2e95867ee733061fef782569",
+        "puct-31/000-0.pgn": "746a423e9407e26388d4af7bddcaffb9a6fb8ce057b1a82b2f53c1af6dd39c22",
+        "puct-31/000-1.json": "23f234bd92ef38009b09ce1cdac696d0207720d8ad6250c0a593060907df302c",
+        "puct-31/000-1.pgn": "9bd9660ad80ad286b7219de9d78a0dc26f9e05174f1a07a1a8835761dc039063",
+        "puct-31/001-0.json": "bb42899051762da402ee098b40df516e10cd1b28278c14bba8f4d36dbf8687ae",
+        "puct-31/001-0.pgn": "0e6ebe5fac51f97750bdb7f916dd66bcad1dd9357637f82736bbd99b1b88e79f",
+        "puct-31/001-1.json": "b818abc04c4c8f5939a67e8fd7ec8690efaef00ad2ad5d0145ce3c76fad9ac57",
+        "puct-31/001-1.pgn": "becb337dde798efe113ad31b8c38db540493918e46dc2d8973a048cceba811b9",
+        "puct-31/002-0.json": "578b508975e176ed20b4cec6892e1f95a8bf4f1328e011453a14b183a0c6f806",
+        "puct-31/002-0.pgn": "c73bd67e20f031c3c959ace49126dec0a840d0a57380d2d28a43df7d1ad11900",
+        "puct-31/002-1.json": "68fa2e73013242712407358306f1612139e60fecd47ef795f21b414994bd80ec",
+        "puct-31/002-1.pgn": "1b8ee454c86ae397cfe1e0ecbe69b900f92ee0c3dba792def5d6406c4ca4c895",
+        "puct-31/003-0.json": "4a6079d866c3b29a45c58a1886e8d599df6885056b3edf74d0de0d3ba6ab6378",
+        "puct-31/003-0.pgn": "1c7775095ba434556b5e8988fa9d51262466cce82bdbb04b0cfd6a2d0cd9f6ef",
+        "puct-31/003-1.json": "7c0df405f737988b3462bcbb4a95c8d7ccb0b84a00a03360427a78d4d8757d58",
+        "puct-31/003-1.pgn": "e43e1c9a9cdacb883dff0f9d3f3db582d353495130ca9a9bfa1dad853c81fe54",
+        "puct-31/004-0.json": "056475d6b1fcfd9d5fd77cdd0f4d4ea1b7933037e2e3d188e6d01fb42f868a96",
+        "puct-31/004-0.pgn": "751014ecb7a83c0cb7a07285c385e9621e5c5168e55653b5137435a55ba0a54f",
+        "puct-31/004-1.json": "c3ccd00aa830157934c7250b5d10ac7309f912e8a866ebd024490a42304b1654",
+        "puct-31/004-1.pgn": "0524d8221ea2a286b1f05c9bc2854e8906eefc7e27adeb9698328365b0b0ea4d",
+        "puct-31/005-0.json": "b4ea729b3f84a22a0231e3071d435291d5a6b87979f56ae30151c2fcec283054",
+        "puct-31/005-0.pgn": "301ee025e4cbdaae524d5594d986676d9f02c600337f006c0f44b0973cb9939c",
+        "puct-31/005-1.json": "70ec65c73bc3395eeade3e7662441219530cb966a91f6fe5639f8d91e1603885",
+        "puct-31/005-1.pgn": "e21a74d7fd57d2196b3eff2ccfefca1f8d51913614ca54582e2d16bff7f77f39",
+        "puct-31/006-0.json": "5dd3bdf2c204af64cb891ab394caee484b3ef7f99e9e9e9e491eaaa9b6028666",
+        "puct-31/006-0.pgn": "8a7200d089a43ab919d34196c740cfe7af221012d16adcb81999959a787b5743",
+        "puct-31/006-1.json": "3deff17dbd2d08364407c28e4d3312c80426b38d698efd7996cba68e95f243fb",
+        "puct-31/006-1.pgn": "673f4eeecbc5e07c07f877f3402eaed00b677f386894b00b9b603f2f4906d53d",
+        "puct-31/007-0.json": "e635d81dc198a8adc37e568873dcd3ab8b966605dea4c365ee4e0af3cec9e889",
+        "puct-31/007-0.pgn": "a8d59f247524592f698f68116e02e236d91a92a5500015b8a38efd6df69c46fc",
+        "puct-31/007-1.json": "9498149dcefc245c941526e25e948480703f2ef468b241ecd5b6226cdaaa77c3",
+        "puct-31/007-1.pgn": "98b66775ac13585e54e79801689bf3ed17c442f03df6d8bcafee6110576638a0",
+        "puct-31/008-0.json": "81b8c145e58326fc5f79c635349af9c6e296cad2de3d372988d4f996c7fa6294",
+        "puct-31/008-0.pgn": "da9424e444e7404f1e40a27032ac97ef32b15d65846577743d3056cc1a9cd168",
+        "puct-31/008-1.json": "f02d637519b53313ef26374e36e2259d17f5b71703595037f8b53b50a8240d77",
+        "puct-31/008-1.pgn": "a93709eac50066c429e3237bbacd149e79a55f3e2a526778cf6f092798b0efbd",
+        "puct-31/009-0.json": "7022f6471f5fabb37005c412e9a63e9f6d924167e03275b0777587cc951e7544",
+        "puct-31/009-0.pgn": "edd302f2befcb9ad2be0cdbebccb206f9b3d697d3b86cbed945b5fae81cb7fee",
+        "puct-31/009-1.json": "cc53da99d300afd173f162f51d9bcb8ee3394a7311cbe39a6316c1f2ad87b77d",
+        "puct-31/009-1.pgn": "956379356208d0c2547ff1a9476d768e529f3d1990024dfd890b65c199eac05b",
+        "puct-31/010-0.json": "c3af582824d19013f4991bcc33fcf67bd309356eaeaec104da8c3c1ecbc2a550",
+        "puct-31/010-0.pgn": "b2ca383f6204cbb4930af3e4ee75c479a59d8681fc142ef21f063b79b0245f30",
+        "puct-31/010-1.json": "d4da49fecd5e5925fd407970ace618871335c88fec111322d89b3a335f2fdce8",
+        "puct-31/010-1.pgn": "b5ffd29b9e00b8535a79d15bc3a38eb76699b2ca36b802b928ca54535c0544e7",
+        "puct-31/011-0.json": "b88c801f2c90147cc1268f3108d0ebb609920f2ded0fb8a80a4a9413940ab7dc",
+        "puct-31/011-0.pgn": "6241d111a6460655b5e99ec981234a1d13a80ca1e53bcd1916a24f6bec7532c9",
+        "puct-31/011-1.json": "b936910d2c352fabc8f19097ab4cb8223b2f4a292ac20fbbfe6488d6f2172a33",
+        "puct-31/011-1.pgn": "20ea6b09ad9c402f041cea519ce3fe03a1a1f86e49479a4e3b222f7e6d58cafb",
+        "puct-31/012-0.json": "aeb546b9e43b7ed5ac5780de2af0891d43e3c46e8f5f97975e5f95eddd8caedf",
+        "puct-31/012-0.pgn": "c54da18ede0e0601caf0423e990ee4521e2eb43af2b01722c291f27801f2f7a7",
+        "puct-31/012-1.json": "e4dc73cfedbd78c7e2e213d2abbe90a3450ba70f94579741778e9f51e3323f93",
+        "puct-31/012-1.pgn": "88595f5933d6ce527086957016c4fb4b665f3e1dd6bd86ebcab8d1e6c3436b84",
+        "puct-31/013-0.json": "d02d26507c8dc09ec6c613a09f73cd6d0e9d00e18f0544bb2d8f9cc51be84cfe",
+        "puct-31/013-0.pgn": "6526e4112e4830c20ea33f10942f697ea4e56dc15cc256409ad956e963cc4c6b",
+        "puct-31/013-1.json": "d93b1ff4abb222ef55f1910f0856f2472b1ba715ba6b42a9eda84c081cf60ffe",
+        "puct-31/013-1.pgn": "c58a00b3adde0cf8d8ae051840bc4dc805cf44582dd2d7a48cebd5bb03c7bc2e",
+        "puct-31/014-0.json": "98c40b3dbd2f0b43bd434bde5bd1a915c15eaf034115d89e4f3c276d75c91eea",
+        "puct-31/014-0.pgn": "9eec76f5d75b81c1d2103ae7d612463e52a1f0ac2ee34aff98548aaab34108d9",
+        "puct-31/014-1.json": "a5937e102a71fd78634ad59b18ae9f6eeaca2e61172430015c294a7b6f339410",
+        "puct-31/014-1.pgn": "2959b36cbedb98265fb6707e7c93b2f004d42bd6072a36c2d3a9c3fd3c7cf0e3",
+        "puct-31/015-0.json": "85bcbe2b437a308fd43af82571c347093026a1c95bc3315744ce1823075e0bc9",
+        "puct-31/015-0.pgn": "62ff5588641c500442d46ec038fe146441e2437606135e0cef2e46ceb9288cd8",
+        "puct-31/015-1.json": "4d2f01594000a3db3dc295d01e89ad678fa2ab2da38544471be18d084f558591",
+        "puct-31/015-1.pgn": "6ec351d872a89ffa1eeac47a8b92943ed661042008c5548d069add9e1465ca02"
+      },
+      "note": "All saved complete game records replayed legally; unfinished results remain excluded, not draws. Actual neural positions checked against aggregate per-game caps."
+    }
+  },
+  "fen_export_normalization": {
+    "changed": 12,
+    "changes": [
+      {
+        "file": "puct-31/024-0.pgn",
+        "before_sha256": "8ae19d55fbe2cc4d565a0c21aacfb7eda51ef712e2ff769485244b6f71142fe7",
+        "after_sha256": "2947aed9ce5def6898c1fe79e984fffd55e61a9b0fc0f6b6dfadfe793832a4cd",
+        "fen": "r1bqk2r/pp2ppbp/2np1np1/2p5/4P1PP/2NPBP2/PPPQB3/R3K1NR b KQkq h3 0 9"
+      },
+      {
+        "file": "puct-31/024-1.pgn",
+        "before_sha256": "3288b467a7d7168bb1edb428eeee6333284236dfc62e1eb4d51ab6e400e309ab",
+        "after_sha256": "d5385c3715d8aa1b2254004d1d65578355ced702a56abefc895135985c9daa51",
+        "fen": "r1bqk2r/pp2ppbp/2np1np1/2p5/4P1PP/2NPBP2/PPPQB3/R3K1NR b KQkq h3 0 9"
+      },
+      {
+        "file": "puct-31/027-0.pgn",
+        "before_sha256": "f0423b39ef8b2087f3f7b22af13c4f72eb26c4f31056804128d35014ce96faba",
+        "after_sha256": "d42e0fa0650eeecc951f12e85f0af7b12367f07a8e5c34fedb1f59f9cf0a748b",
+        "fen": "2kr1b1r/pp1qnpp1/2n1b3/4P2p/3p4/3B1N2/PP1B1PPP/RN1Q1RK1 w - h6 0 11"
+      },
+      {
+        "file": "puct-31/027-1.pgn",
+        "before_sha256": "a77df4dc4acadd7c5f8376cab827ac5d416e20134053b087cadbd879f7630275",
+        "after_sha256": "97c9a2ea1ab23b5e3f36a952f95e0ee5d11b37b39809bce6a10490e8086e6671",
+        "fen": "2kr1b1r/pp1qnpp1/2n1b3/4P2p/3p4/3B1N2/PP1B1PPP/RN1Q1RK1 w - h6 0 11"
+      },
+      {
+        "file": "puct-31/030-0.pgn",
+        "before_sha256": "4fec38229339a8ab75d3fffbfc21bf260572993391dcbf5c26622d154c6ffcf0",
+        "after_sha256": "0ddf368fa9ccd0146e204175d6e7ef97251182fbf883a58a82e90068ce3368ad",
+        "fen": "rn1k3r/p4ppp/2p2b2/1p3b2/2B1p3/2P5/PP1NNPPP/R3K2R w KQ b6 0 12"
+      },
+      {
+        "file": "puct-31/030-1.pgn",
+        "before_sha256": "0ed4bc1211bca76af884516a245663e16801c26a7c551e56c3345e2698d93b5d",
+        "after_sha256": "5705a099e374b732a5a65dcdddf26829f50513486e7a29f398a42343914f0549",
+        "fen": "rn1k3r/p4ppp/2p2b2/1p3b2/2B1p3/2P5/PP1NNPPP/R3K2R w KQ b6 0 12"
+      },
+      {
+        "file": "puct-512/024-0.pgn",
+        "before_sha256": "25b720f7e0fb919fac29287d810afcee4435175899f7cc6b377a09319c5f9c52",
+        "after_sha256": "d4077bf83490a24c90b848ae9c9cb21904676f40c26242e2d7f73fca7b385825",
+        "fen": "r1bqk2r/pp2ppbp/2np1np1/2p5/4P1PP/2NPBP2/PPPQB3/R3K1NR b KQkq h3 0 9"
+      },
+      {
+        "file": "puct-512/024-1.pgn",
+        "before_sha256": "ef85cc76d7b1a38b0666e9687954d2fd51c9280d0a3740e5d6b1fc70e610b5bd",
+        "after_sha256": "e022df0e4155d0e5448a04d90a8f719e37f723bd5e160eb254873e165ccc7957",
+        "fen": "r1bqk2r/pp2ppbp/2np1np1/2p5/4P1PP/2NPBP2/PPPQB3/R3K1NR b KQkq h3 0 9"
+      },
+      {
+        "file": "puct-512/027-0.pgn",
+        "before_sha256": "d26cf1e1a3fc821265461624760c5d148918cb7edfbd00484c7ec98494a7589e",
+        "after_sha256": "6073d58337293029b97989ea3ed37337a1c40644a2c1a08b414c1eba7942381b",
+        "fen": "2kr1b1r/pp1qnpp1/2n1b3/4P2p/3p4/3B1N2/PP1B1PPP/RN1Q1RK1 w - h6 0 11"
+      },
+      {
+        "file": "puct-512/027-1.pgn",
+        "before_sha256": "5f9e79eda4d1b6adb5358a9a72fd8123a595f0f61c17c402024f457cdb5665c1",
+        "after_sha256": "a3f9d8f56d6f4fc747c902b462d3225f4ab6c7e2e02299580e6c43b53db4ce8c",
+        "fen": "2kr1b1r/pp1qnpp1/2n1b3/4P2p/3p4/3B1N2/PP1B1PPP/RN1Q1RK1 w - h6 0 11"
+      },
+      {
+        "file": "puct-512/030-0.pgn",
+        "before_sha256": "c0ba3c4fbf93ae730396e162e6a822b17ebe06c6a5fcc471d77308e95ecb0404",
+        "after_sha256": "fc29f219deb07a6e3b47223da21739e88869f32e75299b85e386e8f009df4c26",
+        "fen": "rn1k3r/p4ppp/2p2b2/1p3b2/2B1p3/2P5/PP1NNPPP/R3K2R w KQ b6 0 12"
+      },
+      {
+        "file": "puct-512/030-1.pgn",
+        "before_sha256": "d4e7e1ffdfe62180b16d65075912a821d694888d2cfceeec23ecd5b888846e38",
+        "after_sha256": "79dfd8b673f8b5c5da7e0a517fe067b2e06630fb53dae3bc6948314c65b88bef",
+        "fen": "rn1k3r/p4ppp/2p2b2/1p3b2/2B1p3/2P5/PP1NNPPP/R3K2R w KQ b6 0 12"
+      }
+    ],
+    "note": "Metadata only: exact raw start FEN restored from original match records; legal moves and final positions checked identical; original PGNs retained."
+  },
+  "validation": {
+    "pytest": "142 passed in25.75s",
+    "log": "output/cpu-speed-20261031/tests-complete.txt",
+    "native_core": "passed UBSan including native AVX2 build,check-classification and repetition-reset tests",
+    "compileall": "passed",
+    "git_diff_check": "passed"
+  },
+  "limits": [
+    "Relative Elo only for these frozen agents,budgets,opening selection and draw rules;not absolute calibration.",
+    "Bootstrap resamples opening pairs;Hoeffding also assumes independent bounded pair scores.",
+    "Fast64 games/opponent vs stable32 games/opponent are separate agents;no pooling.",
+    "Stable control uses same first16 opening pairs;score difference interval crosses zero.",
+    "New small-model training exact keys excluded;whole-source overlap with original big-model training remains unknown.",
+    "Speed/quality configuration selected on reused development roots;fresh96-root results did not generalize favorably.",
+    "Same inference budget means32-position cap,not equal actual usage;actual usage in duel-analysis.",
+    "Original PUCT subtree reuse retained;BF still rebuilds each move;no causal isolation of this factor.",
+    "PGN metadata only restored from immutable raw input;gameplay and outcomes unchanged;old PGNs retained."
+  ],
+  "sources": {
+    "output/cpu-speed-20261031/heldout-comparison/result.json": {
+      "sha256": "a48a4fd24bc0a81ee0d1e5aad8c0e3e4161241031ac463827e7b6cc31e091c83"
+    },
+    "output/cpu-speed-20261031/duel/result.json": {
+      "sha256": "deee5a9aaf919985e90d23e3cb34c9fffa68e30bb791d7e6caa4ccc50152204d"
+    },
+    "output/cpu-speed-20261031/stable-duel/result.json": {
+      "sha256": "59b09d9e779ea3a4d3a0e166e96d13a16449efe933db5ed3b8b2cdc4ceeca776"
+    },
+    "output/cpu-speed-20261031/stable31-duel/result.json": {
+      "sha256": "94777fc9e35bc5e05046961e5a5b75502962f4109a3ce1ba4d4db7df03d424ee"
+    },
+    "output/cpu-speed-20261031/kernel-analysis.json": {
+      "sha256": "482a209b9e99d394cb5113c3d9666dea38d01741cc11b3228ad06a72268c7ea9"
+    },
+    "output/cpu-speed-20261031/plan-before-development.json": {
+      "sha256": "09badb35637c4ef826de2558f32b5e84873fc434654b93cc8839352ea891bd3e"
+    },
+    "output/cpu-speed-20261031/plan.json": {
+      "sha256": "467af789b5e786cae470e8f7e44bce2449d125a4833bc57bd457063dc2bcd804"
+    },
+    "output/cpu-speed-20261031/selection.json": {
+      "sha256": "50bddec15cdf2ff7bc4cd34ff5c6bc7088e6fd48536f019b15f6b019dd884786"
+    },
+    "output/cpu-speed-20261031/openings/plan.json": {
+      "sha256": "6b4a1d1471715e2276c58c4b62da1f7260fbe63a8559c593d5473e9f71fefc3b"
+    },
+    "output/cpu-speed-20261031/heldout-roots/plan.json": {
+      "sha256": "27734f8a82056210eb223c47e8dd22f9104707e412d8851175ccfc0f7a93be9b"
+    },
+    "output/cpu-speed-20261031/development-comparison/result.json": {
+      "sha256": "6d0eeb3440bf07f3a93e269d6dd15b0fa7502e56d4282434a23bcc5f5703b6e4"
+    },
+    "output/cpu-speed-20261031/heldout-analysis.json": {
+      "sha256": "d7775232dd902dec4e0d37507cf6782ebf33207d0cd848c22ec575500776a8c5"
+    },
+    "output/cpu-speed-20261031/duel-analysis.json": {
+      "sha256": "69cefa33e14736f52b094a3222bede4be42d7f2c3d09aab3efec454be54af718"
+    },
+    "output/cpu-speed-20261031/duel/audit-final.json": {
+      "sha256": "2d9292b2cf21f53e35f8d4b529036489b45ff52ea48131efa375b627546648da"
+    },
+    "output/cpu-speed-20261031/stable-duel/audit-final.json": {
+      "sha256": "3fb1efacc73c5efed6b650a61a0d6c5f7892c25b906825c5c084da49371f874b"
+    },
+    "output/cpu-speed-20261031/stable31-duel/audit-final.json": {
+      "sha256": "94daa8fb27f6cb3b2ed5c88b623f93f38818d8b089f2ce5ce4a90c9f9a898575"
+    },
+    "output/cpu-speed-20261031/duel/fen-normalization.json": {
+      "sha256": "12e9fc4ece2b471f230182c81a4d32befae37fdbf96291e5f4c69bb4c727097f"
+    }
+  }
+}

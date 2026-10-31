@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "neurochess"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = ["torch>=2.5", "numpy>=1.26", "python-chess>=1.999", "zstandard>=0.23"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[tool.setuptools.packages.find]
+include = ["neurochess*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.setuptools.package-data]
+neurochess = ["web/*.html", "web/*.js", "web/*.css", "native/*.cpp", "native/*.hpp", "native/vendor/*"]

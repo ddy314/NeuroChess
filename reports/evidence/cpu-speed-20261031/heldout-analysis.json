@@ -1,0 +1,197 @@
+{
+  "positions": 96,
+  "cp_positions": 96,
+  "summary": {
+    "optimized": {
+      "positions": 96,
+      "cp_positions": 96,
+      "mean_cp_regret": 44.333333333333336,
+      "median_cp_regret": 8.5,
+      "cp_blunders_100": 15,
+      "mean_value_regret": 0.09667708333333332,
+      "median_seconds": 0.05153680900548352,
+      "mean_large_positions": 31.145833333333332,
+      "mean_native_seconds": 0.009316914342737922,
+      "mean_inference_seconds": 0.04057572995846689,
+      "mean_inference_batches": 3.0,
+      "p95_seconds": 0.05484978750246228,
+      "mate_events": {
+        "winning_mate_missed": 0,
+        "avoidable_mate_loss": 0
+      }
+    },
+    "conservative": {
+      "positions": 96,
+      "cp_positions": 96,
+      "mean_cp_regret": 39.583333333333336,
+      "median_cp_regret": 0.0,
+      "cp_blunders_100": 12,
+      "mean_value_regret": 0.10427083333333333,
+      "median_seconds": 0.07297518999985186,
+      "mean_large_positions": 31.791666666666668,
+      "mean_native_seconds": 0.021985431115505587,
+      "mean_inference_seconds": 0.05045782012242247,
+      "mean_inference_batches": 5.0,
+      "p95_seconds": 0.08279480175406206,
+      "mate_events": {
+        "winning_mate_missed": 0,
+        "avoidable_mate_loss": 0
+      }
+    },
+    "kernel512": {
+      "positions": 96,
+      "cp_positions": 96,
+      "mean_cp_regret": 38.645833333333336,
+      "median_cp_regret": 0.0,
+      "cp_blunders_100": 12,
+      "mean_value_regret": 0.09638541666666667,
+      "median_seconds": 0.09066303750296356,
+      "mean_large_positions": 31.96875,
+      "mean_native_seconds": 0.022506175621704944,
+      "mean_inference_seconds": 0.06795583035454911,
+      "mean_inference_batches": 9.0,
+      "p95_seconds": 0.10075846099789487,
+      "mate_events": {
+        "winning_mate_missed": 0,
+        "avoidable_mate_loss": 0
+      }
+    },
+    "puct-31": {
+      "positions": 96,
+      "cp_positions": 96,
+      "mean_cp_regret": 26.395833333333332,
+      "median_cp_regret": 0.0,
+      "cp_blunders_100": 6,
+      "mean_value_regret": 0.05559375,
+      "median_seconds": 0.0672294289979618,
+      "mean_large_positions": 31.520833333333332,
+      "mean_native_seconds": 0.00030413267980596476,
+      "mean_inference_seconds": 0.06596752891664437,
+      "mean_inference_batches": 8.895833333333334,
+      "p95_seconds": 0.06777932349723415,
+      "mate_events": {
+        "winning_mate_missed": 0,
+        "avoidable_mate_loss": 0
+      }
+    },
+    "puct-512": {
+      "positions": 96,
+      "cp_positions": 96,
+      "mean_cp_regret": 34.40625,
+      "median_cp_regret": 0.0,
+      "cp_blunders_100": 8,
+      "mean_value_regret": 0.06411458333333332,
+      "median_seconds": 0.5007161554967752,
+      "mean_large_positions": 484.96875,
+      "mean_native_seconds": 0.00155332232376774,
+      "mean_inference_seconds": 0.4736516266810516,
+      "mean_inference_batches": 10.208333333333334,
+      "p95_seconds": 0.5065493682523083,
+      "mate_events": {
+        "winning_mate_missed": 0,
+        "avoidable_mate_loss": 0
+      }
+    },
+    "puct-31-b16": {
+      "positions": 96,
+      "cp_positions": 96,
+      "mean_cp_regret": 29.302083333333332,
+      "median_cp_regret": 0.0,
+      "cp_blunders_100": 7,
+      "mean_value_regret": 0.054322916666666665,
+      "median_seconds": 0.04563025000243215,
+      "mean_large_positions": 30.96875,
+      "mean_native_seconds": 0.0001680791985260536,
+      "mean_inference_seconds": 0.04370099727081348,
+      "mean_inference_batches": 3.8229166666666665,
+      "p95_seconds": 0.046382961994822836,
+      "mate_events": {
+        "winning_mate_missed": 0,
+        "avoidable_mate_loss": 0
+      }
+    }
+  },
+  "paired": {
+    "optimized minus conservative": {
+      "positions": 96,
+      "mean_cp_delta": 4.75,
+      "mean_cp_delta_bootstrap95": [
+        -0.9276041666666662,
+        11.489583333333334
+      ],
+      "blunder_rate_delta": 0.03125,
+      "blunder_rate_delta_bootstrap95": [
+        0.0,
+        0.07291666666666667
+      ],
+      "fixed_blunders": 0,
+      "new_blunders": 3,
+      "discordant_exact_two_sided_p": 0.25
+    },
+    "optimized minus kernel512": {
+      "positions": 96,
+      "mean_cp_delta": 5.6875,
+      "mean_cp_delta_bootstrap95": [
+        1.0416666666666667,
+        11.28125
+      ],
+      "blunder_rate_delta": 0.03125,
+      "blunder_rate_delta_bootstrap95": [
+        0.0,
+        0.07291666666666667
+      ],
+      "fixed_blunders": 0,
+      "new_blunders": 3,
+      "discordant_exact_two_sided_p": 0.25
+    },
+    "optimized minus puct-31": {
+      "positions": 96,
+      "mean_cp_delta": 17.9375,
+      "mean_cp_delta_bootstrap95": [
+        8.479166666666666,
+        28.614843749999995
+      ],
+      "blunder_rate_delta": 0.09375,
+      "blunder_rate_delta_bootstrap95": [
+        0.041666666666666664,
+        0.15625
+      ],
+      "fixed_blunders": 0,
+      "new_blunders": 9,
+      "discordant_exact_two_sided_p": 0.00390625
+    },
+    "optimized minus puct-31-b16": {
+      "positions": 96,
+      "mean_cp_delta": 15.03125,
+      "mean_cp_delta_bootstrap95": [
+        4.572916666666667,
+        26.177343749999995
+      ],
+      "blunder_rate_delta": 0.08333333333333333,
+      "blunder_rate_delta_bootstrap95": [
+        0.020833333333333332,
+        0.14583333333333334
+      ],
+      "fixed_blunders": 1,
+      "new_blunders": 9,
+      "discordant_exact_two_sided_p": 0.021484375
+    },
+    "optimized minus puct-512": {
+      "positions": 96,
+      "mean_cp_delta": 9.927083333333334,
+      "mean_cp_delta_bootstrap95": [
+        -11.437760416666666,
+        25.4375
+      ],
+      "blunder_rate_delta": 0.07291666666666667,
+      "blunder_rate_delta_bootstrap95": [
+        0.010416666666666666,
+        0.13541666666666666
+      ],
+      "fixed_blunders": 2,
+      "new_blunders": 9,
+      "discordant_exact_two_sided_p": 0.0654296875
+    }
+  },
+  "note": "Fresh frozen roots, finite-node unified candidate union, not Elo. Fast and conservative points chosen only on old development roots. Matched-batch PUCT is an additional efficiency control, not the original PUCT-31 configuration."
+}

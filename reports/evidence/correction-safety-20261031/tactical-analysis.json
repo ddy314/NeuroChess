@@ -1,0 +1,164 @@
+{
+  "source": "output/correction-safety-20261031/tactical-comparison/result.json",
+  "positions": 32,
+  "cp_positions": 0,
+  "mate_positions": 32,
+  "summary": {
+    "baseline": {
+      "positions": 32,
+      "cp_positions": 0,
+      "mean_cp_regret": null,
+      "median_cp_regret": null,
+      "cp_blunders_100": 0,
+      "mean_value_regret": 0.0,
+      "median_seconds": 0.09346832450682996,
+      "mean_large_positions": 19.59375,
+      "p95_seconds": 0.12028911695233546,
+      "mean_inference_batches": 5.8125,
+      "selected_root_value_clipped": 0,
+      "mean_mate_nodes": 0.0,
+      "mean_tactical_nodes": 0.0,
+      "mean_cpu_mate_proofs": 0.0,
+      "mean_cpu_references": 0.0,
+      "mean_clipped_anchor_nodes": 0.0,
+      "mate_events": {
+        "winning_mate_missed": 0,
+        "avoidable_mate_loss": 4
+      }
+    },
+    "proof": {
+      "positions": 32,
+      "cp_positions": 0,
+      "mean_cp_regret": null,
+      "median_cp_regret": null,
+      "cp_blunders_100": 0,
+      "mean_value_regret": 0.0,
+      "median_seconds": 0.06743324700073572,
+      "mean_large_positions": 16.25,
+      "p95_seconds": 0.1240101149509428,
+      "mean_inference_batches": 4.65625,
+      "selected_root_value_clipped": 0,
+      "mean_mate_nodes": 6085.6875,
+      "mean_tactical_nodes": 0.0,
+      "mean_cpu_mate_proofs": 7.53125,
+      "mean_cpu_references": 0.0,
+      "mean_clipped_anchor_nodes": 0.0,
+      "mate_events": {
+        "winning_mate_missed": 0,
+        "avoidable_mate_loss": 3
+      }
+    },
+    "cpu": {
+      "positions": 32,
+      "cp_positions": 0,
+      "mean_cp_regret": null,
+      "median_cp_regret": null,
+      "cp_blunders_100": 0,
+      "mean_value_regret": 0.0,
+      "median_seconds": 0.07600027749140281,
+      "mean_large_positions": 16.25,
+      "p95_seconds": 0.13631307805044343,
+      "mean_inference_batches": 4.65625,
+      "selected_root_value_clipped": 0,
+      "mean_mate_nodes": 6085.6875,
+      "mean_tactical_nodes": 1841.0,
+      "mean_cpu_mate_proofs": 7.53125,
+      "mean_cpu_references": 9.46875,
+      "mean_clipped_anchor_nodes": 0.0,
+      "mate_events": {
+        "winning_mate_missed": 0,
+        "avoidable_mate_loss": 3
+      }
+    },
+    "cpu16": {
+      "positions": 32,
+      "cp_positions": 0,
+      "mean_cp_regret": null,
+      "median_cp_regret": null,
+      "cp_blunders_100": 0,
+      "mean_value_regret": 0.0,
+      "median_seconds": 0.06398678100231336,
+      "mean_large_positions": 8.15625,
+      "p95_seconds": 0.10799376059658243,
+      "mean_inference_batches": 2.625,
+      "selected_root_value_clipped": 0,
+      "mean_mate_nodes": 6085.6875,
+      "mean_tactical_nodes": 1841.0,
+      "mean_cpu_mate_proofs": 7.53125,
+      "mean_cpu_references": 9.46875,
+      "mean_clipped_anchor_nodes": 0.0,
+      "mate_events": {
+        "winning_mate_missed": 0,
+        "avoidable_mate_loss": 4
+      }
+    },
+    "puct-15": {
+      "positions": 32,
+      "cp_positions": 0,
+      "mean_cp_regret": null,
+      "median_cp_regret": null,
+      "cp_blunders_100": 0,
+      "mean_value_regret": 0.0,
+      "median_seconds": 0.03543592899950454,
+      "mean_large_positions": 12.5625,
+      "p95_seconds": 0.03692660304659512,
+      "mean_inference_batches": 4.34375,
+      "selected_root_value_clipped": 0,
+      "mean_mate_nodes": 0.0,
+      "mean_tactical_nodes": 0.0,
+      "mean_cpu_mate_proofs": 0.0,
+      "mean_cpu_references": 0.0,
+      "mean_clipped_anchor_nodes": 0.0,
+      "mate_events": {
+        "winning_mate_missed": 0,
+        "avoidable_mate_loss": 7
+      }
+    },
+    "puct-31": {
+      "positions": 32,
+      "cp_positions": 0,
+      "mean_cp_regret": null,
+      "median_cp_regret": null,
+      "cp_blunders_100": 0,
+      "mean_value_regret": 0.0,
+      "median_seconds": 0.060576043993933126,
+      "mean_large_positions": 22.40625,
+      "p95_seconds": 0.06793118769201101,
+      "mean_inference_batches": 6.8125,
+      "selected_root_value_clipped": 0,
+      "mean_mate_nodes": 0.0,
+      "mean_tactical_nodes": 0.0,
+      "mean_cpu_mate_proofs": 0.0,
+      "mean_cpu_references": 0.0,
+      "mean_clipped_anchor_nodes": 0.0,
+      "mate_events": {
+        "winning_mate_missed": 0,
+        "avoidable_mate_loss": 7
+      }
+    },
+    "puct-512": {
+      "positions": 32,
+      "cp_positions": 0,
+      "mean_cp_regret": null,
+      "median_cp_regret": null,
+      "cp_blunders_100": 0,
+      "mean_value_regret": 0.0,
+      "median_seconds": 0.03595220699935453,
+      "mean_large_positions": 122.625,
+      "p95_seconds": 0.4954431044046942,
+      "mean_inference_batches": 4.5,
+      "selected_root_value_clipped": 0,
+      "mean_mate_nodes": 0.0,
+      "mean_tactical_nodes": 0.0,
+      "mean_cpu_mate_proofs": 0.0,
+      "mean_cpu_references": 0.0,
+      "mean_clipped_anchor_nodes": 0.0,
+      "mate_events": {
+        "winning_mate_missed": 0,
+        "avoidable_mate_loss": 4
+      }
+    }
+  },
+  "paired": {},
+  "note": "Finite-budget common candidate-union labels, not optimality or Elo. Mate events mean the teacher reports a mate versus an alternative without that report, not that a draw was available. One root per new source game; bootstrap paired roots. Primary comparison and stage are recorded in the corresponding frozen plan."
+}

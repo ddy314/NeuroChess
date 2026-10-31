@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "game_groups": {
+    "train": 1600,
+    "val": 400,
+    "eval": 128
+  },
+  "counts": {
+    "train": {
+      "groups": 25522,
+      "states": 125543,
+      "unique_keys": 121755,
+      "nonmate_states": 122504,
+      "rank_pairs": 86456
+    },
+    "val": {
+      "groups": 6376,
+      "states": 31350,
+      "unique_keys": 30387,
+      "nonmate_states": 30623,
+      "rank_pairs": 21747
+    }
+  },
+  "cross_split_key_overlap": 0,
+  "trajectory_samples": 400,
+  "raw_cp_preserved": true,
+  "note": "Checks new small-model data; original frozen large-model source/game overlap remains unknown."
+}

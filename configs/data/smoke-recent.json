@@ -1,0 +1,17 @@
+{
+  "name": "recent-elite-smoke-512",
+  "description": "Recent rated standard games plus rating/time-filtered broadcast games; source order prioritizes elite games when deduplicating positions.",
+  "deduplicate_positions": true,
+  "sources": [
+    {
+      "name": "broadcast-2026-09-elite",
+      "url": "https://database.lichess.org/broadcast/lichess_db_broadcast_2026-09.pgn.zst",
+      "min_elo": 2400,
+      "min_base_seconds": 600,
+      "max_positions": 512,
+      "license": "CC-BY-SA-4.0",
+      "attribution": "Lichess broadcast contributors, https://database.lichess.org/#broadcasts",
+      "allow_unknown_time_control": true
+    }
+  ]
+}

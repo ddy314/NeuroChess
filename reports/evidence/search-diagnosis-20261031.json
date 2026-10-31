@@ -1,0 +1,2056 @@
+{
+  "date": "2026-10-31",
+  "conclusion": "Capacity contributes, but search-distribution evaluation errors, saturated scalar targets and search/correction decision mechanisms all contribute. Current new search has not consistently matched PUCT-512.",
+  "report": "reports/SEARCH_DIAGNOSIS_20261031.md",
+  "capacity": {
+    "original-long": {
+      "parameters": 107073,
+      "selected_step": 12500,
+      "train_sample": {
+        "positions": 19890,
+        "mse": 0.15963967042437124,
+        "mae": 0.2738434958161003
+      },
+      "full_validation": {
+        "positions": 51086,
+        "mse": 0.17795309356389588,
+        "mae": 0.28665922491845824,
+        "absolute_error_p90": 0.7116542160511017,
+        "material_mse": 0.3524708518149901,
+        "material_mae": 0.4046676933547065,
+        "note": "Position-hash holdout; not game/source independent or a calibrated error bound."
+      }
+    },
+    "matched-small": {
+      "parameters": 107073,
+      "selected_step": 30000,
+      "train_sample": {
+        "positions": 19890,
+        "mse": 0.18196151296845067,
+        "mae": 0.3015219885830087
+      },
+      "full_validation": {
+        "positions": 51086,
+        "mse": 0.19145345208408235,
+        "mae": 0.3089727602273459,
+        "absolute_error_p90": 0.7369925677776337,
+        "material_mse": 0.3524708518149901,
+        "material_mae": 0.4046676933547065,
+        "note": "Position-hash holdout; not game/source independent or a calibrated error bound."
+      }
+    },
+    "matched-medium": {
+      "parameters": 526593,
+      "selected_step": 27500,
+      "train_sample": {
+        "positions": 19890,
+        "mse": 0.14145507983959327,
+        "mae": 0.25812728722058453
+      },
+      "full_validation": {
+        "positions": 51086,
+        "mse": 0.164018660737243,
+        "mae": 0.2748117604817,
+        "absolute_error_p90": 0.6790953278541565,
+        "material_mse": 0.3524708518149901,
+        "material_mae": 0.4046676933547065,
+        "note": "Position-hash holdout; not game/source independent or a calibrated error bound."
+      }
+    }
+  },
+  "capacity_critical_line": [
+    {
+      "name": "original-long",
+      "parameters": 107073,
+      "validation": {
+        "positions": 20000,
+        "mse": 0.1617986800244087,
+        "mae": 0.2675616963830893,
+        "absolute_error_p90": 0.6813998162746432,
+        "material_mse": 0.3354726196929717,
+        "material_mae": 0.38713446519197897,
+        "note": "Position-hash holdout; not game/source independent or a calibrated error bound."
+      },
+      "critical_line_values": [
+        0.07281792163848877,
+        -0.31003764271736145,
+        0.37127256393432617,
+        -0.33876553177833557
+      ]
+    },
+    {
+      "name": "matched-small",
+      "parameters": 107073,
+      "validation": {
+        "positions": 20000,
+        "mse": 0.17699519956615098,
+        "mae": 0.291078211619088,
+        "absolute_error_p90": 0.7084751009941103,
+        "material_mse": 0.3354726196929717,
+        "material_mae": 0.38713446519197897,
+        "note": "Position-hash holdout; not game/source independent or a calibrated error bound."
+      },
+      "critical_line_values": [
+        0.19485905766487122,
+        -0.40781131386756897,
+        0.3147544264793396,
+        -0.23014438152313232
+      ]
+    },
+    {
+      "name": "matched-medium",
+      "parameters": 526593,
+      "validation": {
+        "positions": 20000,
+        "mse": 0.15099137300082938,
+        "mae": 0.25787073135221583,
+        "absolute_error_p90": 0.6550659596920013,
+        "material_mse": 0.3354726196929717,
+        "material_mae": 0.38713446519197897,
+        "note": "Position-hash holdout; not game/source independent or a calibrated error bound."
+      },
+      "critical_line_values": [
+        0.12026205658912659,
+        -0.30807825922966003,
+        0.34916946291923523,
+        -0.28258106112480164
+      ]
+    }
+  ],
+  "trained_native_parity": {
+    "small": {
+      "positions": 100,
+      "maximum_prediction_error": 2.3245811462402344e-06,
+      "maximum_accumulator_error": 1.3113021850585938e-06
+    },
+    "medium": {
+      "positions": 100,
+      "maximum_prediction_error": 2.3096799850463867e-06,
+      "maximum_accumulator_error": 8.940696716308594e-07
+    }
+  },
+  "frontier_intervention": {
+    "original": {
+      "core_full_validation": {
+        "positions": 51086,
+        "mse": 0.17795309356389588,
+        "mae": 0.28665922491845824,
+        "absolute_error_p90": 0.7116542160511017,
+        "material_mse": 0.3524708518149901,
+        "material_mae": 0.4046676933547065,
+        "note": "Position-hash holdout; not game/source independent or a calibrated error bound."
+      },
+      "frontier_validation": {
+        "positions": 512,
+        "mse": 0.5530071791222129,
+        "mae": 0.5699166465101371,
+        "absolute_error_p90": 1.2730821490287787,
+        "material_mse": 0.5167551096455152,
+        "material_mae": 0.5859151640825075,
+        "note": "Position-hash holdout; not game/source independent or a calibrated error bound."
+      },
+      "frontier_train": {
+        "positions": 2048,
+        "mse": 0.5707883556604952
+      }
+    },
+    "control": {
+      "core_full_validation": {
+        "positions": 51086,
+        "mse": 0.1778456682264769,
+        "mae": 0.28627548611471604,
+        "absolute_error_p90": 0.71172896027565,
+        "material_mse": 0.3524708518149901,
+        "material_mae": 0.4046676933547065,
+        "note": "Position-hash holdout; not game/source independent or a calibrated error bound."
+      },
+      "frontier_validation": {
+        "positions": 512,
+        "mse": 0.5536144452008411,
+        "mae": 0.5697714374227871,
+        "absolute_error_p90": 1.276519775390625,
+        "material_mse": 0.5167551096455152,
+        "material_mae": 0.5859151640825075,
+        "note": "Position-hash holdout; not game/source independent or a calibrated error bound."
+      },
+      "frontier_train": {
+        "positions": 2048,
+        "mse": 0.5704175789857097
+      }
+    },
+    "frontier": {
+      "core_full_validation": {
+        "positions": 51086,
+        "mse": 0.18653090875698314,
+        "mae": 0.29387580504660826,
+        "absolute_error_p90": 0.7262637615203857,
+        "material_mse": 0.3524708518149901,
+        "material_mae": 0.4046676933547065,
+        "note": "Position-hash holdout; not game/source independent or a calibrated error bound."
+      },
+      "frontier_validation": {
+        "positions": 512,
+        "mse": 0.526314016612165,
+        "mae": 0.5465013488269506,
+        "absolute_error_p90": 1.2898592472076418,
+        "material_mse": 0.5167551096455152,
+        "material_mae": 0.5859151640825075,
+        "note": "Position-hash holdout; not game/source independent or a calibrated error bound."
+      },
+      "frontier_train": {
+        "positions": 2048,
+        "mse": 0.0425980030504485
+      }
+    }
+  },
+  "target_saturation": {
+    "counts": {
+      "rows": 5000000,
+      "abs_value_ge_099": 1682494,
+      "abs_value_ge_0999": 1582221,
+      "abs_value_le_001": 1255918,
+      "all_annotated_q_saturated": 1334464,
+      "multipv_rows": 5000000,
+      "saturated_q_but_distinct_policy": 555723
+    },
+    "fractions": {
+      "abs_value_ge_099": 0.3364988,
+      "abs_value_ge_0999": 0.3164442,
+      "abs_value_le_001": 0.2511836,
+      "all_annotated_q_saturated": 0.2668928,
+      "multipv_rows": 1.0,
+      "saturated_q_but_distinct_policy": 0.1111446
+    },
+    "mapping": [
+      {
+        "cp": -1000,
+        "value": -1.0
+      },
+      {
+        "cp": -500,
+        "value": -1.0
+      },
+      {
+        "cp": -345,
+        "value": -1.0
+      },
+      {
+        "cp": -291,
+        "value": -1.0
+      },
+      {
+        "cp": -261,
+        "value": -1.0
+      },
+      {
+        "cp": -245,
+        "value": -1.0
+      },
+      {
+        "cp": -198,
+        "value": -0.996
+      },
+      {
+        "cp": -190,
+        "value": -0.994
+      },
+      {
+        "cp": -100,
+        "value": -0.541
+      },
+      {
+        "cp": -50,
+        "value": -0.069
+      },
+      {
+        "cp": 0,
+        "value": 0.0
+      },
+      {
+        "cp": 50,
+        "value": 0.069
+      },
+      {
+        "cp": 100,
+        "value": 0.541
+      },
+      {
+        "cp": 190,
+        "value": 0.994
+      },
+      {
+        "cp": 245,
+        "value": 1.0
+      },
+      {
+        "cp": 500,
+        "value": 1.0
+      },
+      {
+        "cp": 1000,
+        "value": 1.0
+      }
+    ],
+    "note": "Existing fixed-ply sf16 proxy targets; saturation discards centipawn ordering, not a claim about true game-theoretic values."
+  },
+  "development": {
+    "summary": {
+      "baseline": {
+        "mean_cp_regret": 38.0,
+        "mean_value_regret": 0.153625
+      },
+      "no-internal-anchors": {
+        "mean_cp_regret": 77.375,
+        "mean_value_regret": 0.317875
+      },
+      "decay-8": {
+        "mean_cp_regret": 47.375,
+        "mean_value_regret": 0.17525
+      },
+      "frontier": {
+        "mean_cp_regret": 92.75,
+        "mean_value_regret": 0.32899999999999996
+      },
+      "frontier-pure": {
+        "mean_cp_regret": 67.75,
+        "mean_value_regret": 0.3085
+      },
+      "decay-frontier": {
+        "mean_cp_regret": 74.5,
+        "mean_value_regret": 0.298125
+      },
+      "policy-regularized": {
+        "mean_cp_regret": 5.875,
+        "mean_value_regret": 0.021625
+      },
+      "decay-frontier-policy": {
+        "mean_cp_regret": 4.875,
+        "mean_value_regret": 0.022499999999999992
+      },
+      "oracle-WDL": {
+        "mean_cp_regret": 2.125,
+        "mean_value_regret": 0.014249999999999999
+      },
+      "puct": {
+        "mean_cp_regret": 4.125,
+        "mean_value_regret": 0.006499999999999989
+      }
+    },
+    "error_strata": {
+      "deep_frontier": {
+        "positions": 64,
+        "cheap_mse": 0.5091974788330063,
+        "large_mse": 0.1841541640084668,
+        "search_mse": 0.509197323479509
+      },
+      "root": {
+        "positions": 8,
+        "cheap_mse": 0.11606826345627815,
+        "large_mse": 0.06433454817448384,
+        "search_mse": 0.0673357418251349
+      },
+      "root_child": {
+        "positions": 288,
+        "cheap_mse": 0.4002759899803279,
+        "large_mse": 0.12275552920598606,
+        "search_mse": 0.24592568420209193
+      },
+      "selected_frontier": {
+        "positions": 8,
+        "cheap_mse": 0.19870692000183837,
+        "large_mse": 0.046252713594620416,
+        "search_mse": 0.19870663321602933
+      }
+    },
+    "serialization_note": "Diagnostic FENs reconstructed from root+stored legal paths to preserve raw en-passant metadata. Original labels/predictions unchanged."
+  },
+  "cohorts": {
+    "heldout-comparison-final": {
+      "summary": {
+        "baseline-small": {
+          "positions": 32,
+          "cp_positions": 32,
+          "mean_cp_regret": 108.5625,
+          "median_cp_regret": 15.0,
+          "cp_blunders_100": 9,
+          "mean_value_regret": 0.22934375,
+          "median_seconds": 0.11394213449966628,
+          "mean_large_positions": 31.9375
+        },
+        "guarded-small": {
+          "positions": 32,
+          "cp_positions": 32,
+          "mean_cp_regret": 41.125,
+          "median_cp_regret": 0.0,
+          "cp_blunders_100": 5,
+          "mean_value_regret": 0.0568125,
+          "median_seconds": 0.11319442449894268,
+          "mean_large_positions": 31.9375
+        },
+        "baseline-medium": {
+          "positions": 32,
+          "cp_positions": 32,
+          "mean_cp_regret": 68.40625,
+          "median_cp_regret": 0.0,
+          "cp_blunders_100": 7,
+          "mean_value_regret": 0.12925,
+          "median_seconds": 0.8759724284973345,
+          "mean_large_positions": 31.9375
+        },
+        "guarded-medium": {
+          "positions": 32,
+          "cp_positions": 32,
+          "mean_cp_regret": 17.3125,
+          "median_cp_regret": 0.0,
+          "cp_blunders_100": 3,
+          "mean_value_regret": 0.0556875,
+          "median_seconds": 0.8763383975019678,
+          "mean_large_positions": 31.9375
+        },
+        "frontier-guarded": {
+          "positions": 32,
+          "cp_positions": 32,
+          "mean_cp_regret": 44.375,
+          "median_cp_regret": 0.0,
+          "cp_blunders_100": 6,
+          "mean_value_regret": 0.078875,
+          "median_seconds": 0.12188769649947062,
+          "mean_large_positions": 31.8125
+        },
+        "continued-raw": {
+          "positions": 32,
+          "cp_positions": 32,
+          "mean_cp_regret": 99.25,
+          "median_cp_regret": 9.5,
+          "cp_blunders_100": 8,
+          "mean_value_regret": 0.22784375,
+          "median_seconds": 0.12087136300397106,
+          "mean_large_positions": 31.9375
+        },
+        "continued-guarded": {
+          "positions": 32,
+          "cp_positions": 32,
+          "mean_cp_regret": 38.875,
+          "median_cp_regret": 0.0,
+          "cp_blunders_100": 5,
+          "mean_value_regret": 0.057,
+          "median_seconds": 0.11795170199911809,
+          "mean_large_positions": 31.9375
+        },
+        "hard-raw": {
+          "positions": 32,
+          "cp_positions": 32,
+          "mean_cp_regret": 63.625,
+          "median_cp_regret": 2.0,
+          "cp_blunders_100": 7,
+          "mean_value_regret": 0.12878125,
+          "median_seconds": 0.11501625499658985,
+          "mean_large_positions": 31.9375
+        },
+        "hard-guarded": {
+          "positions": 32,
+          "cp_positions": 32,
+          "mean_cp_regret": 28.25,
+          "median_cp_regret": 0.0,
+          "cp_blunders_100": 4,
+          "mean_value_regret": 0.0545,
+          "median_seconds": 0.11427805799758062,
+          "mean_large_positions": 31.9375
+        },
+        "puct-512": {
+          "positions": 32,
+          "cp_positions": 32,
+          "mean_cp_regret": 19.15625,
+          "median_cp_regret": 0.0,
+          "cp_blunders_100": 3,
+          "mean_value_regret": 0.05487500000000001,
+          "median_seconds": 0.4993044875009218,
+          "mean_large_positions": 510.78125
+        },
+        "puct-128": {
+          "positions": 32,
+          "cp_positions": 32,
+          "mean_cp_regret": 23.53125,
+          "median_cp_regret": 0.0,
+          "cp_blunders_100": 3,
+          "mean_value_regret": 0.025500000000000002,
+          "median_seconds": 0.15449620749859605,
+          "mean_large_positions": 128.625
+        },
+        "puct-31": {
+          "positions": 32,
+          "cp_positions": 32,
+          "mean_cp_regret": 17.875,
+          "median_cp_regret": 0.0,
+          "cp_blunders_100": 3,
+          "mean_value_regret": 0.02546875,
+          "median_seconds": 0.06637194850191008,
+          "mean_large_positions": 31.9375
+        },
+        "direct": {
+          "positions": 32,
+          "cp_positions": 32,
+          "mean_cp_regret": 23.78125,
+          "median_cp_regret": 0.0,
+          "cp_blunders_100": 3,
+          "mean_value_regret": 0.05278125,
+          "median_seconds": 0.004914558492600918,
+          "mean_large_positions": 1.0
+        }
+      },
+      "teacher": {
+        "id": {
+          "name": "Stockfish 18",
+          "author": "the Stockfish developers (see AUTHORS file)"
+        },
+        "binary_sha256": "6b087694916228c905a5e14db74cca8c7e5643602226af1fa5d42353c455b9f9"
+      },
+      "checkpoint_sha256": "9f197a12be729e70f8d7824ef6de1e743b3dce2033c7cc5bb06ce6a6d8832e5c",
+      "openings_sha256": "869afc51e3e111a09f3dcc805b8dcf5bda1ab89636e3cb1ce76b711d410b15c6",
+      "student_hashes": {
+        "output/cheap-minimax-20261031/student-selected/best.bin": "204628c0b60e1b71951c74ffee89b1f61bad693c0b76fc59db83696500dccc89",
+        "output/search-diagnosis-20261031/capacity-medium/best.bin": "002ca11977fea7cba3fe67b7421672906f9556e739da7e57aacf0bb78cb5fd49",
+        "output/search-diagnosis-20261031/finetune-control/last.bin": "b9c973b03a24dae2bc29fdbe6d8f216d6e66b36b5a4b0e913750b661094d51d8",
+        "output/search-diagnosis-20261031/finetune-frontier/last.bin": "82a862aceb801e704d717e9bf55c0a55d850555bbb74f953762f8c807772b93d"
+      },
+      "native_library_sha256": "a7131a84bcaee2ccf9eadb2fbdb5dcd6f63d7d803e8d6ad5f64134e8aac4c3de",
+      "source_hashes": {
+        "neurochess/native/best_first.cpp": "34d0b230d592ff220f953575a3bccf26eeab3460a8b4793504560bdb7f36ff2a",
+        "neurochess/best_first.py": "69f3503dbbfb872fb4f21f65fecd8052faaad6e321207759c100bd292f45286a",
+        "neurochess/cheap.py": "70dd5b55b6f62df36b14e9f28fc4b4492a276db5f4eb4b131be7d7d30ce0813e",
+        "neurochess/native/mcts.cpp": "615429aaff6c562404c367df5c4b416e4aef2a59459d4b753d03da484dd5338d",
+        "scripts/compare_search_variants.py": "e79c039694d6c3407d5df38c82a6f69175609f6daca0e3a84d94a6cc48d40b45"
+      }
+    },
+    "phase2-comparison": {
+      "summary": {
+        "baseline-small": {
+          "positions": 32,
+          "cp_positions": 32,
+          "mean_cp_regret": 16.78125,
+          "median_cp_regret": 0.0,
+          "cp_blunders_100": 1,
+          "mean_value_regret": 0.07553125,
+          "median_seconds": 0.11718321700027445,
+          "mean_large_positions": 31.90625
+        },
+        "guarded-small": {
+          "positions": 32,
+          "cp_positions": 32,
+          "mean_cp_regret": 13.4375,
+          "median_cp_regret": 0.0,
+          "cp_blunders_100": 1,
+          "mean_value_regret": 0.05178125000000001,
+          "median_seconds": 0.11683333950350061,
+          "mean_large_positions": 31.90625
+        },
+        "aligned-small": {
+          "positions": 32,
+          "cp_positions": 32,
+          "mean_cp_regret": 10.84375,
+          "median_cp_regret": 0.0,
+          "cp_blunders_100": 1,
+          "mean_value_regret": 0.042125,
+          "median_seconds": 0.11647860299854074,
+          "mean_large_positions": 32.0
+        },
+        "hard-guarded": {
+          "positions": 32,
+          "cp_positions": 32,
+          "mean_cp_regret": 32.3125,
+          "median_cp_regret": 0.0,
+          "cp_blunders_100": 3,
+          "mean_value_regret": 0.113125,
+          "median_seconds": 0.11468545599927893,
+          "mean_large_positions": 32.0
+        },
+        "hard-aligned": {
+          "positions": 32,
+          "cp_positions": 32,
+          "mean_cp_regret": 25.875,
+          "median_cp_regret": 0.0,
+          "cp_blunders_100": 2,
+          "mean_value_regret": 0.0740625,
+          "median_seconds": 0.11480557399772806,
+          "mean_large_positions": 31.96875
+        },
+        "puct-512": {
+          "positions": 32,
+          "cp_positions": 32,
+          "mean_cp_regret": 9.71875,
+          "median_cp_regret": 0.0,
+          "cp_blunders_100": 1,
+          "mean_value_regret": 0.0406875,
+          "median_seconds": 0.5000978035022854,
+          "mean_large_positions": 483.0625
+        },
+        "puct-31": {
+          "positions": 32,
+          "cp_positions": 32,
+          "mean_cp_regret": 10.3125,
+          "median_cp_regret": 0.0,
+          "cp_blunders_100": 0,
+          "mean_value_regret": 0.03634375,
+          "median_seconds": 0.0664881564953248,
+          "mean_large_positions": 31.96875
+        },
+        "direct": {
+          "positions": 32,
+          "cp_positions": 32,
+          "mean_cp_regret": 14.40625,
+          "median_cp_regret": 0.0,
+          "cp_blunders_100": 1,
+          "mean_value_regret": 0.0495,
+          "median_seconds": 0.004920535000564996,
+          "mean_large_positions": 1.0
+        }
+      },
+      "teacher": {
+        "id": {
+          "name": "Stockfish 18",
+          "author": "the Stockfish developers (see AUTHORS file)"
+        },
+        "binary_sha256": "6b087694916228c905a5e14db74cca8c7e5643602226af1fa5d42353c455b9f9"
+      },
+      "checkpoint_sha256": "9f197a12be729e70f8d7824ef6de1e743b3dce2033c7cc5bb06ce6a6d8832e5c",
+      "openings_sha256": "23838ee1c47fe8e131010d292fb9da96470b89ddff08aa8d17d04871f7c81162",
+      "student_hashes": {
+        "output/cheap-minimax-20261031/student-selected/best.bin": "204628c0b60e1b71951c74ffee89b1f61bad693c0b76fc59db83696500dccc89",
+        "output/search-diagnosis-20261031/finetune-frontier/last.bin": "82a862aceb801e704d717e9bf55c0a55d850555bbb74f953762f8c807772b93d"
+      },
+      "native_library_sha256": "6b28a7431e727eeaebd55cd2203a2043ad939d4c3d8edeb1fcf7e1e3fc599a6d",
+      "source_hashes": {
+        "neurochess/native/best_first.cpp": "612301100e69802a625a46be11242891f355b4e0a67dcb179d4df6abc555b2c8",
+        "neurochess/best_first.py": "e7f87240b471fd5f66dda1c1fda8786665d2f63c271661fa4159ce8b83cb3c88",
+        "neurochess/cheap.py": "70dd5b55b6f62df36b14e9f28fc4b4492a276db5f4eb4b131be7d7d30ce0813e",
+        "neurochess/native/mcts.cpp": "615429aaff6c562404c367df5c4b416e4aef2a59459d4b753d03da484dd5338d",
+        "scripts/compare_search_variants.py": "e79c039694d6c3407d5df38c82a6f69175609f6daca0e3a84d94a6cc48d40b45"
+      }
+    },
+    "phase3-comparison": {
+      "summary": {
+        "baseline": {
+          "positions": 32,
+          "cp_positions": 32,
+          "mean_cp_regret": 70.15625,
+          "median_cp_regret": 24.5,
+          "cp_blunders_100": 9,
+          "mean_value_regret": 0.23343750000000002,
+          "median_seconds": 0.11285990149190184,
+          "mean_large_positions": 32.0
+        },
+        "aligned": {
+          "positions": 32,
+          "cp_positions": 32,
+          "mean_cp_regret": 58.75,
+          "median_cp_regret": 0.0,
+          "cp_blunders_100": 8,
+          "mean_value_regret": 0.1786875,
+          "median_seconds": 0.11128896199807059,
+          "mean_large_positions": 31.96875
+        },
+        "aligned-checked": {
+          "positions": 32,
+          "cp_positions": 32,
+          "mean_cp_regret": 58.75,
+          "median_cp_regret": 0.0,
+          "cp_blunders_100": 8,
+          "mean_value_regret": 0.1786875,
+          "median_seconds": 0.09586789199966006,
+          "mean_large_positions": 24.0
+        },
+        "puct-512": {
+          "positions": 32,
+          "cp_positions": 32,
+          "mean_cp_regret": 31.9375,
+          "median_cp_regret": 0.0,
+          "cp_blunders_100": 4,
+          "mean_value_regret": 0.0624375,
+          "median_seconds": 0.4979801684967242,
+          "mean_large_positions": 478.6875
+        },
+        "puct-31": {
+          "positions": 32,
+          "cp_positions": 32,
+          "mean_cp_regret": 70.59375,
+          "median_cp_regret": 0.0,
+          "cp_blunders_100": 7,
+          "mean_value_regret": 0.20728125000000003,
+          "median_seconds": 0.06646027900569607,
+          "mean_large_positions": 31.96875
+        },
+        "direct": {
+          "positions": 32,
+          "cp_positions": 32,
+          "mean_cp_regret": 108.40625,
+          "median_cp_regret": 0.0,
+          "cp_blunders_100": 11,
+          "mean_value_regret": 0.2986875,
+          "median_seconds": 0.004916217498248443,
+          "mean_large_positions": 1.0
+        }
+      },
+      "teacher": {
+        "id": {
+          "name": "Stockfish 18",
+          "author": "the Stockfish developers (see AUTHORS file)"
+        },
+        "binary_sha256": "6b087694916228c905a5e14db74cca8c7e5643602226af1fa5d42353c455b9f9"
+      },
+      "checkpoint_sha256": "9f197a12be729e70f8d7824ef6de1e743b3dce2033c7cc5bb06ce6a6d8832e5c",
+      "openings_sha256": "4a3b8e4f6836a4960d3d92321d76af1fc7eed7e85facdd8fa4cb139f175f3500",
+      "student_hashes": {
+        "output/cheap-minimax-20261031/student-selected/best.bin": "204628c0b60e1b71951c74ffee89b1f61bad693c0b76fc59db83696500dccc89"
+      },
+      "native_library_sha256": "b3e3a38e9b11ce11ed7e604c375d1f95a265faceaffb01541bc0539c98318546",
+      "source_hashes": {
+        "neurochess/native/best_first.cpp": "7dabc3c1839868517cfb7cd6082f85691d07d3f90f8f3f44ece304e4cacdacaa",
+        "neurochess/best_first.py": "28ac332dc61acc9230c178dcd1e4c899b1c2e8641a30a30b6a18cb22f0d5f727",
+        "neurochess/cheap.py": "70dd5b55b6f62df36b14e9f28fc4b4492a276db5f4eb4b131be7d7d30ce0813e",
+        "neurochess/native/mcts.cpp": "615429aaff6c562404c367df5c4b416e4aef2a59459d4b753d03da484dd5338d",
+        "scripts/compare_search_variants.py": "e79c039694d6c3407d5df38c82a6f69175609f6daca0e3a84d94a6cc48d40b45"
+      }
+    }
+  },
+  "arenas": {
+    "arena-guarded": {
+      "best-first": {
+        "settings": {
+          "nodes": 1000,
+          "max_plies": 600,
+          "max_seconds": 600.0,
+          "pairs": 2,
+          "mode": "best-first-minimax",
+          "openings_sha256": "c149a14f3fbdfbfbc276b69ba198e67bbec47174c9e21ae7a9d39157ecae34fe"
+        },
+        "opponent": {
+          "name": "Stockfish 18",
+          "author": "the Stockfish developers (see AUTHORS file)"
+        },
+        "completed": 4,
+        "truncated": 0,
+        "attempted": 4,
+        "scheduled": 4,
+        "unplayed": 0,
+        "wins": 0,
+        "draws": 2,
+        "losses": 2,
+        "seconds": 24.623514994003926,
+        "rating_claim": "No absolute Elo calibration. Stockfish node limits are not Elo ratings.",
+        "paired_score": 0.25,
+        "paired_score_bootstrap_95": [
+          0.25,
+          0.25
+        ],
+        "independent_pairs": 2,
+        "search_config": {
+          "algorithm": "best-first negamax with lazy multi-fidelity evaluation",
+          "backend": "cpp",
+          "expansions_per_move": 512,
+          "max_nodes": 65536,
+          "max_depth": 64,
+          "neural_budget": 32,
+          "correction_batch": 4,
+          "value_backup": "minimax regularized by persistent neural anchors; exact outcomes override",
+          "tree_reuse": false,
+          "exact_proofs": "all legal children required for loss/draw",
+          "correction_scheduler_description": "candidate calibration ranked by minimax gaps; heuristic",
+          "anchor_weight": 0.75,
+          "q_anchor_weight": 0.25,
+          "anchor_decay": 0.0,
+          "correction_scheduler": "hierarchical",
+          "root_policy_weight": 0.1,
+          "quiescence_depth": 0,
+          "quiescence_extra_node_cap": 100000,
+          "quiescence": "CPU captures/promotions and all check evasions; no large-model queries",
+          "cheap_evaluator": "float dual-perspective incremental accumulator",
+          "cache": "exact effective model inputs plus ordered legal action IDs; outputs only"
+        },
+        "search_stats": {
+          "choices": 247,
+          "cheap_evaluations": 2828647,
+          "expanded_nodes": 125139,
+          "correction_positions": 7813,
+          "large_model_positions": 6994,
+          "inference_batches": 2050,
+          "cache_hits": 810,
+          "native_seconds": 8.677356668908033,
+          "inference_seconds": 15.156435730445082,
+          "max_depth": 29
+        },
+        "large_model_positions": 6994,
+        "report_recovery": "Four completed legal PGNs and final persisted counters retained; config serialization name collision fixed before resuming other methods."
+      },
+      "mcts-small": {
+        "settings": {
+          "nodes": 1000,
+          "max_plies": 600,
+          "max_seconds": 600.0,
+          "pairs": 2,
+          "mode": "mcts",
+          "openings_sha256": "c149a14f3fbdfbfbc276b69ba198e67bbec47174c9e21ae7a9d39157ecae34fe",
+          "search": {
+            "algorithm": "PUCT",
+            "backend": "cpp",
+            "simulations_per_move": 31,
+            "c_puct": 1.5,
+            "fpu_reduction": 0.20000000298023224,
+            "initial_width": 6,
+            "progressive_widening": 1.5,
+            "root_keep": 12,
+            "prune_after_fraction": 0.75,
+            "max_depth": 128,
+            "leaf_batch_size": 4,
+            "tree_reuse": true,
+            "transposition_merging": false,
+            "root_noise": false,
+            "batch_selection": "virtual loss; pending leaves excluded",
+            "reuse_identity": "initial FEN plus entire legal move history, per batch slot",
+            "root_pruning": "retain visit leaders, top-4 priors, forcing moves and proven wins",
+            "budget": "additional simulations per move, retained visits do not consume budget"
+          }
+        },
+        "opponent": {
+          "name": "Stockfish 18",
+          "author": "the Stockfish developers (see AUTHORS file)"
+        },
+        "completed": 4,
+        "truncated": 0,
+        "attempted": 4,
+        "scheduled": 4,
+        "unplayed": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 4,
+        "seconds": 14.28848593699513,
+        "rating_claim": "No absolute Elo calibration. Stockfish node limits are not Elo ratings.",
+        "search_stats": {
+          "choices": 224,
+          "leaf_evaluations": 6678,
+          "completed_simulations": 6722,
+          "terminal_leaves": 95,
+          "pruned_root_edges": 2192,
+          "proven_loss_skips": 646,
+          "mate_proofs": 80,
+          "max_depth": 8,
+          "depth_limit_hits": 0,
+          "tree_reuses": 173,
+          "retained_nodes": 1009,
+          "inference_batches": 1770,
+          "native_seconds": 0.04912120115477592,
+          "inference_seconds": 13.521046151858172,
+          "bridge_seconds": 0.014341556990984827
+        },
+        "decision_samples": [
+          {
+            "fen": "rnbqkb1r/ppp2ppp/8/3pp3/2B1n3/5N2/PPPPQPPP/RNB1K2R w KQkq - 0 5",
+            "move": "d2d3",
+            "simulations": 31,
+            "new_simulations": 31,
+            "retained_visits": 0,
+            "nodes": 32,
+            "proven_value": null,
+            "leaders": [
+              {
+                "move": "d2d3",
+                "visits": 14,
+                "q": -0.208619,
+                "prior": 0.25772,
+                "pruned": false
+              },
+              {
+                "move": "c4b3",
+                "visits": 11,
+                "q": -0.271274,
+                "prior": 0.30453,
+                "pruned": false
+              },
+              {
+                "move": "c4b5",
+                "visits": 2,
+                "q": -0.568205,
+                "prior": 0.14085,
+                "pruned": false
+              },
+              {
+                "move": "c4d5",
+                "visits": 2,
+                "q": -0.543485,
+                "prior": 0.0495174,
+                "pruned": false
+              },
+              {
+                "move": "f3e5",
+                "visits": 1,
+                "q": -0.642173,
+                "prior": 0.0829402,
+                "pruned": false
+              }
+            ]
+          },
+          {
+            "fen": "rnbqkb1r/ppp2ppp/8/4p3/2p1n3/3P1N2/PPP1QPPP/RNB1K2R w KQkq - 0 6",
+            "move": "d3e4",
+            "simulations": 37,
+            "new_simulations": 31,
+            "retained_visits": 6,
+            "nodes": 37,
+            "proven_value": null,
+            "leaders": [
+              {
+                "move": "d3e4",
+                "visits": 23,
+                "q": -0.115462,
+                "prior": 0.524147,
+                "pruned": false
+              },
+              {
+                "move": "e2e4",
+                "visits": 13,
+                "q": -0.310268,
+                "prior": 0.449044,
+                "pruned": false
+              },
+              {
+                "move": "f3e5",
+                "visits": 0,
+                "q": 0,
+                "prior": 0.0115777,
+                "pruned": false
+              },
+              {
+                "move": "d3c4",
+                "visits": 0,
+                "q": 0,
+                "prior": 0.00542636,
+                "pruned": false
+              },
+              {
+                "move": "e1g1",
+                "visits": 0,
+                "q": 0,
+                "prior": 0.00463236,
+                "pruned": false
+              }
+            ]
+          },
+          {
+            "fen": "r1bqkb1r/ppp2ppp/2n5/4p3/2p1P3/5N2/PPP1QPPP/RNB1K2R w KQkq - 1 7",
+            "move": "e1g1",
+            "simulations": 40,
+            "new_simulations": 31,
+            "retained_visits": 9,
+            "nodes": 40,
+            "proven_value": null,
+            "leaders": [
+              {
+                "move": "e1g1",
+                "visits": 11,
+                "q": -0.306819,
+                "prior": 0.292262,
+                "pruned": false
+              },
+              {
+                "move": "e2c4",
+                "visits": 10,
+                "q": -0.179302,
+                "prior": 0.230396,
+                "pruned": false
+              },
+              {
+                "move": "c1e3",
+                "visits": 6,
+                "q": -0.19756,
+                "prior": 0.11435,
+                "pruned": false
+              },
+              {
+                "move": "b1c3",
+                "visits": 5,
+                "q": -0.216437,
+                "prior": 0.0999023,
+                "pruned": false
+              },
+              {
+                "move": "b1d2",
+                "visits": 4,
+                "q": -0.210607,
+                "prior": 0.0742759,
+                "pruned": false
+              }
+            ]
+          },
+          {
+            "fen": "r2qkb1r/ppp2ppp/2n1b3/4p3/2p1P3/5N2/PPP1QPPP/RNB2RK1 w kq - 3 8",
+            "move": "c1e3",
+            "simulations": 33,
+            "new_simulations": 31,
+            "retained_visits": 2,
+            "nodes": 33,
+            "proven_value": null,
+            "leaders": [
+              {
+                "move": "c1e3",
+                "visits": 12,
+                "q": -0.180679,
+                "prior": 0.204244,
+                "pruned": false
+              },
+              {
+                "move": "f1d1",
+                "visits": 11,
+                "q": -0.380991,
+                "prior": 0.349351,
+                "pruned": false
+              },
+              {
+                "move": "f3g5",
+                "visits": 3,
+                "q": -0.62112,
+                "prior": 0.148375,
+                "pruned": false
+              },
+              {
+                "move": "b1d2",
+                "visits": 3,
+                "q": -0.300342,
+                "prior": 0.0706229,
+                "pruned": false
+              },
+              {
+                "move": "b1c3",
+                "visits": 1,
+                "q": -0.762161,
+                "prior": 0.0595617,
+                "pruned": false
+              }
+            ]
+          },
+          {
+            "fen": "r2qkb1r/ppp2ppp/4b3/4p3/2pnP3/4BN2/PPP1QPPP/RN3RK1 w kq - 5 9",
+            "move": "e3d4",
+            "simulations": 31,
+            "new_simulations": 31,
+            "retained_visits": 0,
+            "nodes": 32,
+            "proven_value": null,
+            "leaders": [
+              {
+                "move": "e3d4",
+                "visits": 21,
+                "q": -0.341036,
+                "prior": 0.616382,
+                "pruned": false
+              },
+              {
+                "move": "f3d4",
+                "visits": 5,
+                "q": -0.331355,
+                "prior": 0.129009,
+                "pruned": false
+              },
+              {
+                "move": "e2d1",
+                "visits": 4,
+                "q": -0.395871,
+                "prior": 0.134017,
+                "pruned": false
+              },
+              {
+                "move": "e2d2",
+                "visits": 1,
+                "q": -0.869192,
+                "prior": 0.0918592,
+                "pruned": false
+              },
+              {
+                "move": "e2e1",
+                "visits": 0,
+                "q": 0,
+                "prior": 0.0260733,
+                "pruned": false
+              }
+            ]
+          },
+          {
+            "fen": "r2qkb1r/ppp2ppp/4b3/8/2ppP3/5N2/PPP1QPPP/RN3RK1 w kq - 0 10",
+            "move": "f1d1",
+            "simulations": 49,
+            "new_simulations": 31,
+            "retained_visits": 18,
+            "nodes": 49,
+            "proven_value": null,
+            "leaders": [
+              {
+                "move": "f1d1",
+                "visits": 27,
+                "q": -0.402561,
+                "prior": 0.407388,
+                "pruned": false
+              },
+              {
+                "move": "b1d2",
+                "visits": 16,
+                "q": -0.314967,
+                "prior": 0.192475,
+                "pruned": false
+              },
+              {
+                "move": "c2c3",
+                "visits": 2,
+                "q": -0.742006,
+                "prior": 0.102069,
+                "pruned": false
+              },
+              {
+                "move": "b2b3",
+                "visits": 1,
+                "q": -0.698539,
+                "prior": 0.0533362,
+                "pruned": false
+              },
+              {
+                "move": "e2d2",
+                "visits": 1,
+                "q": -0.896925,
+                "prior": 0.050586,
+                "pruned": false
+              }
+            ]
+          },
+          {
+            "fen": "r2qk2r/ppp2ppp/4b3/2b5/2ppP3/5N2/PPP1QPPP/RN1R2K1 w kq - 2 11",
+            "move": "b1c3",
+            "simulations": 39,
+            "new_simulations": 31,
+            "retained_visits": 8,
+            "nodes": 39,
+            "proven_value": null,
+            "leaders": [
+              {
+                "move": "b1c3",
+                "visits": 14,
+                "q": -0.253226,
+                "prior": 0.196083,
+                "pruned": false
+              },
+              {
+                "move": "b1d2",
+                "visits": 6,
+                "q": -0.281015,
+                "prior": 0.144707,
+                "pruned": false
+              },
+              {
+                "move": "b2b4",
+                "visits": 6,
+                "q": -0.214319,
+                "prior": 0.0849629,
+                "pruned": false
+              },
+              {
+                "move": "f3d4",
+                "visits": 5,
+                "q": -0.291994,
+                "prior": 0.06737,
+                "pruned": false
+              },
+              {
+                "move": "c2c3",
+                "visits": 3,
+                "q": -0.766095,
+                "prior": 0.139344,
+                "pruned": false
+              }
+            ]
+          },
+          {
+            "fen": "r2qk2r/ppp2ppp/1b2b3/8/2ppP3/2N2N2/PPP1QPPP/R2R2K1 w kq - 4 12",
+            "move": "c3d5",
+            "simulations": 31,
+            "new_simulations": 31,
+            "retained_visits": 0,
+            "nodes": 32,
+            "proven_value": null,
+            "leaders": [
+              {
+                "move": "c3d5",
+                "visits": 17,
+                "q": 0.0899745,
+                "prior": 0.318823,
+                "pruned": false
+              },
+              {
+                "move": "c3a4",
+                "visits": 4,
+                "q": -0.248522,
+                "prior": 0.162911,
+                "pruned": false
+              },
+              {
+                "move": "f3d4",
+                "visits": 4,
+                "q": -0.204476,
+                "prior": 0.10613,
+                "pruned": false
+              },
+              {
+                "move": "a2a4",
+                "visits": 2,
+                "q": -0.351756,
+                "prior": 0.121386,
+                "pruned": false
+              },
+              {
+                "move": "e2d2",
+                "visits": 1,
+                "q": -0.789177,
+                "prior": 0.0485491,
+                "pruned": false
+              }
+            ]
+          }
+        ],
+        "paired_score": 0.0,
+        "paired_score_bootstrap_95": [
+          0.0,
+          0.0
+        ],
+        "independent_pairs": 2,
+        "search_config": {
+          "algorithm": "PUCT",
+          "backend": "cpp",
+          "simulations_per_move": 31,
+          "c_puct": 1.5,
+          "fpu_reduction": 0.20000000298023224,
+          "initial_width": 6,
+          "progressive_widening": 1.5,
+          "root_keep": 12,
+          "prune_after_fraction": 0.75,
+          "max_depth": 128,
+          "leaf_batch_size": 4,
+          "tree_reuse": true,
+          "transposition_merging": false,
+          "root_noise": false,
+          "batch_selection": "virtual loss; pending leaves excluded",
+          "reuse_identity": "initial FEN plus entire legal move history, per batch slot",
+          "root_pruning": "retain visit leaders, top-4 priors, forcing moves and proven wins",
+          "budget": "additional simulations per move, retained visits do not consume budget"
+        },
+        "large_model_positions": 6678
+      },
+      "mcts": {
+        "settings": {
+          "nodes": 1000,
+          "max_plies": 600,
+          "max_seconds": 600.0,
+          "pairs": 2,
+          "mode": "mcts",
+          "openings_sha256": "c149a14f3fbdfbfbc276b69ba198e67bbec47174c9e21ae7a9d39157ecae34fe",
+          "search": {
+            "algorithm": "PUCT",
+            "backend": "cpp",
+            "simulations_per_move": 512,
+            "c_puct": 1.5,
+            "fpu_reduction": 0.20000000298023224,
+            "initial_width": 6,
+            "progressive_widening": 1.5,
+            "root_keep": 12,
+            "prune_after_fraction": 0.75,
+            "max_depth": 128,
+            "leaf_batch_size": 64,
+            "tree_reuse": true,
+            "transposition_merging": false,
+            "root_noise": false,
+            "batch_selection": "virtual loss; pending leaves excluded",
+            "reuse_identity": "initial FEN plus entire legal move history, per batch slot",
+            "root_pruning": "retain visit leaders, top-4 priors, forcing moves and proven wins",
+            "budget": "additional simulations per move, retained visits do not consume budget"
+          }
+        },
+        "opponent": {
+          "name": "Stockfish 18",
+          "author": "the Stockfish developers (see AUTHORS file)"
+        },
+        "completed": 4,
+        "truncated": 0,
+        "attempted": 4,
+        "scheduled": 4,
+        "unplayed": 0,
+        "wins": 1,
+        "draws": 1,
+        "losses": 2,
+        "seconds": 103.77780049199646,
+        "rating_claim": "No absolute Elo calibration. Stockfish node limits are not Elo ratings.",
+        "search_stats": {
+          "choices": 224,
+          "leaf_evaluations": 107303,
+          "completed_simulations": 110108,
+          "terminal_leaves": 2823,
+          "pruned_root_edges": 2247,
+          "proven_loss_skips": 39658,
+          "mate_proofs": 1677,
+          "max_depth": 19,
+          "depth_limit_hits": 0,
+          "tree_reuses": 206,
+          "retained_nodes": 18756,
+          "inference_batches": 1778,
+          "native_seconds": 0.24872131175652612,
+          "inference_seconds": 102.75711876917921,
+          "bridge_seconds": 0.01789655291941017
+        },
+        "decision_samples": [
+          {
+            "fen": "rnbqkb1r/ppp2ppp/8/3pp3/2B1n3/5N2/PPPPQPPP/RNB1K2R w KQkq - 0 5",
+            "move": "c4b3",
+            "simulations": 512,
+            "new_simulations": 512,
+            "retained_visits": 0,
+            "nodes": 513,
+            "proven_value": null,
+            "leaders": [
+              {
+                "move": "c4b3",
+                "visits": 154,
+                "q": -0.190255,
+                "prior": 0.30453,
+                "pruned": false
+              },
+              {
+                "move": "d2d3",
+                "visits": 153,
+                "q": -0.130649,
+                "prior": 0.25772,
+                "pruned": false
+              },
+              {
+                "move": "f3e5",
+                "visits": 111,
+                "q": -0.0288165,
+                "prior": 0.0829402,
+                "pruned": false
+              },
+              {
+                "move": "c4b5",
+                "visits": 33,
+                "q": -0.338796,
+                "prior": 0.14085,
+                "pruned": false
+              },
+              {
+                "move": "c4d5",
+                "visits": 16,
+                "q": -0.412292,
+                "prior": 0.0495174,
+                "pruned": false
+              }
+            ]
+          },
+          {
+            "fen": "r1bqkb1r/ppp2ppp/2n5/3pp3/4n3/1B3N2/PPPPQPPP/RNB1K2R w KQkq - 2 6",
+            "move": "d2d3",
+            "simulations": 567,
+            "new_simulations": 512,
+            "retained_visits": 55,
+            "nodes": 567,
+            "proven_value": null,
+            "leaders": [
+              {
+                "move": "d2d3",
+                "visits": 276,
+                "q": -0.276209,
+                "prior": 0.35416,
+                "pruned": false
+              },
+              {
+                "move": "b1c3",
+                "visits": 142,
+                "q": -0.0859298,
+                "prior": 0.103539,
+                "pruned": false
+              },
+              {
+                "move": "e1g1",
+                "visits": 80,
+                "q": -0.327516,
+                "prior": 0.150813,
+                "pruned": false
+              },
+              {
+                "move": "f3e5",
+                "visits": 19,
+                "q": -0.619119,
+                "prior": 0.167887,
+                "pruned": false
+              },
+              {
+                "move": "d2d4",
+                "visits": 9,
+                "q": -0.796316,
+                "prior": 0.100323,
+                "pruned": false
+              }
+            ]
+          },
+          {
+            "fen": "r1bqkb1r/ppp2ppp/2n5/2npp3/8/1B1P1N2/PPP1QPPP/RNB1K2R w KQkq - 1 7",
+            "move": "f3e5",
+            "simulations": 692,
+            "new_simulations": 512,
+            "retained_visits": 180,
+            "nodes": 692,
+            "proven_value": null,
+            "leaders": [
+              {
+                "move": "f3e5",
+                "visits": 609,
+                "q": -0.40404,
+                "prior": 0.487059,
+                "pruned": false
+              },
+              {
+                "move": "b1c3",
+                "visits": 32,
+                "q": -0.528803,
+                "prior": 0.117231,
+                "pruned": false
+              },
+              {
+                "move": "e1g1",
+                "visits": 24,
+                "q": -0.61808,
+                "prior": 0.141212,
+                "pruned": false
+              },
+              {
+                "move": "d3d4",
+                "visits": 13,
+                "q": -0.697513,
+                "prior": 0.101067,
+                "pruned": false
+              },
+              {
+                "move": "c1e3",
+                "visits": 3,
+                "q": -0.84043,
+                "prior": 0.0238074,
+                "pruned": false
+              }
+            ]
+          },
+          {
+            "fen": "r1bqkb1r/ppp2ppp/8/2npN3/3n4/1B1P4/PPP1QPPP/RNB1K2R w KQkq - 1 8",
+            "move": "e2d1",
+            "simulations": 954,
+            "new_simulations": 512,
+            "retained_visits": 442,
+            "nodes": 955,
+            "proven_value": null,
+            "leaders": [
+              {
+                "move": "e2d1",
+                "visits": 494,
+                "q": -0.368309,
+                "prior": 0.215618,
+                "pruned": false
+              },
+              {
+                "move": "e2h5",
+                "visits": 192,
+                "q": -0.507366,
+                "prior": 0.279736,
+                "pruned": false
+              },
+              {
+                "move": "e2e3",
+                "visits": 174,
+                "q": -0.555932,
+                "prior": 0.273339,
+                "pruned": false
+              },
+              {
+                "move": "e5f7",
+                "visits": 42,
+                "q": -0.618016,
+                "prior": 0.113129,
+                "pruned": false
+              },
+              {
+                "move": "e2d2",
+                "visits": 6,
+                "q": -0.84907,
+                "prior": 0.0434233,
+                "pruned": false
+              }
+            ]
+          },
+          {
+            "fen": "r1bqk2r/ppp2ppp/3b4/2npN3/3n4/1B1P4/PPP2PPP/RNBQK2R w KQkq - 3 9",
+            "move": "e1g1",
+            "simulations": 683,
+            "new_simulations": 512,
+            "retained_visits": 171,
+            "nodes": 685,
+            "proven_value": null,
+            "leaders": [
+              {
+                "move": "e1g1",
+                "visits": 241,
+                "q": -0.480297,
+                "prior": 0.121274,
+                "pruned": false
+              },
+              {
+                "move": "e5f7",
+                "visits": 215,
+                "q": -0.2169,
+                "prior": 0.119571,
+                "pruned": false
+              },
+              {
+                "move": "e5f3",
+                "visits": 191,
+                "q": -0.553667,
+                "prior": 0.399217,
+                "pruned": false
+              },
+              {
+                "move": "f2f4",
+                "visits": 8,
+                "q": -0.881901,
+                "prior": 0.0910264,
+                "pruned": false
+              },
+              {
+                "move": "c1e3",
+                "visits": 8,
+                "q": -0.615725,
+                "prior": 0.026324,
+                "pruned": false
+              }
+            ]
+          },
+          {
+            "fen": "r1bqk2r/ppp2ppp/8/2npb3/3n4/1B1P4/PPP2PPP/RNBQ1RK1 w kq - 0 10",
+            "move": "f1e1",
+            "simulations": 542,
+            "new_simulations": 512,
+            "retained_visits": 30,
+            "nodes": 543,
+            "proven_value": null,
+            "leaders": [
+              {
+                "move": "f1e1",
+                "visits": 509,
+                "q": -0.257319,
+                "prior": 0.534917,
+                "pruned": false
+              },
+              {
+                "move": "d1h5",
+                "visits": 13,
+                "q": -0.627611,
+                "prior": 0.122383,
+                "pruned": false
+              },
+              {
+                "move": "c2c3",
+                "visits": 8,
+                "q": -0.67471,
+                "prior": 0.0974124,
+                "pruned": false
+              },
+              {
+                "move": "d1e1",
+                "visits": 3,
+                "q": -0.873844,
+                "prior": 0.0586054,
+                "pruned": false
+              },
+              {
+                "move": "b1c3",
+                "visits": 3,
+                "q": -0.93523,
+                "prior": 0.0514276,
+                "pruned": false
+              }
+            ]
+          },
+          {
+            "fen": "r1bqk2r/ppp3pp/5p2/2npb3/3n4/1B1P4/PPP2PPP/RNBQR1K1 w kq - 0 11",
+            "move": "c2c3",
+            "simulations": 673,
+            "new_simulations": 512,
+            "retained_visits": 161,
+            "nodes": 673,
+            "proven_value": null,
+            "leaders": [
+              {
+                "move": "c2c3",
+                "visits": 426,
+                "q": -0.322521,
+                "prior": 0.127516,
+                "pruned": false
+              },
+              {
+                "move": "d1h5",
+                "visits": 159,
+                "q": -0.475218,
+                "prior": 0.562568,
+                "pruned": false
+              },
+              {
+                "move": "f2f4",
+                "visits": 33,
+                "q": -0.539729,
+                "prior": 0.156459,
+                "pruned": false
+              },
+              {
+                "move": "c1e3",
+                "visits": 17,
+                "q": -0.411201,
+                "prior": 0.041426,
+                "pruned": false
+              },
+              {
+                "move": "c1f4",
+                "visits": 5,
+                "q": -0.532539,
+                "prior": 0.0293696,
+                "pruned": false
+              }
+            ]
+          },
+          {
+            "fen": "r1bqk2r/ppp3pp/4np2/2npb3/8/1BPP4/PP3PPP/RNBQR1K1 w kq - 1 12",
+            "move": "d3d4",
+            "simulations": 534,
+            "new_simulations": 512,
+            "retained_visits": 22,
+            "nodes": 534,
+            "proven_value": null,
+            "leaders": [
+              {
+                "move": "d3d4",
+                "visits": 253,
+                "q": -0.411841,
+                "prior": 0.558811,
+                "pruned": false
+              },
+              {
+                "move": "b3c2",
+                "visits": 145,
+                "q": -0.193708,
+                "prior": 0.0601204,
+                "pruned": false
+              },
+              {
+                "move": "f2f4",
+                "visits": 60,
+                "q": -0.218648,
+                "prior": 0.0235292,
+                "pruned": false
+              },
+              {
+                "move": "d1h5",
+                "visits": 38,
+                "q": -0.597155,
+                "prior": 0.255605,
+                "pruned": false
+              },
+              {
+                "move": "e1e5",
+                "visits": 7,
+                "q": -0.464061,
+                "prior": 0.0214362,
+                "pruned": false
+              }
+            ]
+          }
+        ],
+        "paired_score": 0.375,
+        "paired_score_bootstrap_95": [
+          0.25,
+          0.5
+        ],
+        "independent_pairs": 2,
+        "search_config": {
+          "algorithm": "PUCT",
+          "backend": "cpp",
+          "simulations_per_move": 512,
+          "c_puct": 1.5,
+          "fpu_reduction": 0.20000000298023224,
+          "initial_width": 6,
+          "progressive_widening": 1.5,
+          "root_keep": 12,
+          "prune_after_fraction": 0.75,
+          "max_depth": 128,
+          "leaf_batch_size": 64,
+          "tree_reuse": true,
+          "transposition_merging": false,
+          "root_noise": false,
+          "batch_selection": "virtual loss; pending leaves excluded",
+          "reuse_identity": "initial FEN plus entire legal move history, per batch slot",
+          "root_pruning": "retain visit leaders, top-4 priors, forcing moves and proven wins",
+          "budget": "additional simulations per move, retained visits do not consume budget"
+        },
+        "large_model_positions": 107303
+      }
+    },
+    "arena-aligned": {
+      "best-first": {
+        "settings": {
+          "nodes": 1000,
+          "max_plies": 600,
+          "max_seconds": 300.0,
+          "pairs": 2,
+          "mode": "best-first-minimax",
+          "openings_sha256": "c149a14f3fbdfbfbc276b69ba198e67bbec47174c9e21ae7a9d39157ecae34fe"
+        },
+        "opponent": {
+          "name": "Stockfish 18",
+          "author": "the Stockfish developers (see AUTHORS file)"
+        },
+        "completed": 4,
+        "truncated": 0,
+        "attempted": 4,
+        "scheduled": 4,
+        "unplayed": 0,
+        "wins": 0,
+        "draws": 1,
+        "losses": 3,
+        "seconds": 15.329098746995442,
+        "rating_claim": "No absolute Elo calibration. Stockfish node limits are not Elo ratings.",
+        "paired_score": 0.125,
+        "paired_score_bootstrap_95": [
+          0.0,
+          0.25
+        ],
+        "independent_pairs": 2,
+        "search_config": {
+          "algorithm": "best-first negamax with lazy multi-fidelity evaluation",
+          "backend": "cpp",
+          "expansions_per_move": 512,
+          "max_nodes": 65536,
+          "max_depth": 64,
+          "neural_budget": 32,
+          "correction_batch": 4,
+          "value_backup": "minimax regularized by persistent neural anchors; exact outcomes override",
+          "tree_reuse": false,
+          "exact_proofs": "all legal children required for loss/draw",
+          "correction_scheduler_description": "candidate calibration ranked by minimax gaps; heuristic",
+          "anchor_weight": 0.75,
+          "q_anchor_weight": 0.25,
+          "anchor_decay": 0.0,
+          "correction_scheduler": "hierarchical",
+          "root_policy_weight": 0.1,
+          "align_root_objective": true,
+          "quiescence_depth": 0,
+          "quiescence_extra_node_cap": 100000,
+          "quiescence": "CPU captures/promotions and all check evasions; no large-model queries",
+          "cheap_evaluator": "float dual-perspective incremental accumulator",
+          "cache": "exact effective model inputs plus ordered legal action IDs; outputs only"
+        },
+        "search_stats": {
+          "choices": 142,
+          "cheap_evaluations": 1938322,
+          "expanded_nodes": 70762,
+          "correction_positions": 4415,
+          "large_model_positions": 4018,
+          "inference_batches": 1170,
+          "cache_hits": 397,
+          "native_seconds": 5.8650926385307685,
+          "inference_seconds": 8.790938115838799,
+          "max_depth": 29
+        },
+        "large_model_positions": 4018
+      }
+    }
+  },
+  "real_failure_replays": [
+    {
+      "game": 0,
+      "ply": 8,
+      "fen": "r1bqkb1r/ppp2ppp/8/8/2ppP3/2N5/PPP1QPPP/R1B1K2R w KQkq - 0 9",
+      "original_move": "c3b5",
+      "baseline_reproduced": true,
+      "methods": [
+        {
+          "method": "baseline",
+          "move": "c3b5",
+          "cp_regret": 141,
+          "final_candidate_checked": true
+        },
+        {
+          "method": "guarded",
+          "move": "c3d5",
+          "cp_regret": 0,
+          "final_candidate_checked": true
+        },
+        {
+          "method": "aligned",
+          "move": "c3d5",
+          "cp_regret": 0,
+          "final_candidate_checked": true
+        },
+        {
+          "method": "oracle-WDL",
+          "move": "e1d2",
+          "cp_regret": 337,
+          "final_candidate_checked": false
+        },
+        {
+          "method": "aligned-checked",
+          "move": "e2c4",
+          "cp_regret": 192,
+          "final_candidate_checked": true
+        },
+        {
+          "method": "oracle-WDL-checked",
+          "move": "e2c4",
+          "cp_regret": 192,
+          "final_candidate_checked": true
+        },
+        {
+          "method": "puct-31",
+          "move": "c3d5",
+          "cp_regret": 0,
+          "final_candidate_checked": null
+        },
+        {
+          "method": "puct-512",
+          "move": "c3d5",
+          "cp_regret": 0,
+          "final_candidate_checked": null
+        }
+      ]
+    },
+    {
+      "game": 1,
+      "ply": 23,
+      "fen": "r3k2r/1pp1bppp/p1n5/8/3P1N2/1bP5/3N1PPP/R1B1R1K1 b kq - 1 16",
+      "original_move": "b3c2",
+      "baseline_reproduced": true,
+      "methods": [
+        {
+          "method": "baseline",
+          "move": "b3c2",
+          "cp_regret": 93,
+          "final_candidate_checked": true
+        },
+        {
+          "method": "guarded",
+          "move": "b3c2",
+          "cp_regret": 93,
+          "final_candidate_checked": true
+        },
+        {
+          "method": "aligned",
+          "move": "b3c2",
+          "cp_regret": 93,
+          "final_candidate_checked": true
+        },
+        {
+          "method": "oracle-WDL",
+          "move": "b3e6",
+          "cp_regret": 101,
+          "final_candidate_checked": true
+        },
+        {
+          "method": "aligned-checked",
+          "move": "b3c2",
+          "cp_regret": 93,
+          "final_candidate_checked": true
+        },
+        {
+          "method": "oracle-WDL-checked",
+          "move": "b3e6",
+          "cp_regret": 101,
+          "final_candidate_checked": true
+        },
+        {
+          "method": "puct-31",
+          "move": "b3c2",
+          "cp_regret": 93,
+          "final_candidate_checked": null
+        },
+        {
+          "method": "puct-512",
+          "move": "b3c2",
+          "cp_regret": 93,
+          "final_candidate_checked": null
+        }
+      ]
+    },
+    {
+      "game": 2,
+      "ply": 16,
+      "fen": "2k1rb1r/1ppb2pp/p4n2/2p2p2/4P3/2N1BP2/PPP1N1PP/2KR3R w - - 2 13",
+      "original_move": "e3g5",
+      "baseline_reproduced": true,
+      "methods": [
+        {
+          "method": "baseline",
+          "move": "e3g5",
+          "cp_regret": 167,
+          "final_candidate_checked": true
+        },
+        {
+          "method": "guarded",
+          "move": "e3g5",
+          "cp_regret": 167,
+          "final_candidate_checked": true
+        },
+        {
+          "method": "aligned",
+          "move": "e3g5",
+          "cp_regret": 167,
+          "final_candidate_checked": true
+        },
+        {
+          "method": "oracle-WDL",
+          "move": "e2g3",
+          "cp_regret": 0,
+          "final_candidate_checked": true
+        },
+        {
+          "method": "aligned-checked",
+          "move": "e3g5",
+          "cp_regret": 167,
+          "final_candidate_checked": true
+        },
+        {
+          "method": "oracle-WDL-checked",
+          "move": "e2g3",
+          "cp_regret": 0,
+          "final_candidate_checked": true
+        },
+        {
+          "method": "puct-31",
+          "move": "e3g5",
+          "cp_regret": 167,
+          "final_candidate_checked": null
+        },
+        {
+          "method": "puct-512",
+          "move": "e3g5",
+          "cp_regret": 167,
+          "final_candidate_checked": null
+        }
+      ]
+    },
+    {
+      "game": 3,
+      "ply": 57,
+      "fen": "1k6/2pr1bN1/1p3p2/p6p/1n2P2P/1P3PR1/2P1N1P1/2K5 b - - 0 33",
+      "original_move": "f7b3",
+      "baseline_reproduced": true,
+      "methods": [
+        {
+          "method": "baseline",
+          "move": "f7b3",
+          "cp_regret": 154,
+          "final_candidate_checked": true
+        },
+        {
+          "method": "guarded",
+          "move": "b8b7",
+          "cp_regret": 135,
+          "final_candidate_checked": true
+        },
+        {
+          "method": "aligned",
+          "move": "b8b7",
+          "cp_regret": 135,
+          "final_candidate_checked": true
+        },
+        {
+          "method": "oracle-WDL",
+          "move": "b4a2",
+          "cp_regret": 0,
+          "final_candidate_checked": true
+        },
+        {
+          "method": "aligned-checked",
+          "move": "b8b7",
+          "cp_regret": 135,
+          "final_candidate_checked": true
+        },
+        {
+          "method": "oracle-WDL-checked",
+          "move": "b4a2",
+          "cp_regret": 0,
+          "final_candidate_checked": true
+        },
+        {
+          "method": "puct-31",
+          "move": "b8b7",
+          "cp_regret": 135,
+          "final_candidate_checked": null
+        },
+        {
+          "method": "puct-512",
+          "move": "a5a4",
+          "cp_regret": 200,
+          "final_candidate_checked": null
+        }
+      ]
+    }
+  ],
+  "validation": {
+    "pytest": "120 passed in 24.32s",
+    "log": "output/search-diagnosis-20261031/tests-final.txt",
+    "ubsan_native_core": "passed: minimax signs, persistent anchors and exact proof boundaries",
+    "python_compileall": "passed",
+    "git_diff_check": "passed"
+  },
+  "limits": [
+    "Teacher finite-node candidate-union regret is not exact optimality or Elo.",
+    "Capacity controls use one seed and two sizes.",
+    "Ordinary full validation is position-hash held out, not proven game/source independent.",
+    "Frontier validation is game grouped; the older metric artifact note must be read with its manifest.",
+    "Three 32-position cohorts have different candidate unions and difficulty; retain separate results.",
+    "Arena has only two opening pairs.",
+    "No new model or search default was promoted.",
+    "Oracle-WDL substitutes only WDL, keeps existing policy/Q, and is not a CP oracle."
+  ],
+  "sources": {
+    "output/search-diagnosis-20261031/capacity-analysis.json": {
+      "sha256": "bcd17fbb1b83323959f16600b4bd8192f722e41d4b2276eebf3153454d5106ad"
+    },
+    "output/search-diagnosis-20261031/heldout-comparison-final/result.json": {
+      "sha256": "880e3f2b54d1b0e324343346e98cf7c68f1e4f2c49b7f54712b74e9645529062"
+    },
+    "output/search-diagnosis-20261031/phase2-comparison/result.json": {
+      "sha256": "9c4af6499c2488f224a9696b2dec4d2ed6e888c9740e1357dbe522a1f9af0a84"
+    },
+    "output/search-diagnosis-20261031/phase3-comparison/result.json": {
+      "sha256": "c515a46eb72b1d7990f625ab89e9a327c19a3b7d1b09904e6400f4ae0b9530d5"
+    },
+    "output/search-diagnosis-20261031/game-failure-replays-checked/result.json": {
+      "sha256": "4c2289dd10ca28d7723858d784e68e56139ff81001c59dc947c8e32dfb78b6ee"
+    },
+    "output/search-diagnosis-20261031/development-ablations/result-canonical-inputs.json": {
+      "sha256": "b48d1a0296632fc54b83614c1328abc12c76de303a6888dc1d86604de77ba691"
+    },
+    "output/search-diagnosis-20261031/capacity-critical-line.json": {
+      "sha256": "ed0e8058cf9adc25a79be07fc5f52144cfaf4edf7eea9411c601b8ffed10f1d1"
+    },
+    "output/search-diagnosis-20261031/trained-native-parity.json": {
+      "sha256": "ec65afe38b2ea28eeea0ffc16a7b3c8fc4564367262188d87e155d3c22ec2bdc"
+    },
+    "output/search-diagnosis-20261031/frontier-data-intervention.json": {
+      "sha256": "e526b0d9dfb3a7dc6ab41b769f07b5da1d61ff2e88477a58cd61f66a99ca7089"
+    },
+    "output/search-diagnosis-20261031/target-saturation.json": {
+      "sha256": "5c1dbcd81a6eef97452387e66f507df183579352120a1e6bbe1d549413ce46a3"
+    },
+    "output/search-diagnosis-20261031/arena-guarded/result.json": {
+      "sha256": "a13c40cbd74a9dd41d7a363772b3e314223d8b0d98508f586a25ffff9db8265c"
+    },
+    "output/search-diagnosis-20261031/arena-aligned/result.json": {
+      "sha256": "89939ecb12653c0bd7fedb5fd6834ce8711674eb40518f5f38ac6a2c3fe98e68"
+    }
+  }
+}

@@ -1,0 +1,284 @@
+{
+  "source": "output/rank-frontier-20261031/local-comparison/result.json",
+  "summary": {
+    "old-aligned": {
+      "positions": 64,
+      "cp_positions": 59,
+      "mean_cp_regret": 34.28813559322034,
+      "median_cp_regret": 0.0,
+      "cp_blunders_100": 8,
+      "mean_value_regret": 0.074546875,
+      "median_seconds": 0.1166291040062788,
+      "mean_large_positions": 31.46875
+    },
+    "old-aligned-local": {
+      "positions": 64,
+      "cp_positions": 59,
+      "mean_cp_regret": 28.06779661016949,
+      "median_cp_regret": 0.0,
+      "cp_blunders_100": 6,
+      "mean_value_regret": 0.082328125,
+      "median_seconds": 0.11635563600430032,
+      "mean_large_positions": 31.5
+    },
+    "wdl": {
+      "positions": 64,
+      "cp_positions": 59,
+      "mean_cp_regret": 31.389830508474578,
+      "median_cp_regret": 0.0,
+      "cp_blunders_100": 7,
+      "mean_value_regret": 0.075453125,
+      "median_seconds": 0.11733266749797622,
+      "mean_large_positions": 31.484375
+    },
+    "wdl-local": {
+      "positions": 64,
+      "cp_positions": 59,
+      "mean_cp_regret": 39.389830508474574,
+      "median_cp_regret": 0.0,
+      "cp_blunders_100": 6,
+      "mean_value_regret": 0.089375,
+      "median_seconds": 0.11705801950301975,
+      "mean_large_positions": 31.5
+    },
+    "cp-rank": {
+      "positions": 64,
+      "cp_positions": 59,
+      "mean_cp_regret": 31.949152542372882,
+      "median_cp_regret": 0.0,
+      "cp_blunders_100": 7,
+      "mean_value_regret": 0.102359375,
+      "median_seconds": 0.11831089099723613,
+      "mean_large_positions": 31.5
+    },
+    "cp-rank-local": {
+      "positions": 64,
+      "cp_positions": 59,
+      "mean_cp_regret": 30.728813559322035,
+      "median_cp_regret": 0.0,
+      "cp_blunders_100": 7,
+      "mean_value_regret": 0.098609375,
+      "median_seconds": 0.11693756250315346,
+      "mean_large_positions": 31.5
+    },
+    "puct-31": {
+      "positions": 64,
+      "cp_positions": 59,
+      "mean_cp_regret": 30.10169491525424,
+      "median_cp_regret": 0.0,
+      "cp_blunders_100": 7,
+      "mean_value_regret": 0.061203125,
+      "median_seconds": 0.06748671899549663,
+      "mean_large_positions": 30.4375
+    },
+    "puct-512": {
+      "positions": 64,
+      "cp_positions": 59,
+      "mean_cp_regret": 27.76271186440678,
+      "median_cp_regret": 0.0,
+      "cp_blunders_100": 6,
+      "mean_value_regret": 0.05653124999999999,
+      "median_seconds": 0.5019374339972273,
+      "mean_large_positions": 476.859375
+    }
+  },
+  "cp_roots": 59,
+  "mate_roots": 5,
+  "paired": {
+    "cp-rank minus wdl": {
+      "positions": 59,
+      "mean_cp_delta": 0.559322033898305,
+      "mean_cp_delta_bootstrap95": [
+        -10.000423728813558,
+        12.169915254237281
+      ],
+      "blunder_rate_delta": 0.0,
+      "blunder_rate_delta_bootstrap95": [
+        -0.06779661016949153,
+        0.06779661016949153
+      ],
+      "fixed_blunders": 2,
+      "new_blunders": 2,
+      "discordant_exact_two_sided_p": 1.0
+    },
+    "cp-rank minus old-aligned": {
+      "positions": 59,
+      "mean_cp_delta": -2.3389830508474576,
+      "mean_cp_delta_bootstrap95": [
+        -19.74576271186441,
+        12.45805084745762
+      ],
+      "blunder_rate_delta": -0.01694915254237288,
+      "blunder_rate_delta_bootstrap95": [
+        -0.0847457627118644,
+        0.05084745762711865
+      ],
+      "fixed_blunders": 3,
+      "new_blunders": 2,
+      "discordant_exact_two_sided_p": 1.0
+    },
+    "cp-rank minus puct-31": {
+      "positions": 59,
+      "mean_cp_delta": 1.847457627118644,
+      "mean_cp_delta_bootstrap95": [
+        -11.322457627118643,
+        15.712288135593214
+      ],
+      "blunder_rate_delta": 0.0,
+      "blunder_rate_delta_bootstrap95": [
+        -0.0847457627118644,
+        0.0847457627118644
+      ],
+      "fixed_blunders": 3,
+      "new_blunders": 3,
+      "discordant_exact_two_sided_p": 1.0
+    },
+    "cp-rank minus puct-512": {
+      "positions": 59,
+      "mean_cp_delta": 4.186440677966102,
+      "mean_cp_delta_bootstrap95": [
+        -8.288135593220339,
+        17.440677966101696
+      ],
+      "blunder_rate_delta": 0.01694915254237288,
+      "blunder_rate_delta_bootstrap95": [
+        -0.05084745762711865,
+        0.0847457627118644
+      ],
+      "fixed_blunders": 2,
+      "new_blunders": 3,
+      "discordant_exact_two_sided_p": 1.0
+    },
+    "old-aligned-local minus old-aligned": {
+      "positions": 59,
+      "mean_cp_delta": -6.220338983050848,
+      "mean_cp_delta_bootstrap95": [
+        -20.23728813559322,
+        2.440677966101695
+      ],
+      "blunder_rate_delta": -0.03389830508474576,
+      "blunder_rate_delta_bootstrap95": [
+        -0.0847457627118644,
+        0.0
+      ],
+      "fixed_blunders": 2,
+      "new_blunders": 0,
+      "discordant_exact_two_sided_p": 0.5
+    },
+    "wdl-local minus wdl": {
+      "positions": 59,
+      "mean_cp_delta": 8.0,
+      "mean_cp_delta_bootstrap95": [
+        -12.272033898305084,
+        41.136016949152534
+      ],
+      "blunder_rate_delta": -0.01694915254237288,
+      "blunder_rate_delta_bootstrap95": [
+        -0.0847457627118644,
+        0.03389830508474576
+      ],
+      "fixed_blunders": 2,
+      "new_blunders": 1,
+      "discordant_exact_two_sided_p": 1.0
+    },
+    "cp-rank-local minus cp-rank": {
+      "positions": 59,
+      "mean_cp_delta": -1.2203389830508475,
+      "mean_cp_delta_bootstrap95": [
+        -10.661016949152541,
+        6.610169491525424
+      ],
+      "blunder_rate_delta": 0.0,
+      "blunder_rate_delta_bootstrap95": [
+        -0.05084745762711865,
+        0.05084745762711865
+      ],
+      "fixed_blunders": 1,
+      "new_blunders": 1,
+      "discordant_exact_two_sided_p": 1.0
+    },
+    "cp-rank-local minus wdl-local": {
+      "positions": 59,
+      "mean_cp_delta": -8.661016949152541,
+      "mean_cp_delta_bootstrap95": [
+        -36.96610169491525,
+        8.88135593220339
+      ],
+      "blunder_rate_delta": 0.01694915254237288,
+      "blunder_rate_delta_bootstrap95": [
+        0.0,
+        0.05084745762711865
+      ],
+      "fixed_blunders": 0,
+      "new_blunders": 1,
+      "discordant_exact_two_sided_p": 1.0
+    },
+    "cp-rank-local minus puct-31": {
+      "positions": 59,
+      "mean_cp_delta": 0.6271186440677966,
+      "mean_cp_delta_bootstrap95": [
+        -11.661016949152541,
+        13.034322033898299
+      ],
+      "blunder_rate_delta": 0.0,
+      "blunder_rate_delta_bootstrap95": [
+        -0.0847457627118644,
+        0.0847457627118644
+      ],
+      "fixed_blunders": 3,
+      "new_blunders": 3,
+      "discordant_exact_two_sided_p": 1.0
+    },
+    "cp-rank-local minus puct-512": {
+      "positions": 59,
+      "mean_cp_delta": 2.9661016949152543,
+      "mean_cp_delta_bootstrap95": [
+        -8.796610169491526,
+        14.864406779661017
+      ],
+      "blunder_rate_delta": 0.01694915254237288,
+      "blunder_rate_delta_bootstrap95": [
+        -0.05084745762711865,
+        0.0847457627118644
+      ],
+      "fixed_blunders": 2,
+      "new_blunders": 3,
+      "discordant_exact_two_sided_p": 1.0
+    }
+  },
+  "mate_events": {
+    "old-aligned": {
+      "winning_mate_missed": 0,
+      "avoidable_mate_loss": 1
+    },
+    "old-aligned-local": {
+      "winning_mate_missed": 0,
+      "avoidable_mate_loss": 0
+    },
+    "wdl": {
+      "winning_mate_missed": 0,
+      "avoidable_mate_loss": 1
+    },
+    "wdl-local": {
+      "winning_mate_missed": 0,
+      "avoidable_mate_loss": 0
+    },
+    "cp-rank": {
+      "winning_mate_missed": 0,
+      "avoidable_mate_loss": 2
+    },
+    "cp-rank-local": {
+      "winning_mate_missed": 0,
+      "avoidable_mate_loss": 0
+    },
+    "puct-31": {
+      "winning_mate_missed": 0,
+      "avoidable_mate_loss": 0
+    },
+    "puct-512": {
+      "winning_mate_missed": 0,
+      "avoidable_mate_loss": 0
+    }
+  },
+  "note": "Frozen source-game roots; finite-node candidate-union labels, not exact chess truth. Original primary comparison is CP+rank versus matched WDL; local-exploration follow-up uses a separate later-game cohort. Exploratory comparisons are not multiplicity corrected."
+}

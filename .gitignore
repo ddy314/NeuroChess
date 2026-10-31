@@ -1,2 +1,27 @@
 # Local reference engine; never commit its binary.
 /local/
+.venv/
+__pycache__/
+.pytest_cache/
+*.egg-info/
+/data/
+runs/
+*.pt
+*.tar.gz
+.playwright-cli/
+output/
+# Built locally from the vendored C++ search source.
+/neurochess/native/*.so
+
+# Keep curated research reports and evidence, not runtime logs or snapshots.
+/reports/*
+!/reports/*.md
+!/reports/evidence/
+!/reports/evidence/**
+/reports/START_TRAINING_HANDOFF.md
+
+# One-off remote diagnostics, retained only in the local workspace.
+/scripts/remote_finish.py
+/scripts/remote_gui_inspect.py
+/scripts/remote_pilot.py
+/scripts/remote_validate.py

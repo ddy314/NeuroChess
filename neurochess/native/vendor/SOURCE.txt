@@ -1,0 +1,3 @@
+https://github.com/Disservin/chess-library
+commit 3af102c53752472c208d48921ece705b1f0d1626
+MIT license; vendored source only, no installed dependency.

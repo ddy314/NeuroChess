@@ -1,0 +1,24 @@
+{
+  "primary": "cpu versus baseline confirmation of exploratory first-stage improvement",
+  "secondary": [
+    "cpu-gated vs cpu",
+    "cpu-global-guard vs cpu",
+    "cpu16 vs PUCT15",
+    "cpu-gated16 vs PUCT15"
+  ],
+  "change": "Drop harmful root-value protection. Optional local clipping only when the independent CPU search completed a depth; this is heuristic evidence, not a confidence bound.",
+  "roots": 64,
+  "games": "79055..94419; after all prior experiment games",
+  "weights_unchanged": true,
+  "neural_limits": [
+    16,
+    32
+  ],
+  "cpu_node_caps": [
+    16384,
+    16384
+  ],
+  "teacher": "100k proposal +500k unified candidate-union MultiPV",
+  "root_sha256": "94e26fabb06c1fc80d6f9275c093f663278b4bf382e38705d1929b5ba5bfc4e5",
+  "note": "Follow-up fixed before outcomes, separate from the initial96 roots. Do not hide the negative original primary combined result."
+}

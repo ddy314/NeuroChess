@@ -1,0 +1,523 @@
+{
+  "best-first": {
+    "settings": {
+      "nodes": 1000,
+      "max_plies": 600,
+      "max_seconds": 600.0,
+      "pairs": 2,
+      "mode": "best-first-minimax",
+      "openings_sha256": "c149a14f3fbdfbfbc276b69ba198e67bbec47174c9e21ae7a9d39157ecae34fe"
+    },
+    "opponent": {
+      "name": "Stockfish 18",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "completed": 4,
+    "truncated": 0,
+    "attempted": 4,
+    "scheduled": 4,
+    "unplayed": 0,
+    "wins": 0,
+    "draws": 1,
+    "losses": 3,
+    "seconds": 32.3502547070093,
+    "rating_claim": "No absolute Elo calibration. Stockfish node limits are not Elo ratings.",
+    "paired_score": 0.125,
+    "paired_score_bootstrap_95": [
+      0.0,
+      0.25
+    ],
+    "independent_pairs": 2,
+    "search_config": {
+      "algorithm": "best-first negamax with lazy multi-fidelity evaluation",
+      "backend": "cpp",
+      "expansions_per_move": 256,
+      "max_nodes": 65536,
+      "max_depth": 64,
+      "neural_budget": 32,
+      "correction_batch": 4,
+      "value_backup": "minimax regularized by persistent neural anchors; exact outcomes override",
+      "tree_reuse": false,
+      "exact_proofs": "all legal children required for loss/draw",
+      "correction_scheduler": "hierarchical candidate calibration ranked by minimax gaps; heuristic",
+      "direct_anchor_weight": 0.75,
+      "candidate_q_anchor_weight": 0.25,
+      "quiescence_depth": 2,
+      "quiescence_extra_node_cap": 100000,
+      "quiescence": "CPU captures/promotions and all check evasions; no large-model queries",
+      "cheap_evaluator": "float dual-perspective incremental accumulator",
+      "cache": "exact effective model inputs plus ordered legal action IDs; outputs only"
+    },
+    "search_stats": {
+      "choices": 163,
+      "cheap_evaluations": 5147164,
+      "expanded_nodes": 40689,
+      "correction_positions": 5053,
+      "large_model_positions": 4520,
+      "inference_batches": 1309,
+      "cache_hits": 529,
+      "native_seconds": 19.062936471702415,
+      "inference_seconds": 12.46116112024174,
+      "max_depth": 28
+    },
+    "large_model_positions": 4520
+  },
+  "mcts": {
+    "settings": {
+      "nodes": 1000,
+      "max_plies": 600,
+      "max_seconds": 600.0,
+      "pairs": 2,
+      "mode": "mcts",
+      "openings_sha256": "c149a14f3fbdfbfbc276b69ba198e67bbec47174c9e21ae7a9d39157ecae34fe",
+      "search": {
+        "algorithm": "PUCT",
+        "backend": "cpp",
+        "simulations_per_move": 512,
+        "c_puct": 1.5,
+        "fpu_reduction": 0.20000000298023224,
+        "initial_width": 6,
+        "progressive_widening": 1.5,
+        "root_keep": 12,
+        "prune_after_fraction": 0.75,
+        "max_depth": 128,
+        "leaf_batch_size": 64,
+        "tree_reuse": true,
+        "transposition_merging": false,
+        "root_noise": false,
+        "batch_selection": "virtual loss; pending leaves excluded",
+        "reuse_identity": "initial FEN plus entire legal move history, per batch slot",
+        "root_pruning": "retain visit leaders, top-4 priors, forcing moves and proven wins",
+        "budget": "additional simulations per move, retained visits do not consume budget"
+      }
+    },
+    "opponent": {
+      "name": "Stockfish 18",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "completed": 4,
+    "truncated": 0,
+    "attempted": 4,
+    "scheduled": 4,
+    "unplayed": 0,
+    "wins": 1,
+    "draws": 1,
+    "losses": 2,
+    "seconds": 114.09588295299909,
+    "rating_claim": "No absolute Elo calibration. Stockfish node limits are not Elo ratings.",
+    "search_stats": {
+      "choices": 224,
+      "leaf_evaluations": 107303,
+      "completed_simulations": 110108,
+      "terminal_leaves": 2823,
+      "pruned_root_edges": 2247,
+      "proven_loss_skips": 39658,
+      "mate_proofs": 1677,
+      "max_depth": 19,
+      "depth_limit_hits": 0,
+      "tree_reuses": 206,
+      "retained_nodes": 18756,
+      "inference_batches": 1778,
+      "native_seconds": 0.3636865212756675,
+      "inference_seconds": 112.74639499933983,
+      "bridge_seconds": 0.026697773064370267
+    },
+    "decision_samples": [
+      {
+        "fen": "rnbqkb1r/ppp2ppp/8/3pp3/2B1n3/5N2/PPPPQPPP/RNB1K2R w KQkq - 0 5",
+        "move": "c4b3",
+        "simulations": 512,
+        "new_simulations": 512,
+        "retained_visits": 0,
+        "nodes": 513,
+        "proven_value": null,
+        "leaders": [
+          {
+            "move": "c4b3",
+            "visits": 154,
+            "q": -0.190255,
+            "prior": 0.30453,
+            "pruned": false
+          },
+          {
+            "move": "d2d3",
+            "visits": 153,
+            "q": -0.130649,
+            "prior": 0.25772,
+            "pruned": false
+          },
+          {
+            "move": "f3e5",
+            "visits": 111,
+            "q": -0.0288165,
+            "prior": 0.0829402,
+            "pruned": false
+          },
+          {
+            "move": "c4b5",
+            "visits": 33,
+            "q": -0.338796,
+            "prior": 0.14085,
+            "pruned": false
+          },
+          {
+            "move": "c4d5",
+            "visits": 16,
+            "q": -0.412292,
+            "prior": 0.0495174,
+            "pruned": false
+          }
+        ]
+      },
+      {
+        "fen": "r1bqkb1r/ppp2ppp/2n5/3pp3/4n3/1B3N2/PPPPQPPP/RNB1K2R w KQkq - 2 6",
+        "move": "d2d3",
+        "simulations": 567,
+        "new_simulations": 512,
+        "retained_visits": 55,
+        "nodes": 567,
+        "proven_value": null,
+        "leaders": [
+          {
+            "move": "d2d3",
+            "visits": 276,
+            "q": -0.276209,
+            "prior": 0.35416,
+            "pruned": false
+          },
+          {
+            "move": "b1c3",
+            "visits": 142,
+            "q": -0.0859298,
+            "prior": 0.103539,
+            "pruned": false
+          },
+          {
+            "move": "e1g1",
+            "visits": 80,
+            "q": -0.327516,
+            "prior": 0.150813,
+            "pruned": false
+          },
+          {
+            "move": "f3e5",
+            "visits": 19,
+            "q": -0.619119,
+            "prior": 0.167887,
+            "pruned": false
+          },
+          {
+            "move": "d2d4",
+            "visits": 9,
+            "q": -0.796316,
+            "prior": 0.100323,
+            "pruned": false
+          }
+        ]
+      },
+      {
+        "fen": "r1bqkb1r/ppp2ppp/2n5/2npp3/8/1B1P1N2/PPP1QPPP/RNB1K2R w KQkq - 1 7",
+        "move": "f3e5",
+        "simulations": 692,
+        "new_simulations": 512,
+        "retained_visits": 180,
+        "nodes": 692,
+        "proven_value": null,
+        "leaders": [
+          {
+            "move": "f3e5",
+            "visits": 609,
+            "q": -0.40404,
+            "prior": 0.487059,
+            "pruned": false
+          },
+          {
+            "move": "b1c3",
+            "visits": 32,
+            "q": -0.528803,
+            "prior": 0.117231,
+            "pruned": false
+          },
+          {
+            "move": "e1g1",
+            "visits": 24,
+            "q": -0.61808,
+            "prior": 0.141212,
+            "pruned": false
+          },
+          {
+            "move": "d3d4",
+            "visits": 13,
+            "q": -0.697513,
+            "prior": 0.101067,
+            "pruned": false
+          },
+          {
+            "move": "c1e3",
+            "visits": 3,
+            "q": -0.84043,
+            "prior": 0.0238074,
+            "pruned": false
+          }
+        ]
+      },
+      {
+        "fen": "r1bqkb1r/ppp2ppp/8/2npN3/3n4/1B1P4/PPP1QPPP/RNB1K2R w KQkq - 1 8",
+        "move": "e2d1",
+        "simulations": 954,
+        "new_simulations": 512,
+        "retained_visits": 442,
+        "nodes": 955,
+        "proven_value": null,
+        "leaders": [
+          {
+            "move": "e2d1",
+            "visits": 494,
+            "q": -0.368309,
+            "prior": 0.215618,
+            "pruned": false
+          },
+          {
+            "move": "e2h5",
+            "visits": 192,
+            "q": -0.507366,
+            "prior": 0.279736,
+            "pruned": false
+          },
+          {
+            "move": "e2e3",
+            "visits": 174,
+            "q": -0.555932,
+            "prior": 0.273339,
+            "pruned": false
+          },
+          {
+            "move": "e5f7",
+            "visits": 42,
+            "q": -0.618016,
+            "prior": 0.113129,
+            "pruned": false
+          },
+          {
+            "move": "e2d2",
+            "visits": 6,
+            "q": -0.84907,
+            "prior": 0.0434233,
+            "pruned": false
+          }
+        ]
+      },
+      {
+        "fen": "r1bqk2r/ppp2ppp/3b4/2npN3/3n4/1B1P4/PPP2PPP/RNBQK2R w KQkq - 3 9",
+        "move": "e1g1",
+        "simulations": 683,
+        "new_simulations": 512,
+        "retained_visits": 171,
+        "nodes": 685,
+        "proven_value": null,
+        "leaders": [
+          {
+            "move": "e1g1",
+            "visits": 241,
+            "q": -0.480297,
+            "prior": 0.121274,
+            "pruned": false
+          },
+          {
+            "move": "e5f7",
+            "visits": 215,
+            "q": -0.2169,
+            "prior": 0.119571,
+            "pruned": false
+          },
+          {
+            "move": "e5f3",
+            "visits": 191,
+            "q": -0.553667,
+            "prior": 0.399217,
+            "pruned": false
+          },
+          {
+            "move": "f2f4",
+            "visits": 8,
+            "q": -0.881901,
+            "prior": 0.0910264,
+            "pruned": false
+          },
+          {
+            "move": "c1e3",
+            "visits": 8,
+            "q": -0.615725,
+            "prior": 0.026324,
+            "pruned": false
+          }
+        ]
+      },
+      {
+        "fen": "r1bqk2r/ppp2ppp/8/2npb3/3n4/1B1P4/PPP2PPP/RNBQ1RK1 w kq - 0 10",
+        "move": "f1e1",
+        "simulations": 542,
+        "new_simulations": 512,
+        "retained_visits": 30,
+        "nodes": 543,
+        "proven_value": null,
+        "leaders": [
+          {
+            "move": "f1e1",
+            "visits": 509,
+            "q": -0.257319,
+            "prior": 0.534917,
+            "pruned": false
+          },
+          {
+            "move": "d1h5",
+            "visits": 13,
+            "q": -0.627611,
+            "prior": 0.122383,
+            "pruned": false
+          },
+          {
+            "move": "c2c3",
+            "visits": 8,
+            "q": -0.67471,
+            "prior": 0.0974124,
+            "pruned": false
+          },
+          {
+            "move": "d1e1",
+            "visits": 3,
+            "q": -0.873844,
+            "prior": 0.0586054,
+            "pruned": false
+          },
+          {
+            "move": "b1c3",
+            "visits": 3,
+            "q": -0.93523,
+            "prior": 0.0514276,
+            "pruned": false
+          }
+        ]
+      },
+      {
+        "fen": "r1bqk2r/ppp3pp/5p2/2npb3/3n4/1B1P4/PPP2PPP/RNBQR1K1 w kq - 0 11",
+        "move": "c2c3",
+        "simulations": 673,
+        "new_simulations": 512,
+        "retained_visits": 161,
+        "nodes": 673,
+        "proven_value": null,
+        "leaders": [
+          {
+            "move": "c2c3",
+            "visits": 426,
+            "q": -0.322521,
+            "prior": 0.127516,
+            "pruned": false
+          },
+          {
+            "move": "d1h5",
+            "visits": 159,
+            "q": -0.475218,
+            "prior": 0.562568,
+            "pruned": false
+          },
+          {
+            "move": "f2f4",
+            "visits": 33,
+            "q": -0.539729,
+            "prior": 0.156459,
+            "pruned": false
+          },
+          {
+            "move": "c1e3",
+            "visits": 17,
+            "q": -0.411201,
+            "prior": 0.041426,
+            "pruned": false
+          },
+          {
+            "move": "c1f4",
+            "visits": 5,
+            "q": -0.532539,
+            "prior": 0.0293696,
+            "pruned": false
+          }
+        ]
+      },
+      {
+        "fen": "r1bqk2r/ppp3pp/4np2/2npb3/8/1BPP4/PP3PPP/RNBQR1K1 w kq - 1 12",
+        "move": "d3d4",
+        "simulations": 534,
+        "new_simulations": 512,
+        "retained_visits": 22,
+        "nodes": 534,
+        "proven_value": null,
+        "leaders": [
+          {
+            "move": "d3d4",
+            "visits": 253,
+            "q": -0.411841,
+            "prior": 0.558811,
+            "pruned": false
+          },
+          {
+            "move": "b3c2",
+            "visits": 145,
+            "q": -0.193708,
+            "prior": 0.0601204,
+            "pruned": false
+          },
+          {
+            "move": "f2f4",
+            "visits": 60,
+            "q": -0.218648,
+            "prior": 0.0235292,
+            "pruned": false
+          },
+          {
+            "move": "d1h5",
+            "visits": 38,
+            "q": -0.597155,
+            "prior": 0.255605,
+            "pruned": false
+          },
+          {
+            "move": "e1e5",
+            "visits": 7,
+            "q": -0.464061,
+            "prior": 0.0214362,
+            "pruned": false
+          }
+        ]
+      }
+    ],
+    "paired_score": 0.375,
+    "paired_score_bootstrap_95": [
+      0.25,
+      0.5
+    ],
+    "independent_pairs": 2,
+    "search_config": {
+      "algorithm": "PUCT",
+      "backend": "cpp",
+      "simulations_per_move": 512,
+      "c_puct": 1.5,
+      "fpu_reduction": 0.20000000298023224,
+      "initial_width": 6,
+      "progressive_widening": 1.5,
+      "root_keep": 12,
+      "prune_after_fraction": 0.75,
+      "max_depth": 128,
+      "leaf_batch_size": 64,
+      "tree_reuse": true,
+      "transposition_merging": false,
+      "root_noise": false,
+      "batch_selection": "virtual loss; pending leaves excluded",
+      "reuse_identity": "initial FEN plus entire legal move history, per batch slot",
+      "root_pruning": "retain visit leaders, top-4 priors, forcing moves and proven wins",
+      "budget": "additional simulations per move, retained visits do not consume budget"
+    },
+    "large_model_positions": 107303
+  }
+}

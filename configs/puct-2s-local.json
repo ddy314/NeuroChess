@@ -1,0 +1,16 @@
+{
+  "simulations": 16384,
+  "leaf_batch_size": 64,
+  "time_limit": 2.0,
+  "time_margin": 0.03,
+  "inference_cache_size": 32768,
+  "tree_reuse": true,
+  "c_puct": 1.5,
+  "fpu_reduction": 0.2,
+  "initial_width": 6,
+  "widening": 1.5,
+  "root_keep": 12,
+  "prune_after": 0.75,
+  "max_depth": 128,
+  "pending_loss_guard": true
+}

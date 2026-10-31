@@ -1,0 +1,46 @@
+{
+  "schema": "rank-frontier-v1",
+  "args": {
+    "pgn": "data/source/lichess-2013-01.pgn.zst",
+    "cheap": "output/cheap-minimax-20261031/student-selected/best.bin",
+    "stockfish": "local/stockfish/stockfish/stockfish-ubuntu-x86-64-avx2",
+    "key_db": "data/evals-v2-5m/keys.sqlite",
+    "out": "output/rank-frontier-20261031/data",
+    "after_game": 39191,
+    "games": 2000,
+    "eval_games": 128,
+    "per_root": 16,
+    "min_elo": 1600,
+    "seed": 431903,
+    "nodes": 20000,
+    "workers": 8
+  },
+  "groups": {
+    "train": 25522,
+    "val": 6376
+  },
+  "states": {
+    "train": 125543,
+    "val": 31350
+  },
+  "games": {
+    "train": 1600,
+    "val": 400,
+    "eval": 128
+  },
+  "target": "state-side raw centipawns (mates separate), sf16 ply32 W-L, same-search MultiPV siblings",
+  "cp_scale": 600,
+  "cp_training_clip": 3000,
+  "history": "full played history + search path passed to Stockfish; cheap model masks repetition/clocks",
+  "split": "whole source games; overlapping annotated train/val keys removed; heldout played-prefix keys excluded",
+  "cross_split_slots_removed": 0,
+  "seconds": 258.84627099598583,
+  "fingerprints": {
+    "train.npy": "ada1cde1ee9a335150c4955811eb5a87c04b713db30757da2fa18c3b18cbceb5",
+    "val.npy": "68f68e503172a754d7c32caf485200f2d7818cc31784932f2e74bb098e36fa1a",
+    "roots.json": "a92ee3be3432055b6363f37775b973e1ff9c3a9bf3226f51011bb0064a38bf6a",
+    "jobs.json": "91bbdfb2d815c77677e649141adb8c7ad6d474034fd180435817170610de0771",
+    "eval.fen": "14f76cbb54de05d55e49789c34cbfd44e4e1478a868d41fd489da3e8bd643461",
+    "plan.json": "f2f9cdaaf60a2bf6ded801b5d262807b9742c71dd8407292a63fc4f7a9d08f37"
+  }
+}

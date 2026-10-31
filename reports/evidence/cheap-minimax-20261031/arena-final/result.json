@@ -1,0 +1,65 @@
+{
+  "best-first": {
+    "settings": {
+      "nodes": 1000,
+      "max_plies": 600,
+      "max_seconds": 300.0,
+      "pairs": 2,
+      "mode": "best-first-minimax",
+      "openings_sha256": "c149a14f3fbdfbfbc276b69ba198e67bbec47174c9e21ae7a9d39157ecae34fe"
+    },
+    "opponent": {
+      "name": "Stockfish 18",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "completed": 4,
+    "truncated": 0,
+    "attempted": 4,
+    "scheduled": 4,
+    "unplayed": 0,
+    "wins": 0,
+    "draws": 0,
+    "losses": 4,
+    "seconds": 15.89132980699651,
+    "rating_claim": "No absolute Elo calibration. Stockfish node limits are not Elo ratings.",
+    "paired_score": 0.0,
+    "paired_score_bootstrap_95": [
+      0.0,
+      0.0
+    ],
+    "independent_pairs": 2,
+    "search_config": {
+      "algorithm": "best-first negamax with lazy multi-fidelity evaluation",
+      "backend": "cpp",
+      "expansions_per_move": 512,
+      "max_nodes": 65536,
+      "max_depth": 64,
+      "neural_budget": 32,
+      "correction_batch": 4,
+      "value_backup": "minimax regularized by persistent neural anchors; exact outcomes override",
+      "tree_reuse": false,
+      "exact_proofs": "all legal children required for loss/draw",
+      "correction_scheduler": "hierarchical candidate calibration ranked by minimax gaps; heuristic",
+      "direct_anchor_weight": 0.75,
+      "candidate_q_anchor_weight": 0.25,
+      "quiescence_depth": 0,
+      "quiescence_extra_node_cap": 100000,
+      "quiescence": "CPU captures/promotions and all check evasions; no large-model queries",
+      "cheap_evaluator": "float dual-perspective incremental accumulator",
+      "cache": "exact effective model inputs plus ordered legal action IDs; outputs only"
+    },
+    "search_stats": {
+      "choices": 160,
+      "cheap_evaluations": 1878551,
+      "expanded_nodes": 77787,
+      "correction_positions": 4847,
+      "large_model_positions": 4390,
+      "inference_batches": 1267,
+      "cache_hits": 455,
+      "native_seconds": 5.484782303261454,
+      "inference_seconds": 9.774594483635155,
+      "max_depth": 22
+    },
+    "large_model_positions": 4390
+  }
+}

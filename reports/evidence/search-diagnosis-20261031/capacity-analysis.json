@@ -1,0 +1,122 @@
+{
+  "original-long": {
+    "parameters": 107073,
+    "selected_step": 12500,
+    "train_sample": {
+      "positions": 19890,
+      "mse": 0.15963967042437124,
+      "mae": 0.2738434958161003
+    },
+    "full_validation": {
+      "positions": 51086,
+      "mse": 0.17795309356389588,
+      "mae": 0.28665922491845824,
+      "absolute_error_p90": 0.7116542160511017,
+      "material_mse": 0.3524708518149901,
+      "material_mae": 0.4046676933547065,
+      "note": "Position-hash holdout; not game/source independent or a calibrated error bound."
+    },
+    "search_distribution": {
+      "deep_frontier": {
+        "positions": 64,
+        "mse": 0.5077617122220378,
+        "mae": 0.5927692999975116
+      },
+      "root": {
+        "positions": 8,
+        "mse": 0.11606827555269342,
+        "mae": 0.20161786594893785
+      },
+      "root_child": {
+        "positions": 288,
+        "mse": 0.4055774348644075,
+        "mae": 0.511456451930759
+      },
+      "selected_frontier": {
+        "positions": 8,
+        "mse": 0.19870686491405015,
+        "mae": 0.3742483331058174
+      }
+    }
+  },
+  "matched-small": {
+    "parameters": 107073,
+    "selected_step": 30000,
+    "train_sample": {
+      "positions": 19890,
+      "mse": 0.18196151296845067,
+      "mae": 0.3015219885830087
+    },
+    "full_validation": {
+      "positions": 51086,
+      "mse": 0.19145345208408235,
+      "mae": 0.3089727602273459,
+      "absolute_error_p90": 0.7369925677776337,
+      "material_mse": 0.3524708518149901,
+      "material_mae": 0.4046676933547065,
+      "note": "Position-hash holdout; not game/source independent or a calibrated error bound."
+    },
+    "search_distribution": {
+      "deep_frontier": {
+        "positions": 64,
+        "mse": 0.4920276293598833,
+        "mae": 0.6015792817536276
+      },
+      "root": {
+        "positions": 8,
+        "mse": 0.12328237414486154,
+        "mae": 0.22252521245740356
+      },
+      "root_child": {
+        "positions": 288,
+        "mse": 0.41307555354542164,
+        "mae": 0.5241904200839596
+      },
+      "selected_frontier": {
+        "positions": 8,
+        "mse": 0.14312338805662186,
+        "mae": 0.33778675619140264
+      }
+    }
+  },
+  "matched-medium": {
+    "parameters": 526593,
+    "selected_step": 27500,
+    "train_sample": {
+      "positions": 19890,
+      "mse": 0.14145507983959327,
+      "mae": 0.25812728722058453
+    },
+    "full_validation": {
+      "positions": 51086,
+      "mse": 0.164018660737243,
+      "mae": 0.2748117604817,
+      "absolute_error_p90": 0.6790953278541565,
+      "material_mse": 0.3524708518149901,
+      "material_mae": 0.4046676933547065,
+      "note": "Position-hash holdout; not game/source independent or a calibrated error bound."
+    },
+    "search_distribution": {
+      "deep_frontier": {
+        "positions": 64,
+        "mse": 0.40524615295476785,
+        "mae": 0.527717036472226
+      },
+      "root": {
+        "positions": 8,
+        "mse": 0.12435327783071562,
+        "mae": 0.21368589184619488
+      },
+      "root_child": {
+        "positions": 288,
+        "mse": 0.3471827600553905,
+        "mae": 0.4650325242622745
+      },
+      "selected_frontier": {
+        "positions": 8,
+        "mse": 0.164786934540043,
+        "mae": 0.3365558529794216
+      }
+    }
+  }
+}

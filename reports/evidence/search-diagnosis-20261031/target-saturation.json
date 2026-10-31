@@ -1,0 +1,90 @@
+{
+  "counts": {
+    "rows": 5000000,
+    "abs_value_ge_099": 1682494,
+    "abs_value_ge_0999": 1582221,
+    "abs_value_le_001": 1255918,
+    "all_annotated_q_saturated": 1334464,
+    "multipv_rows": 5000000,
+    "saturated_q_but_distinct_policy": 555723
+  },
+  "fractions": {
+    "abs_value_ge_099": 0.3364988,
+    "abs_value_ge_0999": 0.3164442,
+    "abs_value_le_001": 0.2511836,
+    "all_annotated_q_saturated": 0.2668928,
+    "multipv_rows": 1.0,
+    "saturated_q_but_distinct_policy": 0.1111446
+  },
+  "mapping": [
+    {
+      "cp": -1000,
+      "value": -1.0
+    },
+    {
+      "cp": -500,
+      "value": -1.0
+    },
+    {
+      "cp": -345,
+      "value": -1.0
+    },
+    {
+      "cp": -291,
+      "value": -1.0
+    },
+    {
+      "cp": -261,
+      "value": -1.0
+    },
+    {
+      "cp": -245,
+      "value": -1.0
+    },
+    {
+      "cp": -198,
+      "value": -0.996
+    },
+    {
+      "cp": -190,
+      "value": -0.994
+    },
+    {
+      "cp": -100,
+      "value": -0.541
+    },
+    {
+      "cp": -50,
+      "value": -0.069
+    },
+    {
+      "cp": 0,
+      "value": 0.0
+    },
+    {
+      "cp": 50,
+      "value": 0.069
+    },
+    {
+      "cp": 100,
+      "value": 0.541
+    },
+    {
+      "cp": 190,
+      "value": 0.994
+    },
+    {
+      "cp": 245,
+      "value": 1.0
+    },
+    {
+      "cp": 500,
+      "value": 1.0
+    },
+    {
+      "cp": 1000,
+      "value": 1.0
+    }
+  ],
+  "note": "Existing fixed-ply sf16 proxy targets; saturation discards centipawn ordering, not a claim about true game-theoretic values."
+}

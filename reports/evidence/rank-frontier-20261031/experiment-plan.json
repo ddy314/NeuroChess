@@ -1,0 +1,32 @@
+{
+  "primary": "cp-rank vs matched wdl, then original PUCT-512 and inference-budget matched PUCT-31",
+  "variants": {
+    "wdl": {
+      "cp_weight": 0,
+      "rank_weight": 0
+    },
+    "cp": {
+      "cp_weight": 0.5,
+      "rank_weight": 0
+    },
+    "cp-rank": {
+      "cp_weight": 0.5,
+      "rank_weight": 0.2
+    }
+  },
+  "steps": 20000,
+  "batch_groups": 256,
+  "seed": 431903,
+  "lr": 0.0005,
+  "width": 128,
+  "hidden": 32,
+  "validation_every": 1000,
+  "checkpoint_selection": "validation WDL MSE + 0.2 * sibling rank BCE, same rule for all variants",
+  "evaluation": "128 heldout source-game roots fixed before annotation; no final-evaluation tuning",
+  "teacher": "100k proposal + 500k coherent candidate-union MultiPV",
+  "primary_metrics": [
+    "cp_blunders_100",
+    "mean_cp_regret"
+  ],
+  "auxiliary": "known failures replay; first four evaluation openings paired games; neither used for selection"
+}
