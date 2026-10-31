@@ -1,5 +1,7 @@
 # Curriculum v3
 
+**Status (2026-10-31):** completed 8,000 additional updates through cumulative engine-supervision step 15,500. The fixed Stockfish evaluations and verified selected checkpoint are summarized in [training progress](../reports/TRAINING_PROGRESS.md). The following describes the historical experiment protocol, not a request to relaunch it.
+
 Continue from engine-v2-expanded/last.pt (cumulative optimizer step 7500) with its optimizer state.
 
 - Stage A: 4000 updates on 5M engine positions with policy-only human replay.

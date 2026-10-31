@@ -1,0 +1,127 @@
+{
+  "source": "Selected reference-validation records from cloud training logs.",
+  "validation_positions": 8457,
+  "columns": [
+    "cumulative_step",
+    "val_loss"
+  ],
+  "stage_a": [
+    [
+      7500,
+      2.438868827228923
+    ],
+    [
+      7525,
+      2.4418295771993614
+    ],
+    [
+      7750,
+      2.4441439044578455
+    ],
+    [
+      8000,
+      2.448328446479248
+    ],
+    [
+      8250,
+      2.442332119472035
+    ],
+    [
+      8500,
+      2.4449376718251155
+    ],
+    [
+      8750,
+      2.439612247989831
+    ],
+    [
+      9000,
+      2.4350738940374836
+    ],
+    [
+      9250,
+      2.4362815197469554
+    ],
+    [
+      9500,
+      2.43144940027492
+    ],
+    [
+      9750,
+      2.429466713964763
+    ],
+    [
+      10000,
+      2.4266706297298097
+    ],
+    [
+      10250,
+      2.4267558494442474
+    ],
+    [
+      10500,
+      2.4246348254404637
+    ],
+    [
+      10750,
+      2.4240860936206694
+    ],
+    [
+      11000,
+      2.4217209578603525
+    ],
+    [
+      11250,
+      2.422091167080525
+    ],
+    [
+      11500,
+      2.422256525659217
+    ]
+  ],
+  "last_wave": [
+    [
+      14500,
+      2.41834380912262
+    ],
+    [
+      14525,
+      2.4184357263213907
+    ],
+    [
+      14750,
+      2.4214803103198532
+    ],
+    [
+      15000,
+      2.420397396387608
+    ],
+    [
+      15250,
+      2.4179375720556937
+    ],
+    [
+      15500,
+      2.417757894717394
+    ]
+  ],
+  "unretrieved_interval": [
+    11500,
+    14500
+  ],
+  "last_wave_train_logged_sample_first20_mean": 2.4270838260650636,
+  "last_wave_train_logged_sample_last20_mean": 2.4262619972229005,
+  "relative_loss_reduction_last1000": 0.00024227920075550922,
+  "relative_loss_reduction_full8000": 0.008656034418839822,
+  "top1_before": 0.4399905403807497,
+  "top1_final": 0.44188246423081473,
+  "q_mae_stage_a_end": 0.18734689294375692,
+  "q_mae_final": 0.1895142145761261,
+  "decision": "Stop repeating the same curriculum; first test fresh search-distribution teacher data from the current selected model. CP/ranking remains a separate experimental arm.",
+  "limits": [
+    "Not a model capacity ceiling proof.",
+    "Training windows are logged samples, not full epoch means.",
+    "Metrics come from the same reference validation set; no fresh test-set claim.",
+    "Raw metrics for the intervening three hard waves were not retrieved."
+  ]
+}

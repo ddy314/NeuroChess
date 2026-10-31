@@ -1,0 +1,91 @@
+{
+  "plan": {
+    "checkpoints": {
+      "new": {
+        "step": 10000,
+        "sha256": "03b03e7a427123cf88cf8fab5379498e2f84235187af2eab729b76c2bd6376a3"
+      }
+    },
+    "openings_sha256": "084a0f78faf5aee3336089fefc735a0e01c1f91747ada88e5777f7398643db67",
+    "opening_pairs": 16,
+    "nodes": 1000,
+    "max_plies": 800,
+    "conditions": [
+      "strong",
+      "weak"
+    ],
+    "mode": "mcts",
+    "batch_games": 16,
+    "device": "cuda",
+    "torch": "2.14.0+cu130",
+    "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "draw_rule": "Claimable threefold repetition and 50-move draw are adjudicated as draws.",
+    "caveat": "Fixed local comparison, not an absolute Elo calibration. Weak opponent uses Skill Level 0.",
+    "search": {
+      "algorithm": "PUCT",
+      "backend": "cpp",
+      "simulations_per_move": 256,
+      "c_puct": 1.5,
+      "fpu_reduction": 0.20000000298023224,
+      "initial_width": 6,
+      "progressive_widening": 1.5,
+      "root_keep": 12,
+      "prune_after_fraction": 0.75,
+      "max_depth": 128,
+      "leaf_batch_size": 16,
+      "tree_reuse": true,
+      "transposition_merging": false,
+      "root_noise": false,
+      "batch_selection": "virtual loss; pending leaves excluded",
+      "reuse_identity": "initial FEN plus entire legal move history, per batch slot",
+      "root_pruning": "retain visit leaders, top-4 priors, forcing moves and proven wins",
+      "budget": "additional simulations per move, retained visits do not consume budget"
+    }
+  },
+  "engine": {
+    "name": "Stockfish 18",
+    "author": "the Stockfish developers (see AUTHORS file)"
+  },
+  "result": {
+    "strong-new": {
+      "games": 32,
+      "completed": 32,
+      "truncated": 0,
+      "wins": 7,
+      "draws": 14,
+      "losses": 11,
+      "paired": {
+        "mean": 0.4375,
+        "independent_openings": 16,
+        "opening_bootstrap_95": [
+          0.34375,
+          0.53125
+        ],
+        "hoeffding_95": [
+          0.09797462106484511,
+          0.7770253789351549
+        ]
+      }
+    },
+    "weak-new": {
+      "games": 32,
+      "completed": 32,
+      "truncated": 0,
+      "wins": 32,
+      "draws": 0,
+      "losses": 0,
+      "paired": {
+        "mean": 1.0,
+        "independent_openings": 16,
+        "opening_bootstrap_95": [
+          1.0,
+          1.0
+        ],
+        "hoeffding_95": [
+          0.6604746210648451,
+          1.0
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "evidence": "Recorded cloud completion verification summary; full cloud artifacts remain in private storage.",
+  "cumulative_step": 15500,
+  "additional_steps": 8000,
+  "verified_at": 1793444587.1079147,
+  "selected_sha256": "e4ed8978db91eeef8360c4dea87faf7a4f826325bce45aa7efc024692d585ef7",
+  "last_sha256": "40ff46329b28174936187eaafe3570c9a8cbaf4d30cd13ed89290b8082af7673",
+  "pgn_sha256": "e5ef9a26c08d17d327b325602531e54541da16d649035f0e1e494a745808d8df",
+  "result_sha256": "a8e903a444cc60fbce881303dec3b706965ddafa20060a7a56aca5f7f3e5edb0",
+  "evaluation": {
+    "games": 128,
+    "games_per_mode": 64,
+    "all_moves_legal": true,
+    "all_scores_verified": true,
+    "stockfish_nodes": 1000,
+    "results": {
+      "direct": {
+        "played": 64,
+        "wins": 1,
+        "draws": 9,
+        "losses": 54,
+        "truncated": 0
+      },
+      "search": {
+        "played": 64,
+        "wins": 29,
+        "draws": 14,
+        "losses": 21,
+        "truncated": 0
+      }
+    }
+  }
+}

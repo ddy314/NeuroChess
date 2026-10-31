@@ -1,0 +1,54 @@
+{
+  "strong-new": {
+    "paired_openings": 16,
+    "mean_score_difference": 0.375,
+    "paired_bootstrap_95": [
+      0.28125,
+      0.46875
+    ],
+    "opening_differences": [
+      0.25,
+      0.5,
+      0.25,
+      0.5,
+      0.25,
+      0.25,
+      0.5,
+      0.5,
+      0.5,
+      0.0,
+      0.5,
+      0.5,
+      0.5,
+      0.75,
+      0.25,
+      0.0
+    ]
+  },
+  "weak-new": {
+    "paired_openings": 16,
+    "mean_score_difference": 0.1875,
+    "paired_bootstrap_95": [
+      0.0625,
+      0.3125
+    ],
+    "opening_differences": [
+      0.5,
+      0.0,
+      0.0,
+      0.5,
+      0.5,
+      0.0,
+      0.0,
+      0.0,
+      0.75,
+      0.0,
+      0.0,
+      0.0,
+      0.5,
+      0.0,
+      0.0,
+      0.25
+    ]
+  }
+}

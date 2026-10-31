@@ -1,0 +1,68 @@
+{
+  "counts": {
+    "test": 2000,
+    "train": 500000,
+    "val": 10000
+  },
+  "source_game_groups": {
+    "test": 2000,
+    "train": 500000,
+    "val": 10000
+  },
+  "source_game_cross_split_overlap": 0,
+  "old_position_overlap": 0,
+  "old_unique_keys": 7046237,
+  "rating_bins": [
+    [
+      "test",
+      "1600-1999",
+      1039
+    ],
+    [
+      "test",
+      "2000-2399",
+      642
+    ],
+    [
+      "test",
+      "2400+",
+      319
+    ],
+    [
+      "train",
+      "1600-1999",
+      262289
+    ],
+    [
+      "train",
+      "2000-2399",
+      161046
+    ],
+    [
+      "train",
+      "2400+",
+      76665
+    ],
+    [
+      "val",
+      "1600-1999",
+      5315
+    ],
+    [
+      "val",
+      "2000-2399",
+      3148
+    ],
+    [
+      "val",
+      "2400+",
+      1537
+    ]
+  ],
+  "jobs_sha256": "747abe500eb217d51a6428f6f850388a89391564fa1a6eef0d5943812b31a504",
+  "independent_check": "SQLite exact-key intersection plus distinct source-game groups after selection",
+  "limitations": [
+    "Old pretrained source-game overlap unknown; novelty here means exact canonical positions.",
+    "Difficulty is rated puzzle difficulty; positions were not filtered by current model errors."
+  ]
+}

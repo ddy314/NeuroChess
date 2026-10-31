@@ -1,0 +1,71 @@
+{
+  "plan": {
+    "checkpoints": {
+      "new": {
+        "step": 10000,
+        "sha256": "03b03e7a427123cf88cf8fab5379498e2f84235187af2eab729b76c2bd6376a3"
+      }
+    },
+    "openings_sha256": "084a0f78faf5aee3336089fefc735a0e01c1f91747ada88e5777f7398643db67",
+    "opening_pairs": 16,
+    "nodes": 1000,
+    "max_plies": 800,
+    "conditions": [
+      "strong",
+      "weak"
+    ],
+    "mode": "policy",
+    "batch_games": 16,
+    "device": "cuda",
+    "torch": "2.14.0+cu130",
+    "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "draw_rule": "Claimable threefold repetition and 50-move draw are adjudicated as draws.",
+    "caveat": "Fixed local comparison, not an absolute Elo calibration. Weak opponent uses Skill Level 0."
+  },
+  "engine": {
+    "name": "Stockfish 18",
+    "author": "the Stockfish developers (see AUTHORS file)"
+  },
+  "result": {
+    "strong-new": {
+      "games": 32,
+      "completed": 32,
+      "truncated": 0,
+      "wins": 0,
+      "draws": 4,
+      "losses": 28,
+      "paired": {
+        "mean": 0.0625,
+        "independent_openings": 16,
+        "opening_bootstrap_95": [
+          0.015625,
+          0.125
+        ],
+        "hoeffding_95": [
+          0.0,
+          0.4020253789351549
+        ]
+      }
+    },
+    "weak-new": {
+      "games": 32,
+      "completed": 32,
+      "truncated": 0,
+      "wins": 25,
+      "draws": 2,
+      "losses": 5,
+      "paired": {
+        "mean": 0.8125,
+        "independent_openings": 16,
+        "opening_bootstrap_95": [
+          0.6875,
+          0.9375
+        ],
+        "hoeffding_95": [
+          0.4729746210648451,
+          1.0
+        ]
+      }
+    }
+  }
+}

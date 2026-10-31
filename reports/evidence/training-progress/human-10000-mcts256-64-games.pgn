@@ -1,0 +1,959 @@
+[Event "NeuroChess local paired evaluation"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "6"]
+[White "Stockfish"]
+[Black "NeuroChess-step-10000"]
+[Result "0-1"]
+[FEN "rnbq1rk1/ppp1bpp1/4pn1p/3p2B1/3P4/2NBPN2/PPP2PPP/R2QK2R w KQ - 0 7"]
+[SetUp "1"]
+[GameId "strong-new-0005-0"]
+[ModelMode "mcts"]
+[SearchDepth "variable"]
+
+7. h4 c5 8. dxc5 Bxc5 9. Ne5 Nc6 10. Ng4 Be7 11. Bxh6 gxh6 12. Rh3 Kh8 13. Nxh6 Kg7 14. Rg3+ Kxh6 15. e4 Ne5 16. Qc1+ Kh7 17. Qg5 Nxd3+ 18. Kd2 Rg8 19. Rg1 Rxg5 20. Rxg5 dxe4 21. cxd3 Qxd3+ 22. Kc1 Nd5 23. g3 Nxc3 24. Rh5+ Kg7 25. Rh7+ Kxh7 26. b4 Ne2+ 27. Kb2 Bf6# 0-1
+
+[Event "NeuroChess local paired evaluation"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "2"]
+[White "NeuroChess-step-10000"]
+[Black "Stockfish"]
+[Result "1-0"]
+[FEN "r1bqkbnr/1ppp1ppp/p1n5/1B6/3pP3/5N2/PPP2PPP/RNBQK2R w KQkq - 0 5"]
+[SetUp "1"]
+[GameId "strong-new-0001-1"]
+[ModelMode "mcts"]
+[SearchDepth "variable"]
+
+5. Bxc6 dxc6 6. Qxd4 Qxd4 7. Nxd4 Bd7 8. Nc3 Be7 9. Be3 O-O-O 10. O-O-O b6 11. f3 Re8 12. Rhe1 Bd6 13. f4 Nf6 14. e5 Ng4 15. Bg1 Be7 16. h3 c5 17. Nf3 Nh6 18. Nd5 Bd8 19. g4 f6 20. f5 fxe5 21. Nxe5 Bh4 22. Re3 Bxf5 23. Nf3 Be4 24. Nxh4 Nf7 25. Nf5 Bxd5 26. Rxd5 g6 27. Ne7+ Kb7 28. Bh2 Nd8 29. Rd7 Nf7 30. Rxc7+ Ka8 31. Nc6 Re7 32. Rexe7 c4 33. Ra7# 1-0
+
+[Event "NeuroChess local paired evaluation"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "7"]
+[White "Stockfish"]
+[Black "NeuroChess-step-10000"]
+[Result "1/2-1/2"]
+[FEN "r1bqkbnr/ppp2ppp/2n5/3pP3/5p2/5N2/PPPP2PP/RNBQKB1R w KQkq - 1 5"]
+[SetUp "1"]
+[GameId "strong-new-0006-0"]
+[ModelMode "mcts"]
+[SearchDepth "variable"]
+
+5. d4 g5 6. h3 h5 7. c4 Nge7 8. Nc3 Bh6 9. h4 g4 10. Ng5 dxc4 11. Bxf4 Qxd4 12. Qxd4 Nxd4 13. Rd1 Ne6 14. Bc1 Nxg5 15. hxg5 Bg7 16. Bxc4 Be6 17. Bxe6 fxe6 18. O-O Rf8 19. Rxf8+ Kxf8 20. Ne4 Bxe5 21. Nc5 Kf7 22. Nxb7 Rb8 23. Nd8+ Kg6 24. Nxe6 Bxb2 25. Bxb2 Rxb2 26. Rd7 Nf5 27. Rxc7 Rxa2 28. Rc5 h4 29. Nf8+ Kxg5 30. Nh7+ Kg6 31. Nf8+ Kf6 32. Nh7+ Kg6 33. Nf8+ Kg5 34. Nh7+ 1/2-1/2
+
+[Event "NeuroChess local paired evaluation"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "8"]
+[White "NeuroChess-step-10000"]
+[Black "Stockfish"]
+[Result "0-1"]
+[FEN "r2qkbnr/pp2pppp/2n5/3p1b2/3P4/2P2N2/PP3PPP/RNBQKB1R w KQkq - 1 6"]
+[SetUp "1"]
+[GameId "strong-new-0007-1"]
+[ModelMode "mcts"]
+[SearchDepth "variable"]
+
+6. Bd3 Bxd3 7. Qxd3 e6 8. O-O Bd6 9. Re1 h6 10. Nbd2 Qc7 11. c4 dxc4 12. Nxc4 Nf6 13. Nxd6+ Qxd6 14. Qb5 O-O 15. Qxb7 Nb4 16. Bf4 Qxf4 17. Qxb4 Rac8 18. h3 Rc2 19. Qb3 Rfc8 20. a4 Nd5 21. a5 g5 22. a6 h5 23. Re5 g4 24. Rg5+ Kf8 25. Qa3+ Ne7 26. hxg4 Rc1+ 27. Ne1 Qxg5 28. Rxc1 Rxc1 29. Qb4 hxg4 30. g3 Kg7 31. Kf1 Nc6 32. Qb7 Qa5 33. b4 Qd5 34. f3 Qxf3+ 35. Kg1 Qxg3+ 36. Kf1 Rxe1# 0-1
+
+[Event "NeuroChess local paired evaluation"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "8"]
+[White "Stockfish"]
+[Black "NeuroChess-step-10000"]
+[Result "0-1"]
+[FEN "r2qkbnr/pp2pppp/2n5/3p1b2/3P4/2P2N2/PP3PPP/RNBQKB1R w KQkq - 1 6"]
+[SetUp "1"]
+[GameId "strong-new-0007-0"]
+[ModelMode "mcts"]
+[SearchDepth "variable"]
+
+6. Bb5 e6 7. Ne5 Ne7 8. O-O a6 9. Ba4 Qc7 10. g4 Be4 11. f3 Bxb1 12. Rxb1 b5 13. Nxc6 Nxc6 14. Bc2 Bd6 15. f4 g6 16. f5 Bxh2+ 17. Kh1 h5 18. fxe6 hxg4 19. Qxg4 Bg1+ 20. Kg2 Qh2+ 21. Kf3 Rh3+ 22. Qxh3 Qxh3+ 23. Ke2 Qg2+ 24. Ke1 fxe6 25. Bd2 O-O-O 26. Rf6 Be3 27. Bxe3 Qxc2 28. Rc1 Qxb2 29. Rxe6 Kb7 30. a4 bxa4 31. c4 Nxd4 32. Bxd4 Qxc1+ 33. Ke2 Qxc4+ 34. Ke3 a3 35. Re7+ Kc6 36. Bf6 d4+ 37. Kd2 Qc3+ 38. Kd1 a2 39. Ke2 d3+ 40. Ke3 d2+ 41. Bxc3 d1=Q 42. Kf4 Rf8+ 43. Ke3 Rf3+ 44. Ke4 Qd5# 0-1
+
+[Event "NeuroChess local paired evaluation"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "2"]
+[White "Stockfish"]
+[Black "NeuroChess-step-10000"]
+[Result "1/2-1/2"]
+[FEN "r1bqkbnr/1ppp1ppp/p1n5/1B6/3pP3/5N2/PPP2PPP/RNBQK2R w KQkq - 0 5"]
+[SetUp "1"]
+[GameId "strong-new-0001-0"]
+[ModelMode "mcts"]
+[SearchDepth "variable"]
+
+5. Bxc6 dxc6 6. Qxd4 Qxd4 7. Nxd4 Nf6 8. Nc3 c5 9. Nde2 b5 10. a4 b4 11. e5 Ng4 12. Nd5 Ra7 13. Bf4 Be6 14. Rd1 c6 15. Nb6 h5 16. O-O Be7 17. f3 Nh6 18. Bxh6 Rxh6 19. Nf4 b3 20. c3 c4 21. Nxe6 fxe6 22. Nxc4 Bc5+ 23. Kh1 Rd7 24. Rxd7 Kxd7 25. Rd1+ Kc7 26. Na5 Be3 27. Rd6 Bc1 28. Rxc6+ Kd7 29. Rd6+ Ke7 30. Rb6 Bxb2 31. Rxb3 Bc1 32. g3 h4 33. Rb7+ Kf8 34. Kg2 Bd2 35. Nc6 h3+ 36. Kf2 Bxc3 37. Rb8+ Kf7 38. f4 Kg6 39. Kf3 Kh7 40. Nd8 Bd4 41. g4 Bg1 42. Rb2 Bd4 43. Rb8 Bg1 44. Kg3 Bd4 1/2-1/2
+
+[Event "NeuroChess local paired evaluation"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "4"]
+[White "Stockfish"]
+[Black "NeuroChess-step-10000"]
+[Result "0-1"]
+[FEN "rnbq1rk1/pp2ppbp/2p2np1/3p2B1/2PP4/2N1PN2/PP3PPP/R2QKB1R w KQ - 1 7"]
+[SetUp "1"]
+[GameId "strong-new-0003-0"]
+[ModelMode "mcts"]
+[SearchDepth "variable"]
+
+7. Qb3 Nbd7 8. Bh4 Qa5 9. Rc1 dxc4 10. Bxc4 Nb6 11. O-O Nxc4 12. Qxc4 Be6 13. Qe2 Nd5 14. a3 Nxc3 15. Rxc3 Rfe8 16. Ng5 Bd5 17. e4 h6 18. Nf3 Be6 19. Bg3 Rad8 20. Rd1 Bg4 21. Qc4 Bxf3 22. Rxf3 e6 23. h3 Rd7 24. Rfd3 Red8 25. Bh4 g5 26. Bg3 Qb6 27. d5 cxd5 28. exd5 exd5 29. Rxd5 Rxd5 30. Rxd5 Rxd5 31. Qxd5 Bxb2 32. a4 Bf6 33. Be5 Qb1+ 34. Kh2 Qf5 35. f4 gxf4 36. Qxb7 Bxe5 37. Qd5 f3+ 38. Kg1 f2+ 39. Kf1 Qf4 40. Qa8+ Kg7 41. Qc8 Bd4 42. Qc6 Qe3 43. Qc3 Qxc3 44. Ke2 Qe3+ 45. Kd1 f1=Q+ 46. Kc2 Qfc1# 0-1
+
+[Event "NeuroChess local paired evaluation"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "3"]
+[White "Stockfish"]
+[Black "NeuroChess-step-10000"]
+[Result "1-0"]
+[FEN "rnb1kb1r/ppppqpp1/5n1p/6N1/2P1p3/2N3P1/PP1PPP1P/R1BQKB1R w KQkq - 0 6"]
+[SetUp "1"]
+[GameId "strong-new-0002-0"]
+[ModelMode "mcts"]
+[SearchDepth "variable"]
+
+6. Nh3 c6 7. Bg2 d5 8. cxd5 cxd5 9. Nf4 d4 10. Ncd5 Nxd5 11. Nxd5 Qe5 12. Qc2 Nc6 13. Qxe4 Qxe4 14. Bxe4 Bd6 15. d3 Be6 16. Nf4 Bxf4 17. Bxf4 Rc8 18. Kd2 Ke7 19. h4 Rhd8 20. Rhc1 Bd5 21. Rc5 Bxe4 22. dxe4 Nb4 23. Rac1 Rxc5 24. Rxc5 Nxa2 25. Ra5 Nb4 26. Re5+ Kf8 27. Rb5 Na6 28. Rxb7 Nc5 29. Rxa7 Nxe4+ 30. Ke1 d3 31. exd3 Rxd3 32. Rb7 Nc5 33. Ke2 Nxb7 34. Kxd3 Ke7 35. b4 Ke6 36. Kd4 h5 37. Kc4 f6 38. b5 g6 39. Kd4 Kf5 40. Kd5 g5 41. Bc7 Kg4 42. Kc6 gxh4 43. gxh4 Kxh4 44. Kxb7 Kg4 45. Kc6 h4 46. b6 h3 47. b7 Kf3 48. b8=Q Kg2 49. Qb3 h2 50. Qg3+ Kf1 51. Qxh2 Ke2 52. Qg1 f5 53. f4 Kf3 54. Qd1+ Kg3 55. Qe2 Kh3 56. Qf2 Kg4 57. Qg2+ Kh4 58. Bd8+ Kh5 59. Qg5# 1-0
+
+[Event "NeuroChess local paired evaluation"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "7"]
+[White "NeuroChess-step-10000"]
+[Black "Stockfish"]
+[Result "1/2-1/2"]
+[FEN "r1bqkbnr/ppp2ppp/2n5/3pP3/5p2/5N2/PPPP2PP/RNBQKB1R w KQkq - 1 5"]
+[SetUp "1"]
+[GameId "strong-new-0006-1"]
+[ModelMode "mcts"]
+[SearchDepth "variable"]
+
+5. d4 g5 6. Bd3 Bh6 7. O-O g4 8. c3 gxf3 9. Qxf3 Be6 10. Bxf4 Qh4 11. Nd2 Qxf4 12. Qxf4 Bxf4 13. Rxf4 Nge7 14. Raf1 a5 15. Nf3 h6 16. Nh4 Kd7 17. h3 Rag8 18. Kh2 Nd8 19. Bb5+ c6 20. Be2 Ng6 21. Nxg6 Rxg6 22. Bh5 Rg7 23. g4 Ke7 24. Kg3 Rgg8 25. Kh4 Rg7 26. Rf6 c5 27. dxc5 Rhh7 28. b4 axb4 29. cxb4 d4 30. b5 Bc4 31. Rb1 Bxa2 32. Rb2 Be6 33. Rf4 Rg5 34. Rxd4 Rxe5 35. Rc2 Rh8 36. Kg3 Rg8 37. Kf4 Rd5 38. Rxd5 Bxd5 39. Re2+ Ne6+ 40. Kg3 Bc4 41. Rb2 Nxc5 42. Rc2 Ne4+ 43. Kf4 Nd6 44. b6 Rf8 45. h4 Ra8 46. g5 Ra5 47. gxh6 Rxh5 48. Kg4 Rxh6 49. Kg5 Rg6+ 50. Kf4 Rf6+ 51. Kg5 Rf5+ 52. Kg4 Ra5 53. h5 Be6+ 54. Kf4 Rxh5 55. Rc7+ Bd7 56. Rc1 Be6 57. Rc7+ Bd7 58. Kg3 Rb5 59. Kf4 1/2-1/2
+
+[Event "NeuroChess local paired evaluation"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "5"]
+[White "NeuroChess-step-10000"]
+[Black "Stockfish"]
+[Result "0-1"]
+[FEN "r1bqk2r/pp1pppbp/2n2np1/1Bp5/4P3/3P1N2/PPP2PPP/RNBQ1RK1 w kq - 3 6"]
+[SetUp "1"]
+[GameId "strong-new-0004-1"]
+[ModelMode "mcts"]
+[SearchDepth "variable"]
+
+6. Re1 O-O 7. Nbd2 Qc7 8. c3 d5 9. e5 Nh5 10. Bxc6 Qxc6 11. d4 Nf4 12. Nf1 Ne6 13. Ng3 cxd4 14. cxd4 Bd7 15. Be3 Rac8 16. Rc1 Qa6 17. Qb3 Qb5 18. Qa3 Rxc1 19. Rxc1 Re8 20. Ng5 Nxg5 21. Bxg5 f6 22. exf6 exf6 23. Be3 Bf8 24. Qxa7 Qxb2 25. h3 Rxe3 26. fxe3 Qxc1+ 27. Kh2 Qc7 28. Qa8 f5 29. a4 Qc8 30. Qa5 Qc6 31. Ne2 Kf7 32. Nf4 Bd6 33. Qd8 Bf8 34. Nd3 Kg7 35. Ne5 Bd6 36. a5 Qc8 37. Qxd7+ Qxd7 38. a6 bxa6 39. Kg3 Qa4 40. Kf4 a5 41. g4 fxg4 42. hxg4 Bxe5+ 43. Kxe5 Qe8+ 44. Kxd5 a4 45. e4 Qb5+ 46. Ke6 Qc6+ 47. Ke5 Qc7+ 48. Kd5 a3 49. e5 a2 50. Ke4 Qc6+ 51. d5 Qa4+ 52. Kf3 Qd1+ 53. Kf4 Qxd5 54. g5 Qd4+ 55. Kg3 Qxe5+ 56. Kg4 Qf5+ 57. Kh4 Qf4+ 58. Kh3 Qxg5 59. Kh2 a1=Q 60. Kh3 Qh1# 0-1
+
+[Event "NeuroChess local paired evaluation"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "1"]
+[White "Stockfish"]
+[Black "NeuroChess-step-10000"]
+[Result "1/2-1/2"]
+[FEN "rnbqkb1r/ppp2ppp/8/3pp3/2B1n3/5N2/PPPPQPPP/RNB1K2R w KQkq - 0 5"]
+[SetUp "1"]
+[GameId "strong-new-0000-0"]
+[ModelMode "mcts"]
+[SearchDepth "variable"]
+
+5. Nxe5 dxc4 6. Qxe4 Qe7 7. Nc3 f6 8. Nxc4 Nc6 9. d3 Qxe4+ 10. Nxe4 Be6 11. Bd2 O-O-O 12. Ne3 Nd4 13. h4 h6 14. Bc3 f5 15. Nd2 Bc5 16. Nb3 Nxb3 17. axb3 f4 18. Nc4 f3 19. gxf3 Rhf8 20. Ra5 b6 21. Rxa7 Kb8 22. Ra1 Rxf3 23. Ne5 Rxf2 24. Nc6+ Kc8 25. Ra8+ Kd7 26. Rxd8+ Kxc6 27. d4 Rxc2 28. dxc5 bxc5 29. O-O Bd5 30. Rxd5 Kxd5 31. h5 Ke4 32. Bxg7 c4 33. Bxh6 cxb3 34. Bg7 Rc5 35. h6 Rh5 36. Rf8 c5 37. Rf2 c4 38. Kf1 Ke3 39. Re2+ Kf3 40. Rf2+ Ke3 41. Rf7 c3 42. Bxc3 Rxh6 43. Rf8 Rh1+ 44. Kg2 Rh5 45. Rf3+ Ke2 46. Kg3 Rg5+ 47. Kf4 Rg8 48. Rg3 Re8 49. Bf6 Rf8 50. Kf5 Rb8 51. Ke5 Rb6 52. Rc3 Kd2 53. Kf5 Rb5+ 54. Ke6 Rb6+ 55. Ke7 Rb7+ 56. Kf8 Rb8+ 57. Ke7 Rb7+ 58. Ke6 Rb6+ 59. Kf5 Rb5+ 60. Be5 Rb6 1/2-1/2
+
+[Event "NeuroChess local paired evaluation"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "6"]
+[White "NeuroChess-step-10000"]
+[Black "Stockfish"]
+[Result "0-1"]
+[FEN "rnbq1rk1/ppp1bpp1/4pn1p/3p2B1/3P4/2NBPN2/PPP2PPP/R2QK2R w KQ - 0 7"]
+[SetUp "1"]
+[GameId "strong-new-0005-1"]
+[ModelMode "mcts"]
+[SearchDepth "variable"]
+
+7. Bh4 c5 8. dxc5 Nbd7 9. b4 a5 10. a3 axb4 11. axb4 Rxa1 12. Qxa1 e5 13. O-O e4 14. Nd4 exd3 15. cxd3 Ne5 16. Rd1 Nc6 17. Qb2 Nxd4 18. exd4 Be6 19. Ra1 Nh5 20. Bg3 Nxg3 21. hxg3 Qb8 22. b5 Bf6 23. Qb4 b6 24. c6 h5 25. Ne2 g5 26. Ra6 Re8 27. Qc3 Bc8 28. c7 Qb7 29. Kf1 Re7 30. g4 Rxc7 31. Qb4 Bxg4 32. Qd6 Be7 33. Qh6 Rc8 34. f3 Bf5 35. Ng3 Bxd3+ 36. Kf2 Bg6 37. Nxh5 Bxh5 38. Qxh5 Qc7 39. Ra2 Kg7 40. Re2 Bf6 41. Qg4 Ra8 42. g3 Qc8 43. Qh5 Qf5 44. g4 Qf4 45. Qh1 Rh8 46. Qg2 Rh6 47. Qg3 Rh2+ 48. Qxh2 Qxh2+ 49. Ke3 Qg1+ 50. Kd3 Qxd4+ 51. Kc2 Qb2+ 52. Kd1 Qb1+ 53. Kd2 Qb4+ 54. Kd1 Qb1+ 55. Kd2 Qxb5 56. Ke1 Qb1+ 57. Kf2 Bd4+ 58. Kg2 Qg1+ 59. Kh3 Qf1+ 60. Kg3 Qxe2 61. f4 Qe1+ 62. Kh2 Qg1+ 63. Kh3 gxf4 64. Kh4 Qh1+ 65. Kg5 Qh6+ 66. Kf5 Qf6# 0-1
+
+[Event "NeuroChess local paired evaluation"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "4"]
+[White "NeuroChess-step-10000"]
+[Black "Stockfish"]
+[Result "1/2-1/2"]
+[FEN "rnbq1rk1/pp2ppbp/2p2np1/3p2B1/2PP4/2N1PN2/PP3PPP/R2QKB1R w KQ - 1 7"]
+[SetUp "1"]
+[GameId "strong-new-0003-1"]
+[ModelMode "mcts"]
+[SearchDepth "variable"]
+
+7. cxd5 cxd5 8. Bd3 h6 9. Bh4 Bg4 10. h3 Bxf3 11. Qxf3 e6 12. O-O Nc6 13. Rac1 Re8 14. a3 Rc8 15. b4 a6 16. Na4 e5 17. Nc5 e4 18. Qe2 exd3 19. Qxd3 Qe7 20. Qb3 g5 21. Bg3 Bf8 22. Rc3 Ra8 23. Rfc1 Bg7 24. Nxb7 Nxd4 25. exd4 Qxb7 26. Rc7 Qb5 27. Qf3 Re6 28. Be5 Rd8 29. R1c5 Qe8 30. Ra7 Rd7 31. Rxd7 Nxd7 32. Rxd5 Nxe5 33. dxe5 Bxe5 34. g3 Bf6 35. Kg2 Rc6 36. Rf5 Kg7 37. a4 Rd6 38. b5 axb5 39. axb5 Qd7 40. Rc5 Rb6 41. Rc6 Bd4 42. Rxb6 Bxb6 43. Qc3+ Kg8 44. Qe5 Qc8 45. Qf6 Qc5 46. h4 gxh4 47. gxh4 Qd5+ 48. f3 Qc5 49. Qxh6 Qf2+ 50. Kh3 Qxf3+ 51. Kh2 Qe2+ 52. Kh3 Qxb5 53. Qg5+ Qxg5 54. hxg5 Kh7 55. Kg4 Kg6 56. Kf4 Bf2 57. Kg4 Be1 58. Kf3 Kxg5 59. Kg2 Ba5 60. Kf3 Bc7 61. Ke4 Bb6 62. Kf3 Bg1 63. Kg2 Bc5 64. Kf1 Kf4 65. Kg2 f6 66. Kf1 Bd6 67. Kg1 f5 68. Kf1 Bc7 69. Kg1 Ke3 70. Kh1 Kf4 71. Kg1 Ke3 72. Kh1 Bb6 73. Kg1 1/2-1/2
+
+[Event "NeuroChess local paired evaluation"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "3"]
+[White "NeuroChess-step-10000"]
+[Black "Stockfish"]
+[Result "1/2-1/2"]
+[FEN "rnb1kb1r/ppppqpp1/5n1p/6N1/2P1p3/2N3P1/PP1PPP1P/R1BQKB1R w KQkq - 0 6"]
+[SetUp "1"]
+[GameId "strong-new-0002-1"]
+[ModelMode "mcts"]
+[SearchDepth "variable"]
+
+6. Nh3 g5 7. Bg2 Bg7 8. O-O O-O 9. d3 exd3 10. exd3 d5 11. Re1 Qd6 12. cxd5 Bg4 13. Qb3 Na6 14. Be3 Qd7 15. Nxg5 hxg5 16. Qxb7 Qc8 17. Qxc8 Bxc8 18. Bxg5 Rb8 19. Re2 Nb4 20. d4 Bb7 21. a3 Nbxd5 22. Nxd5 Nxd5 23. Rd1 Rfe8 24. Rc2 Bf8 25. h4 a5 26. Rd3 Re1+ 27. Kh2 a4 28. Rf3 Bc8 29. Rxf7 Kxf7 30. Bxd5+ Be6 31. Rxc7+ Kg8 32. Bxe6+ Rxe6 33. Rc2 Bh6 34. d5 Rd6 35. Bxh6 Rxh6 36. Kh3 Rd6 37. Rd2 Rb5 38. Rd4 Rxb2 39. Rxa4 Rxf2 40. Ra5 Kg7 41. a4 Rc2 42. h5 Kf6 43. Kh4 Rh2+ 44. Kg4 Rb2 45. h6 Kg6 46. Kf4 Re2 47. g4 Rf6+ 48. Kg3 Re1 49. g5 Rg1+ 50. Kh2 Rxg5 51. h7 Kxh7 52. Ra7+ Kh6 53. Ra8 Rxd5 54. Kg3 Rg5+ 55. Kh4 Rf2 56. Rh8+ Kg7 57. Rd8 Rgf5 58. Rd7+ Rf7 59. Rd4 R2f4+ 60. Rxf4 Rxf4+ 61. Kg5 Rf3 62. a5 Rf1 63. a6 Rc1 64. a7 Rc8 65. Kf5 Re8 66. a8=Q Rxa8 67. Ke5 Kh6 68. Kd5 Ra6 69. Kc5 Rg6 70. Kd5 Rg2 71. Ke5 Rb2 72. Kd4 Rb1 73. Kd3 Rb8 74. Kd4 Rc8 75. Kd5 Rc1 76. Kd4 Rc7 77. Kd5 Rc1 78. Kd4 Rc7 79. Kd5 1/2-1/2
+
+[Event "NeuroChess local paired evaluation"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "1"]
+[White "NeuroChess-step-10000"]
+[Black "Stockfish"]
+[Result "0-1"]
+[FEN "rnbqkb1r/ppp2ppp/8/3pp3/2B1n3/5N2/PPPPQPPP/RNB1K2R w KQkq - 0 5"]
+[SetUp "1"]
+[GameId "strong-new-0000-1"]
+[ModelMode "mcts"]
+[SearchDepth "variable"]
+
+5. Nxe5 Be7 6. Bd3 Nc5 7. O-O O-O 8. b4 Ne6 9. Bb2 g6 10. f4 Ng7 11. a3 c5 12. bxc5 f6 13. Nf3 Ne6 14. f5 Bxc5+ 15. Kh1 Nf4 16. Qd1 Nxd3 17. cxd3 Bxf5 18. Qb3 Qb6 19. Qxd5+ Be6 20. Qe4 Bf7 21. Nc3 Re8 22. Qh4 Qxb2 23. Qxf6 Nd7 24. Qh4 Be7 25. Ng5 Bxg5 26. Qxg5 Qb3 27. Rab1 Qe6 28. Rxb7 Qc6 29. Rxd7 Qxd7 30. Ne4 Rxe4 31. dxe4 Bc4 32. Rc1 Qd4 33. Qe7 Qb2 34. Rg1 Qxd2 35. h3 Qd8 36. Qe5 Bf7 37. Rf1 Qd7 38. Qf6 Re8 39. e5 Qe7 40. Qf4 Bb3 41. Re1 Be6 42. a4 Rc8 43. Rd1 Qg7 44. Rd6 Re8 45. Qd4 Qe7 46. a5 Bf5 47. Qd5+ Kg7 48. e6 Bxe6 49. Qd4+ Kg8 50. Ra6 Bf7 51. Rxa7 Qe5 52. Qd7 Qf4 53. Qd1 Qf2 54. Rxf7 Re1+ 55. Qxe1 Qxe1+ 56. Kh2 Kxf7 57. a6 Qa1 58. a7 Qxa7 59. Kg3 Qc7+ 60. Kf3 Qb6 61. Kg3 Qd6+ 62. Kf3 Qd8 63. Kg3 Qc7+ 64. Kf3 Ke8 65. Kg4 h5+ 66. Kh4 Qe7+ 67. Kg3 Qc7+ 68. Kf3 h4 69. g3 Qxg3+ 70. Ke4 Qxh3 71. Kf4 Qg3+ 72. Ke4 Qc3 73. Kf4 Qg3+ 74. Ke4 h3 75. Kd5 h2 76. Kc6 h1=Q+ 77. Kc5 Qc3+ 78. Kd6 Qhc6# 0-1
+
+[Event "NeuroChess local paired evaluation"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "5"]
+[White "Stockfish"]
+[Black "NeuroChess-step-10000"]
+[Result "1/2-1/2"]
+[FEN "r1bqk2r/pp1pppbp/2n2np1/1Bp5/4P3/3P1N2/PPP2PPP/RNBQ1RK1 w kq - 3 6"]
+[SetUp "1"]
+[GameId "strong-new-0004-0"]
+[ModelMode "mcts"]
+[SearchDepth "variable"]
+
+6. e5 Nd5 7. Bxc6 dxc6 8. Re1 O-O 9. h3 h6 10. Bd2 Be6 11. Qc1 Kh7 12. Re4 Bf5 13. Rh4 Rh8 14. Bxh6 Kg8 15. Bxg7 Kxg7 16. Qd2 Rxh4 17. Nxh4 Be6 18. Nf3 Qh8 19. Nc3 Qh6 20. Ng5 Rh8 21. Nxe6+ fxe6 22. Qxh6+ Rxh6 23. Ne4 b6 24. Ng5 Nf4 25. Re1 Rh5 26. Nf3 g5 27. Re4 Kg6 28. h4 Kf5 29. hxg5 Rh7 30. g3 Nd5 31. c3 Rg7 32. a3 b5 33. Rh4 a5 34. Rh8 Nb6 35. Kh2 Na4 36. b3 Nxc3 37. Rf8+ Kg4 38. a4 Ne2 39. Kg2 Nc1 40. d4 Nxb3 41. dxc5 Nxc5 42. g6 b4 43. Rf7 Rg8 44. Rf4+ Kh5 45. Rc4 Nxa4 46. Rh4+ Kxg6 47. Nd4 Kf7 48. Rf4+ Ke8 49. Nxc6 Nc3 50. Nxa5 Nd5 51. Rc4 Kf7 52. Kf3 Ra8 53. Rc5 Nb6 54. Rb5 Nd5 55. Nc6 Ra3+ 56. Kg2 Rc3 57. Nd8+ Ke8 58. Nxe6 Kd7 59. Rxd5+ Kxe6 60. Rb5 b3 61. g4 Rd3 62. f3 Rd2+ 63. Kg3 b2 64. f4 Kd7 65. Rb6 Kc7 66. Rb4 Kc6 67. g5 Kc5 68. Rb8 Kc4 69. g6 Rd3+ 70. Kg4 Rb3 71. Rxb3 Kxb3 72. g7 b1=Q 73. g8=Q+ Kc3 74. Qc8+ Kd4 75. Qd7+ Ke3 76. Qxe7 Qg1+ 77. Kf5 Qb1+ 78. Kg5 Qg1+ 79. Kf6 Kxf4 80. Qb4+ Kf3 81. Qc3+ Ke4 82. Qc4+ Kf3 83. Qd3+ Kf4 84. Qf5+ Ke3 85. Qg5+ Qxg5+ 86. Kxg5 Kd4 87. Kf5 Kd5 88. Kf6 Ke4 89. e6 Kd5 90. e7 Kd6 91. Kf7 Ke5 92. Ke8 Kd6 93. Kf7 Ke5 94. Kg6 Kd6 1/2-1/2
+
+[Event "NeuroChess local paired evaluation"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "11"]
+[White "NeuroChess-step-10000"]
+[Black "Stockfish"]
+[Result "1/2-1/2"]
+[FEN "r1bqk2r/pppp1ppp/2n2n2/2b5/2BpP3/2P2N2/PP3PPP/RNBQK2R w KQkq - 0 6"]
+[SetUp "1"]
+[GameId "strong-new-0010-1"]
+[ModelMode "mcts"]
+[SearchDepth "variable"]
+
+6. cxd4 Bb4+ 7. Nc3 Nxe4 8. O-O Bxc3 9. bxc3 d5 10. Bd3 O-O 11. Qc2 Re8 12. Bf4 Ne7 13. c4 Ng6 14. Be3 Bg4 15. Ne5 Nf6 16. cxd5 Nxe5 17. dxe5 Rxe5 18. Bd4 Rxd5 19. Bxf6 gxf6 20. Bxh7+ Kg7 21. Be4 Rd2 22. Qb3 Qd4 23. Bxb7 Rb8 24. Qg3 Rxb7 25. h3 f5 26. hxg4 Qxg4 27. Qc3+ Qd4 28. Qg3+ Qg4 29. Qc3+ Qd4 30. Qg3+ 1/2-1/2
+
+[Event "NeuroChess local paired evaluation"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "13"]
+[White "NeuroChess-step-10000"]
+[Black "Stockfish"]
+[Result "1/2-1/2"]
+[FEN "r1bq1rk1/pppnppbp/3p1np1/6B1/2PPP3/2N2N2/PP3PPP/R2QKB1R w KQ - 3 7"]
+[SetUp "1"]
+[GameId "strong-new-0012-1"]
+[ModelMode "mcts"]
+[SearchDepth "variable"]
+
+7. Qd2 c5 8. d5 Ng4 9. Be2 f6 10. Bf4 Nge5 11. O-O Nxf3+ 12. Bxf3 Ne5 13. Be2 f5 14. f3 Qa5 15. Bg5 fxe4 16. fxe4 Qd8 17. Rxf8+ Qxf8 18. Rf1 Nf7 19. Be3 Bd7 20. h3 Be5 21. Bg4 Bxg4 22. hxg4 Qg7 23. Nb5 g5 24. Nc7 Rb8 25. Ne6 Qh6 26. Bxg5 Qh2+ 27. Kf2 b5 28. cxb5 Qg3+ 29. Kg1 Qh2+ 30. Kf2 Qg3+ 31. Kg1 Qh2+ 1/2-1/2
+
+[Event "NeuroChess local paired evaluation"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "9"]
+[White "NeuroChess-step-10000"]
+[Black "Stockfish"]
+[Result "0-1"]
+[FEN "r2qkbnr/ppp3pp/2p5/4Nb2/4p3/8/PPPP1PPP/RNBQK2R w KQkq - 0 7"]
+[SetUp "1"]
+[GameId "strong-new-0008-1"]
+[ModelMode "mcts"]
+[SearchDepth "variable"]
+
+7. O-O Qd4 8. d3 Qxe5 9. dxe4 Be6 10. Nc3 Bc5 11. Kh1 Nf6 12. f4 Qd4 13. Qf3 O-O 14. h3 Rad8 15. f5 Bc4 16. Rd1 Qe5 17. Bf4 Rxd1+ 18. Rxd1 Qe8 19. Bxc7 b6 20. b3 Bf7 21. Bf4 Nd7 22. Qg3 Bh5 23. Rd3 b5 24. Qg5 h6 25. Qh4 Kh7 26. g4 Bf7 27. g5 b4 28. Ne2 Qxe4+ 29. Kh2 Qxe2+ 30. Kg3 Bf2+ 31. Kg2 Be3+ 32. Kh1 Qf1+ 33. Kh2 Qg1# 0-1
+
+[Event "NeuroChess local paired evaluation"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "14"]
+[White "NeuroChess-step-10000"]
+[Black "Stockfish"]
+[Result "1-0"]
+[FEN "rnbqk2r/pp2ppbp/3p1np1/8/3NP3/2NB4/PPP2PPP/R1BQK2R w KQkq - 2 7"]
+[SetUp "1"]
+[GameId "strong-new-0013-1"]
+[ModelMode "mcts"]
+[SearchDepth "variable"]
+
+7. O-O Nc6 8. Nxc6 bxc6 9. h3 O-O 10. Be3 d5 11. e5 Nd7 12. f4 Nxe5 13. fxe5 d4 14. Bd2 dxc3 15. Bxc3 Be6 16. Qf3 Qb6+ 17. Kh1 Rad8 18. b3 h6 19. Rae1 Qc5 20. Ba1 Qb6 21. Qg3 c5 22. Rf4 Qa5 23. a4 Rc8 24. Ref1 Rfd8 25. Bxg6 fxg6 26. Qxg6 Qa6 27. Rf7 Bxf7 28. Qxa6 c4 29. e6 Bg6 30. Bxg7 cxb3 31. cxb3 Bd3 32. Qxa7 Bxf1 33. Qxe7 Bxg2+ 34. Kxg2 Rc2+ 35. Kf3 Rdd2 36. Qf7+ Kh7 37. Ba1# 1-0
+
+[Event "NeuroChess local paired evaluation"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "11"]
+[White "Stockfish"]
+[Black "NeuroChess-step-10000"]
+[Result "1/2-1/2"]
+[FEN "r1bqk2r/pppp1ppp/2n2n2/2b5/2BpP3/2P2N2/PP3PPP/RNBQK2R w KQkq - 0 6"]
+[SetUp "1"]
+[GameId "strong-new-0010-0"]
+[ModelMode "mcts"]
+[SearchDepth "variable"]
+
+6. cxd4 Bb4+ 7. Bd2 d5 8. Bxb4 dxc4 9. Ba3 Nxe4 10. d5 Ne7 11. Qe2 Nd6 12. Nc3 O-O 13. Bxd6 cxd6 14. Qxc4 Qb6 15. O-O Bd7 16. Rfe1 Ng6 17. h4 Rac8 18. Qb3 Qxb3 19. axb3 a6 20. Ne4 Bg4 21. Nh2 Bd7 22. Nxd6 Rc2 23. Nf3 Rxb2 24. h5 Nf4 25. Ne5 Bb5 26. Nxb5 axb5 27. Rad1 Nxh5 28. Nd7 Rd8 29. d6 Nf6 30. Nxf6+ gxf6 31. Re7 Rxb3 32. d7 Kf8 33. Rde1 Kg7 34. Rd1 Kf8 35. Rde1 Kg7 36. Rd1 1/2-1/2
+
+[Event "NeuroChess local paired evaluation"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "15"]
+[White "Stockfish"]
+[Black "NeuroChess-step-10000"]
+[Result "1-0"]
+[FEN "r1bqk2r/1ppp1ppp/p1n2n2/2b1p3/2B1P3/2PP1N2/PP3PPP/RNBQK2R w KQkq - 0 6"]
+[SetUp "1"]
+[GameId "strong-new-0014-0"]
+[ModelMode "mcts"]
+[SearchDepth "variable"]
+
+6. Ng5 O-O 7. Qb3 d5 8. Bxd5 Nxd5 9. exd5 Ne7 10. Ne4 Ba7 11. Bg5 f6 12. d6+ Kh8 13. dxe7 Qxe7 14. Bd2 f5 15. Bg5 Qd7 16. Qa3 Re8 17. Ned2 Qxd3 18. c4 Qc2 19. Qc3 Qxc3 20. Nxc3 c6 21. Be3 Bxe3 22. fxe3 Be6 23. e4 f4 24. Rc1 Rad8 25. b3 Rd3 26. Nf3 Bg4 27. O-O Bxf3 28. Rxf3 Rd4 29. Rd1 Red8 30. Rff1 Rd3 31. Rxd3 Rxd3 32. Nd1 Rd2 33. Nf2 Rxa2 34. Nd3 Rd2 35. Nxe5 g5 36. Nf3 Rb2 37. Nxg5 Rxb3 38. Rxf4 a5 39. e5 a4 40. e6 Re3 41. Kf2 Re5 42. Nf7+ Kg7 43. Nxe5 a3 44. e7 c5 45. Rf7+ Kh6 46. e8=Q a2 47. Qg8 a1=Q 48. Rxh7# 1-0
+
+[Event "NeuroChess local paired evaluation"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "9"]
+[White "Stockfish"]
+[Black "NeuroChess-step-10000"]
+[Result "0-1"]
+[FEN "r2qkbnr/ppp3pp/2p5/4Nb2/4p3/8/PPPP1PPP/RNBQK2R w KQkq - 0 7"]
+[SetUp "1"]
+[GameId "strong-new-0008-0"]
+[ModelMode "mcts"]
+[SearchDepth "variable"]
+
+7. O-O Qd4 8. Ng4 O-O-O 9. Ne3 Bg6 10. Qg4+ Kb8 11. Nc3 Nf6 12. Qg5 Bd6 13. b3 Qe5 14. Qxe5 Bxe5 15. Rb1 b5 16. Ne2 Kb7 17. Nc4 bxc4 18. Bb2 Bxb2 19. Rxb2 Rxd2 20. bxc4+ Ka8 21. Nf4 Rb8 22. Rxb8+ Kxb8 23. f3 exf3 24. Nxg6 Rxg2+ 25. Kh1 Rxg6 26. Rxf3 Rg4 27. Rf1 Rxc4 28. Rg1 g6 29. Rf1 Rxc2 30. Rxf6 Kb7 31. a4 a5 32. Rf7 h5 33. Rf1 Kb6 34. h3 Rc4 35. Kh2 Rxa4 36. Kg2 Rd4 37. Kf3 a4 38. Ke3 Rb4 39. Rg1 a3 40. Kd2 a2 41. Kc2 Rb1 42. Rxb1+ axb1=Q+ 43. Kxb1 Kc5 44. Kc1 Kd4 45. h4 c5 46. Kd1 c4 47. Kd2 c3+ 48. Kc2 Kc4 49. Kb1 Kd3 50. Kc1 c2 51. Kb2 Kd2 52. Kb3 c1=Q 53. Ka2 Qc3 54. Kb1 Qb4+ 55. Ka2 Kc2 56. Ka1 Qb1# 0-1
+
+[Event "NeuroChess local paired evaluation"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "12"]
+[White "NeuroChess-step-10000"]
+[Black "Stockfish"]
+[Result "1-0"]
+[FEN "rnbqk1nr/ppp2p1p/3b4/8/6p1/5NP1/PPPPP2P/RNBQKB1R w KQkq - 0 6"]
+[SetUp "1"]
+[GameId "strong-new-0011-1"]
+[ModelMode "mcts"]
+[SearchDepth "variable"]
+
+6. Nh4 Be7 7. Ng2 h5 8. d4 h4 9. Bf4 h3 10. Ne3 Bg5 11. Bxg5 Qxg5 12. Qd2 Nc6 13. Nc3 Nf6 14. Ned5 Qf5 15. Nxc7+ Kf8 16. Nxa8 b5 17. O-O-O b4 18. Na4 Ne4 19. Qe3 Nf2 20. Nc7 Nxh1 21. d5 Nf2 22. dxc6 Nxd1 23. Qd4 Rh6 24. Qd8+ Kg7 25. Ne8+ Kh7 26. Qxd1 Re6 27. Nd6 Qg5+ 28. Kb1 Qe5 29. Nxc8 Rxc6 30. e3 Rxc8 31. Qxg4 Rd8 32. Bd3+ Rxd3 33. cxd3 f5 34. Qxh3+ Kg7 35. Qg2 Qxe3 36. Kc2 Kh7 37. Qd2 Qe7 38. Kb3 Qe6+ 39. Kxb4 a5+ 40. Kxa5 Qe5+ 41. Kb4 Kg6 42. d4 Qb8+ 43. Ka3 f4 44. gxf4 Qf8+ 45. b4 Qe7 46. Nc3 Qa7+ 47. Kb3 Kf6 48. a4 Kg7 49. d5 Kf6 50. d6 Qf7+ 51. Qd5 Qxd5+ 52. Nxd5+ Kf5 53. d7 Kg6 54. d8=Q Kg7 55. Qf6+ Kh7 56. f5 Kg8 57. Qe7 Kh8 58. f6 Kg8 59. Qg7# 1-0
+
+[Event "NeuroChess local paired evaluation"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "13"]
+[White "Stockfish"]
+[Black "NeuroChess-step-10000"]
+[Result "1/2-1/2"]
+[FEN "r1bq1rk1/pppnppbp/3p1np1/6B1/2PPP3/2N2N2/PP3PPP/R2QKB1R w KQ - 3 7"]
+[SetUp "1"]
+[GameId "strong-new-0012-0"]
+[ModelMode "mcts"]
+[SearchDepth "variable"]
+
+7. Be2 e5 8. Qd2 Qe8 9. dxe5 dxe5 10. b4 c6 11. O-O a5 12. a3 Qe6 13. c5 b6 14. Be3 bxc5 15. bxc5 Ng4 16. Ng5 Qe7 17. Bxg4 f5 18. Nd5 cxd5 19. Qxd5+ Kh8 20. exf5 Nf6 21. Qxa8 Nxg4 22. fxg6 hxg6 23. h4 Bh6 24. Qe4 Bf5 25. Qc4 Nxe3 26. fxe3 Bxg5 27. hxg5 Qxg5 28. Qc3 Rf6 29. Qxe5 Kh7 30. Rad1 Rf7 31. Rf2 Re7 32. Qf4 Qh5 33. Rc1 Re4 34. Qc7+ Kh6 35. Qb8 Rh4 36. Qh8+ Kg5 37. Qxh5+ Rxh5 38. Rd2 Be4 39. Rc4 Bc6 40. Rd6 Bb5 41. Rcd4 Kh6 42. R4d5 Rxd5 43. Rxd5 Kg7 44. Kf2 Kf6 45. e4 Ke6 46. g3 Bc4 47. Rd6+ Ke5 48. Ke3 g5 49. Rd8 Be6 50. c6 Bg4 51. Rd5+ Ke6 52. Kd4 Ke7 53. c7 Bc8 54. e5 g4 55. a4 Be6 56. Rd6 Bc8 57. Ke3 Bd7 58. Rh6 Bc8 59. Rd6 Bd7 60. Kd4 Bc8 1/2-1/2
+
+[Event "NeuroChess local paired evaluation"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "12"]
+[White "Stockfish"]
+[Black "NeuroChess-step-10000"]
+[Result "1-0"]
+[FEN "rnbqk1nr/ppp2p1p/3b4/8/6p1/5NP1/PPPPP2P/RNBQKB1R w KQkq - 0 6"]
+[SetUp "1"]
+[GameId "strong-new-0011-0"]
+[ModelMode "mcts"]
+[SearchDepth "variable"]
+
+6. Nh4 Ne7 7. d4 Ng6 8. Nxg6 hxg6 9. Bg2 Rxh2 10. Qd3 Rxg2 11. Qe4+ Be6 12. Qxg2 Qf6 13. Qf2 Qg7 14. Bh6 Qh8 15. Nc3 Nd7 16. O-O-O Qf6 17. Qe3 O-O-O 18. Bg5 Qg7 19. Bxd8 Kxd8 20. Nb5 Bd5 21. Nxd6 cxd6 22. Qg5+ Nf6 23. Rhf1 Ke7 24. Rf4 Ke6 25. Rxg4 Nxg4 26. Qxg4+ f5 27. Qg5 Be4 28. Kb1 Qf6 29. Qh6 Kd5 30. Qe3 g5 31. Qb3+ Kc6 32. Ka1 f4 33. d5+ Kc7 34. Qc4+ Kb8 35. Qxe4 fxg3 36. Qe8+ Kc7 37. Qe3 g2 38. Qg3 Qf1 39. Rb1 g4 40. Qxg4 Qf2 41. a3 a6 42. Qg6 Qf1 43. c4 Qf2 44. c5 dxc5 45. e4 c4 46. d6+ Kd7 47. Rd1 Qf1 48. Qg4+ Kd8 49. Qh4+ Kd7 50. Qh3+ Kd8 51. Rxf1 gxf1=Q+ 52. Qxf1 Kd7 53. Ka2 c3 54. Qh3+ Kxd6 55. Qxc3 Ke6 56. Qb4 Ke5 57. Qb6 Kxe4 58. Qe6+ Kd4 59. a4 Kc5 60. a5 Kb5 61. Qb6+ Kc4 62. Qxb7 Kc5 63. Qd7 Kc4 64. Qd6 Kb5 65. b3 Kxa5 66. Qc5# 1-0
+
+[Event "NeuroChess local paired evaluation"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "16"]
+[White "NeuroChess-step-10000"]
+[Black "Stockfish"]
+[Result "0-1"]
+[FEN "r1bqk1nr/p2p1ppp/1pn1p3/2b5/2PNP3/8/PP2BPPP/RNBQK2R w KQkq - 2 7"]
+[SetUp "1"]
+[GameId "strong-new-0015-1"]
+[ModelMode "mcts"]
+[SearchDepth "variable"]
+
+7. Nb3 Bb4+ 8. Nc3 Bxc3+ 9. bxc3 Nf6 10. f3 O-O 11. Qd6 Ne8 12. Qg3 f6 13. O-O Ba6 14. Rd1 Ne5 15. f4 Nxc4 16. f5 e5 17. h4 Qc8 18. h5 Ncd6 19. Bf3 Bb7 20. Ba3 Nxe4 21. Bxe4 Bxe4 22. Bxf8 Kxf8 23. h6 gxh6 24. Qh4 Bxf5 25. Rf1 Bg6 26. Rxf6+ Nxf6 27. Qxf6+ Kg8 28. Qxe5 Qc6 29. Rd1 Re8 30. Qd4 d5 31. Qxd5+ Qxd5 32. Rxd5 Re7 33. Nd4 Kf7 34. Kf2 Kf6 35. Rd6+ Ke5 36. Rc6 Ke4 37. a4 Kd3 38. Nb5 h5 39. c4 Re2+ 40. Kg3 Be4 41. Rc7 Rxg2+ 42. Kh4 Bg6 43. Rxa7 Kxc4 44. Nd6+ Kd5 45. Nb5 Rg4+ 46. Kh3 Bf5 47. Kh2 Rb4 48. Nc7+ Kc6 49. Nb5 h4 50. Rc7+ Kd5 51. Nc3+ Kd4 52. Nb5+ Ke5 53. Rc6 Rb2+ 54. Kg1 h3 55. Nd6 Kd5 56. Rxb6 Rxb6 57. Nxf5 Ke5 58. Ne3 Rb3 59. Ng4+ Kf4 60. Nf2 Rg3+ 61. Kh2 Rg2+ 62. Kxh3 Rxf2 63. a5 h6 64. a6 Ra2 65. a7 Ra3+ 66. Kh4 Kf5 67. a8=Q Rxa8 68. Kh5 Ra6 69. Kh4 Ra3 70. Kh5 Rh3# 0-1
+
+[Event "NeuroChess local paired evaluation"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "10"]
+[White "Stockfish"]
+[Black "NeuroChess-step-10000"]
+[Result "1-0"]
+[FEN "r2qkbnr/ppp2ppp/2n5/3p3b/3P4/3B1P2/PPP1N1PP/RNBQK2R w KQkq - 1 7"]
+[SetUp "1"]
+[GameId "strong-new-0009-0"]
+[ModelMode "mcts"]
+[SearchDepth "variable"]
+
+7. Nf4 Bg6 8. Nc3 Nf6 9. O-O Bd6 10. Nb5 Be7 11. Nc3 O-O 12. Nce2 Bxd3 13. Nxd3 Bd6 14. Bg5 h6 15. Bh4 Re8 16. Qd2 g5 17. Bg3 Bxg3 18. hxg3 Qe7 19. Kf2 Ne4+ 20. fxe4 dxe4 21. Ne5 Nxe5 22. dxe5 Qxe5 23. Qb4 e3+ 24. Kg1 Rad8 25. Qxb7 Rd2 26. Rae1 Re6 27. Qa8+ Kg7 28. Qf3 Rf6 29. Qg4 Rf2 30. Rxf2 exf2+ 31. Kxf2 Rxc2 32. b3 Rxa2 33. Qc4 h5 34. Rc1 h4 35. gxh4 gxh4 36. Rd1 h3 37. gxh3 Qf5+ 38. Kg2 Qg5+ 39. Kh1 Qe5 40. Qg4+ Kf8 41. Qc8+ Kg7 42. Rg1+ Kf6 43. Qd8+ Kf5 44. Rg5+ Ke4 45. Rxe5+ Kxe5 46. Qe7+ Kd5 47. Nc3+ Kd4 48. Nxa2 c5 49. Nc1 Kc3 50. Qxc5+ Kb2 51. Nd3+ Kxb3 52. Nc1+ Kb2 53. Nd3+ Kb3 54. h4 a5 55. Nc1+ Kb2 56. Qc4 f5 57. Nd3+ Ka3 58. Qc3+ Ka4 59. Qc4+ Ka3 60. Qc1+ Kb3 61. h5 a4 62. h6 a3 63. Qd1+ Kc3 64. Kg1 a2 65. h7 a1=Q 66. Qxa1+ Kxd3 67. Qb1+ Kd4 68. Qxf5 Kc3 69. h8=Q+ Kc4 70. Qa1 Kb3 71. Qd5+ Kb4 72. Qaa5# 1-0
+
+[Event "NeuroChess local paired evaluation"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "14"]
+[White "Stockfish"]
+[Black "NeuroChess-step-10000"]
+[Result "1/2-1/2"]
+[FEN "rnbqk2r/pp2ppbp/3p1np1/8/3NP3/2NB4/PPP2PPP/R1BQK2R w KQkq - 2 7"]
+[SetUp "1"]
+[GameId "strong-new-0013-0"]
+[ModelMode "mcts"]
+[SearchDepth "variable"]
+
+7. O-O O-O 8. Be3 Ng4 9. Qc1 Nxe3 10. fxe3 Nc6 11. Nf3 a6 12. Qe1 b5 13. a4 b4 14. Nd5 Bxb2 15. Rb1 Bg7 16. Qh4 Rb8 17. Nd4 Nxd4 18. Nxe7+ Kh8 19. Rxf7 Ne6 20. Rbf1 Rxf7 21. Rxf7 Qe8 22. e5 Nf8 23. Nxg6+ Nxg6 24. Bxg6 Qg8 25. exd6 Be6 26. Re7 h6 27. d7 Bxd7 28. Rxd7 Rf8 29. Qe7 Rf6 30. Bf7 Qf8 31. Rd8 Rxf7 32. Rxf8+ Rxf8 33. Qxb4 Re8 34. g4 Rxe3 35. Kh1 Re2 36. Qc4 Re1+ 37. Kg2 a5 38. Qc8+ Kh7 39. Qf5+ Kh8 40. Qc8+ Kh7 41. Kf2 Re7 42. Qf5+ Kh8 43. c4 Bd4+ 44. Kf1 Kg7 45. Qb5 Rf7+ 46. Kg2 Rf2+ 47. Kg3 Rf7 48. h3 Bf2+ 49. Kg2 Bh4 50. Qb6 Re7 51. c5 Re2+ 52. Kh1 Bg3 53. h4 Rh2+ 54. Kg1 Rxh4 55. Qb7+ Kg6 56. Qe4+ Kf6 57. Qf3+ Bf4 58. Qxf4+ Ke6 59. Qg3 Rxg4 60. Qxg4+ Kd5 61. Kf1 Kxc5 62. Ke1 h5 63. Qf5+ Kb4 64. Qd5 Kxa4 65. Qc4+ Ka3 66. Qc5+ Kb3 67. Qb5+ Kc3 68. Qc5+ Kb3 69. Kd1 a4 70. Qb5+ Kc3 71. Qa5+ Kb3 72. Qb5+ Kc3 73. Qa5+ Kb3 1/2-1/2
+
+[Event "NeuroChess local paired evaluation"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "15"]
+[White "NeuroChess-step-10000"]
+[Black "Stockfish"]
+[Result "1/2-1/2"]
+[FEN "r1bqk2r/1ppp1ppp/p1n2n2/2b1p3/2B1P3/2PP1N2/PP3PPP/RNBQK2R w KQkq - 0 6"]
+[SetUp "1"]
+[GameId "strong-new-0014-1"]
+[ModelMode "mcts"]
+[SearchDepth "variable"]
+
+6. O-O Ba7 7. Nbd2 O-O 8. Re1 Ng4 9. Rf1 h6 10. h3 Nf6 11. Re1 d6 12. Nf1 Na5 13. Bb3 Nxb3 14. axb3 Re8 15. Ng3 d5 16. Qe2 c6 17. b4 Bb8 18. Nh4 Nxe4 19. dxe4 Qxh4 20. Kh2 Bc7 21. f3 f5 22. exf5 Rf8 23. Be3 Bxf5 24. Nxf5 Rxf5 25. Bf2 e4+ 26. Kh1 Qf4 27. Bg1 exf3 28. Qe6+ Kh7 29. g3 Qg5 30. Bf2 Qh5 31. Kh2 Rd8 32. Re3 d4 33. cxd4 Rxd4 34. Kg1 Qxh3 35. Rxf3 Rdd5 36. Qe4 Qh5 37. Rxf5 Qxf5 38. Qxf5+ Rxf5 39. Rd1 Rf7 40. Kg2 Be5 41. Rd2 Kg6 42. Re2 Kf6 43. Bc5 Rd7 44. Rf2+ Kg6 45. Re2 Bf6 46. Kf3 Rd3+ 47. Kg2 Rb3 48. Kh3 Rxb2 49. Re8 Rd2 50. Rb8 Rd7 51. Kg4 Bd8 52. Kf4 Bc7+ 53. Kf3 Bxb8 54. Ke4 Rd1 55. g4 Bd6 56. Be3 Re1 57. Kd3 Bxb4 58. Ke4 Bc5 59. Kd3 Bxe3 60. Ke4 Bc1+ 61. Kd3 b6 62. Kc2 a5 63. Kb3 Re4 64. Kc2 Ba3 65. Kd3 Ra4 66. Kc2 Rb4 67. Kc3 Rf4 68. Kb3 b5 69. Kxa3 Ra4+ 70. Kb3 Re4 71. Kc3 Ra4 72. Kb3 Re4 73. Kc3 Re5 74. Kb3 1/2-1/2
+
+[Event "NeuroChess local paired evaluation"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "10"]
+[White "NeuroChess-step-10000"]
+[Black "Stockfish"]
+[Result "1/2-1/2"]
+[FEN "r2qkbnr/ppp2ppp/2n5/3p3b/3P4/3B1P2/PPP1N1PP/RNBQK2R w KQkq - 1 7"]
+[SetUp "1"]
+[GameId "strong-new-0009-1"]
+[ModelMode "mcts"]
+[SearchDepth "variable"]
+
+7. O-O Bg6 8. c3 Bxd3 9. Qxd3 Qd7 10. Bf4 h5 11. Nd2 h4 12. h3 Bd6 13. Rfe1 Nge7 14. b4 Qf5 15. Qe3 O-O 16. Bxd6 cxd6 17. b5 Ng6 18. bxc6 bxc6 19. c4 Rae8 20. Qf2 Qc2 21. cxd5 Qxd2 22. dxc6 Qc2 23. Rac1 Qxa2 24. c7 Rc8 25. f4 Ne7 26. Qxh4 Nd5 27. Ng3 Rxc7 28. Rxc7 Nxc7 29. Nf5 Nd5 30. Qg5 g6 31. Kh2 Qc2 32. Ne7+ Nxe7 33. Rxe7 a5 34. h4 Ra8 35. Qd5 Rf8 36. Qxa5 Qb2 37. Qd5 Qf2 38. Qg5 Qxd4 39. h5 Qd3 40. hxg6 Qxg6 41. Qxg6+ fxg6 42. Kg3 d5 43. Rd7 Rf6 44. Rxd5 Kh7 45. Kg4 Rf7 46. Kg5 Rb7 47. g4 Kg7 48. Re5 Rc7 49. Rd5 Rb7 50. Rc5 Ra7 51. Rb5 Rd7 52. Rc5 Ra7 53. Re5 Rc7 54. Rb5 Ra7 55. Rc5 Rb7 56. Ra5 Rd7 57. Rb5 Ra7 58. Rc5 Rd7 59. Rc6 Rd5+ 60. f5 gxf5 61. gxf5 Rd2 62. Rc7+ Kg8 63. Kg6 Rg2+ 64. Kf6 Ra2 65. Rc8+ Kh7 66. Rc7+ Kh6 67. Rc6 Ra8 68. Kf7+ Kg5 69. f6 Kh6 70. Ke7 Ra7+ 71. Ke6 Ra8 72. f7 Kg7 73. Ke7 Ra7+ 74. Ke6 Rxf7 75. Rc1 Rf2 76. Rg1+ Kf8 77. Ra1 Re2+ 78. Kf6 Rf2+ 79. Ke6 Rf7 80. Ra8+ Kg7 81. Ra1 Rf6+ 82. Ke5 Rh6 83. Rg1+ Kh8 84. Kf5 Rh5+ 85. Kf6 Rh6+ 86. Kf7 Kh7 87. Rg7+ Kh8 88. Rg8+ Kh7 89. Rg7+ Kh8 90. Rg8+ Kh7 1/2-1/2
+
+[Event "NeuroChess local paired evaluation"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "16"]
+[White "Stockfish"]
+[Black "NeuroChess-step-10000"]
+[Result "1-0"]
+[FEN "r1bqk1nr/p2p1ppp/1pn1p3/2b5/2PNP3/8/PP2BPPP/RNBQK2R w KQkq - 2 7"]
+[SetUp "1"]
+[GameId "strong-new-0015-0"]
+[ModelMode "mcts"]
+[SearchDepth "variable"]
+
+7. Nb3 Bb4+ 8. Bd2 Bxd2+ 9. Qxd2 Bb7 10. Nc3 Nf6 11. Qd6 Qb8 12. Qd2 Qe5 13. Rd1 O-O 14. f4 Qc7 15. e5 Nxe5 16. fxe5 Qxe5 17. O-O d5 18. Bf3 Rad8 19. Qf2 dxc4 20. Rxd8 Rxd8 21. Bxb7 cxb3 22. axb3 Qc7 23. Ba6 h6 24. h3 Qd6 25. Bc4 Qe7 26. Qe3 Qd6 27. Rd1 Qc7 28. Rxd8+ Qxd8 29. Qf4 Qd7 30. b4 Qe7 31. Bf1 e5 32. Qh4 Qd6 33. Qc4 Qd2 34. Qc8+ Kh7 35. Qf5+ Kg8 36. Qxe5 Qxb2 37. Qd4 Qa1 38. b5 Qe1 39. Ne2 Kh7 40. Qe5 h5 41. Qf4 Kg8 42. Nd4 Ne4 43. Nc2 Qc3 44. Qxe4 g6 45. Qc6 Qd2 46. Qe8+ Kg7 47. Qe5+ Kg8 48. Qc7 h4 49. Kh1 Qf2 50. Qd8+ Kh7 51. Qd3 Kg7 52. Qd4+ Qxd4 53. Nxd4 Kf6 54. Nf3 g5 55. Bd3 Ke6 56. Ne1 Ke5 57. Bc4 Kd4 58. Bxf7 Kc5 59. Kh2 Kxb5 60. Be6 a5 61. Nc2 Kc5 62. Bb3 b5 63. Ba2 a4 64. g4 b4 65. Nxb4 Kxb4 66. Kg2 Kc3 67. Kf3 Kb2 68. Be6 a3 69. Ke4 Kc3 70. Kf5 Kd4 71. Kxg5 Ke5 72. Ba2 Kd4 73. Kxh4 Kc3 74. g5 Kb2 75. Bd5 a2 76. Bxa2 Kxa2 77. g6 Kb3 78. Kg5 Kc4 79. g7 Kd3 80. g8=Q Ke3 81. h4 Kf3 82. h5 Ke3 83. Qc4 Kf3 84. Qd3+ Kg2 85. Qe4+ Kf2 86. Kg6 Kg3 87. Qe1+ Kg4 88. h6 Kf3 89. h7 Kg4 90. h8=Q Kf3 91. Qh3+ Kf4 92. Qf5# 1-0
+
+[Event "NeuroChess local paired evaluation"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "2"]
+[White "Stockfish"]
+[Black "NeuroChess-step-10000"]
+[Result "0-1"]
+[FEN "r1bqkbnr/1ppp1ppp/p1n5/1B6/3pP3/5N2/PPP2PPP/RNBQK2R w KQkq - 0 5"]
+[SetUp "1"]
+[GameId "weak-new-0001-0"]
+[ModelMode "mcts"]
+[SearchDepth "variable"]
+
+5. Bc4 Nf6 6. Nxd4 Nxe4 7. Qe2 Nxd4 8. Bxf7+ Kxf7 9. Qd1 d5 10. c3 Qh4 11. O-O Nc6 12. Nd2 Bd6 13. Nf3 Qh5 14. Ng5+ Kg6 15. h4 Qxh4 16. Nxe4 Qh2# 0-1
+
+[Event "NeuroChess local paired evaluation"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "2"]
+[White "NeuroChess-step-10000"]
+[Black "Stockfish"]
+[Result "1-0"]
+[FEN "r1bqkbnr/1ppp1ppp/p1n5/1B6/3pP3/5N2/PPP2PPP/RNBQK2R w KQkq - 0 5"]
+[SetUp "1"]
+[GameId "weak-new-0001-1"]
+[ModelMode "mcts"]
+[SearchDepth "variable"]
+
+5. Bxc6 bxc6 6. Qxd4 Nf6 7. Nc3 d5 8. e5 Nh5 9. O-O a5 10. Bg5 Be7 11. Bxe7 Kxe7 12. Qh4+ f6 13. Qxh5 Be6 14. exf6+ Kd7 15. fxg7 Qe8 16. gxh8=Q Qe7 17. Qxa8 a4 18. Ne5+ Kd6 19. Qxc6# 1-0
+
+[Event "NeuroChess local paired evaluation"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "4"]
+[White "NeuroChess-step-10000"]
+[Black "Stockfish"]
+[Result "1-0"]
+[FEN "rnbq1rk1/pp2ppbp/2p2np1/3p2B1/2PP4/2N1PN2/PP3PPP/R2QKB1R w KQ - 1 7"]
+[SetUp "1"]
+[GameId "weak-new-0003-1"]
+[ModelMode "mcts"]
+[SearchDepth "variable"]
+
+7. cxd5 Qb6 8. Bxf6 c5 9. Bxg7 Bf5 10. Bxf8 Qb4 11. Qd2 Kxf8 12. dxc5 Nc6 13. dxc6 Rd8 14. Qxd8+ Kg7 15. Qd4+ e5 16. Qxb4 Bh3 17. gxh3 Kg8 18. cxb7 e4 19. Qxe4 a5 20. b8=Q+ Kg7 21. Qbe5+ Kf8 22. Qa8# 1-0
+
+[Event "NeuroChess local paired evaluation"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "8"]
+[White "Stockfish"]
+[Black "NeuroChess-step-10000"]
+[Result "0-1"]
+[FEN "r2qkbnr/pp2pppp/2n5/3p1b2/3P4/2P2N2/PP3PPP/RNBQKB1R w KQkq - 1 6"]
+[SetUp "1"]
+[GameId "weak-new-0007-0"]
+[ModelMode "mcts"]
+[SearchDepth "variable"]
+
+6. Be2 e6 7. a4 Bd6 8. Ra2 Nf6 9. Nh4 Bxb1 10. Bf4 Bxa2 11. g3 Bxf4 12. Bb5 Bg5 13. Ng2 O-O 14. O-O Bc4 15. Qf3 Bxf1 16. Bxf1 Ne4 17. Qh5 Qf6 18. Be2 Qxf2+ 19. Kh1 g6 20. Bd3 gxh5 21. Nf4 Bxf4 22. Bxe4 Qf1# 0-1
+
+[Event "NeuroChess local paired evaluation"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "7"]
+[White "NeuroChess-step-10000"]
+[Black "Stockfish"]
+[Result "1-0"]
+[FEN "r1bqkbnr/ppp2ppp/2n5/3pP3/5p2/5N2/PPPP2PP/RNBQKB1R w KQkq - 1 5"]
+[SetUp "1"]
+[GameId "weak-new-0006-1"]
+[ModelMode "mcts"]
+[SearchDepth "variable"]
+
+5. d4 Nge7 6. Bxf4 Nf5 7. c3 h6 8. Bd3 Be6 9. O-O g6 10. Nbd2 g5 11. Bg3 h5 12. Bxf5 Bxf5 13. h4 Bg4 14. Qb3 Na5 15. Qa4+ Bd7 16. Qxa5 Be7 17. Qxd5 g4 18. Ng5 Bc6 19. Qxf7+ Kd7 20. Qe6+ Ke8 21. Nde4 Rh7 22. Nf6+ Kf8 23. Qg8# 1-0
+
+[Event "NeuroChess local paired evaluation"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "3"]
+[White "Stockfish"]
+[Black "NeuroChess-step-10000"]
+[Result "0-1"]
+[FEN "rnb1kb1r/ppppqpp1/5n1p/6N1/2P1p3/2N3P1/PP1PPP1P/R1BQKB1R w KQkq - 0 6"]
+[SetUp "1"]
+[GameId "weak-new-0002-0"]
+[ModelMode "mcts"]
+[SearchDepth "variable"]
+
+6. Ngxe4 Nxe4 7. Nd5 Qc5 8. e3 c6 9. Nc7+ Kd8 10. f3 Kxc7 11. d4 Qb4+ 12. Qd2 Nxd2 13. Bxd2 Qxb2 14. Rd1 Bb4 15. d5 Bxd2+ 16. Rxd2 Qc1+ 17. Rd1 Qxe3+ 18. Be2 Re8 19. d6+ Kd8 20. Kf1 Qxe2+ 21. Kg1 Qxd1+ 22. Kg2 Re2+ 23. Kh3 Qxh1 24. c5 Qxf3 25. a4 Qh5# 0-1
+
+[Event "NeuroChess local paired evaluation"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "6"]
+[White "NeuroChess-step-10000"]
+[Black "Stockfish"]
+[Result "1-0"]
+[FEN "rnbq1rk1/ppp1bpp1/4pn1p/3p2B1/3P4/2NBPN2/PPP2PPP/R2QK2R w KQ - 0 7"]
+[SetUp "1"]
+[GameId "weak-new-0005-1"]
+[ModelMode "mcts"]
+[SearchDepth "variable"]
+
+7. Bh4 c5 8. dxc5 a6 9. O-O Nbd7 10. b4 b6 11. c6 Bxb4 12. cxd7 Bxd7 13. Ne2 Ba4 14. Rb1 Bd6 15. Bxf6 Qc7 16. Ba1 Rfc8 17. Ng3 a5 18. Nd4 Kh8 19. Qh5 Bd7 20. Qxf7 a4 21. Nxe6 Be5 22. Nxc7 Rf8 23. Qxd7 Bxa1 24. Rxa1 Ra7 25. Qe7 Rfa8 26. Nf5 g5 27. Qg7# 1-0
+
+[Event "NeuroChess local paired evaluation"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "6"]
+[White "Stockfish"]
+[Black "NeuroChess-step-10000"]
+[Result "0-1"]
+[FEN "rnbq1rk1/ppp1bpp1/4pn1p/3p2B1/3P4/2NBPN2/PPP2PPP/R2QK2R w KQ - 0 7"]
+[SetUp "1"]
+[GameId "weak-new-0005-0"]
+[ModelMode "mcts"]
+[SearchDepth "variable"]
+
+7. Bf4 c5 8. dxc5 Bxc5 9. g4 Nc6 10. Qe2 Re8 11. Ne5 Bd6 12. g5 Nxe5 13. Bb5 hxg5 14. Bxe8 gxf4 15. exf4 Ng6 16. Bxf7+ Kxf7 17. h4 Nxf4 18. Qf3 e5 19. Rd1 Bg4 20. Qxd5+ N4xd5 21. Rg1 Bxd1 22. f3 Nxc3 23. Rxg7+ Kxg7 24. a4 Bc5 25. Kf1 Qd2 26. h5 Qe2# 0-1
+
+[Event "NeuroChess local paired evaluation"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "5"]
+[White "NeuroChess-step-10000"]
+[Black "Stockfish"]
+[Result "1-0"]
+[FEN "r1bqk2r/pp1pppbp/2n2np1/1Bp5/4P3/3P1N2/PPP2PPP/RNBQ1RK1 w kq - 3 6"]
+[SetUp "1"]
+[GameId "weak-new-0004-1"]
+[ModelMode "mcts"]
+[SearchDepth "variable"]
+
+6. Re1 O-O 7. Nbd2 Qc7 8. c3 Rd8 9. a4 d5 10. Bxc6 bxc6 11. Qc2 Ba6 12. e5 Ne8 13. Nb3 Qb6 14. Be3 Bxd3 15. Qxd3 Qxb3 16. Bxc5 Nc7 17. Nd4 Qb7 18. b4 Rdc8 19. e6 Kf8 20. exf7 Bxd4 21. Qxd4 Na6 22. Qh8+ Kxf7 23. Rxe7+ Qxe7 24. Qxh7+ Kf8 25. Bxe7+ Ke8 26. Re1 Nc5 27. Bxc5+ Kd8 28. Qe7# 1-0
+
+[Event "NeuroChess local paired evaluation"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "4"]
+[White "Stockfish"]
+[Black "NeuroChess-step-10000"]
+[Result "0-1"]
+[FEN "rnbq1rk1/pp2ppbp/2p2np1/3p2B1/2PP4/2N1PN2/PP3PPP/R2QKB1R w KQ - 1 7"]
+[SetUp "1"]
+[GameId "weak-new-0003-0"]
+[ModelMode "mcts"]
+[SearchDepth "variable"]
+
+7. Rc1 Nbd7 8. h3 Re8 9. Be2 Ne4 10. Nxe4 dxe4 11. Ne5 Nxe5 12. O-O Nd3 13. Rc3 Nxb2 14. Qc2 Nd3 15. Qb3 Qa5 16. h4 h6 17. c5 hxg5 18. h5 Be6 19. Rc4 Bxc4 20. Qxc4 Qb4 21. Qxf7+ Kxf7 22. Bg4 gxh5 23. Bxh5+ Kg8 24. Bxe8 Rxe8 25. Ra1 Rf8 26. Rf1 Qd2 27. Kh2 Rxf2 28. a4 Qxe3 29. d5 Qf4+ 30. Kh3 Qh4# 0-1
+
+[Event "NeuroChess local paired evaluation"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "3"]
+[White "NeuroChess-step-10000"]
+[Black "Stockfish"]
+[Result "1-0"]
+[FEN "rnb1kb1r/ppppqpp1/5n1p/6N1/2P1p3/2N3P1/PP1PPP1P/R1BQKB1R w KQkq - 0 6"]
+[SetUp "1"]
+[GameId "weak-new-0002-1"]
+[ModelMode "mcts"]
+[SearchDepth "variable"]
+
+6. Nh3 g5 7. Bg2 Nc6 8. O-O d6 9. d3 Bg7 10. dxe4 Bg4 11. f3 Bd7 12. Nf2 O-O-O 13. Nd5 Qe8 14. Be3 Rg8 15. Rc1 Rf8 16. b4 Kb8 17. b5 Ne5 18. a4 c6 19. Nxf6 Bxf6 20. Qxd6+ Ka8 21. Qxf6 g4 22. f4 Ng6 23. Bc5 Be6 24. Bxf8 a6 25. Bc5 axb5 26. axb5 Bxc4 27. Ra1+ Kb8 28. bxc6 Bxe2 29. Rfb1 Kc7 30. Rxb7+ Kc8 31. Ra8# 1-0
+
+[Event "NeuroChess local paired evaluation"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "5"]
+[White "Stockfish"]
+[Black "NeuroChess-step-10000"]
+[Result "0-1"]
+[FEN "r1bqk2r/pp1pppbp/2n2np1/1Bp5/4P3/3P1N2/PPP2PPP/RNBQ1RK1 w kq - 3 6"]
+[SetUp "1"]
+[GameId "weak-new-0004-0"]
+[ModelMode "mcts"]
+[SearchDepth "variable"]
+
+6. Bxc6 bxc6 7. e5 Nd5 8. Re1 O-O 9. h3 d6 10. Nbd2 Rb8 11. Nc4 h6 12. Qe2 Nb6 13. Na5 Qc7 14. Bd2 Kh7 15. Rab1 Nd5 16. a3 Ba6 17. c4 Nb6 18. b4 cxb4 19. Bxb4 c5 20. exd6 exd6 21. Bd2 d5 22. Qd1 dxc4 23. Ng5+ hxg5 24. Qe2 cxd3 25. Qf3 Rbe8 26. a4 Re2 27. Bc3 Bxc3 28. Nc6 Rxe1+ 29. Rxe1 Bxe1 30. Qe4 d2 31. Ne7 d1=Q 32. f4 Bg3+ 33. Qe1 Qxe1# 0-1
+
+[Event "NeuroChess local paired evaluation"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "7"]
+[White "Stockfish"]
+[Black "NeuroChess-step-10000"]
+[Result "0-1"]
+[FEN "r1bqkbnr/ppp2ppp/2n5/3pP3/5p2/5N2/PPPP2PP/RNBQKB1R w KQkq - 1 5"]
+[SetUp "1"]
+[GameId "weak-new-0006-0"]
+[ModelMode "mcts"]
+[SearchDepth "variable"]
+
+5. d4 g5 6. h3 h5 7. h4 g4 8. Ng5 f6 9. exf6 Qxf6 10. Qe2+ Nge7 11. Qd2 Nxd4 12. c3 Ne6 13. Qf2 Nxg5 14. Bb5+ c6 15. hxg5 Qe5+ 16. Qe2 Qxe2+ 17. Bxe2 Ng6 18. Bd3 Ne5 19. Be2 f3 20. gxf3 gxf3 21. Bf4 Ng6 22. Bxf3 Nxf4 23. Kf2 Bc5+ 24. Ke1 Bf5 25. Nd2 O-O-O 26. Nb3 Rde8+ 27. Kd2 Be3+ 28. Kd1 h4 29. Nd4 Bxd4 30. Rxh4 Rxh4 31. Bxd5 Nxd5 32. a3 Nxc3+ 33. Kc1 Be3# 0-1
+
+[Event "NeuroChess local paired evaluation"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "1"]
+[White "Stockfish"]
+[Black "NeuroChess-step-10000"]
+[Result "0-1"]
+[FEN "rnbqkb1r/ppp2ppp/8/3pp3/2B1n3/5N2/PPPPQPPP/RNB1K2R w KQkq - 0 5"]
+[SetUp "1"]
+[GameId "weak-new-0000-0"]
+[ModelMode "mcts"]
+[SearchDepth "variable"]
+
+5. Bb3 Nc6 6. c3 Nc5 7. Nxe5 Nxe5 8. d4 Nxb3 9. axb3 Bg4 10. Qe3 Qe7 11. dxe5 Qc5 12. Qf4 Be6 13. Na3 Qb6 14. b4 a5 15. Nb1 Be7 16. Be3 c5 17. O-O O-O 18. bxc5 Qxb2 19. Qa4 Rfc8 20. h3 Bxc5 21. Na3 Bxe3 22. Qc2 Qxc2 23. Nxc2 Bd2 24. Rfb1 Bxc3 25. Ra4 Bxe5 26. Rxb7 Rxc2 27. f4 Bf6 28. Rb1 d4 29. g3 d3 30. g4 d2 31. f5 Rc1+ 32. Kg2 Bd5+ 33. Kh2 Be5+ 34. Rf4 Bxf4# 0-1
+
+[Event "NeuroChess local paired evaluation"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "8"]
+[White "NeuroChess-step-10000"]
+[Black "Stockfish"]
+[Result "1-0"]
+[FEN "r2qkbnr/pp2pppp/2n5/3p1b2/3P4/2P2N2/PP3PPP/RNBQKB1R w KQkq - 1 6"]
+[SetUp "1"]
+[GameId "weak-new-0007-1"]
+[ModelMode "mcts"]
+[SearchDepth "variable"]
+
+6. Bd3 Bg6 7. O-O Bxd3 8. Qxd3 Rc8 9. Re1 Qd7 10. Bf4 g6 11. Nbd2 Nf6 12. Ne5 Nxe5 13. Bxe5 Qc6 14. Qf3 Bg7 15. Re2 O-O 16. Rae1 Qd7 17. h3 Rc6 18. Bxf6 exf6 19. Re7 Qc8 20. Qxd5 Rb6 21. Nc4 Rxb2 22. Nxb2 a6 23. c4 f5 24. Qxb7 Bxd4 25. Qxc8 Rxc8 26. Re8+ Rxe8 27. Rxe8+ Kg7 28. Nd3 a5 29. c5 h6 30. c6 Kf6 31. c7 Ba7 32. c8=Q Kg7 33. Rg8+ Kh7 34. Qf8 Bxf2+ 35. Kxf2 h5 36. Rh8# 1-0
+
+[Event "NeuroChess local paired evaluation"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "1"]
+[White "NeuroChess-step-10000"]
+[Black "Stockfish"]
+[Result "1-0"]
+[FEN "rnbqkb1r/ppp2ppp/8/3pp3/2B1n3/5N2/PPPPQPPP/RNB1K2R w KQkq - 0 5"]
+[SetUp "1"]
+[GameId "weak-new-0000-1"]
+[ModelMode "mcts"]
+[SearchDepth "variable"]
+
+5. Nxe5 Bc5 6. Bb3 Bxf2+ 7. Kd1 O-O 8. Rf1 Bc5 9. d3 Nc6 10. Nxc6 bxc6 11. dxe4 dxe4+ 12. Nd2 a5 13. a4 Rb8 14. c3 e3 15. Kc2 Qe7 16. Bc4 Kh8 17. Nf3 Bf5+ 18. Bd3 Be6 19. Bxe3 Bb3+ 20. Kd2 Rfd8 21. Bd4 Be6 22. Kc2 Bxd4 23. Nxd4 Rxd4 24. cxd4 Qb4 25. Rab1 Ba2 26. Qe4 f5 27. Qxf5 Bb3+ 28. Kc1 Bg8 29. Qc5 Rf8 30. Qxb4 Rxf1+ 31. Bxf1 axb4 32. a5 Be6 33. a6 Kg8 34. a7 b3 35. a8=Q+ Kf7 36. Qxc6 Kf8 37. Qxe6 c6 38. Bc4 c5 39. Qf7# 1-0
+
+[Event "NeuroChess local paired evaluation"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "9"]
+[White "NeuroChess-step-10000"]
+[Black "Stockfish"]
+[Result "1-0"]
+[FEN "r2qkbnr/ppp3pp/2p5/4Nb2/4p3/8/PPPP1PPP/RNBQK2R w KQkq - 0 7"]
+[SetUp "1"]
+[GameId "weak-new-0008-1"]
+[ModelMode "mcts"]
+[SearchDepth "variable"]
+
+7. O-O Qf6 8. d4 exd3 9. Nxd3 Bd6 10. Re1+ Be7 11. Ne5 Nh6 12. Bxh6 gxh6 13. Qh5+ Kf8 14. Nc3 c5 15. Nd5 Kg7 16. Nxf6 Raf8 17. Qxf5 Rf7 18. Nh5+ Kf8 19. Qxf7# 1-0
+
+[Event "NeuroChess local paired evaluation"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "16"]
+[White "Stockfish"]
+[Black "NeuroChess-step-10000"]
+[Result "0-1"]
+[FEN "r1bqk1nr/p2p1ppp/1pn1p3/2b5/2PNP3/8/PP2BPPP/RNBQK2R w KQkq - 2 7"]
+[SetUp "1"]
+[GameId "weak-new-0015-0"]
+[ModelMode "mcts"]
+[SearchDepth "variable"]
+
+7. Nxc6 dxc6 8. Qb3 Qf6 9. Bf3 Ne7 10. O-O O-O 11. Nc3 e5 12. Na4 Bd4 13. Be3 Ng6 14. Rad1 Be6 15. Rd2 Nh4 16. Be2 Qg6 17. g3 Qxe4 18. gxh4 Bh3 19. Bxd4 Qg2# 0-1
+
+[Event "NeuroChess local paired evaluation"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "10"]
+[White "Stockfish"]
+[Black "NeuroChess-step-10000"]
+[Result "0-1"]
+[FEN "r2qkbnr/ppp2ppp/2n5/3p3b/3P4/3B1P2/PPP1N1PP/RNBQK2R w KQkq - 1 7"]
+[SetUp "1"]
+[GameId "weak-new-0009-0"]
+[ModelMode "mcts"]
+[SearchDepth "variable"]
+
+7. h4 Bd6 8. g4 Bg6 9. c3 h5 10. Bf4 hxg4 11. Bg5 Qxg5 12. hxg5 Rxh1+ 13. Kd2 Rxd1+ 14. Kxd1 Bxd3 15. a3 gxf3 16. Ng3 Bxg3 17. Nd2 f2 18. Nf1 Bxf1 19. Kd2 Bf4+ 20. Kd1 Bd3 21. g6 f1=Q# 0-1
+
+[Event "NeuroChess local paired evaluation"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "12"]
+[White "NeuroChess-step-10000"]
+[Black "Stockfish"]
+[Result "1-0"]
+[FEN "rnbqk1nr/ppp2p1p/3b4/8/6p1/5NP1/PPPPP2P/RNBQKB1R w KQkq - 0 6"]
+[SetUp "1"]
+[GameId "weak-new-0011-1"]
+[ModelMode "mcts"]
+[SearchDepth "variable"]
+
+6. Nh4 Be6 7. d4 Bb4+ 8. c3 Nc6 9. cxb4 Qf6 10. d5 Nd4 11. Nc3 Bxd5 12. Nxd5 Qc6 13. Qxd4 f6 14. Bg2 O-O-O 15. O-O Kb8 16. Be3 a5 17. Rac1 Qxd5 18. Qa7+ Kc8 19. Bxd5 Rxd5 20. Rxc7+ Kd8 21. Qb8# 1-0
+
+[Event "NeuroChess local paired evaluation"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "12"]
+[White "Stockfish"]
+[Black "NeuroChess-step-10000"]
+[Result "0-1"]
+[FEN "rnbqk1nr/ppp2p1p/3b4/8/6p1/5NP1/PPPPP2P/RNBQKB1R w KQkq - 0 6"]
+[SetUp "1"]
+[GameId "weak-new-0011-0"]
+[ModelMode "mcts"]
+[SearchDepth "variable"]
+
+6. Ng1 h5 7. Bg2 h4 8. d4 hxg3 9. e4 gxh2 10. e5 Qh4+ 11. Kf1 Be7 12. Bf4 g3 13. Ne2 Bh3 14. a3 Bxg2+ 15. Kxg2 Qh3+ 16. Kf3 g2+ 17. Kf2 gxh1=Q 18. Ng3 Qxd1 19. Ke3 Qg2 20. Nc3 Qdd2# 0-1
+
+[Event "NeuroChess local paired evaluation"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "13"]
+[White "NeuroChess-step-10000"]
+[Black "Stockfish"]
+[Result "1-0"]
+[FEN "r1bq1rk1/pppnppbp/3p1np1/6B1/2PPP3/2N2N2/PP3PPP/R2QKB1R w KQ - 3 7"]
+[SetUp "1"]
+[GameId "weak-new-0012-1"]
+[ModelMode "mcts"]
+[SearchDepth "variable"]
+
+7. Qd2 Re8 8. Bh6 Bh8 9. h4 c6 10. h5 Nxh5 11. Rxh5 b5 12. Rh4 Bf6 13. Bg5 e5 14. Bxf6 Qxf6 15. cxb5 g5 16. Qxg5+ Qxg5 17. Nxg5 Rb8 18. bxc6 exd4 19. cxd7 Bxd7 20. Nd5 Rxb2 21. Nf6+ Kg7 22. Nxe8+ Kh8 23. Rxh7+ Kg8 24. Nf6+ Kf8 25. Rxf7# 1-0
+
+[Event "NeuroChess local paired evaluation"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "11"]
+[White "NeuroChess-step-10000"]
+[Black "Stockfish"]
+[Result "1-0"]
+[FEN "r1bqk2r/pppp1ppp/2n2n2/2b5/2BpP3/2P2N2/PP3PPP/RNBQK2R w KQkq - 0 6"]
+[SetUp "1"]
+[GameId "weak-new-0010-1"]
+[ModelMode "mcts"]
+[SearchDepth "variable"]
+
+6. cxd4 Qe7 7. dxc5 Qxe4+ 8. Qe2 Qxe2+ 9. Kxe2 b6 10. cxb6 Na5 11. bxc7 Bb7 12. Bd3 Nd5 13. Bd2 Rc8 14. Bxa5 f6 15. Nc3 Nf4+ 16. Kd2 Bxf3 17. gxf3 f5 18. Ba6 d5 19. Bxc8 d4 20. Rhe1+ Ne2 21. Rxe2+ Kf7 22. Be6+ Ke7 23. c8=Q dxc3+ 24. Qxc3 Kf8 25. Bb4+ Ke8 26. Qc8# 1-0
+
+[Event "NeuroChess local paired evaluation"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "16"]
+[White "NeuroChess-step-10000"]
+[Black "Stockfish"]
+[Result "1-0"]
+[FEN "r1bqk1nr/p2p1ppp/1pn1p3/2b5/2PNP3/8/PP2BPPP/RNBQK2R w KQkq - 2 7"]
+[SetUp "1"]
+[GameId "weak-new-0015-1"]
+[ModelMode "mcts"]
+[SearchDepth "variable"]
+
+7. Nb3 Be7 8. Nc3 Bb7 9. O-O Nf6 10. Be3 O-O 11. Rc1 Qb8 12. f4 h6 13. e5 Nxe5 14. fxe5 Qxe5 15. Qd2 d5 16. Bf4 Qxf4 17. Qxf4 Ne4 18. Nxe4 dxc4 19. Rxc4 Bxe4 20. Qxe4 b5 21. Rc7 Rae8 22. Bxb5 f5 23. Qxe6+ Kh7 24. Rxe7 Rb8 25. Bd3 Rb5 26. Bxb5 f4 27. Bd3+ Kh8 28. Re8 g6 29. Rxf8+ Kh7 30. Qxg6# 1-0
+
+[Event "NeuroChess local paired evaluation"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "14"]
+[White "Stockfish"]
+[Black "NeuroChess-step-10000"]
+[Result "0-1"]
+[FEN "rnbqk2r/pp2ppbp/3p1np1/8/3NP3/2NB4/PPP2PPP/R1BQK2R w KQkq - 2 7"]
+[SetUp "1"]
+[GameId "weak-new-0013-0"]
+[ModelMode "mcts"]
+[SearchDepth "variable"]
+
+7. Bb5+ Bd7 8. a3 Nc6 9. Nxc6 bxc6 10. Bc4 O-O 11. Qe2 Rb8 12. Rb1 Qa5 13. Bd2 Qc7 14. Ba2 d5 15. f3 d4 16. Na4 c5 17. b3 Bxa4 18. e5 Nd5 19. e6 Bb5 20. b4 Bxe2 21. Bh6 Nc3 22. Bxg7 Kxg7 23. bxc5 Nxb1 24. exf7 Nc3 25. Rf1 Bxf1 26. g4 Nxa2 27. Kxf1 Rxf7 28. Kg1 Qxc5 29. Kg2 Qxc2+ 30. Kg1 Rb1# 0-1
+
+[Event "NeuroChess local paired evaluation"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "15"]
+[White "NeuroChess-step-10000"]
+[Black "Stockfish"]
+[Result "1-0"]
+[FEN "r1bqk2r/1ppp1ppp/p1n2n2/2b1p3/2B1P3/2PP1N2/PP3PPP/RNBQK2R w KQkq - 0 6"]
+[SetUp "1"]
+[GameId "weak-new-0014-1"]
+[ModelMode "mcts"]
+[SearchDepth "variable"]
+
+6. O-O O-O 7. Nbd2 Ba7 8. Re1 Ng4 9. Rf1 h6 10. h3 Bxf2+ 11. Rxf2 Nxf2 12. Kxf2 Kh7 13. Nf1 f5 14. exf5 b5 15. Bd5 Qf6 16. g4 Bb7 17. Ng3 Nb4 18. Bxb7 Rfc8 19. Bxc8 e4 20. Nxe4 Qxf5 21. gxf5 d5 22. cxb4 d4 23. f6 Rxc8 24. fxg7 Rd8 25. g8=Q+ Kxg8 26. Qg1+ Kf7 27. Qg4 Ra8 28. Ne5+ Ke7 29. Qd7+ Kf8 30. Qf7# 1-0
+
+[Event "NeuroChess local paired evaluation"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "10"]
+[White "NeuroChess-step-10000"]
+[Black "Stockfish"]
+[Result "1-0"]
+[FEN "r2qkbnr/ppp2ppp/2n5/3p3b/3P4/3B1P2/PPP1N1PP/RNBQK2R w KQkq - 1 7"]
+[SetUp "1"]
+[GameId "weak-new-0009-1"]
+[ModelMode "mcts"]
+[SearchDepth "variable"]
+
+7. O-O Qd7 8. c3 Bd6 9. Bf4 Nge7 10. Bxd6 Qxd6 11. Ng3 Bg6 12. f4 Bxd3 13. Qxd3 f6 14. Nd2 h5 15. Rae1 O-O-O 16. Nf5 Qd7 17. Nxg7 Qg4 18. Ne6 Rdg8 19. Rf2 h4 20. f5 Kb8 21. b4 Nc8 22. h3 Qxg2+ 23. Rxg2 Ne5 24. Qe2 Ne7 25. dxe5 d4 26. exf6 Rxg2+ 27. Qxg2 Rg8 28. Ng7 Kc8 29. Rxe7 a5 30. f7 Rh8 31. Re8+ Kd7 32. Qd5# 1-0
+
+[Event "NeuroChess local paired evaluation"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "11"]
+[White "Stockfish"]
+[Black "NeuroChess-step-10000"]
+[Result "0-1"]
+[FEN "r1bqk2r/pppp1ppp/2n2n2/2b5/2BpP3/2P2N2/PP3PPP/RNBQK2R w KQkq - 0 6"]
+[SetUp "1"]
+[GameId "weak-new-0010-0"]
+[ModelMode "mcts"]
+[SearchDepth "variable"]
+
+6. b4 Bb6 7. cxd4 Nxe4 8. O-O d5 9. b5 dxc4 10. bxc6 O-O 11. Qc2 Bxd4 12. Qxe4 Bxa1 13. Ng5 g6 14. cxb7 Bxb7 15. Qxb7 Rb8 16. Qe4 Bf6 17. h4 Bxg5 18. hxg5 Re8 19. Qh4 Rxb1 20. Qf4 Qd3 21. g3 c3 22. Qxc7 Qf3 23. Qc4 Rd8 24. Re1 Rd1 25. Qc8+ Kg7 26. Kh2 Qxf2+ 27. Kh3 Qxe1 28. Bd2 Qh1+ 29. Kg4 Qe4+ 30. Kh3 Rh1# 0-1
+
+[Event "NeuroChess local paired evaluation"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "15"]
+[White "Stockfish"]
+[Black "NeuroChess-step-10000"]
+[Result "0-1"]
+[FEN "r1bqk2r/1ppp1ppp/p1n2n2/2b1p3/2B1P3/2PP1N2/PP3PPP/RNBQK2R w KQkq - 0 6"]
+[SetUp "1"]
+[GameId "weak-new-0014-0"]
+[ModelMode "mcts"]
+[SearchDepth "variable"]
+
+6. Ng5 O-O 7. b4 Ba7 8. a4 h6 9. Nxf7 Rxf7 10. Bxf7+ Kxf7 11. O-O d5 12. h3 dxe4 13. dxe4 Qxd1 14. Rxd1 Nxe4 15. Ra2 Be6 16. Re2 Nf6 17. Kh2 Bb3 18. Rf1 Bxa4 19. Be3 Bb5 20. Rfe1 Bxe2 21. Kg1 Bxe3 22. b5 Bxf2+ 23. Kh1 Bxe1 24. Na3 axb5 25. Kh2 Rxa3 26. g4 Rxc3 27. g5 hxg5 28. Kg2 b4 29. Kg1 Rxh3 30. Kg2 g4 31. Kg1 Bf3 32. Kf1 Rh1# 0-1
+
+[Event "NeuroChess local paired evaluation"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "9"]
+[White "Stockfish"]
+[Black "NeuroChess-step-10000"]
+[Result "0-1"]
+[FEN "r2qkbnr/ppp3pp/2p5/4Nb2/4p3/8/PPPP1PPP/RNBQK2R w KQkq - 0 7"]
+[SetUp "1"]
+[GameId "weak-new-0008-0"]
+[ModelMode "mcts"]
+[SearchDepth "variable"]
+
+7. O-O Qd4 8. Ng4 O-O-O 9. Ne3 Bg6 10. Qg4+ Kb8 11. Nc3 Nf6 12. Qg5 Bd6 13. Ne2 Qc5 14. Qh4 Be5 15. Rb1 Rhf8 16. b3 Nd5 17. Nxd5 cxd5 18. Qg5 Bf6 19. Qg4 Qxc2 20. Ba3 Rfe8 21. Rfc1 Qxd2 22. Rxc7 Kxc7 23. Nd4 Qxd4 24. Qf4+ Qe5 25. Qc1+ Kb8 26. Bc5 e3 27. Qa3 b6 28. f4 Qe4 29. Qxa7+ Kxa7 30. Re1 bxc5 31. Rc1 e2 32. h3 e1=Q+ 33. Rxe1 Qxe1+ 34. Kh2 Bh4 35. b4 Bg3# 0-1
+
+[Event "NeuroChess local paired evaluation"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "13"]
+[White "Stockfish"]
+[Black "NeuroChess-step-10000"]
+[Result "0-1"]
+[FEN "r1bq1rk1/pppnppbp/3p1np1/6B1/2PPP3/2N2N2/PP3PPP/R2QKB1R w KQ - 3 7"]
+[SetUp "1"]
+[GameId "weak-new-0012-0"]
+[ModelMode "mcts"]
+[SearchDepth "variable"]
+
+7. Bd3 e5 8. dxe5 dxe5 9. O-O c6 10. Bc2 Qc7 11. Qd3 Nc5 12. Qd1 Bg4 13. h3 Bxf3 14. Qxf3 Ne6 15. Bxf6 Nd4 16. Qg4 Bxf6 17. Qd1 Rad8 18. Bd3 Ne6 19. a3 Nf4 20. Qc2 Rxd3 21. Rad1 Rfd8 22. Nd5 cxd5 23. exd5 e4 24. g3 Rxd1 25. Qxd1 Nd3 26. Qb3 Bd4 27. Kg2 Nxf2 28. Rxf2 Bxf2 29. h4 e3 30. Qb6 Qxb6 31. b4 Qd4 32. b5 e2 33. c5 e1=Q 34. Kh2 Qg1+ 35. Kh3 Qh1# 0-1
+
+[Event "NeuroChess local paired evaluation"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "14"]
+[White "NeuroChess-step-10000"]
+[Black "Stockfish"]
+[Result "1-0"]
+[FEN "rnbqk2r/pp2ppbp/3p1np1/8/3NP3/2NB4/PPP2PPP/R1BQK2R w KQkq - 2 7"]
+[SetUp "1"]
+[GameId "weak-new-0013-1"]
+[ModelMode "mcts"]
+[SearchDepth "variable"]
+
+7. O-O a6 8. h3 e5 9. Nde2 O-O 10. a4 Nbd7 11. Be3 Qc7 12. a5 b6 13. axb6 Nxb6 14. b3 Nbd7 15. Bc4 Bb7 16. f3 Rfe8 17. Qd2 Nb6 18. Bxb6 Qxb6+ 19. Kh1 Qb4 20. Rfd1 Bf8 21. Ra4 Qb6 22. Rda1 Reb8 23. Nd5 Nxd5 24. Bxd5 Bxd5 25. Qxd5 Qe3 26. Qd1 Rb6 27. Rc4 Qf2 28. Nc3 Rbb8 29. Nd5 Rc8 30. Rxc8 Rxc8 31. c4 Bh6 32. Ne7+ Kg7 33. Nxc8 Qg3 34. Nxd6 Bc1 35. Rxc1 a5 36. Qe1 Qf2 37. Qxf2 Kg8 38. c5 a4 39. bxa4 h6 40. c6 h5 41. c7 h4 42. c8=Q+ Kg7 43. Qxh4 f5 44. Rc7# 1-0

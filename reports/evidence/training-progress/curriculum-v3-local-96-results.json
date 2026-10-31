@@ -1,0 +1,134 @@
+{
+  "phase": "complete",
+  "completed": 96,
+  "scheduled": 96,
+  "results": {
+    "500": {
+      "completed": 32,
+      "scheduled": 32,
+      "wins": 23,
+      "draws": 7,
+      "losses": 2,
+      "truncated": 0,
+      "independent_pairs": 16,
+      "score": 0.828125,
+      "relative_elo": 273.1532737770256,
+      "paired_bootstrap_score95": [
+        0.734375,
+        0.921875
+      ],
+      "paired_bootstrap_elo95": [
+        176.6595746229774,
+        428.7528029224502
+      ],
+      "hoeffding_score95": [
+        0.4885996210648451,
+        1
+      ],
+      "hoeffding_elo95": [
+        -7.9231678692297125,
+        null
+      ],
+      "pentanomial": [
+        0,
+        0,
+        3,
+        5,
+        8
+      ]
+    },
+    "1000": {
+      "completed": 32,
+      "scheduled": 32,
+      "wins": 16,
+      "draws": 6,
+      "losses": 10,
+      "truncated": 0,
+      "independent_pairs": 16,
+      "score": 0.59375,
+      "relative_elo": 65.92409945839687,
+      "paired_bootstrap_score95": [
+        0.421875,
+        0.765625
+      ],
+      "paired_bootstrap_elo95": [
+        -54.73518396320307,
+        205.64192838913294
+      ],
+      "hoeffding_score95": [
+        0.2542246210648451,
+        0.9332753789351549
+      ],
+      "hoeffding_elo95": [
+        -186.95617310986594,
+        458.2894770542549
+      ],
+      "pentanomial": [
+        2,
+        3,
+        3,
+        3,
+        5
+      ]
+    },
+    "1500": {
+      "completed": 32,
+      "scheduled": 32,
+      "wins": 10,
+      "draws": 9,
+      "losses": 13,
+      "truncated": 0,
+      "independent_pairs": 16,
+      "score": 0.453125,
+      "relative_elo": -32.66801858052781,
+      "paired_bootstrap_score95": [
+        0.3125,
+        0.59375
+      ],
+      "paired_bootstrap_elo95": [
+        -136.9690723288825,
+        65.92409945839687
+      ],
+      "hoeffding_score95": [
+        0.11359962106484511,
+        0.7926503789351549
+      ],
+      "hoeffding_elo95": [
+        -356.9012201387661,
+        232.9513702237127
+      ],
+      "pentanomial": [
+        2,
+        4,
+        7,
+        1,
+        2
+      ]
+    }
+  },
+  "updated_at": 1793447708.8405044,
+  "elapsed_seconds": 2132.5388112068176,
+  "resumed_games": 0,
+  "network_stats": {
+    "forward_positions": 2204499,
+    "q_supported_actions": 10043035,
+    "q_changed_decisions": 86385
+  },
+  "search_stats": {
+    "choices": 4651,
+    "leaf_evaluations": 2204499,
+    "completed_simulations": 2253174,
+    "terminal_leaves": 49236,
+    "pruned_root_edges": 71050,
+    "proven_loss_skips": 1204387,
+    "mate_proofs": 27656,
+    "max_depth": 21,
+    "depth_limit_hits": 0,
+    "tree_reuses": 4081,
+    "retained_nodes": 611048,
+    "inference_batches": 34687,
+    "native_seconds": 9.68901638238458,
+    "inference_seconds": 2116.6013259835745,
+    "bridge_seconds": 0.39018463691172656
+  }
+}
