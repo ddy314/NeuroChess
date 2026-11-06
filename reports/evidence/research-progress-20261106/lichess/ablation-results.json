@@ -1,0 +1,1982 @@
+{
+  "main_checkpoint_step": 4000,
+  "main_new_positions": 3072000,
+  "original_guard": {
+    "old_loss_relative": 0.01,
+    "old_policy_relative": 0.01,
+    "old_value_relative": 0.02,
+    "old_top1_drop": 0.005,
+    "old_q_mae_increase": 0.005,
+    "old_value_mae_increase": 0.005,
+    "old_value_stratum_increase": 0.01,
+    "new_loss_relative": 0.01,
+    "new_q_mae_increase": 0.01,
+    "new_value_mae_increase": 0.01
+  },
+  "branches": {
+    "A": {
+      "variant": "A",
+      "settings": {
+        "lr_multiplier": 1.0,
+        "balance_strength": 1.0
+      },
+      "source_sha256": "7e62cea5558ae39dc2cc4925de7768cec18f2fd40ca1784aa6c1131420948655",
+      "target_updates": 500,
+      "start_update": 4000,
+      "initial_validation": {
+        "new": {
+          "step": 4000,
+          "split": "new",
+          "positions": 8192,
+          "loss": 2.592065066099167,
+          "policy_loss": 2.070945708081126,
+          "q_loss": 0.11943751951912418,
+          "value_loss": 0.46140060015022755,
+          "top1": 0.3818359375,
+          "q_mae": 0.2256098102778753,
+          "value_mae": 0.2367408879293862,
+          "value_strata": {
+            "winning": {
+              "n": 2069,
+              "mae": 0.2782369530948807
+            },
+            "neutral": {
+              "n": 4370,
+              "mae": 0.19914241065249888
+            },
+            "losing": {
+              "n": 1753,
+              "mae": 0.2814927344054783
+            }
+          }
+        },
+        "old_core": {
+          "step": 4000,
+          "split": "old_core",
+          "positions": 8192,
+          "loss": 2.5352422315627337,
+          "policy_loss": 2.009664732031524,
+          "q_loss": 0.11451939100516029,
+          "value_loss": 0.4683177978731692,
+          "top1": 0.424072265625,
+          "q_mae": 0.21953800539713006,
+          "value_mae": 0.2230545966930464,
+          "value_strata": {
+            "winning": {
+              "n": 2116,
+              "mae": 0.29761448308441696
+            },
+            "neutral": {
+              "n": 4387,
+              "mae": 0.14868045905520572
+            },
+            "losing": {
+              "n": 1689,
+              "mae": 0.32282405922298535
+            }
+          }
+        },
+        "old_general": {
+          "step": 4000,
+          "split": "old_general",
+          "positions": 4096,
+          "loss": 2.3998551294207573,
+          "policy_loss": 1.9732500854879618,
+          "q_loss": 0.09235162776894867,
+          "value_loss": 0.3804292380809784,
+          "top1": 0.436767578125,
+          "q_mae": 0.18364930494357698,
+          "value_mae": 0.17926460691060697,
+          "value_strata": {
+            "winning": {
+              "n": 1146,
+              "mae": 0.229830975345227
+            },
+            "neutral": {
+              "n": 2241,
+              "mae": 0.12082111793157754
+            },
+            "losing": {
+              "n": 709,
+              "mae": 0.28225868388653136
+            }
+          }
+        }
+      },
+      "completed_updates": 500,
+      "status": "complete",
+      "gates": [
+        {
+          "passed": true,
+          "checks": {
+            "new/loss": true,
+            "new/Q": true,
+            "new/value": true,
+            "new/top1": true,
+            "new/winning": true,
+            "new/neutral": true,
+            "new/losing": true,
+            "old_core/loss": true,
+            "old_core/Q": true,
+            "old_core/value": true,
+            "old_core/policy": true,
+            "old_core/value_CE": true,
+            "old_core/top1": true,
+            "old_core/winning": true,
+            "old_core/neutral": true,
+            "old_core/losing": true,
+            "old_general/loss": true,
+            "old_general/Q": true,
+            "old_general/value": true,
+            "old_general/policy": true,
+            "old_general/value_CE": true,
+            "old_general/top1": true,
+            "old_general/winning": true,
+            "old_general/neutral": true,
+            "old_general/losing": true
+          },
+          "failed": [],
+          "offset": 100,
+          "step": 4100,
+          "current": {
+            "new": {
+              "step": 4100,
+              "split": "new",
+              "positions": 8192,
+              "loss": 2.5944514330476522,
+              "policy_loss": 2.0709957871586084,
+              "q_loss": 0.11953808896942064,
+              "value_loss": 0.463686584495008,
+              "top1": 0.382080078125,
+              "q_mae": 0.22586313463123,
+              "value_mae": 0.23782427285958363,
+              "value_strata": {
+                "winning": {
+                  "n": 2069,
+                  "mae": 0.27313724401757594
+                },
+                "neutral": {
+                  "n": 4370,
+                  "mae": 0.20388081694984578
+                },
+                "losing": {
+                  "n": 1753,
+                  "mae": 0.28076230195237784
+                }
+              }
+            },
+            "old_core": {
+              "step": 4100,
+              "split": "old_core",
+              "positions": 8192,
+              "loss": 2.53524312004447,
+              "policy_loss": 2.0096868881955743,
+              "q_loss": 0.11436823292751797,
+              "value_loss": 0.46837212261743844,
+              "top1": 0.423583984375,
+              "q_mae": 0.21931454005307197,
+              "value_mae": 0.2231604573124315,
+              "value_strata": {
+                "winning": {
+                  "n": 2116,
+                  "mae": 0.29265900766336145
+                },
+                "neutral": {
+                  "n": 4387,
+                  "mae": 0.15144945534648524
+                },
+                "losing": {
+                  "n": 1689,
+                  "mae": 0.3223536089299795
+                }
+              }
+            },
+            "old_general": {
+              "step": 4100,
+              "split": "old_general",
+              "positions": 4096,
+              "loss": 2.3998382091522217,
+              "policy_loss": 1.97326223179698,
+              "q_loss": 0.09219038076116703,
+              "value_loss": 0.38048079051077366,
+              "top1": 0.437255859375,
+              "q_mae": 0.18340192106323908,
+              "value_mae": 0.17936771513404892,
+              "value_strata": {
+                "winning": {
+                  "n": 1146,
+                  "mae": 0.22558077572671012
+                },
+                "neutral": {
+                  "n": 2241,
+                  "mae": 0.12328724662529364
+                },
+                "losing": {
+                  "n": 709,
+                  "mae": 0.2819292983342335
+                }
+              }
+            }
+          },
+          "baseline_reference": "Original frozen parent; thresholds unchanged",
+          "search_passed": true
+        },
+        {
+          "passed": true,
+          "checks": {
+            "new/loss": true,
+            "new/Q": true,
+            "new/value": true,
+            "new/top1": true,
+            "new/winning": true,
+            "new/neutral": true,
+            "new/losing": true,
+            "old_core/loss": true,
+            "old_core/Q": true,
+            "old_core/value": true,
+            "old_core/policy": true,
+            "old_core/value_CE": true,
+            "old_core/top1": true,
+            "old_core/winning": true,
+            "old_core/neutral": true,
+            "old_core/losing": true,
+            "old_general/loss": true,
+            "old_general/Q": true,
+            "old_general/value": true,
+            "old_general/policy": true,
+            "old_general/value_CE": true,
+            "old_general/top1": true,
+            "old_general/winning": true,
+            "old_general/neutral": true,
+            "old_general/losing": true
+          },
+          "failed": [],
+          "offset": 250,
+          "step": 4250,
+          "current": {
+            "new": {
+              "step": 4250,
+              "split": "new",
+              "positions": 8192,
+              "loss": 2.595298495143652,
+              "policy_loss": 2.071102200075984,
+              "q_loss": 0.11949990718858317,
+              "value_loss": 0.4644463392905891,
+              "top1": 0.3822021484375,
+              "q_mae": 0.2261228241515092,
+              "value_mae": 0.23836304335841874,
+              "value_strata": {
+                "winning": {
+                  "n": 2069,
+                  "mae": 0.27233008011196974
+                },
+                "neutral": {
+                  "n": 4370,
+                  "mae": 0.2053927934740817
+                },
+                "losing": {
+                  "n": 1753,
+                  "mae": 0.2804635527431625
+                }
+              }
+            },
+            "old_core": {
+              "step": 4250,
+              "split": "old_core",
+              "positions": 8192,
+              "loss": 2.5351982582360506,
+              "policy_loss": 2.009744491428137,
+              "q_loss": 0.11405017360812053,
+              "value_loss": 0.46842868137173355,
+              "top1": 0.423583984375,
+              "q_mae": 0.21911021579828663,
+              "value_mae": 0.2233048402867439,
+              "value_strata": {
+                "winning": {
+                  "n": 2116,
+                  "mae": 0.2934624670884996
+                },
+                "neutral": {
+                  "n": 4387,
+                  "mae": 0.1519632479368049
+                },
+                "losing": {
+                  "n": 1689,
+                  "mae": 0.32071279015451615
+                }
+              }
+            },
+            "old_general": {
+              "step": 4250,
+              "split": "old_general",
+              "positions": 4096,
+              "loss": 2.399840895086527,
+              "policy_loss": 1.9731631688773632,
+              "q_loss": 0.09211442954256199,
+              "value_loss": 0.38062049308791757,
+              "top1": 0.4375,
+              "q_mae": 0.18335528677049787,
+              "value_mae": 0.17931237522765286,
+              "value_strata": {
+                "winning": {
+                  "n": 1146,
+                  "mae": 0.22618773514583682
+                },
+                "neutral": {
+                  "n": 2241,
+                  "mae": 0.1232152557891321
+                },
+                "losing": {
+                  "n": 709,
+                  "mae": 0.28085607366980553
+                }
+              }
+            }
+          },
+          "baseline_reference": "Original frozen parent; thresholds unchanged"
+        },
+        {
+          "passed": true,
+          "checks": {
+            "new/loss": true,
+            "new/Q": true,
+            "new/value": true,
+            "new/top1": true,
+            "new/winning": true,
+            "new/neutral": true,
+            "new/losing": true,
+            "old_core/loss": true,
+            "old_core/Q": true,
+            "old_core/value": true,
+            "old_core/policy": true,
+            "old_core/value_CE": true,
+            "old_core/top1": true,
+            "old_core/winning": true,
+            "old_core/neutral": true,
+            "old_core/losing": true,
+            "old_general/loss": true,
+            "old_general/Q": true,
+            "old_general/value": true,
+            "old_general/policy": true,
+            "old_general/value_CE": true,
+            "old_general/top1": true,
+            "old_general/winning": true,
+            "old_general/neutral": true,
+            "old_general/losing": true
+          },
+          "failed": [],
+          "offset": 500,
+          "step": 4500,
+          "current": {
+            "new": {
+              "step": 4500,
+              "split": "new",
+              "positions": 8192,
+              "loss": 2.592684291303158,
+              "policy_loss": 2.070893813855946,
+              "q_loss": 0.11929423292167485,
+              "value_loss": 0.46214337018318474,
+              "top1": 0.382080078125,
+              "q_mae": 0.22558575326260405,
+              "value_mae": 0.2372388653111841,
+              "value_strata": {
+                "winning": {
+                  "n": 2069,
+                  "mae": 0.2757160755062504
+                },
+                "neutral": {
+                  "n": 4370,
+                  "mae": 0.20093846035917723
+                },
+                "losing": {
+                  "n": 1753,
+                  "mae": 0.2823178280873837
+                }
+              }
+            },
+            "old_core": {
+              "step": 4500,
+              "split": "old_core",
+              "positions": 8192,
+              "loss": 2.534830130636692,
+              "policy_loss": 2.0096531584858894,
+              "q_loss": 0.11432788468664512,
+              "value_loss": 0.4680130295455456,
+              "top1": 0.423583984375,
+              "q_mae": 0.21937316824811304,
+              "value_mae": 0.22313663997313427,
+              "value_strata": {
+                "winning": {
+                  "n": 2116,
+                  "mae": 0.29531943673947525
+                },
+                "neutral": {
+                  "n": 4387,
+                  "mae": 0.14947674438181258
+                },
+                "losing": {
+                  "n": 1689,
+                  "mae": 0.32402898100424776
+                }
+              }
+            },
+            "old_general": {
+              "step": 4500,
+              "split": "old_general",
+              "positions": 4096,
+              "loss": 2.3998335748910904,
+              "policy_loss": 1.9732935540378094,
+              "q_loss": 0.09235826937947422,
+              "value_loss": 0.3803608794696629,
+              "top1": 0.437744140625,
+              "q_mae": 0.1836648320510404,
+              "value_mae": 0.17932375029403147,
+              "value_strata": {
+                "winning": {
+                  "n": 1146,
+                  "mae": 0.22813640052800507
+                },
+                "neutral": {
+                  "n": 2241,
+                  "mae": 0.121512189158706
+                },
+                "losing": {
+                  "n": 709,
+                  "mae": 0.28315507798956124
+                }
+              }
+            }
+          },
+          "baseline_reference": "Original frozen parent; thresholds unchanged",
+          "search_passed": true
+        }
+      ],
+      "last_good_offset": 500,
+      "last_checkpoint_offset": 500,
+      "end_update": 4500,
+      "additional_new_positions": 384000,
+      "additional_replay_positions": 128000,
+      "input_sequence_sha256": "624f275b034fe7cfec39e42d65c4bc8c8a46893d8e36a7cd1a4d1b9f3bff18a1",
+      "input_prefix_sha256": {
+        "100": "b4dce12616768128670061966720a42fe217b0ff270c1cdcec76743ab8ee98d7",
+        "250": "65fe56a8f49d1ae110ab5a8667fe02a5145f708ca40f7f97676aa4925d9a59af",
+        "500": "624f275b034fe7cfec39e42d65c4bc8c8a46893d8e36a7cd1a4d1b9f3bff18a1"
+      },
+      "final_validation": {
+        "new": {
+          "step": 4500,
+          "split": "new",
+          "positions": 8192,
+          "loss": 2.592684291303158,
+          "policy_loss": 2.070893813855946,
+          "q_loss": 0.11929423292167485,
+          "value_loss": 0.46214337018318474,
+          "top1": 0.382080078125,
+          "q_mae": 0.22558575326260405,
+          "value_mae": 0.2372388653111841,
+          "value_strata": {
+            "winning": {
+              "n": 2069,
+              "mae": 0.2757160755062504
+            },
+            "neutral": {
+              "n": 4370,
+              "mae": 0.20093846035917723
+            },
+            "losing": {
+              "n": 1753,
+              "mae": 0.2823178280873837
+            }
+          }
+        },
+        "old_core": {
+          "step": 4500,
+          "split": "old_core",
+          "positions": 8192,
+          "loss": 2.534830130636692,
+          "policy_loss": 2.0096531584858894,
+          "q_loss": 0.11432788468664512,
+          "value_loss": 0.4680130295455456,
+          "top1": 0.423583984375,
+          "q_mae": 0.21937316824811304,
+          "value_mae": 0.22313663997313427,
+          "value_strata": {
+            "winning": {
+              "n": 2116,
+              "mae": 0.29531943673947525
+            },
+            "neutral": {
+              "n": 4387,
+              "mae": 0.14947674438181258
+            },
+            "losing": {
+              "n": 1689,
+              "mae": 0.32402898100424776
+            }
+          }
+        },
+        "old_general": {
+          "step": 4500,
+          "split": "old_general",
+          "positions": 4096,
+          "loss": 2.3998335748910904,
+          "policy_loss": 1.9732935540378094,
+          "q_loss": 0.09235826937947422,
+          "value_loss": 0.3803608794696629,
+          "top1": 0.437744140625,
+          "q_mae": 0.1836648320510404,
+          "value_mae": 0.17932375029403147,
+          "value_strata": {
+            "winning": {
+              "n": 1146,
+              "mae": 0.22813640052800507
+            },
+            "neutral": {
+              "n": 2241,
+              "mae": 0.121512189158706
+            },
+            "losing": {
+              "n": 709,
+              "mae": 0.28315507798956124
+            }
+          }
+        }
+      },
+      "all_gates_passed": true,
+      "final_search": {
+        "step": 4500,
+        "passed": true,
+        "introduced_blunders": [],
+        "mean_regret_delta_cp": 0.0,
+        "scope": "Same 48 development roots, frozen original-parent choices, L4 and locked 2s PUCT; finite 1M-node candidate-union teachers; not an Elo test"
+      },
+      "seconds": 1788.4886569976807,
+      "parameter_changes": {
+        "shared": {
+          "delta_l2": 0.07290389286525986,
+          "relative_delta_l2": 0.00022932628205692623
+        },
+        "policy_Q_projection": {
+          "delta_l2": 0.005038548788290452,
+          "relative_delta_l2": 0.00014245527211424654
+        },
+        "policy": {
+          "delta_l2": 0.0001441340909759721,
+          "relative_delta_l2": 0.00016516126758330012
+        },
+        "Q": {
+          "delta_l2": 0.00018927575635223595,
+          "relative_delta_l2": 0.00047484668511548253
+        },
+        "value": {
+          "delta_l2": 0.0028762046768201093,
+          "relative_delta_l2": 0.0002610712309347346
+        }
+      },
+      "original_main_checkpoint_modified": false
+    },
+    "B": {
+      "variant": "B",
+      "settings": {
+        "lr_multiplier": 1.5,
+        "balance_strength": 1.0
+      },
+      "source_sha256": "7e62cea5558ae39dc2cc4925de7768cec18f2fd40ca1784aa6c1131420948655",
+      "target_updates": 500,
+      "start_update": 4000,
+      "initial_validation": {
+        "new": {
+          "step": 4000,
+          "split": "new",
+          "positions": 8192,
+          "loss": 2.592065066099167,
+          "policy_loss": 2.070945708081126,
+          "q_loss": 0.11943751951912418,
+          "value_loss": 0.46140060015022755,
+          "top1": 0.3818359375,
+          "q_mae": 0.2256098102778753,
+          "value_mae": 0.2367408879293862,
+          "value_strata": {
+            "winning": {
+              "n": 2069,
+              "mae": 0.2782369530948807
+            },
+            "neutral": {
+              "n": 4370,
+              "mae": 0.19914241065249888
+            },
+            "losing": {
+              "n": 1753,
+              "mae": 0.2814927344054783
+            }
+          }
+        },
+        "old_core": {
+          "step": 4000,
+          "split": "old_core",
+          "positions": 8192,
+          "loss": 2.5352422315627337,
+          "policy_loss": 2.009664732031524,
+          "q_loss": 0.11451939100516029,
+          "value_loss": 0.4683177978731692,
+          "top1": 0.424072265625,
+          "q_mae": 0.21953800539713006,
+          "value_mae": 0.2230545966930464,
+          "value_strata": {
+            "winning": {
+              "n": 2116,
+              "mae": 0.29761448308441696
+            },
+            "neutral": {
+              "n": 4387,
+              "mae": 0.14868045905520572
+            },
+            "losing": {
+              "n": 1689,
+              "mae": 0.32282405922298535
+            }
+          }
+        },
+        "old_general": {
+          "step": 4000,
+          "split": "old_general",
+          "positions": 4096,
+          "loss": 2.3998551294207573,
+          "policy_loss": 1.9732500854879618,
+          "q_loss": 0.09235162776894867,
+          "value_loss": 0.3804292380809784,
+          "top1": 0.436767578125,
+          "q_mae": 0.18364930494357698,
+          "value_mae": 0.17926460691060697,
+          "value_strata": {
+            "winning": {
+              "n": 1146,
+              "mae": 0.229830975345227
+            },
+            "neutral": {
+              "n": 2241,
+              "mae": 0.12082111793157754
+            },
+            "losing": {
+              "n": 709,
+              "mae": 0.28225868388653136
+            }
+          }
+        }
+      },
+      "completed_updates": 500,
+      "status": "complete",
+      "gates": [
+        {
+          "passed": true,
+          "checks": {
+            "new/loss": true,
+            "new/Q": true,
+            "new/value": true,
+            "new/top1": true,
+            "new/winning": true,
+            "new/neutral": true,
+            "new/losing": true,
+            "old_core/loss": true,
+            "old_core/Q": true,
+            "old_core/value": true,
+            "old_core/policy": true,
+            "old_core/value_CE": true,
+            "old_core/top1": true,
+            "old_core/winning": true,
+            "old_core/neutral": true,
+            "old_core/losing": true,
+            "old_general/loss": true,
+            "old_general/Q": true,
+            "old_general/value": true,
+            "old_general/policy": true,
+            "old_general/value_CE": true,
+            "old_general/top1": true,
+            "old_general/winning": true,
+            "old_general/neutral": true,
+            "old_general/losing": true
+          },
+          "failed": [],
+          "offset": 100,
+          "step": 4100,
+          "current": {
+            "new": {
+              "step": 4100,
+              "split": "new",
+              "positions": 8192,
+              "loss": 2.594815982505679,
+              "policy_loss": 2.070965356193483,
+              "q_loss": 0.11956385194207542,
+              "value_loss": 0.4640687091741711,
+              "top1": 0.383056640625,
+              "q_mae": 0.22590912294979143,
+              "value_mae": 0.23797571579950727,
+              "value_strata": {
+                "winning": {
+                  "n": 2069,
+                  "mae": 0.27284529590628115
+                },
+                "neutral": {
+                  "n": 4370,
+                  "mae": 0.20461523639117057
+                },
+                "losing": {
+                  "n": 1753,
+                  "mae": 0.2799837784198816
+                }
+              }
+            },
+            "old_core": {
+              "step": 4100,
+              "split": "old_core",
+              "positions": 8192,
+              "loss": 2.5354178342968225,
+              "policy_loss": 2.0097085759043694,
+              "q_loss": 0.11434193718014285,
+              "value_loss": 0.46853828779421747,
+              "top1": 0.4234619140625,
+              "q_mae": 0.21929950199679735,
+              "value_mae": 0.22322369393417318,
+              "value_strata": {
+                "winning": {
+                  "n": 2116,
+                  "mae": 0.29259252598128915
+                },
+                "neutral": {
+                  "n": 4387,
+                  "mae": 0.1518834381480144
+                },
+                "losing": {
+                  "n": 1689,
+                  "mae": 0.3216163840005919
+                }
+              }
+            },
+            "old_general": {
+              "step": 4100,
+              "split": "old_general",
+              "positions": 4096,
+              "loss": 2.3998284935951233,
+              "policy_loss": 1.973178280517459,
+              "q_loss": 0.09216808233759366,
+              "value_loss": 0.3805661650840193,
+              "top1": 0.43798828125,
+              "q_mae": 0.18337547041554314,
+              "value_mae": 0.17935800314663197,
+              "value_strata": {
+                "winning": {
+                  "n": 1146,
+                  "mae": 0.22546683129631828
+                },
+                "neutral": {
+                  "n": 2241,
+                  "mae": 0.12355130846109923
+                },
+                "losing": {
+                  "n": 709,
+                  "mae": 0.28122272208984544
+                }
+              }
+            }
+          },
+          "baseline_reference": "Original frozen parent; thresholds unchanged",
+          "search_passed": true
+        },
+        {
+          "passed": true,
+          "checks": {
+            "new/loss": true,
+            "new/Q": true,
+            "new/value": true,
+            "new/top1": true,
+            "new/winning": true,
+            "new/neutral": true,
+            "new/losing": true,
+            "old_core/loss": true,
+            "old_core/Q": true,
+            "old_core/value": true,
+            "old_core/policy": true,
+            "old_core/value_CE": true,
+            "old_core/top1": true,
+            "old_core/winning": true,
+            "old_core/neutral": true,
+            "old_core/losing": true,
+            "old_general/loss": true,
+            "old_general/Q": true,
+            "old_general/value": true,
+            "old_general/policy": true,
+            "old_general/value_CE": true,
+            "old_general/top1": true,
+            "old_general/winning": true,
+            "old_general/neutral": true,
+            "old_general/losing": true
+          },
+          "failed": [],
+          "offset": 250,
+          "step": 4250,
+          "current": {
+            "new": {
+              "step": 4250,
+              "split": "new",
+              "positions": 8192,
+              "loss": 2.5954640228301287,
+              "policy_loss": 2.0710968049243093,
+              "q_loss": 0.119540058192797,
+              "value_loss": 0.4645971837453544,
+              "top1": 0.3818359375,
+              "q_mae": 0.22622770032735928,
+              "value_mae": 0.2384185814580917,
+              "value_strata": {
+                "winning": {
+                  "n": 2069,
+                  "mae": 0.27290670519087906
+                },
+                "neutral": {
+                  "n": 4370,
+                  "mae": 0.2055878330729113
+                },
+                "losing": {
+                  "n": 1753,
+                  "mae": 0.279556312456438
+                }
+              }
+            },
+            "old_core": {
+              "step": 4250,
+              "split": "old_core",
+              "positions": 8192,
+              "loss": 2.535238604992628,
+              "policy_loss": 2.00970771163702,
+              "q_loss": 0.1139948422787711,
+              "value_loss": 0.46853347634896636,
+              "top1": 0.423583984375,
+              "q_mae": 0.21910233617406683,
+              "value_mae": 0.22333821809672827,
+              "value_strata": {
+                "winning": {
+                  "n": 2116,
+                  "mae": 0.2943795851259255
+                },
+                "neutral": {
+                  "n": 4387,
+                  "mae": 0.15216210085248177
+                },
+                "losing": {
+                  "n": 1689,
+                  "mae": 0.31920920312735473
+                }
+              }
+            },
+            "old_general": {
+              "step": 4250,
+              "split": "old_general",
+              "positions": 4096,
+              "loss": 2.39986539632082,
+              "policy_loss": 1.9731358643621206,
+              "q_loss": 0.09205993887735531,
+              "value_loss": 0.38069957704283297,
+              "top1": 0.437255859375,
+              "q_mae": 0.18336971300985544,
+              "value_mae": 0.1793059973186928,
+              "value_strata": {
+                "winning": {
+                  "n": 1146,
+                  "mae": 0.22691971394534094
+                },
+                "neutral": {
+                  "n": 2241,
+                  "mae": 0.12326491076772678
+                },
+                "losing": {
+                  "n": 709,
+                  "mae": 0.27947913653812306
+                }
+              }
+            }
+          },
+          "baseline_reference": "Original frozen parent; thresholds unchanged"
+        },
+        {
+          "passed": true,
+          "checks": {
+            "new/loss": true,
+            "new/Q": true,
+            "new/value": true,
+            "new/top1": true,
+            "new/winning": true,
+            "new/neutral": true,
+            "new/losing": true,
+            "old_core/loss": true,
+            "old_core/Q": true,
+            "old_core/value": true,
+            "old_core/policy": true,
+            "old_core/value_CE": true,
+            "old_core/top1": true,
+            "old_core/winning": true,
+            "old_core/neutral": true,
+            "old_core/losing": true,
+            "old_general/loss": true,
+            "old_general/Q": true,
+            "old_general/value": true,
+            "old_general/policy": true,
+            "old_general/value_CE": true,
+            "old_general/top1": true,
+            "old_general/winning": true,
+            "old_general/neutral": true,
+            "old_general/losing": true
+          },
+          "failed": [],
+          "offset": 500,
+          "step": 4500,
+          "current": {
+            "new": {
+              "step": 4500,
+              "split": "new",
+              "positions": 8192,
+              "loss": 2.592678751796484,
+              "policy_loss": 2.0708454521372914,
+              "q_loss": 0.11925108288414776,
+              "value_loss": 0.4622077685780823,
+              "top1": 0.382080078125,
+              "q_mae": 0.2254543823100839,
+              "value_mae": 0.2372113819603925,
+              "value_strata": {
+                "winning": {
+                  "n": 2069,
+                  "mae": 0.2757959728326816
+                },
+                "neutral": {
+                  "n": 4370,
+                  "mae": 0.2012075183295338
+                },
+                "losing": {
+                  "n": 1753,
+                  "mae": 0.28142436858451475
+                }
+              }
+            },
+            "old_core": {
+              "step": 4500,
+              "split": "old_core",
+              "positions": 8192,
+              "loss": 2.5346390958875418,
+              "policy_loss": 2.009574234485626,
+              "q_loss": 0.11423639295389876,
+              "value_loss": 0.46794666931964457,
+              "top1": 0.4232177734375,
+              "q_mae": 0.21922345792833967,
+              "value_mae": 0.2230336995302764,
+              "value_strata": {
+                "winning": {
+                  "n": 2116,
+                  "mae": 0.29555338381266744
+                },
+                "neutral": {
+                  "n": 4387,
+                  "mae": 0.14951051986702626
+                },
+                "losing": {
+                  "n": 1689,
+                  "mae": 0.3231488784770727
+                }
+              }
+            },
+            "old_general": {
+              "step": 4500,
+              "split": "old_general",
+              "positions": 4096,
+              "loss": 2.3997593708336353,
+              "policy_loss": 1.9733018595725298,
+              "q_loss": 0.09232118382351473,
+              "value_loss": 0.38029691483825445,
+              "top1": 0.438720703125,
+              "q_mae": 0.18352190514817232,
+              "value_mae": 0.1791753135023555,
+              "value_strata": {
+                "winning": {
+                  "n": 1146,
+                  "mae": 0.22826507916904817
+                },
+                "neutral": {
+                  "n": 2241,
+                  "mae": 0.12146523383947647
+                },
+                "losing": {
+                  "n": 709,
+                  "mae": 0.2822379609924572
+                }
+              }
+            }
+          },
+          "baseline_reference": "Original frozen parent; thresholds unchanged",
+          "search_passed": true
+        }
+      ],
+      "last_good_offset": 500,
+      "last_checkpoint_offset": 500,
+      "end_update": 4500,
+      "additional_new_positions": 384000,
+      "additional_replay_positions": 128000,
+      "input_sequence_sha256": "624f275b034fe7cfec39e42d65c4bc8c8a46893d8e36a7cd1a4d1b9f3bff18a1",
+      "input_prefix_sha256": {
+        "100": "b4dce12616768128670061966720a42fe217b0ff270c1cdcec76743ab8ee98d7",
+        "250": "65fe56a8f49d1ae110ab5a8667fe02a5145f708ca40f7f97676aa4925d9a59af",
+        "500": "624f275b034fe7cfec39e42d65c4bc8c8a46893d8e36a7cd1a4d1b9f3bff18a1"
+      },
+      "final_validation": {
+        "new": {
+          "step": 4500,
+          "split": "new",
+          "positions": 8192,
+          "loss": 2.592678751796484,
+          "policy_loss": 2.0708454521372914,
+          "q_loss": 0.11925108288414776,
+          "value_loss": 0.4622077685780823,
+          "top1": 0.382080078125,
+          "q_mae": 0.2254543823100839,
+          "value_mae": 0.2372113819603925,
+          "value_strata": {
+            "winning": {
+              "n": 2069,
+              "mae": 0.2757959728326816
+            },
+            "neutral": {
+              "n": 4370,
+              "mae": 0.2012075183295338
+            },
+            "losing": {
+              "n": 1753,
+              "mae": 0.28142436858451475
+            }
+          }
+        },
+        "old_core": {
+          "step": 4500,
+          "split": "old_core",
+          "positions": 8192,
+          "loss": 2.5346390958875418,
+          "policy_loss": 2.009574234485626,
+          "q_loss": 0.11423639295389876,
+          "value_loss": 0.46794666931964457,
+          "top1": 0.4232177734375,
+          "q_mae": 0.21922345792833967,
+          "value_mae": 0.2230336995302764,
+          "value_strata": {
+            "winning": {
+              "n": 2116,
+              "mae": 0.29555338381266744
+            },
+            "neutral": {
+              "n": 4387,
+              "mae": 0.14951051986702626
+            },
+            "losing": {
+              "n": 1689,
+              "mae": 0.3231488784770727
+            }
+          }
+        },
+        "old_general": {
+          "step": 4500,
+          "split": "old_general",
+          "positions": 4096,
+          "loss": 2.3997593708336353,
+          "policy_loss": 1.9733018595725298,
+          "q_loss": 0.09232118382351473,
+          "value_loss": 0.38029691483825445,
+          "top1": 0.438720703125,
+          "q_mae": 0.18352190514817232,
+          "value_mae": 0.1791753135023555,
+          "value_strata": {
+            "winning": {
+              "n": 1146,
+              "mae": 0.22826507916904817
+            },
+            "neutral": {
+              "n": 2241,
+              "mae": 0.12146523383947647
+            },
+            "losing": {
+              "n": 709,
+              "mae": 0.2822379609924572
+            }
+          }
+        }
+      },
+      "all_gates_passed": true,
+      "final_search": {
+        "step": 4500,
+        "passed": true,
+        "introduced_blunders": [],
+        "mean_regret_delta_cp": 0.0,
+        "scope": "Same 48 development roots, frozen original-parent choices, L4 and locked 2s PUCT; finite 1M-node candidate-union teachers; not an Elo test"
+      },
+      "seconds": 1850.6573684215546,
+      "parameter_changes": {
+        "shared": {
+          "delta_l2": 0.10340138913067184,
+          "relative_delta_l2": 0.0003252591212472549
+        },
+        "policy_Q_projection": {
+          "delta_l2": 0.007119540693813594,
+          "relative_delta_l2": 0.00020129131412256984
+        },
+        "policy": {
+          "delta_l2": 0.0002055107436721873,
+          "relative_delta_l2": 0.0002354919276699328
+        },
+        "Q": {
+          "delta_l2": 0.0002720969312117627,
+          "relative_delta_l2": 0.0006826248025951934
+        },
+        "value": {
+          "delta_l2": 0.003885733554171895,
+          "relative_delta_l2": 0.0003527055116236105
+        }
+      },
+      "original_main_checkpoint_modified": false
+    },
+    "C": {
+      "variant": "C",
+      "settings": {
+        "lr_multiplier": 1.0,
+        "balance_strength": 0.5
+      },
+      "source_sha256": "7e62cea5558ae39dc2cc4925de7768cec18f2fd40ca1784aa6c1131420948655",
+      "target_updates": 500,
+      "start_update": 4000,
+      "initial_validation": {
+        "new": {
+          "step": 4000,
+          "split": "new",
+          "positions": 8192,
+          "loss": 2.592065066099167,
+          "policy_loss": 2.070945708081126,
+          "q_loss": 0.11943751951912418,
+          "value_loss": 0.46140060015022755,
+          "top1": 0.3818359375,
+          "q_mae": 0.2256098102778753,
+          "value_mae": 0.2367408879293862,
+          "value_strata": {
+            "winning": {
+              "n": 2069,
+              "mae": 0.2782369530948807
+            },
+            "neutral": {
+              "n": 4370,
+              "mae": 0.19914241065249888
+            },
+            "losing": {
+              "n": 1753,
+              "mae": 0.2814927344054783
+            }
+          }
+        },
+        "old_core": {
+          "step": 4000,
+          "split": "old_core",
+          "positions": 8192,
+          "loss": 2.5352422315627337,
+          "policy_loss": 2.009664732031524,
+          "q_loss": 0.11451939100516029,
+          "value_loss": 0.4683177978731692,
+          "top1": 0.424072265625,
+          "q_mae": 0.21953800539713006,
+          "value_mae": 0.2230545966930464,
+          "value_strata": {
+            "winning": {
+              "n": 2116,
+              "mae": 0.29761448308441696
+            },
+            "neutral": {
+              "n": 4387,
+              "mae": 0.14868045905520572
+            },
+            "losing": {
+              "n": 1689,
+              "mae": 0.32282405922298535
+            }
+          }
+        },
+        "old_general": {
+          "step": 4000,
+          "split": "old_general",
+          "positions": 4096,
+          "loss": 2.3998551294207573,
+          "policy_loss": 1.9732500854879618,
+          "q_loss": 0.09235162776894867,
+          "value_loss": 0.3804292380809784,
+          "top1": 0.436767578125,
+          "q_mae": 0.18364930494357698,
+          "value_mae": 0.17926460691060697,
+          "value_strata": {
+            "winning": {
+              "n": 1146,
+              "mae": 0.229830975345227
+            },
+            "neutral": {
+              "n": 2241,
+              "mae": 0.12082111793157754
+            },
+            "losing": {
+              "n": 709,
+              "mae": 0.28225868388653136
+            }
+          }
+        }
+      },
+      "completed_updates": 500,
+      "status": "complete",
+      "gates": [
+        {
+          "passed": true,
+          "checks": {
+            "new/loss": true,
+            "new/Q": true,
+            "new/value": true,
+            "new/top1": true,
+            "new/winning": true,
+            "new/neutral": true,
+            "new/losing": true,
+            "old_core/loss": true,
+            "old_core/Q": true,
+            "old_core/value": true,
+            "old_core/policy": true,
+            "old_core/value_CE": true,
+            "old_core/top1": true,
+            "old_core/winning": true,
+            "old_core/neutral": true,
+            "old_core/losing": true,
+            "old_general/loss": true,
+            "old_general/Q": true,
+            "old_general/value": true,
+            "old_general/policy": true,
+            "old_general/value_CE": true,
+            "old_general/top1": true,
+            "old_general/winning": true,
+            "old_general/neutral": true,
+            "old_general/losing": true
+          },
+          "failed": [],
+          "offset": 100,
+          "step": 4100,
+          "current": {
+            "new": {
+              "step": 4100,
+              "split": "new",
+              "positions": 8192,
+              "loss": 2.590884165838361,
+              "policy_loss": 2.0709271347150207,
+              "q_loss": 0.11937182710971683,
+              "value_loss": 0.4602711156476289,
+              "top1": 0.3812255859375,
+              "q_mae": 0.2255682673811218,
+              "value_mae": 0.23623988127098983,
+              "value_strata": {
+                "winning": {
+                  "n": 2069,
+                  "mae": 0.27709067245353863
+                },
+                "neutral": {
+                  "n": 4370,
+                  "mae": 0.1966545955506015
+                },
+                "losing": {
+                  "n": 1753,
+                  "mae": 0.2867061742780655
+                }
+              }
+            },
+            "old_core": {
+              "step": 4100,
+              "split": "old_core",
+              "positions": 8192,
+              "loss": 2.535067504271865,
+              "policy_loss": 2.0097143724560738,
+              "q_loss": 0.11455291209858842,
+              "value_loss": 0.46807666635140777,
+              "top1": 0.4232177734375,
+              "q_mae": 0.21958250662318043,
+              "value_mae": 0.22277651393740427,
+              "value_strata": {
+                "winning": {
+                  "n": 2116,
+                  "mae": 0.29626596742265615
+                },
+                "neutral": {
+                  "n": 4387,
+                  "mae": 0.1466218923250233
+                },
+                "losing": {
+                  "n": 1689,
+                  "mae": 0.3285116480041434
+                }
+              }
+            },
+            "old_general": {
+              "step": 4100,
+              "split": "old_general",
+              "positions": 4096,
+              "loss": 2.3996506556868553,
+              "policy_loss": 1.9732856433838606,
+              "q_loss": 0.09234258235665038,
+              "value_loss": 0.3801937107928097,
+              "top1": 0.43701171875,
+              "q_mae": 0.18371176197935304,
+              "value_mae": 0.17910315860225978,
+              "value_strata": {
+                "winning": {
+                  "n": 1146,
+                  "mae": 0.22850593208558012
+                },
+                "neutral": {
+                  "n": 2241,
+                  "mae": 0.11952608866846277
+                },
+                "losing": {
+                  "n": 709,
+                  "mae": 0.28756103633110885
+                }
+              }
+            }
+          },
+          "baseline_reference": "Original frozen parent; thresholds unchanged",
+          "search_passed": true
+        },
+        {
+          "passed": true,
+          "checks": {
+            "new/loss": true,
+            "new/Q": true,
+            "new/value": true,
+            "new/top1": true,
+            "new/winning": true,
+            "new/neutral": true,
+            "new/losing": true,
+            "old_core/loss": true,
+            "old_core/Q": true,
+            "old_core/value": true,
+            "old_core/policy": true,
+            "old_core/value_CE": true,
+            "old_core/top1": true,
+            "old_core/winning": true,
+            "old_core/neutral": true,
+            "old_core/losing": true,
+            "old_general/loss": true,
+            "old_general/Q": true,
+            "old_general/value": true,
+            "old_general/policy": true,
+            "old_general/value_CE": true,
+            "old_general/top1": true,
+            "old_general/winning": true,
+            "old_general/neutral": true,
+            "old_general/losing": true
+          },
+          "failed": [],
+          "offset": 250,
+          "step": 4250,
+          "current": {
+            "new": {
+              "step": 4250,
+              "split": "new",
+              "positions": 8192,
+              "loss": 2.591199131682515,
+              "policy_loss": 2.0710437605157495,
+              "q_loss": 0.11937488336116076,
+              "value_loss": 0.460467919241637,
+              "top1": 0.3819580078125,
+              "q_mae": 0.22595965664571627,
+              "value_mae": 0.23666776324341754,
+              "value_strata": {
+                "winning": {
+                  "n": 2069,
+                  "mae": 0.2767917483593997
+                },
+                "neutral": {
+                  "n": 4370,
+                  "mae": 0.19758855434010994
+                },
+                "losing": {
+                  "n": 1753,
+                  "mae": 0.28673029473371253
+                }
+              }
+            },
+            "old_core": {
+              "step": 4250,
+              "split": "old_core",
+              "positions": 8192,
+              "loss": 2.5348047725856304,
+              "policy_loss": 2.0097625609487295,
+              "q_loss": 0.11414902217802592,
+              "value_loss": 0.46796770161017776,
+              "top1": 0.42333984375,
+              "q_mae": 0.2193190918200209,
+              "value_mae": 0.22295063685623973,
+              "value_strata": {
+                "winning": {
+                  "n": 2116,
+                  "mae": 0.29724885687929187
+                },
+                "neutral": {
+                  "n": 4387,
+                  "mae": 0.14706850939385502
+                },
+                "losing": {
+                  "n": 1689,
+                  "mae": 0.3269647633267568
+                }
+              }
+            },
+            "old_general": {
+              "step": 4250,
+              "split": "old_general",
+              "positions": 4096,
+              "loss": 2.399690769612789,
+              "policy_loss": 1.9732421357184649,
+              "q_loss": 0.09220611423370428,
+              "value_loss": 0.3803455794695765,
+              "top1": 0.4375,
+              "q_mae": 0.18360263917369005,
+              "value_mae": 0.17916716291696844,
+              "value_strata": {
+                "winning": {
+                  "n": 1146,
+                  "mae": 0.2291816744033449
+                },
+                "neutral": {
+                  "n": 2241,
+                  "mae": 0.11960356470648555
+                },
+                "losing": {
+                  "n": 709,
+                  "mae": 0.28659366986521206
+                }
+              }
+            }
+          },
+          "baseline_reference": "Original frozen parent; thresholds unchanged"
+        },
+        {
+          "passed": true,
+          "checks": {
+            "new/loss": true,
+            "new/Q": true,
+            "new/value": true,
+            "new/top1": true,
+            "new/winning": true,
+            "new/neutral": true,
+            "new/losing": true,
+            "old_core/loss": true,
+            "old_core/Q": true,
+            "old_core/value": true,
+            "old_core/policy": true,
+            "old_core/value_CE": true,
+            "old_core/top1": true,
+            "old_core/winning": true,
+            "old_core/neutral": true,
+            "old_core/losing": true,
+            "old_general/loss": true,
+            "old_general/Q": true,
+            "old_general/value": true,
+            "old_general/policy": true,
+            "old_general/value_CE": true,
+            "old_general/top1": true,
+            "old_general/winning": true,
+            "old_general/neutral": true,
+            "old_general/losing": true
+          },
+          "failed": [],
+          "offset": 500,
+          "step": 4500,
+          "current": {
+            "new": {
+              "step": 4500,
+              "split": "new",
+              "positions": 8192,
+              "loss": 2.5896037705242634,
+              "policy_loss": 2.0709420712664723,
+              "q_loss": 0.11922305528423749,
+              "value_loss": 0.45905015780590475,
+              "top1": 0.3824462890625,
+              "q_mae": 0.22558435416980369,
+              "value_mae": 0.2360438096673505,
+              "value_strata": {
+                "winning": {
+                  "n": 2069,
+                  "mae": 0.27878827954799573
+                },
+                "neutral": {
+                  "n": 4370,
+                  "mae": 0.1948212550448742
+                },
+                "losing": {
+                  "n": 1753,
+                  "mae": 0.2883565623867838
+                }
+              }
+            },
+            "old_core": {
+              "step": 4500,
+              "split": "old_core",
+              "positions": 8192,
+              "loss": 2.5345960184931755,
+              "policy_loss": 2.009693928062916,
+              "q_loss": 0.11429427907569334,
+              "value_loss": 0.4677549528423697,
+              "top1": 0.4239501953125,
+              "q_mae": 0.21945447807787632,
+              "value_mae": 0.22305228706362357,
+              "value_strata": {
+                "winning": {
+                  "n": 2116,
+                  "mae": 0.29761021582643893
+                },
+                "neutral": {
+                  "n": 4387,
+                  "mae": 0.146166106279856
+                },
+                "losing": {
+                  "n": 1689,
+                  "mae": 0.3293489702112086
+                }
+              }
+            },
+            "old_general": {
+              "step": 4500,
+              "split": "old_general",
+              "positions": 4096,
+              "loss": 2.399799730628729,
+              "policy_loss": 1.9733574446290731,
+              "q_loss": 0.09238071902655065,
+              "value_loss": 0.3802519135642797,
+              "top1": 0.438720703125,
+              "q_mae": 0.18382154608240825,
+              "value_mae": 0.17943567252177672,
+              "value_strata": {
+                "winning": {
+                  "n": 1146,
+                  "mae": 0.22990429012452693
+                },
+                "neutral": {
+                  "n": 2241,
+                  "mae": 0.11926249655803922
+                },
+                "losing": {
+                  "n": 709,
+                  "mae": 0.2880549271931223
+                }
+              }
+            }
+          },
+          "baseline_reference": "Original frozen parent; thresholds unchanged",
+          "search_passed": true
+        }
+      ],
+      "last_good_offset": 500,
+      "last_checkpoint_offset": 500,
+      "end_update": 4500,
+      "additional_new_positions": 384000,
+      "additional_replay_positions": 128000,
+      "input_sequence_sha256": "624f275b034fe7cfec39e42d65c4bc8c8a46893d8e36a7cd1a4d1b9f3bff18a1",
+      "input_prefix_sha256": {
+        "100": "b4dce12616768128670061966720a42fe217b0ff270c1cdcec76743ab8ee98d7",
+        "250": "65fe56a8f49d1ae110ab5a8667fe02a5145f708ca40f7f97676aa4925d9a59af",
+        "500": "624f275b034fe7cfec39e42d65c4bc8c8a46893d8e36a7cd1a4d1b9f3bff18a1"
+      },
+      "final_validation": {
+        "new": {
+          "step": 4500,
+          "split": "new",
+          "positions": 8192,
+          "loss": 2.5896037705242634,
+          "policy_loss": 2.0709420712664723,
+          "q_loss": 0.11922305528423749,
+          "value_loss": 0.45905015780590475,
+          "top1": 0.3824462890625,
+          "q_mae": 0.22558435416980369,
+          "value_mae": 0.2360438096673505,
+          "value_strata": {
+            "winning": {
+              "n": 2069,
+              "mae": 0.27878827954799573
+            },
+            "neutral": {
+              "n": 4370,
+              "mae": 0.1948212550448742
+            },
+            "losing": {
+              "n": 1753,
+              "mae": 0.2883565623867838
+            }
+          }
+        },
+        "old_core": {
+          "step": 4500,
+          "split": "old_core",
+          "positions": 8192,
+          "loss": 2.5345960184931755,
+          "policy_loss": 2.009693928062916,
+          "q_loss": 0.11429427907569334,
+          "value_loss": 0.4677549528423697,
+          "top1": 0.4239501953125,
+          "q_mae": 0.21945447807787632,
+          "value_mae": 0.22305228706362357,
+          "value_strata": {
+            "winning": {
+              "n": 2116,
+              "mae": 0.29761021582643893
+            },
+            "neutral": {
+              "n": 4387,
+              "mae": 0.146166106279856
+            },
+            "losing": {
+              "n": 1689,
+              "mae": 0.3293489702112086
+            }
+          }
+        },
+        "old_general": {
+          "step": 4500,
+          "split": "old_general",
+          "positions": 4096,
+          "loss": 2.399799730628729,
+          "policy_loss": 1.9733574446290731,
+          "q_loss": 0.09238071902655065,
+          "value_loss": 0.3802519135642797,
+          "top1": 0.438720703125,
+          "q_mae": 0.18382154608240825,
+          "value_mae": 0.17943567252177672,
+          "value_strata": {
+            "winning": {
+              "n": 1146,
+              "mae": 0.22990429012452693
+            },
+            "neutral": {
+              "n": 2241,
+              "mae": 0.11926249655803922
+            },
+            "losing": {
+              "n": 709,
+              "mae": 0.2880549271931223
+            }
+          }
+        }
+      },
+      "all_gates_passed": true,
+      "final_search": {
+        "step": 4500,
+        "passed": true,
+        "introduced_blunders": [],
+        "mean_regret_delta_cp": 0.0,
+        "scope": "Same 48 development roots, frozen original-parent choices, L4 and locked 2s PUCT; finite 1M-node candidate-union teachers; not an Elo test"
+      },
+      "seconds": 1870.6446261405945,
+      "parameter_changes": {
+        "shared": {
+          "delta_l2": 0.07911342859434935,
+          "relative_delta_l2": 0.00024885898032701143
+        },
+        "policy_Q_projection": {
+          "delta_l2": 0.005494514317839569,
+          "relative_delta_l2": 0.00015534682012060703
+        },
+        "policy": {
+          "delta_l2": 0.00014822298096659248,
+          "relative_delta_l2": 0.0001698466702474909
+        },
+        "Q": {
+          "delta_l2": 0.0002276292753629838,
+          "relative_delta_l2": 0.0005710663051859751
+        },
+        "value": {
+          "delta_l2": 0.005340558449899577,
+          "relative_delta_l2": 0.00048475902276039044
+        }
+      },
+      "original_main_checkpoint_modified": false
+    }
+  },
+  "paired_vs_A": {
+    "B": {
+      "new": {
+        "top1": {
+          "mean_delta": 0.0,
+          "bootstrap_95": [
+            -0.0008544921875,
+            0.0009765625
+          ],
+          "n": 8192,
+          "scope": "Position bootstrap, not game-clustered; fixed development data selected during training; not independent confirmation"
+        },
+        "policy_ce": {
+          "mean_delta": -4.8347714269425524e-05,
+          "bootstrap_95": [
+            -0.00011232735906929747,
+            1.498816044183109e-05
+          ],
+          "n": 8192,
+          "scope": "Position bootstrap, not game-clustered; fixed development data selected during training; not independent confirmation"
+        },
+        "value_error": {
+          "mean_delta": -2.7483397062155746e-05,
+          "bootstrap_95": [
+            -8.306485762687998e-05,
+            2.6681328951028107e-05
+          ],
+          "n": 8192,
+          "scope": "Position bootstrap, not game-clustered; fixed development data selected during training; not independent confirmation"
+        },
+        "Q_MAE": {
+          "mean_delta": -0.00013137146227418527,
+          "bootstrap_95": [
+            -0.00017589029568563122,
+            -8.544508158622467e-05
+          ],
+          "n": 8192,
+          "q_labels": 26772,
+          "scope": "Position-paired bootstrap of label-weighted Q MAE; development data, not independent confirmation"
+        },
+        "top1_counts": {
+          "improved": 7,
+          "regressed": 7
+        }
+      },
+      "old_core": {
+        "top1": {
+          "mean_delta": -0.0003662109375,
+          "bootstrap_95": [
+            -0.001220703125,
+            0.00048828125
+          ],
+          "n": 8192,
+          "scope": "Position bootstrap, not game-clustered; fixed development data selected during training; not independent confirmation"
+        },
+        "policy_ce": {
+          "mean_delta": -7.895051014372712e-05,
+          "bootstrap_95": [
+            -0.00014534375162398306,
+            -8.43508204688704e-06
+          ],
+          "n": 8192,
+          "scope": "Position bootstrap, not game-clustered; fixed development data selected during training; not independent confirmation"
+        },
+        "value_error": {
+          "mean_delta": -0.0001029402318835082,
+          "bootstrap_95": [
+            -0.000157816156832169,
+            -4.732535421361209e-05
+          ],
+          "n": 8192,
+          "scope": "Position bootstrap, not game-clustered; fixed development data selected during training; not independent confirmation"
+        },
+        "Q_MAE": {
+          "mean_delta": -0.0001497098413201323,
+          "bootstrap_95": [
+            -0.0001921383715886736,
+            -0.00010611941505373397
+          ],
+          "n": 8192,
+          "q_labels": 27029,
+          "scope": "Position-paired bootstrap of label-weighted Q MAE; development data, not independent confirmation"
+        },
+        "top1_counts": {
+          "improved": 5,
+          "regressed": 8
+        }
+      },
+      "old_general": {
+        "top1": {
+          "mean_delta": 0.0009765625,
+          "bootstrap_95": [
+            0.0,
+            0.002197265625
+          ],
+          "n": 4096,
+          "scope": "Position bootstrap, not game-clustered; fixed development data selected during training; not independent confirmation"
+        },
+        "policy_ce": {
+          "mean_delta": 8.285808007713058e-06,
+          "bootstrap_95": [
+            -8.26340751814314e-05,
+            9.7110664489719e-05
+          ],
+          "n": 4096,
+          "scope": "Position bootstrap, not game-clustered; fixed development data selected during training; not independent confirmation"
+        },
+        "value_error": {
+          "mean_delta": -0.00014843642594541961,
+          "bootstrap_95": [
+            -0.00022584412695749733,
+            -7.283507995907727e-05
+          ],
+          "n": 4096,
+          "scope": "Position bootstrap, not game-clustered; fixed development data selected during training; not independent confirmation"
+        },
+        "Q_MAE": {
+          "mean_delta": -0.00014292942762905708,
+          "bootstrap_95": [
+            -0.0002009342807117378,
+            -8.512948117837082e-05
+          ],
+          "n": 4096,
+          "q_labels": 13755,
+          "scope": "Position-paired bootstrap of label-weighted Q MAE; development data, not independent confirmation"
+        },
+        "top1_counts": {
+          "improved": 5,
+          "regressed": 1
+        }
+      }
+    },
+    "C": {
+      "new": {
+        "top1": {
+          "mean_delta": 0.0003662109375,
+          "bootstrap_95": [
+            -0.00048828125,
+            0.001220703125
+          ],
+          "n": 8192,
+          "scope": "Position bootstrap, not game-clustered; fixed development data selected during training; not independent confirmation"
+        },
+        "policy_ce": {
+          "mean_delta": 4.82515711155429e-05,
+          "bootstrap_95": [
+            -1.1632443763431864e-05,
+            0.00011404707728956963
+          ],
+          "n": 8192,
+          "scope": "Position bootstrap, not game-clustered; fixed development data selected during training; not independent confirmation"
+        },
+        "value_error": {
+          "mean_delta": -0.001195055955562907,
+          "bootstrap_95": [
+            -0.0013786668374589084,
+            -0.0009999268054190936
+          ],
+          "n": 8192,
+          "scope": "Position bootstrap, not game-clustered; fixed development data selected during training; not independent confirmation"
+        },
+        "Q_MAE": {
+          "mean_delta": -1.3985014529630206e-06,
+          "bootstrap_95": [
+            -4.967013748051174e-05,
+            4.824589084039153e-05
+          ],
+          "n": 8192,
+          "q_labels": 26772,
+          "scope": "Position-paired bootstrap of label-weighted Q MAE; development data, not independent confirmation"
+        },
+        "top1_counts": {
+          "improved": 8,
+          "regressed": 5
+        }
+      },
+      "old_core": {
+        "top1": {
+          "mean_delta": 0.0003662109375,
+          "bootstrap_95": [
+            -0.0006103515625,
+            0.0013427734375
+          ],
+          "n": 8192,
+          "scope": "Position bootstrap, not game-clustered; fixed development data selected during training; not independent confirmation"
+        },
+        "policy_ce": {
+          "mean_delta": 4.0765136191112106e-05,
+          "bootstrap_95": [
+            -2.6891217811453316e-05,
+            0.00010572069315202266
+          ],
+          "n": 8192,
+          "scope": "Position bootstrap, not game-clustered; fixed development data selected during training; not independent confirmation"
+        },
+        "value_error": {
+          "mean_delta": -8.435287372776656e-05,
+          "bootstrap_95": [
+            -0.00024327936644610303,
+            8.031524101070875e-05
+          ],
+          "n": 8192,
+          "scope": "Position bootstrap, not game-clustered; fixed development data selected during training; not independent confirmation"
+        },
+        "Q_MAE": {
+          "mean_delta": 8.13101391130249e-05,
+          "bootstrap_95": [
+            3.2159751996672074e-05,
+            0.00012831908763668234
+          ],
+          "n": 8192,
+          "q_labels": 27029,
+          "scope": "Position-paired bootstrap of label-weighted Q MAE; development data, not independent confirmation"
+        },
+        "top1_counts": {
+          "improved": 9,
+          "regressed": 6
+        }
+      },
+      "old_general": {
+        "top1": {
+          "mean_delta": 0.0009765625,
+          "bootstrap_95": [
+            -0.00048828125,
+            0.002197265625
+          ],
+          "n": 4096,
+          "scope": "Position bootstrap, not game-clustered; fixed development data selected during training; not independent confirmation"
+        },
+        "policy_ce": {
+          "mean_delta": 6.386698362348397e-05,
+          "bootstrap_95": [
+            -2.604212012613516e-05,
+            0.00014945184630903432
+          ],
+          "n": 4096,
+          "scope": "Position bootstrap, not game-clustered; fixed development data selected during training; not independent confirmation"
+        },
+        "value_error": {
+          "mean_delta": 0.00011192241942126202,
+          "bootstrap_95": [
+            -7.830636273098435e-05,
+            0.00030124079311519823
+          ],
+          "n": 4096,
+          "scope": "Position bootstrap, not game-clustered; fixed development data selected during training; not independent confirmation"
+        },
+        "Q_MAE": {
+          "mean_delta": 0.00015671380312442347,
+          "bootstrap_95": [
+            8.881520916407122e-05,
+            0.00022278700188126634
+          ],
+          "n": 4096,
+          "q_labels": 13755,
+          "scope": "Position-paired bootstrap of label-weighted Q MAE; development data, not independent confirmation"
+        },
+        "top1_counts": {
+          "improved": 6,
+          "regressed": 2
+        }
+      }
+    }
+  },
+  "matched_data_sequences": {
+    "100": true,
+    "250": true,
+    "500": true
+  },
+  "original_main_checkpoint_sha256": {
+    "last.pt": "7e62cea5558ae39dc2cc4925de7768cec18f2fd40ca1784aa6c1131420948655",
+    "best.pt": "0349e95e9d93f9018043ccb7b2b47a2c6a8192505d3b30853d7652f844aef5ee"
+  },
+  "gradient_diagnosis": "gradient-diagnosis.json",
+  "finished_at": 1793812154.9848201,
+  "main_training_resumed": false,
+  "selected_variant": null,
+  "automatic_promotion": false,
+  "test_labels_evaluated": false,
+  "completed_epoch": false,
+  "scope": "500-step development comparisons; all three heads trained; original frozen-parent metric/search thresholds; guard failures stop individual branches early; no automatic selection or extra epoch"
+}

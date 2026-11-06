@@ -1,0 +1,13 @@
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "trt-graph-pipeline-b8"]
+[Black "baseline"]
+[Result "1/2-1/2"]
+[FEN "r2q1rk1/pp3ppp/1bn3n1/3p4/6b1/1NP2N1P/PP2BPP1/R1BQ1RK1 b - - 0 12"]
+[SetUp "1"]
+[Termination "THREEFOLD_REPETITION"]
+
+12... Bf5 13. a4 a6 14. Re1 Be4 15. Bf1 Re8 16. Be3 h6 17. Bxb6 Qxb6 18. a5 Qc7 19. Nfd4 Rad8 20. Nxc6 Qxc6 21. Nd4 Qf6 22. Re3 Re5 23. f3 Bf5 24. Rxe5 Qxe5 25. Qe2 Qf6 26. Re1 Bd7 27. Qf2 Rc8 28. Qd2 Nf4 29. Kh2 h5 30. Ne2 Nxe2 31. Bxe2 Re8 32. Bd3 Qd6+ 33. Kh1 Re5 34. Rxe5 Qxe5 35. Qe2 Qg5 36. Qf2 g6 37. f4 Qe7 38. f5 g5 39. Qe2 Qxe2 40. Bxe2 h4 41. Bf3 Bc6 42. f6 Kh7 43. Bh5 Be8 44. Bf3 Bc6 45. Bh5 Be8 46. Bf3 1/2-1/2
+

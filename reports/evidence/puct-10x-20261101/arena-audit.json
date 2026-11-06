@@ -1,0 +1,60 @@
+{
+  "verified_games": 8,
+  "games": [
+    {
+      "file": "000-0.json",
+      "plies": 115,
+      "score": 0.0
+    },
+    {
+      "file": "000-1.json",
+      "plies": 147,
+      "score": 1.0
+    },
+    {
+      "file": "001-0.json",
+      "plies": 92,
+      "score": 0.0
+    },
+    {
+      "file": "001-1.json",
+      "plies": 37,
+      "score": 0.0
+    },
+    {
+      "file": "002-0.json",
+      "plies": 83,
+      "score": 1.0
+    },
+    {
+      "file": "002-1.json",
+      "plies": 68,
+      "score": 0.5
+    },
+    {
+      "file": "003-0.json",
+      "plies": 120,
+      "score": 1.0
+    },
+    {
+      "file": "003-1.json",
+      "plies": 176,
+      "score": 0.0
+    }
+  ],
+  "latency": {
+    "baseline": {
+      "moves": 419,
+      "median": 1.961037668006611,
+      "p95": 1.983210149210936,
+      "maximum": 1.9917325139977038
+    },
+    "trt-graph-pipeline-b8": {
+      "moves": 419,
+      "median": 0.19526576800853945,
+      "p95": 0.19647152580146213,
+      "maximum": 0.19662422299734317
+    }
+  },
+  "note": "Replayed legal moves and claimable outcomes; reconciled choice, simulation and actual network-input counters. Incomplete arena plans remain incomplete."
+}

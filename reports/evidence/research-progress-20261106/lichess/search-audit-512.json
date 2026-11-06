@@ -1,0 +1,307 @@
+{
+  "completed": true,
+  "cohorts": {
+    "random": {
+      "n": 384,
+      "original_1M_gate": {
+        "passed": false,
+        "introduced_blunders": [
+          289,
+          296,
+          302
+        ],
+        "mean_regret_delta_cp": -1.1848958333333333
+      },
+      "final_search_delta": {
+        "mean": -1.1692708333333333,
+        "bootstrap95": [
+          -778.02421875,
+          773.7139973958333
+        ],
+        "n": 384,
+        "scope": "Position-paired exploratory bootstrap, no game clustering or independent test confirmation"
+      },
+      "introduced_blunders_initial": [
+        289,
+        296,
+        302
+      ],
+      "introduced_blunders_confirmed": [
+        147,
+        289,
+        296,
+        302
+      ],
+      "same_search_moves": 363,
+      "confirmed_roots": 213,
+      "depth24_roots": 117,
+      "all_cp_roots": 310,
+      "all_exact_roots": 249,
+      "models": {
+        "parent": {
+          "modes": {
+            "policy": {
+              "mean_regret": 3687.8359375,
+              "errors_ge100": 54
+            },
+            "Q_supported": {
+              "mean_regret": 4734.630208333333,
+              "errors_ge100": 79
+            },
+            "fused": {
+              "mean_regret": 3689.1953125,
+              "errors_ge100": 55
+            },
+            "search": {
+              "mean_regret": 1335.2395833333333,
+              "errors_ge100": 34
+            }
+          },
+          "search_seconds_mean": 1.873929321776103,
+          "search_seconds_p95": 1.9748950801986211,
+          "fused_unannotated": 110,
+          "fresh_teacher_Q_MAE": 0.2792029771544501,
+          "fresh_teacher_Q_labels": 1371,
+          "fresh_unrestricted_Value_MAE": 0.2514186053757051,
+          "fresh_Value_source_strata": {
+            "winning": {
+              "n": 98,
+              "mae": 0.28068291690322206
+            },
+            "neutral": {
+              "n": 190,
+              "mae": 0.19598162178683434
+            },
+            "losing": {
+              "n": 96,
+              "mae": 0.33126365071100494
+            }
+          },
+          "candidate_union_pairwise_rank_accuracy": {
+            "policy": {
+              "mean": 0.6111615070063824,
+              "n": 361
+            },
+            "Q": {
+              "mean": 0.5479083166756297,
+              "n": 361
+            }
+          }
+        },
+        "candidate": {
+          "modes": {
+            "policy": {
+              "mean_regret": 3684.4583333333335,
+              "errors_ge100": 53
+            },
+            "Q_supported": {
+              "mean_regret": 4752.268229166667,
+              "errors_ge100": 77
+            },
+            "fused": {
+              "mean_regret": 3688.0104166666665,
+              "errors_ge100": 53
+            },
+            "search": {
+              "mean_regret": 1334.0703125,
+              "errors_ge100": 35
+            }
+          },
+          "search_seconds_mean": 1.8784970189635999,
+          "search_seconds_p95": 1.9771687974511223,
+          "fused_unannotated": 108,
+          "fresh_teacher_Q_MAE": 0.2775529999479938,
+          "fresh_teacher_Q_labels": 1371,
+          "fresh_unrestricted_Value_MAE": 0.24690828074872842,
+          "fresh_Value_source_strata": {
+            "winning": {
+              "n": 98,
+              "mae": 0.2800831923205025
+            },
+            "neutral": {
+              "n": 190,
+              "mae": 0.19836792426989658
+            },
+            "losing": {
+              "n": 96,
+              "mae": 0.30911168071689704
+            }
+          },
+          "candidate_union_pairwise_rank_accuracy": {
+            "policy": {
+              "mean": 0.6159078533039752,
+              "n": 361
+            },
+            "Q": {
+              "mean": 0.5590371001728343,
+              "n": 361
+            }
+          }
+        }
+      },
+      "cp_only_search_delta": {
+        "mean": 0.4096774193548387,
+        "bootstrap95": [
+          -2.0936290322580646,
+          2.690403225806452
+        ],
+        "n": 310,
+        "scope": "Position-paired exploratory bootstrap, no game clustering or independent test confirmation"
+      }
+    },
+    "hard": {
+      "n": 128,
+      "original_1M_gate": {
+        "passed": false,
+        "introduced_blunders": [
+          386,
+          419,
+          422
+        ],
+        "mean_regret_delta_cp": 3.9453125
+      },
+      "final_search_delta": {
+        "mean": 730.6640625,
+        "bootstrap95": [
+          -1591.4541015625,
+          3706.478125
+        ],
+        "n": 128,
+        "scope": "Position-paired exploratory bootstrap, no game clustering or independent test confirmation"
+      },
+      "introduced_blunders_initial": [
+        386,
+        419,
+        422
+      ],
+      "introduced_blunders_confirmed": [
+        386,
+        395,
+        420,
+        422
+      ],
+      "same_search_moves": 108,
+      "confirmed_roots": 66,
+      "depth24_roots": 56,
+      "all_cp_roots": 96,
+      "all_exact_roots": 98,
+      "models": {
+        "parent": {
+          "modes": {
+            "policy": {
+              "mean_regret": 8634.3984375,
+              "errors_ge100": 34
+            },
+            "Q_supported": {
+              "mean_regret": 6247.7578125,
+              "errors_ge100": 32
+            },
+            "fused": {
+              "mean_regret": 7861.234375,
+              "errors_ge100": 34
+            },
+            "search": {
+              "mean_regret": 3912.296875,
+              "errors_ge100": 10
+            }
+          },
+          "search_seconds_mean": 1.9247230327187594,
+          "search_seconds_p95": 1.9780725848493603,
+          "fused_unannotated": 98,
+          "fresh_teacher_Q_MAE": 0.24819833364222144,
+          "fresh_teacher_Q_labels": 528,
+          "fresh_unrestricted_Value_MAE": 0.20759058656119306,
+          "fresh_Value_source_strata": {
+            "losing": {
+              "n": 37,
+              "mae": 0.16585397511962297
+            },
+            "neutral": {
+              "n": 65,
+              "mae": 0.17030353396983386
+            },
+            "winning": {
+              "n": 26,
+              "mae": 0.3602026266295176
+            }
+          },
+          "candidate_union_pairwise_rank_accuracy": {
+            "policy": {
+              "mean": 0.3948934837092733,
+              "n": 114
+            },
+            "Q": {
+              "mean": 0.4444809941520468,
+              "n": 114
+            }
+          }
+        },
+        "candidate": {
+          "modes": {
+            "policy": {
+              "mean_regret": 8647.296875,
+              "errors_ge100": 36
+            },
+            "Q_supported": {
+              "mean_regret": 6238.6640625,
+              "errors_ge100": 29
+            },
+            "fused": {
+              "mean_regret": 7888.890625,
+              "errors_ge100": 38
+            },
+            "search": {
+              "mean_regret": 4642.9609375,
+              "errors_ge100": 11
+            }
+          },
+          "search_seconds_mean": 1.9250697086642106,
+          "search_seconds_p95": 1.9748042671519215,
+          "fused_unannotated": 128,
+          "fresh_teacher_Q_MAE": 0.2444864028824553,
+          "fresh_teacher_Q_labels": 528,
+          "fresh_unrestricted_Value_MAE": 0.20385618421266555,
+          "fresh_Value_source_strata": {
+            "losing": {
+              "n": 37,
+              "mae": 0.1527309572076475
+            },
+            "neutral": {
+              "n": 65,
+              "mae": 0.169146743635604
+            },
+            "winning": {
+              "n": 26,
+              "mae": 0.36338491639322956
+            }
+          },
+          "candidate_union_pairwise_rank_accuracy": {
+            "policy": {
+              "mean": 0.3853174603174604,
+              "n": 114
+            },
+            "Q": {
+              "mean": 0.4370422584238373,
+              "n": 114
+            }
+          }
+        }
+      },
+      "cp_only_search_delta": {
+        "mean": -0.10416666666666667,
+        "bootstrap95": [
+          -24.604166666666668,
+          18.532031250000003
+        ],
+        "n": 96,
+        "scope": "Position-paired exploratory bootstrap, no game clustering or independent test confirmation"
+      }
+    }
+  },
+  "all_original_gates_passed": false,
+  "candidate_updates": 4000,
+  "training_resumed": false,
+  "automatic_promotion": false,
+  "test_labels_used": false,
+  "limitation": "FEN-only histories; development sample, hard cohort selected on model outputs; finite teachers; not Elo or universal quality proof"
+}

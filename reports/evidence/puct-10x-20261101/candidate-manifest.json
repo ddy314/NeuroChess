@@ -1,0 +1,61 @@
+{
+  "suite": [
+    {
+      "name": "baseline",
+      "backend": "eager",
+      "options": {
+        "simulations": 16384,
+        "leaf_batch_size": 64,
+        "time_limit": 2.0,
+        "time_margin": 0.03,
+        "inference_cache_size": 32768,
+        "tree_reuse": true,
+        "c_puct": 1.5,
+        "fpu_reduction": 0.2,
+        "initial_width": 6,
+        "widening": 1.5,
+        "root_keep": 12,
+        "prune_after": 0.75,
+        "max_depth": 128,
+        "pending_loss_guard": true
+      }
+    },
+    {
+      "name": "trt-graph-pipeline-b8",
+      "backend": "tensorrt-int8graph",
+      "engine": "pipeline",
+      "options": {
+        "simulations": 16384,
+        "leaf_batch_size": 8,
+        "time_limit": 0.2,
+        "time_margin": 0.006,
+        "inference_cache_size": 32768,
+        "tree_reuse": true,
+        "c_puct": 1.5,
+        "fpu_reduction": 0.2,
+        "initial_width": 6,
+        "widening": 1.5,
+        "root_keep": 12,
+        "prune_after": 0.75,
+        "max_depth": 128,
+        "pending_loss_guard": true
+      }
+    }
+  ],
+  "source_sha256": {
+    "neurochess/pipeline_mcts.py": "b225036e4fa26cd172fbbaf589b77791080f7466841ae788b4c8fe79d219c5d0",
+    "neurochess/native/mcts_pipeline.cpp": "e2edec8798c85508c491365af83b96b78fad61284a5e910de470162c3bcc339f",
+    "neurochess/native/libmcts_pipeline.so": "988324464e7bbc571dc2bfea995e53eff2653b397eab6c60aac0f994a0ebc876",
+    "neurochess/tensorrt_inference.py": "fe752129cccc69ecf62c2435b5b828a9fae95f740c217e808a2bbb2a1c90dc82",
+    "neurochess/tensorrt_graph.py": "4757352fb51909881f4d8aff598c77422b98017a9eaf660ed4d240d4a471642b",
+    "neurochess/fused_heads.py": "9708b650d4f97f788db882822ac9e599492b991843152f06104c8d0b5de63ade",
+    "neurochess/cuda_inference.py": "6782513fb8ffc9e7b387f8a5ddb59abcf90ba5d166812d721d8eb97396590d95",
+    "scripts/duel_fast_search.py": "871fb441798932db919cb244ae3d2a4ec22c5cde29085697ee0ffdcc60171988",
+    "scripts/compare_fast_search.py": "6be5965b818edc5018186411bf3a6b01318d20ae685bd811baecf268266f58ab",
+    "scripts/check_search_floor.py": "c3ff2f6e17a69c92f6578a19057ec7a649cc14b0897f0a6567364030110e49be",
+    "scripts/build_tensorrt_int8.py": "37bb982b4ed924e633165f20d093fcc2bbddbd9fccaf0688c8e2825dedaec6e3",
+    "scripts/build_tensorrt_backend.py": "0fc7e04eb4b062f6492deb7363b61ebe77665d0d9b86c6c58f7b19743f5cde92"
+  },
+  "engine_sha256": "9435bc06609c85cf3643b9effcfe782be6a4c641cc4635c3abd472c128c3537d",
+  "status": "experimental; not promoted"
+}

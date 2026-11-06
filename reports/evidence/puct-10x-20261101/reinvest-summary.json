@@ -1,0 +1,423 @@
+{
+  "fresh32": {
+    "baseline": {
+      "samples": 32,
+      "mean_cp_regret": 37.25,
+      "blunders_100": 2,
+      "median_simulations": 2230.5,
+      "median_actual_network_inputs": 1990.5,
+      "p95_seconds": 1.9790838538465323,
+      "mean_seconds": 1.9599956580000253
+    },
+    "trt-graph-pipeline-0.5s": {
+      "samples": 32,
+      "mean_cp_regret": 20.53125,
+      "blunders_100": 2,
+      "median_simulations": 1683.5,
+      "median_actual_network_inputs": 1529.0,
+      "p95_seconds": 0.49652791314802014,
+      "mean_seconds": 0.4953555377487646,
+      "paired_cp_change": -16.71875,
+      "cp_change_bootstrap95": [
+        -51.84375,
+        5.875
+      ],
+      "introduced_blunders": [
+        19
+      ],
+      "introduced_mate_failures": []
+    },
+    "trt-graph-pipeline-1s": {
+      "samples": 32,
+      "mean_cp_regret": 24.78125,
+      "blunders_100": 3,
+      "median_simulations": 3478.5,
+      "median_actual_network_inputs": 3045.0,
+      "p95_seconds": 0.9923423876003653,
+      "mean_seconds": 0.9912625942806699,
+      "paired_cp_change": -12.46875,
+      "cp_change_bootstrap95": [
+        -49.34375,
+        12.875781249999932
+      ],
+      "introduced_blunders": [
+        19,
+        30
+      ],
+      "introduced_mate_failures": []
+    },
+    "trt-graph-pipeline-2s": {
+      "samples": 32,
+      "mean_cp_regret": 24.5,
+      "blunders_100": 3,
+      "median_simulations": 7390.0,
+      "median_actual_network_inputs": 6091.5,
+      "p95_seconds": 1.9925145031440479,
+      "mean_seconds": 1.9703500439063646,
+      "paired_cp_change": -12.75,
+      "cp_change_bootstrap95": [
+        -49.56328125,
+        12.59375
+      ],
+      "introduced_blunders": [
+        19,
+        30
+      ],
+      "introduced_mate_failures": []
+    }
+  },
+  "known_critical": {
+    "index": 0,
+    "fen": "1b2r1k1/pp3pp1/2p5/2P2p2/4r3/4B2P/PP1Q1P1q/3RRK2 w - - 4 28",
+    "methods": [
+      {
+        "method": "baseline",
+        "move": "f2f3",
+        "seconds": 1.9514737959980266,
+        "large_positions": 1943,
+        "root": {
+          "move": "f2f3",
+          "simulations": 2314,
+          "new_simulations": 2314,
+          "retained_visits": 0,
+          "nodes": 2342,
+          "proven_value": null,
+          "leaders": [
+            {
+              "move": "f2f3",
+              "visits": 1852,
+              "q": -0.618347,
+              "prior": 0.0952914,
+              "pruned": false
+            },
+            {
+              "move": "d2d8",
+              "visits": 268,
+              "q": -0.784802,
+              "prior": 0.0643493,
+              "pruned": false
+            },
+            {
+              "move": "f1e2",
+              "visits": 89,
+              "q": -0.940998,
+              "prior": 0.379516,
+              "pruned": false
+            },
+            {
+              "move": "d2d7",
+              "visits": 45,
+              "q": -0.822821,
+              "prior": 0.0457279,
+              "pruned": false
+            },
+            {
+              "move": "f2f4",
+              "visits": 29,
+              "q": -0.966276,
+              "prior": 0.137152,
+              "pruned": false
+            }
+          ],
+          "elapsed_seconds": 1.9513847219932359,
+          "time_stopped": true,
+          "time_limit": 2.0,
+          "time_overrun": false
+        },
+        "stats": {
+          "choices": 1,
+          "leaf_evaluations": 2271,
+          "completed_simulations": 2314,
+          "terminal_leaves": 44,
+          "pruned_root_edges": 16,
+          "proven_loss_skips": 8686,
+          "mate_proofs": 34,
+          "max_depth": 16,
+          "depth_limit_hits": 0,
+          "tree_reuses": 0,
+          "retained_nodes": 0,
+          "inference_batches": 39,
+          "native_seconds": 0.008269423036836088,
+          "inference_seconds": 1.9428972299647285,
+          "bridge_seconds": 8.491599874105304e-05,
+          "time_stops": 1,
+          "inference_cache": {
+            "requested_positions": 2271,
+            "forward_positions": 1943,
+            "cache_hits": 316,
+            "batch_duplicates": 12
+          }
+        },
+        "teacher": {
+          "cp": -464,
+          "mate": null,
+          "value": -1.0
+        },
+        "cp_regret": 0
+      },
+      {
+        "method": "trt-graph-pipeline-0.5s",
+        "move": "f2f3",
+        "seconds": 0.4954817639954854,
+        "large_positions": 1544,
+        "root": {
+          "move": "f2f3",
+          "simulations": 1932,
+          "new_simulations": 1932,
+          "retained_visits": 0,
+          "nodes": 1982,
+          "proven_value": null,
+          "leaders": [
+            {
+              "move": "f2f3",
+              "visits": 1041,
+              "q": -0.691585,
+              "prior": 0.0941481,
+              "pruned": false
+            },
+            {
+              "move": "d2d7",
+              "visits": 572,
+              "q": -0.836434,
+              "prior": 0.0439637,
+              "pruned": false
+            },
+            {
+              "move": "f1e2",
+              "visits": 147,
+              "q": -0.951118,
+              "prior": 0.380609,
+              "pruned": false
+            },
+            {
+              "move": "d2d8",
+              "visits": 80,
+              "q": -0.870412,
+              "prior": 0.0676704,
+              "pruned": false
+            },
+            {
+              "move": "f2f4",
+              "visits": 41,
+              "q": -0.984332,
+              "prior": 0.135239,
+              "pruned": false
+            }
+          ],
+          "elapsed_seconds": 0.49539592099608853,
+          "time_stopped": true,
+          "time_limit": 0.5
+        },
+        "stats": {
+          "choices": 1,
+          "leaf_evaluations": 1873,
+          "completed_simulations": 1932,
+          "terminal_leaves": 60,
+          "pruned_root_edges": 16,
+          "proven_loss_skips": 8980,
+          "mate_proofs": 57,
+          "max_depth": 16,
+          "depth_limit_hits": 0,
+          "tree_reuses": 0,
+          "retained_nodes": 0,
+          "inference_batches": 460,
+          "native_seconds": 0.010895121638895944,
+          "inference_seconds": 0.47102649498265237,
+          "bridge_seconds": 8.407900168094784e-05,
+          "time_stops": 1,
+          "physical_inference_batches": 194,
+          "inference_cache": {
+            "requested_positions": 1873,
+            "forward_positions": 1544,
+            "cache_hits": 325,
+            "batch_duplicates": 4
+          }
+        },
+        "teacher": {
+          "cp": -464,
+          "mate": null,
+          "value": -1.0
+        },
+        "cp_regret": 0
+      },
+      {
+        "method": "trt-graph-pipeline-1s",
+        "move": "f2f3",
+        "seconds": 0.9915154529880965,
+        "large_positions": 3096,
+        "root": {
+          "move": "f2f3",
+          "simulations": 3669,
+          "new_simulations": 3669,
+          "retained_visits": 0,
+          "nodes": 3737,
+          "proven_value": null,
+          "leaders": [
+            {
+              "move": "f2f3",
+              "visits": 2680,
+              "q": -0.782046,
+              "prior": 0.0941481,
+              "pruned": false
+            },
+            {
+              "move": "d2d7",
+              "visits": 572,
+              "q": -0.836434,
+              "prior": 0.0439637,
+              "pruned": false
+            },
+            {
+              "move": "f1e2",
+              "visits": 197,
+              "q": -0.953672,
+              "prior": 0.380609,
+              "pruned": false
+            },
+            {
+              "move": "d2d8",
+              "visits": 80,
+              "q": -0.870412,
+              "prior": 0.0676704,
+              "pruned": false
+            },
+            {
+              "move": "f2f4",
+              "visits": 61,
+              "q": -0.980165,
+              "prior": 0.135239,
+              "pruned": false
+            }
+          ],
+          "elapsed_seconds": 0.991436292999424,
+          "time_stopped": true,
+          "time_limit": 1.0
+        },
+        "stats": {
+          "choices": 1,
+          "leaf_evaluations": 3593,
+          "completed_simulations": 3669,
+          "terminal_leaves": 77,
+          "pruned_root_edges": 16,
+          "proven_loss_skips": 16741,
+          "mate_proofs": 75,
+          "max_depth": 22,
+          "depth_limit_hits": 0,
+          "tree_reuses": 0,
+          "retained_nodes": 0,
+          "inference_batches": 790,
+          "native_seconds": 0.020894088243949227,
+          "inference_seconds": 0.9444440161896637,
+          "bridge_seconds": 7.144099799916148e-05,
+          "time_stops": 1,
+          "physical_inference_batches": 388,
+          "inference_cache": {
+            "requested_positions": 3593,
+            "forward_positions": 3096,
+            "cache_hits": 489,
+            "batch_duplicates": 8
+          }
+        },
+        "teacher": {
+          "cp": -464,
+          "mate": null,
+          "value": -1.0
+        },
+        "cp_regret": 0
+      },
+      {
+        "method": "trt-graph-pipeline-2s",
+        "move": "f2f3",
+        "seconds": 1.9902161280042492,
+        "large_positions": 6200,
+        "root": {
+          "move": "f2f3",
+          "simulations": 7427,
+          "new_simulations": 7427,
+          "retained_visits": 0,
+          "nodes": 7573,
+          "proven_value": null,
+          "leaders": [
+            {
+              "move": "f2f3",
+              "visits": 6013,
+              "q": -0.824988,
+              "prior": 0.0941481,
+              "pruned": false
+            },
+            {
+              "move": "d2d7",
+              "visits": 572,
+              "q": -0.836434,
+              "prior": 0.0439637,
+              "pruned": false
+            },
+            {
+              "move": "f1e2",
+              "visits": 408,
+              "q": -0.94341,
+              "prior": 0.380609,
+              "pruned": false
+            },
+            {
+              "move": "f2f4",
+              "visits": 136,
+              "q": -0.951493,
+              "prior": 0.135239,
+              "pruned": false
+            },
+            {
+              "move": "d2d8",
+              "visits": 131,
+              "q": -0.888674,
+              "prior": 0.0676704,
+              "pruned": false
+            }
+          ],
+          "elapsed_seconds": 1.9901413530024001,
+          "time_stopped": true,
+          "time_limit": 2.0
+        },
+        "stats": {
+          "choices": 1,
+          "leaf_evaluations": 7281,
+          "completed_simulations": 7427,
+          "terminal_leaves": 147,
+          "pruned_root_edges": 16,
+          "proven_loss_skips": 33891,
+          "mate_proofs": 153,
+          "max_depth": 23,
+          "depth_limit_hits": 0,
+          "tree_reuses": 0,
+          "retained_nodes": 0,
+          "inference_batches": 1558,
+          "native_seconds": 0.04378101314068772,
+          "inference_seconds": 1.8939495108788833,
+          "bridge_seconds": 7.689799531362951e-05,
+          "time_stops": 1,
+          "physical_inference_batches": 776,
+          "inference_cache": {
+            "requested_positions": 7281,
+            "forward_positions": 6200,
+            "cache_hits": 1071,
+            "batch_duplicates": 10
+          }
+        },
+        "teacher": {
+          "cp": -464,
+          "mate": null,
+          "value": -1.0
+        },
+        "cp_regret": 0
+      }
+    ],
+    "teacher_candidates": {
+      "f2f3": {
+        "cp": -464,
+        "mate": null,
+        "value": -1.0
+      }
+    }
+  },
+  "note": "Fresh32 separate from known tactical regression atindex0. No direct games of these longer-budget variants yet; no baseline promotion."
+}

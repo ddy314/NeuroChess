@@ -3,6 +3,7 @@ import fcntl,hashlib,json,os,shutil,sqlite3,subprocess,sys,tarfile,threading,tim
 from pathlib import Path
 ROOT=Path('/content/neurochess');WORK=Path('/content/fresh-v4');MOUNT=Path('/content/drive')
 SAVE=MOUNT/'MyDrive/neurochess/fresh-v4-preparation';DELIVERY=MOUNT/'MyDrive/neurochess-data/fresh-v4-500k'
+COPY_LOCK=threading.RLock()
 
 
 def sha(path):
@@ -10,10 +11,11 @@ def sha(path):
 
 
 def copy(source,target):
-    target=Path(target);target.parent.mkdir(parents=True,exist_ok=True)
-    temp=target.with_name(target.name+'.tmp');shutil.copyfile(source,temp)
-    if sha(source)!=sha(temp):raise OSError('Drive readback failed: '+str(target))
-    temp.replace(target)
+    with COPY_LOCK:
+        target=Path(target);target.parent.mkdir(parents=True,exist_ok=True)
+        temp=target.with_name(target.name+'.tmp');shutil.copyfile(source,temp)
+        if sha(source)!=sha(temp):raise OSError('Drive readback failed: '+str(target))
+        temp.replace(target)
 
 
 def download(url,path):
@@ -38,7 +40,8 @@ def main():
     state={'phase':'copying-old-data','updated_at':time.time()};stop=threading.Event();failure=None
     def persist():
         atomic_json(WORK/'pipeline-status.json',dict(state,updated_at=time.time()))
-        for name in ['pipeline-status.json','selection-progress.json','selection-audit.json','jobs.jsonl','pipeline-error.json','opening-library.json','ready.json']:
+        for name in ['pipeline-status.json','selection-progress.json','selection-audit.json','jobs.jsonl','pipeline-error.json','opening-library.json','ready.json',
+                     'quality-spec.json','quality-progress.json','quality-gate.json']:
             if (WORK/name).exists():copy(WORK/name,SAVE/name)
         label_work=WORK/'teacher'
         for name in ['progress.json','spec.json']:
@@ -118,13 +121,30 @@ def main():
                 if own&extra:raise ValueError('Parallel labels overlap')
                 db.execute('ATTACH DATABASE ? AS helper',(str(other),));db.execute('INSERT INTO labels SELECT * FROM helper.labels');db.commit();db.execute('DETACH DATABASE helper')
             spec=json.loads((WORK/'teacher/spec.json').read_text());spec.update(start=0,end=512000,parallel_workers=16,source_partitions=[[0,256000],[256000,512000]])
+            state['phase']='source-teacher-quality-adjudication'
+            from fresh_teacher_quality import quality_gate
+            quality_plan=plan['source_teacher_quality_gate']
+            quality=quality_gate(db,all_jobs,str(ROOT/'bin/stockfish'),WORK,workers=8,
+                nodes=quality_plan['teacher_nodes'],coarse_nodes=quality_plan['coarse_nodes'],threshold_cp=quality_plan['threshold_cp'])
+            if quality['counts']!={'train':500000,'val':10000,'test':2000} or quality['unsupported_source_conflicts']:
+                raise ValueError('Incomplete teacher/source quality gate')
+            copy(WORK/'quality-gate.json',SAVE/'quality-gate.json')
+            spec.update(quality_gate_sha256=sha(WORK/'quality-gate.json'),source_policy_only_positions=quality['unresolved_source_policy_only'])
+            if (WORK/'data/annotation-audit.json').exists():
+                existing=json.loads((WORK/'data/trainval/manifest.json').read_text())['provenance']
+                if existing.get('quality_gate_sha256')!=spec['quality_gate_sha256']:
+                    (WORK/'data').rename(WORK/('data-before-quality-'+str(int(time.time()))))
             if not (WORK/'data/annotation-audit.json').exists():export(db,WORK/'data',spec)
         proof=json.loads((WORK/'data/annotation-audit.json').read_text())
         if proof['trainval']['counts']!={'train':500000,'val':10000} or proof['test']['counts']!={'train':0,'val':2000}:raise ValueError('Final dataset counts differ')
         state['phase']='packing-and-verifying-delivery';archive=WORK/'fresh-v4-500k.tar.gz'
-        with tarfile.open(archive,'w:gz',compresslevel=1) as tar:tar.add(WORK/'data',arcname='data');tar.add(jobs,arcname='jobs.jsonl');tar.add(WORK/'opening-library.json',arcname='opening-library.json');tar.add(WORK/'selection-audit.json',arcname='selection-audit.json')
+        with tarfile.open(archive,'w:gz',compresslevel=1) as tar:
+            for name in ['data','opening-library.json','selection-audit.json','quality-gate.json','quality-spec.json']:
+                tar.add(WORK/name,arcname=name)
+            tar.add(jobs,arcname='jobs.jsonl')
         copy(archive,Path(str(DELIVERY)+'.tar.gz'))
-        atomic_json(WORK/'ready.json',dict(complete=True,counts=proof,archive_sha256=sha(archive),plan=plan,created_at=time.time()))
+        atomic_json(WORK/'ready.json',dict(complete=True,counts=proof,archive_sha256=sha(archive),plan=plan,
+            quality_gate_sha256=sha(WORK/'quality-gate.json'),quality_gate=quality,created_at=time.time()))
         copy(WORK/'ready.json',Path(str(DELIVERY)+'-ready.json'));state['phase']='complete'
     except Exception as error:
         failure=error;state['phase']='failed';atomic_json(WORK/'pipeline-error.json',dict(error=repr(error),time=time.time()))

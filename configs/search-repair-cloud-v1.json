@@ -1,0 +1,55 @@
+{
+  "name": "search-repair-cloud-v1",
+  "authorized_at": "2026-11-01T22:22:29.651239+08:00",
+  "training_branches": 1,
+  "initialization": "Exact original fresh policy/Q trunk + original old value trunk, saved as portable PolicyValuePair; no value-layer transplant",
+  "policy_q_parent_sha256": "343d19699d86f3e0b8e2ff1a9cf3237a403fb25c4e0af98ad7d63a72d6c78247",
+  "value_parent_sha256": "e4ed8978db91eeef8360c4dea87faf7a4f826325bce45aa7efc024692d585ef7",
+  "short": {
+    "steps": 750,
+    "trainable": "value output MLP only; both trunks frozen",
+    "lr": 1e-05,
+    "batch_size": 1024,
+    "initial_value_kl_weight": 0.1
+  },
+  "gate": {
+    "diagnostic_roots": 20,
+    "additional_holdout_roots": 32,
+    "search_config": "puct-2s-v1",
+    "full_games": 0,
+    "diagnostic_tolerance_games": 0,
+    "holdout_tolerance_games": 1,
+    "general_value_validation": 4096,
+    "balanced_value_validation": 300,
+    "general_ce_relative_tolerance": 0.03,
+    "general_mae_absolute_tolerance": 0.02,
+    "balanced_mae_absolute_tolerance": 0.005,
+    "per_stratum_mae_absolute_tolerance": 0.03,
+    "opponent_mean_value_increase_tolerance": 0.05,
+    "all_checks_required": true
+  },
+  "continuation": {
+    "conditional_on_short_gate": true,
+    "steps": 4000,
+    "trainable": "value branch encoder and MLP; policy/Q branch frozen",
+    "lr": 2e-06,
+    "effective_batch": 1024,
+    "general_replay_fraction": 0.8,
+    "repair_fraction": 0.2,
+    "gate_every": 1000,
+    "save_every": 250,
+    "stop_on_gate_failure": true
+  },
+  "data": {
+    "train_families": 2000,
+    "val_families": 512,
+    "teacher_nodes": 100000,
+    "train_value_strata": 10000,
+    "val_value_strata": 100,
+    "replay_source": "verified old5M core; no claim that replay is novel data",
+    "curated_roots": "Reuse full source quality-gated labels and policy-only conflict fallback",
+    "additional_novel_root_claim": false
+  },
+  "completion": "Persist all checkpoints and gate artifacts, verify SHA readback and release; do not automatically promote desktop default model",
+  "recurring_monitor": false
+}

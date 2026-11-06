@@ -1,0 +1,16 @@
+[Event "NeuroChess optimized 0.5s fixed-node arena"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "5"]
+[White "Stockfish 18-nodes1500"]
+[Black "NeuroChess-selected-PUCT-0.5s"]
+[Result "1-0"]
+[FEN "r1bqkb1r/p4ppp/2p2n2/3p4/8/3B3P/PPP2PP1/RNBQ1RK1 b kq - 1 9"]
+[SetUp "1"]
+[SFNodes "1500"]
+[SearchSeconds "0.5"]
+[ModelSHA256 "e4ed8978db91eeef8360c4dea87faf7a4f826325bce45aa7efc024692d585ef7"]
+[Termination "CHECKMATE"]
+
+9... Bd6 10. Re1+ Be6 11. Nd2 O-O 12. b3 a5 13. Bb2 a4 14. Nf3 Re8 15. Ng5 a3 16. Bc3 Bd7 17. Rxe8+ Bxe8 18. Qe2 Bd7 19. Re1 h6 20. Nf3 c5 21. Nh4 d4 22. Bd2 Qc7 23. Bc4 Re8 24. Qd1 Bh2+ 25. Kf1 Rxe1+ 26. Bxe1 Bc6 27. Nf3 Nd5 28. g3 Qd7 29. Kg2 Bxg3 30. Bxd5 Qxd5 31. fxg3 c4 32. Kf2 cxb3 33. cxb3 d3 34. Bd2 Bb7 35. Bb4 g5 36. Bxa3 h5 37. Bc1 f6 38. h4 Qc5+ 39. Be3 Qc6 40. hxg5 fxg5 41. Bxg5 Qb6+ 42. Be3 Qf6 43. b4 Qf7 44. Bh6 Kh7 45. Bd2 Ba8 46. b5 Qb7 47. Bf4 Qb6+ 48. Be3 Qxb5 49. Nd4 Qb2+ 50. Ke1 Qc3+ 51. Kf1 Kg6 52. Qb3 d2 53. Ke2 Qc5 54. Kxd2 Qa5+ 55. Ke2 Bd5 56. Qd3+ Kg7 57. a3 Bb7 58. Ne6+ Kf6 59. Nc5 Bc8 60. Qd6+ Kf7 61. Qd5+ Kg7 62. Ne6+ Bxe6 63. Qxa5 Bg4+ 64. Ke1 Kg6 65. Qg5+ Kf7 66. a4 Ke6 67. Qb5 h4 68. gxh4 Bf3 69. Qe8+ Kd5 70. Qa8+ Kc4 71. Qxf3 Kd3 72. Bg5+ Kd4 73. Qa3 Ke4 74. Qc5 Kf3 75. a5 Ke4 76. h5 Kf3 77. Qf5+ Kg3 78. Ke2 Kg2 79. Qf3+ Kg1 80. Qf1+ Kh2 81. Bf4# 1-0
+

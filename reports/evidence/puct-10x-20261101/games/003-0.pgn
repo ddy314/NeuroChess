@@ -1,0 +1,13 @@
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "baseline"]
+[Black "trt-graph-pipeline-b8"]
+[Result "0-1"]
+[FEN "r2q1rk1/pp3pbp/3pbnp1/4pn2/2P5/P1N1PNB1/1PQ2PPP/R3KB1R w KQ - 3 13"]
+[SetUp "1"]
+[Termination "CHECKMATE"]
+
+13. Ng5 Bd7 14. Be2 Rc8 15. O-O Bc6 16. Rad1 Qe7 17. Nge4 Nxe4 18. Nxe4 Rfd8 19. Rd2 h5 20. h3 Bh6 21. Bf3 b5 22. b3 d5 23. cxd5 Bxd5 24. Qb1 Bxe4 25. Rxd8+ Rxd8 26. Qxe4 Nxg3 27. fxg3 Qxa3 28. Kh2 Qe7 29. Bxh5 gxh5 30. Rf5 h4 31. Qg4+ Kf8 32. Rh5 Qf6 33. Qb4+ Kg8 34. Qg4+ Bg7 35. Rg5 hxg3+ 36. Kxg3 Rd3 37. Qc8+ Kh7 38. h4 Rd8 39. Qg4 Bh6 40. Qe4+ Kh8 41. Rf5 Qe6 42. Kh2 Kg8 43. Rxe5 Qg6 44. Rf5 Bg7 45. g3 Qd6 46. Rg5 Qf6 47. Kh3 a6 48. b4 Qe6+ 49. Qxe6 fxe6 50. h5 Rd5 51. Kg4 Rxg5+ 52. Kxg5 Bc3 53. Kg6 Bxb4 54. h6 Bc3 55. g4 Be5 56. g5 b4 57. h7+ Kf8 58. h8=N Bxh8 59. Kh7 Be5 60. g6 b3 61. g7+ Bxg7 62. Kg6 b2 63. Kg5 b1=Q 64. Kf4 Qf5+ 65. Kg3 Be5+ 66. Kg2 Qe4+ 67. Kf2 a5 68. Ke2 a4 69. Kf2 a3 70. Ke2 a2 71. Ke1 Qc2 72. e4 a1=Q# 0-1
+

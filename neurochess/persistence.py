@@ -5,18 +5,20 @@ import shutil
 
 
 class RunMirror:
-    def __init__(self, source, destination, mount):
+    def __init__(self, source, destination, mount, exclude_top_level=()):
         self.source = Path(source)
         self.destination = Path(destination)
         self.mount = Path(mount)
         self.copied = {}
+        self.exclude_top_level = frozenset(exclude_top_level)
 
     def sync(self):
         # Never recreate a disappeared mount or silently save on ephemeral storage.
         if not os.path.ismount(self.mount) or not self.destination.is_dir():
             raise OSError('Persistent mount or original run directory is unavailable')
         paths = sorted(p for p in self.source.rglob('*') if p.is_file()
-                       and p.suffix != '.tmp')
+                       and p.suffix != '.tmp'
+                       and p.relative_to(self.source).parts[0] not in self.exclude_top_level)
         # Publish completion only after the checkpoint and other artifacts.
         paths.sort(key=lambda p: p.name == 'status.json')
         for path in paths:

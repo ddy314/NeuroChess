@@ -1,6 +1,7 @@
 # Local reference engine; never commit its binary.
 /local/
 .venv/
+.vscode/
 __pycache__/
 .pytest_cache/
 *.egg-info/
@@ -25,3 +26,6 @@ output/
 /scripts/remote_gui_inspect.py
 /scripts/remote_pilot.py
 /scripts/remote_validate.py
+
+# Even curated evidence directories do not publish raw runtime logs.
+*.log

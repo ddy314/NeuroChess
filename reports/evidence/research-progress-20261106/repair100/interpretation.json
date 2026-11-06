@@ -1,0 +1,249 @@
+{
+  "verified_at": 1793899909.5258346,
+  "outcome": "Original search gate stopped the bounded trial at50 of100 updates; no technical training failure; no candidate promoted.",
+  "supervised_steps_passed": [
+    25,
+    50
+  ],
+  "original48": {
+    "passed": true,
+    "introduced_blunders": [],
+    "mean_regret_delta_cp": 0.0
+  },
+  "regression_controls": {
+    "passed": false,
+    "introduced_blunders": [
+      1147,
+      1386
+    ],
+    "mean_regret_delta_cp": 56.5
+  },
+  "baseline_local": {
+    "new": {
+      "positions": 8192,
+      "loss": 2.6113621750846505,
+      "policy_loss": 2.0842742389068007,
+      "q_loss": 0.12405427527846768,
+      "value_loss": 0.46506080066319555,
+      "top1": 0.38330078125,
+      "q_mae": 0.23200807349841798,
+      "value_mae": 0.23846316182581972,
+      "value_strata": {
+        "winning": {
+          "n": 2069,
+          "mae": 0.27637061223440834
+        },
+        "neutral": {
+          "n": 4370,
+          "mae": 0.1966700664719831
+        },
+        "losing": {
+          "n": 1753,
+          "mae": 0.29790715030322773
+        }
+      }
+    },
+    "old_core": {
+      "positions": 8192,
+      "loss": 2.5440446278080344,
+      "policy_loss": 2.016333994921297,
+      "q_loss": 0.11513792115147226,
+      "value_loss": 0.4701416752068326,
+      "top1": 0.4244384765625,
+      "q_mae": 0.21996255859320804,
+      "value_mae": 0.22333722937824518,
+      "value_strata": {
+        "winning": {
+          "n": 2116,
+          "mae": 0.29597972555082497
+        },
+        "neutral": {
+          "n": 4387,
+          "mae": 0.1446945096447521
+        },
+        "losing": {
+          "n": 1689,
+          "mae": 0.33659601538751416
+        }
+      }
+    },
+    "old_general": {
+      "positions": 4096,
+      "loss": 2.4029501574113965,
+      "policy_loss": 1.9767846940085292,
+      "q_loss": 0.09202906172140501,
+      "value_loss": 0.3801509222248569,
+      "top1": 0.43603515625,
+      "q_mae": 0.18312370053467772,
+      "value_mae": 0.17880178938517588,
+      "value_strata": {
+        "winning": {
+          "n": 1146,
+          "mae": 0.2279307724920997
+        },
+        "neutral": {
+          "n": 2241,
+          "mae": 0.11701303967772386
+        },
+        "losing": {
+          "n": 709,
+          "mae": 0.2946928661889351
+        }
+      }
+    }
+  },
+  "baseline_fresh": {
+    "positions": 4096,
+    "loss": 2.5901606418192387,
+    "policy_loss": 2.0748911686241627,
+    "q_loss": 0.12230289471335709,
+    "value_loss": 0.45411802851594985,
+    "top1": 0.388427734375,
+    "q_mae": 0.23113016471287973,
+    "value_mae": 0.23108357263186008,
+    "value_strata": {
+      "winning": {
+        "n": 1045,
+        "mae": 0.2563116020892867
+      },
+      "neutral": {
+        "n": 2164,
+        "mae": 0.1892908542948928
+      },
+      "losing": {
+        "n": 887,
+        "mae": 0.3033227515475155
+      }
+    }
+  },
+  "final_supervised": {
+    "new": {
+      "positions": 8192,
+      "loss": 2.6107929907739162,
+      "policy_loss": 2.082692615222186,
+      "q_loss": 0.12412786054483149,
+      "value_loss": 0.46603644540300593,
+      "top1": 0.3834228515625,
+      "q_mae": 0.2319267791749187,
+      "value_mae": 0.23887243837752692,
+      "value_strata": {
+        "winning": {
+          "n": 2069,
+          "mae": 0.2761789899904131
+        },
+        "neutral": {
+          "n": 4370,
+          "mae": 0.2013110401323843
+        },
+        "losing": {
+          "n": 1753,
+          "mae": 0.2884765770222569
+        }
+      }
+    },
+    "old_core": {
+      "positions": 8192,
+      "loss": 2.5427776593714952,
+      "policy_loss": 2.0154996002092957,
+      "q_loss": 0.11498337898228783,
+      "value_loss": 0.4697863713372499,
+      "top1": 0.4248046875,
+      "q_mae": 0.21970476926535223,
+      "value_mae": 0.22371047761403418,
+      "value_strata": {
+        "winning": {
+          "n": 2116,
+          "mae": 0.2955649581153319
+        },
+        "neutral": {
+          "n": 4387,
+          "mae": 0.1492144659257152
+        },
+        "losing": {
+          "n": 1689,
+          "mae": 0.32718586099823155
+        }
+      }
+    },
+    "old_general": {
+      "positions": 4096,
+      "loss": 2.4028815189376473,
+      "policy_loss": 1.9761724872514606,
+      "q_loss": 0.09210663646808825,
+      "value_loss": 0.38065572129562497,
+      "top1": 0.4365234375,
+      "q_mae": 0.18291083827793533,
+      "value_mae": 0.1794291605369267,
+      "value_strata": {
+        "winning": {
+          "n": 1146,
+          "mae": 0.22808894831004567
+        },
+        "neutral": {
+          "n": 2241,
+          "mae": 0.12084894374813776
+        },
+        "losing": {
+          "n": 709,
+          "mae": 0.285937128147197
+        }
+      }
+    }
+  },
+  "final_fresh": {
+    "positions": 4096,
+    "loss": 2.5895203854888678,
+    "policy_loss": 2.0732568902894855,
+    "q_loss": 0.12238753758720122,
+    "value_loss": 0.4550697284284979,
+    "top1": 0.388427734375,
+    "q_mae": 0.23112876333569432,
+    "value_mae": 0.23154040580303104,
+    "value_strata": {
+      "winning": {
+        "n": 1045,
+        "mae": 0.2560550905612596
+      },
+      "neutral": {
+        "n": 2164,
+        "mae": 0.1942603387330317
+      },
+      "losing": {
+        "n": 887,
+        "mae": 0.293610551876458
+      }
+    }
+  },
+  "counts": {
+    "presentation_counts": {
+      "clean": 8000,
+      "repair": 1600,
+      "old_replay": 3200,
+      "total": 12800
+    },
+    "unique_counts": {
+      "clean": 8000,
+      "repair": 255,
+      "old_replay": 3200
+    },
+    "repair_pool_size": 256,
+    "repair_pool_equivalent_passes": 6.25,
+    "effective_batch": 256,
+    "microbatch": 32
+  },
+  "limitations": [
+    "Five postselected regressions and development controls; a single timed screen is not a fixed-work repeatability or Elo estimate.",
+    "Final384 random/128 hard audit not run after the50-step search gate stopped.",
+    "147: original1M118cp;5M104cp atdepth21; prior20Mdepth25 teacher gives77cp. Do not upgrade severity or erase original gate.",
+    "386: original1M416cp;5Mdepth24 exact confirmation459cp; prior20Mdepth26 also strongly rejects premature queen promotion.",
+    "No source-game identities; canonical position-key and root-group isolation only.",
+    "Original test labels not used.",
+    "last.pt25 only passed supervised gate; it is not a fully search-approved replacement."
+  ],
+  "unchanged_frozen_parent": true,
+  "original_main_resumed": false,
+  "automatic_expansion": false,
+  "automatic_promotion": false,
+  "local_service_exited": true,
+  "local_training_gpu_processes_remaining": false
+}

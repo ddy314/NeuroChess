@@ -1,0 +1,34 @@
+{
+  "status": "proposed-only",
+  "approved_weight_candidate": null,
+  "training_resumed": false,
+  "causal_scope": "Five postselected roots, matched retained controls, exact per-root fixed work, full-trunk output interventions; no model-wide importance or Elo claim",
+  "immediate": "Retain frozen parent; preserve step4000 and rejected interpolation prototypes separately",
+  "repair_experiment": [
+    {
+      "step": 1,
+      "action": "Build independently sourced training-root search-node replay; never train current validation roots or reserved descendants; preserve canonical dedup and split exclusions"
+    },
+    {
+      "step": 2,
+      "action": "Coherent teacher labels for union of teacher best, student policy/Q-supported choices, and actual search choices, including promotions; require nodes>=1M, depth>=24, exact complete iterations, and independent deeper disagreement checks"
+    },
+    {
+      "step": 3,
+      "action": "Keep Q and Value WDL semantics. Existing Policy already uses CP-softmax; compare extra weighting or pairwise Policy ranking on large teacher CP gaps, rather than pretending saturated W-L can express hundreds of CP"
+    },
+    {
+      "step": 4,
+      "action": "Joint three-head/shared-trunk small-step repair from frozen-parent reference; preserve functional fused priors, Q seeds and descendant Value on verified retained states; do not blindly revert only Value MLP"
+    },
+    {
+      "step": 5,
+      "action": "Bounded pilot before more training; unchanged old/new metric gates and locked2s screens, five development regressions plus broad separate random/hard controls and fresh untouched evaluation; count new unique data and replay separately"
+    }
+  ],
+  "rejected_shortcuts": [
+    "Adopt any alpha0.25/0.50/0.75 interpolation: all still fail386 and420",
+    "Replace final visit choice with max root Q: fixes selected5 but introduces4 other exact-CP regressions in teacher-covered random subset",
+    "Increase simulations and call that model improvement or alter the locked baseline"
+  ]
+}

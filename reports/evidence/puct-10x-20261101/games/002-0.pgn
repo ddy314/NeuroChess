@@ -1,0 +1,13 @@
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "baseline"]
+[Black "trt-graph-pipeline-b8"]
+[Result "0-1"]
+[FEN "r2q1rk1/pp3ppp/1bn3n1/3p4/6b1/1NP2N1P/PP2BPP1/R1BQ1RK1 b - - 0 12"]
+[SetUp "1"]
+[Termination "CHECKMATE"]
+
+12... Bf5 13. a4 a6 14. Nbd4 Be4 15. Be3 Re8 16. Re1 h6 17. Bf1 Qc7 18. Nxc6 bxc6 19. Bxb6 Qxb6 20. b4 c5 21. a5 Qf6 22. bxc5 Nf4 23. Re3 Rac8 24. Qd4 Qf5 25. Rae1 Qg6 26. g3 Ne6 27. Qb4 Rb8 28. Qa4 Nxc5 29. Qd4 Ne6 30. Qd2 Red8 31. Ne5 Qh5 32. f4 Rbc8 33. h4 f6 34. Bh3 Qe8 35. Ng6 Rc4 36. f5 Nc5 37. Bf1 Ra4 38. g4 Qd7 39. g5 Bxf5 40. Ne7+ Kh7 41. Rg3 Ne4 42. gxf6 Nxd2 43. Rxg7+ Kh8 44. Bh3 Nf3+ 45. Kg2 Ra2+ 46. Re2 Rxe2+ 47. Kxf3 Be4+ 48. Kg3 Qd6+ 49. Kg4 Qxf6 50. Ng6+ Bxg6 51. Rf7 Bxf7 52. Kg3 Qf2+ 53. Kg4 Re4# 0-1
+

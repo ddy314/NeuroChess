@@ -50,7 +50,8 @@ def atomic_json(path,value):
 
 def group_id(url):
     # Lichess GameUrl has a ply fragment and sometimes a player token suffix.
-    return urlsplit(url).path.strip('/').split('/')[0][:8]
+    parts=urlsplit(url).path.strip('/').split('/')
+    return parts[1 if parts[0]=='game' else 0][:8]
 
 
 def group_split(group,seed):
@@ -168,7 +169,8 @@ def label(task):
     for move in job['history']:board.push_uci(move)
     if position_key(board).hex()!=job['key']:raise ValueError('Puzzle identity differs')
     coarse=ENGINE.analyse(board,chess.engine.Limit(nodes=coarse_nodes),multipv=min(4,board.legal_moves.count()),game=object())
-    candidates=list(dict.fromkeys([x['pv'][0] for x in coarse]+[board.parse_uci(job['solution'][0])]))
+    source=[board.parse_uci(job['solution'][0])] if job.get('solution') else []
+    candidates=list(dict.fromkeys([x['pv'][0] for x in coarse]+source))
     infos=ENGINE.analyse(board,chess.engine.Limit(nodes=nodes),root_moves=candidates,multipv=len(candidates),game=object())
     row,legal=record(board);pvs=[]
     for info in infos:
@@ -176,7 +178,8 @@ def label(task):
         pv['mate' if score.is_mate() else 'cp']=score.mate() if score.is_mate() else score.score();pvs.append(pv)
     assign_targets(row,board,legal,pvs)
     return job['key'],job['split'],row.tobytes(),json.dumps(dict(pvs=pvs,depths=[i.get('depth') for i in infos],
-        puzzle_solution=job['solution'],category=job['category'],source_group=job['group']))
+        puzzle_solution=job.get('solution',[]),category=job['category'],source_group=job['group'],
+        source_role=job.get('role','solver-root')))
 
 
 def annotate(jobs_path,engine,work,out,plan,start_index=0,end_index=None):

@@ -76,10 +76,14 @@ python scripts/build_native_mcts.py --debug
 .venv/bin/python -m pytest tests/test_native_mcts.py tests/test_mcts.py tests/test_oneply.py tests/test_local_arena.py tests/test_core.py -q
 python scripts/build_native_mcts.py
 python scripts/benchmark_mcts.py \
-  --checkpoint output/local-arena-20261030/checkpoints/step-8400.pt \
+  --checkpoint /path/to/compatible-human-policy-checkpoint.pt \
   --simulations 128 --repeats 3 \
   --out output/native-mcts-20261030/benchmark.json
 ```
+
+The historical step-8400 checkpoint used in this benchmark was removed during
+the 2026-11-01 cleanup; the original benchmark results remain under
+`output/native-mcts-20261030/`. A replacement checkpoint changes the benchmark.
 
 Debug build enables undefined-behavior checks. Differential tests compare legal
 action IDs, all model input fields, and exact terminal outcomes against

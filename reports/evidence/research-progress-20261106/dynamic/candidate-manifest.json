@@ -1,0 +1,24 @@
+{
+  "candidate_counts": {
+    "test": 10000,
+    "train": 500000,
+    "val": 10000
+  },
+  "goals": {
+    "train": 500000,
+    "val": 10000,
+    "test": 10000
+  },
+  "candidate_target_reached": true,
+  "old_key_overlap": 0,
+  "source_game_cross_split_overlap": 0,
+  "known_historical_source_game_overlap": 0,
+  "historical_games_with_unknown_provenance": "Exact keys excluded; complete historical game isolation is unprovable",
+  "exclusion_sha256": "3832bf87712b737c6c1b182d0e3907b6bba779b766f5ba5ab311815496b2cf65",
+  "files": {
+    "train.jsonl": "5e6d4e4725c1bc43fbc8c04b6a19c076aaed989ab6e5fbda514817dc478248d9",
+    "val.jsonl": "b0aab2f6948e67d3782b4b34b1f0a93bd273e94c59d329fc49ad7200f0443f95",
+    "test.jsonl": "13572db05ebb083a90efe373da8d67e17774c0c3852e45a96a862de2ecfd0354"
+  },
+  "teacher_labels_ready": false
+}

@@ -1,0 +1,67 @@
+{
+  "whole_game_unmatched": {
+    "baseline": {
+      "median_new_simulations": 3737.0,
+      "mean_new_simulations": 4453.752918287938
+    },
+    "pawn": {
+      "median_new_simulations": 1813,
+      "mean_new_simulations": 2324.8252427184466
+    }
+  },
+  "matched_first_roots": [
+    {
+      "opening": 0,
+      "pawn": {
+        "new_simulations": 1568,
+        "seconds": 1.9604295789999924,
+        "move": "a4a3"
+      },
+      "baseline": {
+        "new_simulations": 3295,
+        "seconds": 1.953538557999991,
+        "move": "a4d7"
+      }
+    },
+    {
+      "opening": 1,
+      "baseline": {
+        "new_simulations": 3722,
+        "seconds": 1.9768553979999979,
+        "move": "d1b3"
+      },
+      "pawn": {
+        "new_simulations": 1928,
+        "seconds": 1.9460326769999483,
+        "move": "d1b3"
+      }
+    },
+    {
+      "opening": 2,
+      "pawn": {
+        "new_simulations": 1805,
+        "seconds": 1.9038857000000462,
+        "move": "e2e4"
+      },
+      "baseline": {
+        "new_simulations": 4299,
+        "seconds": 1.9668344960000468,
+        "move": "g1f3"
+      }
+    },
+    {
+      "opening": 3,
+      "baseline": {
+        "new_simulations": 3982,
+        "seconds": 1.9629759519998515,
+        "move": "d2d4"
+      },
+      "pawn": {
+        "new_simulations": 1870,
+        "seconds": 1.9277050390001023,
+        "move": "d2d4"
+      }
+    }
+  ],
+  "scope": "new_simulations are backups, not distinct neural input counts; only four same-root comparisons, architecture and policy/tree effects not isolated"
+}

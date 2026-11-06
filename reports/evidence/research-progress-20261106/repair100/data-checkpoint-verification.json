@@ -1,0 +1,42 @@
+{
+  "checked_at": 1793899857.7238805,
+  "passed": true,
+  "checks": {
+    "selected_nodes": true,
+    "unique_nodes": true,
+    "excluded_overlap_zero": true,
+    "clean_overlap_zero": true,
+    "root_clean_isolated": true,
+    "all256_labels_requalified_and_rebuilt": true,
+    "teacher_binary_matches": true
+  },
+  "checkpoints": {
+    "last.pt": {
+      "step": 25,
+      "repair_updates": 25,
+      "source_main_updates": 4000,
+      "optimizer_steps": [
+        25
+      ],
+      "clean_presentations": 4000,
+      "repair_presentations": 800,
+      "replay_presentations": 1600,
+      "default_promoted": false
+    },
+    "rejected.pt": {
+      "step": 50,
+      "repair_updates": 50,
+      "source_main_updates": 4000,
+      "optimizer_steps": [
+        50
+      ],
+      "clean_presentations": 8000,
+      "repair_presentations": 1600,
+      "replay_presentations": 3200,
+      "default_promoted": false
+    }
+  },
+  "only_supervised_gate_at_last25": true,
+  "no_512_after_early_stop": true,
+  "no_new_experiment": true
+}

@@ -25,12 +25,16 @@ def main():
     p.add_argument('--stockfish',required=True);p.add_argument('--out',required=True)
     p.add_argument('--pairs',type=int,default=8);p.add_argument('--batch-games',type=int,default=16)
     p.add_argument('--simulations',type=int,default=512);p.add_argument('--nodes',type=int,default=1000)
+    p.add_argument('--search-config',help='Native PUCT configuration JSON; timed searches run one board per player')
     a=p.parse_args();out=Path(a.out);out.mkdir(parents=True,exist_ok=False)
     torch.set_num_threads(4);torch.set_float32_matmul_precision('high')
     fens=Path(a.openings).read_text().splitlines();assert len(fens)==a.pairs and len(set(fens))==a.pairs and a.batch_games>=2 and a.batch_games%2==0
     model,state=load_model(a.checkpoint,'cuda');assert model.config.history_free
     with open(a.checkpoint,'rb') as f:sha=hashlib.file_digest(f,'sha256').hexdigest()
-    direct=MultiheadPlayer(model,'cuda');search=NativeMCTSPlayer(direct,simulations=a.simulations,leaf_batch_size=64)
+    search_options=json.loads(Path(a.search_config).read_text()) if a.search_config else dict(simulations=a.simulations,leaf_batch_size=64)
+    if search_options.get('time_limit') is not None:a.batch_games=2
+    direct=MultiheadPlayer(model,'cuda');search=NativeMCTSPlayer(direct,**search_options)
+    slot_search=[search]+[NativeMCTSPlayer(direct,**search_options) for _ in range(a.batch_games-1)] if search_options.get('time_limit') is not None else [search]
     search.mode='multihead-puct'
     engines=[chess.engine.SimpleEngine.popen_uci(a.stockfish,timeout=30) for _ in range(a.batch_games)]
     for e in engines:e.configure({'Threads':1,'Hash':64,'Skill Level':20,'UCI_LimitStrength':False})
@@ -67,7 +71,7 @@ def main():
                             game.headers.update(Event='Engine-supervised multihead evaluation',Round=str(i+1),
                                 White='NeuroChess-'+mode if color else engines[0].id['name'],
                                 Black=engines[0].id['name'] if color else 'NeuroChess-'+mode,
-                                ModelMode=mode,SearchSimulations=str(a.simulations if mode=='search' else 0))
+                                ModelMode=mode,SearchSimulations=str(search_options['simulations'] if mode=='search' else 0))
                             active.append(dict(board=board,game=game,node=game,color=color,slot=len(active),opening=i,plies=0))
                     status('running')
                     while active:
@@ -88,14 +92,17 @@ def main():
                             if move not in g['board'].legal_moves:raise RuntimeError('Illegal move')
                             g['board'].push(move);g['node']=g['node'].add_variation(move);g['plies']+=1
                         if pending:
-                            for g,move in zip(pending,player.choose_many([g['board'] for g in pending])):push(g,move)
+                            if mode=='search' and search_options.get('time_limit') is not None:
+                                for g in pending:push(g,slot_search[g['slot']].choose(g['board']))
+                            else:
+                                for g,move in zip(pending,player.choose_many([g['board'] for g in pending])):push(g,move)
                         pending=[g for g in active if g['board'].turn!=g['color'] and g['plies']<1000 and not g['board'].is_game_over(claim_draw=True)]
                         def sf(g):return engines[g['slot']].play(g['board'],chess.engine.Limit(nodes=a.nodes),game=g['game']).move
                         for g,move in zip(pending,pool.map(sf,pending)):push(g,move)
                         status('running')
             report=status('complete');(out/'result.json').write_text(json.dumps(report,indent=2))
     finally:
-        search.close()
+        for player in slot_search:player.close()
         for engine in engines:engine.quit()
 
 

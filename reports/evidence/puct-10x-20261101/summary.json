@@ -1,0 +1,136 @@
+{
+  "status": "experimental; not promoted",
+  "baseline_id": "puct-2s-v1",
+  "candidate": "trt-graph-pipeline-b8",
+  "final_position_gate": {
+    "candidate": "trt-graph-pipeline-b8",
+    "samples": 112,
+    "baseline_p95": 1.9805217229055416,
+    "candidate_p95": 0.19641636634914902,
+    "speedup": 10.083282568138815,
+    "speed_ok": true,
+    "mean_cp_change": -4.544444444444444,
+    "cp_change_bootstrap95": [
+      -14.222222222222221,
+      3.077777777777778
+    ],
+    "introduced_blunders": [],
+    "introduced_mate_failures": [],
+    "position_ok": false,
+    "arena_ok": false,
+    "promote": false,
+    "reasons": [
+      "Frozen position quality floor failed or evidence incomplete",
+      "No sufficient paired direct-play evidence against frozen2s baseline"
+    ],
+    "note": "This is a conservative empirical promotion gate, not a mathematical guarantee over every chess position. Do not relax the locked floor to pass a candidate."
+  },
+  "critical_recheck_gate": {
+    "candidate": "trt-graph-pipeline-b8",
+    "samples": 1,
+    "baseline_p95": 1.9491791629989166,
+    "candidate_p95": 0.19545616800314747,
+    "speedup": 9.97246176936984,
+    "speed_ok": false,
+    "mean_cp_change": 278.0,
+    "cp_change_bootstrap95": [
+      278.0,
+      278.0
+    ],
+    "introduced_blunders": [
+      82
+    ],
+    "introduced_mate_failures": [],
+    "position_ok": false,
+    "arena_ok": false,
+    "promote": false,
+    "reasons": [
+      "P95 does not meet both <=0.2s and >=10x measured baseline speedup",
+      "Frozen position quality floor failed or evidence incomplete",
+      "No sufficient paired direct-play evidence against frozen2s baseline"
+    ],
+    "note": "This is a conservative empirical promotion gate, not a mathematical guarantee over every chess position. Do not relax the locked floor to pass a candidate."
+  },
+  "arena_summary": {
+    "scheduled": 8,
+    "attempted": 8,
+    "completed": 8,
+    "truncated": 0,
+    "wins": 3,
+    "draws": 1,
+    "losses": 4,
+    "independent_completed_pairs": 4,
+    "paired_score": 0.4375,
+    "score_bootstrap95": [
+      0.125,
+      0.6875
+    ],
+    "relative_elo": -43.65778777002721,
+    "relative_elo_bootstrap95": [
+      -338.03921600570277,
+      136.9690723288825
+    ],
+    "score_hoeffding95": [
+      0.0,
+      1.0
+    ],
+    "relative_elo_hoeffding95": [
+      null,
+      null
+    ],
+    "pentanomial": [
+      1,
+      0,
+      2,
+      1,
+      0
+    ],
+    "rating_note": "Relative to this opponent, budgets and opening distribution only. Bootstrap pairs, not individual games. Null Elo endpoints mean unbounded; identical pair outcomes make bootstrap degenerate; consult conservative interval."
+  },
+  "arena_latency": {
+    "baseline": {
+      "moves": 419,
+      "mean_seconds": 1.80107174729836,
+      "actual_network_inputs": 747076
+    },
+    "trt-graph-pipeline-b8": {
+      "moves": 419,
+      "mean_seconds": 0.18377079082606942,
+      "actual_network_inputs": 235633
+    }
+  },
+  "archives": {
+    "confirmation.json.gz": {
+      "source": "output/puct-10x-20261031/confirmation-eval/result.json",
+      "source_sha256": "af2639ee99e6b8992a10c2ea062160e4e4f5d9437c19a77dda6dfdc4566cbec0",
+      "archive_sha256": "80f0e0f892e5c478970b990fd930b4386bbd09736edefd2ba9362ec39f5f76be"
+    },
+    "final-positions.json.gz": {
+      "source": "output/puct-10x-20261031/regression-eval/result.json",
+      "source_sha256": "8a43f9cf1305d87e347b3a9b1dbdc1c999e2f27332893fcef4ebadf463cd9f85",
+      "archive_sha256": "bf860d4bfdda7220f8eff9b146dd76da56a877a856ff227555b008979afc3401"
+    },
+    "arena.json.gz": {
+      "source": "output/puct-10x-20261031/arena/result.json",
+      "source_sha256": "2d4e823ebc6a879d6bd1e830f67c03727cf39758721c4d9a336ae3639a1b1d2f",
+      "archive_sha256": "e7fada71fdb87731d8a67959058c7ba312e1ee1307945c1a5a6a937c40877dbc"
+    }
+  },
+  "tests": {
+    "cpu_passed": 185,
+    "cpu_cuda_skips": 4,
+    "gpu_focused_passed": 4,
+    "tensorrt_replay_groups": 10,
+    "ubsan": "pass"
+  },
+  "note": "P95 speedup is about10.08x; actual game mean speedup is about9.80x. Playing quality floor has not passed. No baseline replacement. Numerical values preserved; local paths normalized.",
+  "reinvestment": {
+    "fresh_samples": 32,
+    "baseline_simulations_median": 2230.5,
+    "optimized_2s_simulations_median": 7390,
+    "ratio": 3.3131584846446986,
+    "critical_recovered_at_seconds": 0.5,
+    "position_only": true,
+    "long_budget_versions_promoted": false
+  }
+}

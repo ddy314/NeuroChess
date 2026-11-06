@@ -1,0 +1,342 @@
+{
+  "args": {
+    "pgn": "data/source/lichess-2013-01.pgn.zst",
+    "key_db": "data/evals-v2-5m/keys.sqlite",
+    "after_game": 100980,
+    "exclude": [
+      "output/puct-2s-20261031/validation-roots/roots.fen",
+      "output/puct-2s-20261031/final-roots/roots.fen",
+      "output/puct-2s-20261031/openings/openings.fen",
+      "output/puct-10x-20261031/fresh-roots/roots.fen",
+      "output/puct-10x-20261031/fresh-openings/openings.fen"
+    ],
+    "out": "output/puct-10x-20261031/confirmation-roots",
+    "roots": 64,
+    "seed": 110107,
+    "min_elo": 1800
+  },
+  "roots": [
+    {
+      "game": 100982,
+      "fen": "r1b1k2r/pp1p1ppp/2n5/6q1/2P1N1n1/2N5/PP2P1PP/R2Q1BKR b kq - 0 11",
+      "key": "925cbfc48b00d3b5ec3890cf3da26ec3"
+    },
+    {
+      "game": 100985,
+      "fen": "8/6p1/p1k5/1p2KPP1/1P5P/8/P7/8 b - - 0 39",
+      "key": "7e7979a923957bc2ccf9cdf28a39232e"
+    },
+    {
+      "game": 100991,
+      "fen": "r1bqr1k1/pp2bpp1/2n4p/2pNpP2/4P3/3P2P1/PPP3BP/R1BQ1RK1 b - - 0 12",
+      "key": "f7abfbeeacb7c1b37bf68f704c69f860"
+    },
+    {
+      "game": 101000,
+      "fen": "r4r2/pp3pk1/8/2b3q1/2N1P1bp/6Q1/PP2pPP1/R3R1K1 w - - 0 26",
+      "key": "a3fd16d5785291eadba52a5a2011caf9"
+    },
+    {
+      "game": 101001,
+      "fen": "2r2r1k/pp4p1/2p1p1B1/q5bP/2PP1n2/8/PPQ2P2/1K4RR b - - 2 24",
+      "key": "33d547fb96016d5af19c0494168593e4"
+    },
+    {
+      "game": 101047,
+      "fen": "r1b1qrk1/pp1n1pb1/2pp1npp/4p3/2PP4/2NBPNB1/PPQ2PPP/R3K2R w KQ e6 0 11",
+      "key": "7aa347576d73bfd3f59d7c8d2ae9cbe8"
+    },
+    {
+      "game": 101052,
+      "fen": "r2qk2r/pp2bppp/2n1pn2/3p4/3P1B2/3Q1N1P/PPP2PP1/RN2R1K1 b kq - 3 10",
+      "key": "119931c8f9a51bfdbe8db0fe7a2dcfe4"
+    },
+    {
+      "game": 101053,
+      "fen": "2r2r1k/q4p2/p3pbp1/1b6/5P2/P2BPQ2/4N1PP/2R2RK1 w - - 2 25",
+      "key": "2c68c24e952a69b6016a8cb6f172bdcb"
+    },
+    {
+      "game": 101057,
+      "fen": "8/6pk/p5p1/1P4r1/P1Q4p/7P/6PK/8 w - - 1 40",
+      "key": "3d20b0ca744af685432a3ddc1fa344f0"
+    },
+    {
+      "game": 101096,
+      "fen": "3rr1k1/p4p2/5b1p/5NpB/4n3/4B2P/PP3PP1/R4RK1 w - - 0 23",
+      "key": "fef7dc3bb4612ccffcdabbf1f1af0f82"
+    },
+    {
+      "game": 101108,
+      "fen": "1nrqk2r/pp1b1ppp/4p3/1P1pPn2/P2N4/3B4/2PNQ1P1/R3R1K1 w k - 0 19",
+      "key": "39fb2e4f3d6676cb76e9ee529033a3ca"
+    },
+    {
+      "game": 101109,
+      "fen": "2r1r1k1/pp1b1p2/1q2p1pB/3p4/1P1p4/P2B2P1/2P2PP1/R2Q1NK1 w - - 1 19",
+      "key": "d006b1f49eaa7d7a747fd4042386cf1c"
+    },
+    {
+      "game": 101119,
+      "fen": "2r3k1/5pp1/p1Pp3p/5P2/8/1B2R1Pb/P7/6K1 b - - 0 39",
+      "key": "e1ffe024fd5b84a581ecd79924c82443"
+    },
+    {
+      "game": 101121,
+      "fen": "r1bqk2r/pppn1pb1/3p3p/4p1pn/3PP3/2PB1N1P/PP1N1PPB/R2QK2R w KQkq e6 0 12",
+      "key": "9094f6593a9a39f2942658206cbe4bd5"
+    },
+    {
+      "game": 101122,
+      "fen": "r3rnk1/ppq2pbp/2p2np1/4p3/3PP1b1/2PBB1N1/PP1N1RPP/4QRK1 b - - 7 16",
+      "key": "9cd00ba6f780449be12ab47a2baa4e8c"
+    },
+    {
+      "game": 101125,
+      "fen": "r2q1rk1/3bppbp/n2p1np1/2pP4/4P3/3B1N1P/PP3PP1/RNBQ1RK1 w - - 0 11",
+      "key": "5bb00a3e1685285f9c1cb8b156b21545"
+    },
+    {
+      "game": 101127,
+      "fen": "r1bqkb1r/pp3ppp/2p5/2npP3/3p1P2/1B1P4/PPP3PP/RNBQ1RK1 b kq f3 0 10",
+      "key": "e5f42efd7b6917942bbae1c74ca59110"
+    },
+    {
+      "game": 101129,
+      "fen": "3q1r2/pp1nbk1p/2r1Rnp1/3p1B2/3P4/2N5/PP2QPPP/R1B3K1 w - - 0 16",
+      "key": "11528efaa39b1301652afb58a94dba88"
+    },
+    {
+      "game": 101130,
+      "fen": "r1bqkb1r/ppp2ppp/3p1n2/8/4PP2/3BBN1P/PPP3n1/RN1QK2R w KQkq - 0 9",
+      "key": "4eb088f6eccc0d7cb7750dbd80e2cfda"
+    },
+    {
+      "game": 101134,
+      "fen": "r4rk1/ppp3bp/3p1nq1/3P4/2PN1pb1/5N1P/PP3PP1/R2Q1RK1 b - - 0 19",
+      "key": "095927b21d398eefe30506e0d166a86d"
+    },
+    {
+      "game": 101135,
+      "fen": "r2q1rk1/ppp1bppp/2np1n2/4p3/4P3/1PPP1N1P/1P3PP1/RNBQ1RK1 b - - 0 9",
+      "key": "180341188ffe1a08cbbd715f27bf4982"
+    },
+    {
+      "game": 101137,
+      "fen": "r1bq1rk1/1p2nppp/p1pp1n2/4p3/P1B1P3/3PPN1P/1PP1N1P1/R2Q1RK1 b - - 1 11",
+      "key": "b4ae65e49f7aed8b233ec8ef98c33b89"
+    },
+    {
+      "game": 101141,
+      "fen": "1k1r3r/1p2qpp1/1N2pnp1/8/Q7/5P2/P4P1P/R3R1K1 b - - 0 20",
+      "key": "f67f5d677461f89ee0b648949f4f0e44"
+    },
+    {
+      "game": 101142,
+      "fen": "2r1kbnr/1p1b1pp1/pq2p2p/1n1pP3/1P1P4/PN2BN2/4BPPP/R2Q1RK1 b k - 5 14",
+      "key": "c4756d0653dfb3358127f92b4a676f07"
+    },
+    {
+      "game": 101143,
+      "fen": "3q1rk1/1b1nbppp/1p1p1n2/r2Pp1B1/P3P3/2NB1N1P/4QPP1/R3R1K1 w - - 0 17",
+      "key": "d3cf0f25216994bc17987027f87288c1"
+    },
+    {
+      "game": 101145,
+      "fen": "2r5/pp1k1p2/6pp/3PB3/2P5/3n1P1P/P7/1K4R1 w - - 2 30",
+      "key": "49974b882851bb021019eaa90a086921"
+    },
+    {
+      "game": 101149,
+      "fen": "r4rk1/p3Nppp/3qbn2/2pp4/8/2NP3P/PPPB1PP1/R2Q1RK1 b - - 0 15",
+      "key": "cfdb75db3bb66ec2528b97cbd7b0bff7"
+    },
+    {
+      "game": 101153,
+      "fen": "3kr3/p2qn2p/1p1bR1p1/2pP1p2/2PN4/5N2/PP2Q1PP/6K1 w - c6 0 24",
+      "key": "1bf375d4b9d60075da677037598dc972"
+    },
+    {
+      "game": 101154,
+      "fen": "r2qk2r/ppp2ppp/2n1pn2/8/1bPP4/4B3/PPB2PPP/RN1QK1NR w KQkq - 2 9",
+      "key": "ed1d91bad55c7ce766f481ed62927167"
+    },
+    {
+      "game": 101157,
+      "fen": "r3kb1r/pp1b1ppp/1q2pn2/3pn3/2pP1P2/2P1P3/PPB3PP/RNBQ1RK1 w kq - 0 10",
+      "key": "d758aebf1da199693e9dfac8f5aa61b6"
+    },
+    {
+      "game": 101162,
+      "fen": "r3k3/1pp2pp1/p1pb1q1r/4p2p/4Pnb1/1P1PQN1P/PBPN1PP1/R4RK1 w q - 5 13",
+      "key": "496ba05ddd2ffa9660b2f3407af0bb31"
+    },
+    {
+      "game": 101164,
+      "fen": "r2q1rk1/pbp1n1pp/1p4n1/3pP3/3P4/P1PB1NP1/3BQ2P/R4RK1 b - - 0 16",
+      "key": "c2503f0be44fc16bd147ca4a168e7c41"
+    },
+    {
+      "game": 101172,
+      "fen": "4r1k1/pp3R1R/4r1p1/1P4B1/6PP/8/1P3K2/8 w - - 11 39",
+      "key": "de6bc77a4e0ab0caf2ea0326e31be632"
+    },
+    {
+      "game": 101184,
+      "fen": "r1br2k1/p3pBbp/5np1/8/1q6/2N1BP2/P1P3PP/R2Q1RK1 b - - 0 14",
+      "key": "6cce43e558efa8b26f1ab1cbeda7d23e"
+    },
+    {
+      "game": 101189,
+      "fen": "1b2r1k1/pp3pp1/2p5/2P2p2/4r3/4B2P/PP1Q1P1q/3RRK2 w - - 4 28",
+      "key": "af242d7ac431a3040070605211e21269"
+    },
+    {
+      "game": 101190,
+      "fen": "1k5r/p2r1p1p/Qp2q1p1/4N1B1/4n3/2P3P1/1P3PBP/5RK1 b - - 0 23",
+      "key": "7e43f81e208fce0f8e6ea8f9fb385f00"
+    },
+    {
+      "game": 101194,
+      "fen": "2k4r/pppq1ppp/5n2/4r3/2P5/P3B2P/4QPP1/R4RK1 w - - 0 18",
+      "key": "749775d90ae235400cdf211fd3880168"
+    },
+    {
+      "game": 101203,
+      "fen": "5k2/p1Q2p1p/3rp1p1/3b4/8/q2B3P/P1P2PP1/1R2R1K1 b - - 1 25",
+      "key": "8c883f22f10ec2972ee7f2f822aa4fca"
+    },
+    {
+      "game": 101209,
+      "fen": "r2qkb1r/pp1npppp/2p2n2/6B1/4N1b1/3B1N2/PPP1QPPP/R3K2R w KQkq - 6 9",
+      "key": "b889d967ada4114a5cc206432a982307"
+    },
+    {
+      "game": 101211,
+      "fen": "3r4/k6p/1ppq4/p7/8/2N2Q2/PP5P/K6B w - - 2 35",
+      "key": "21d83869a732d7bfc221abfb51fe1062"
+    },
+    {
+      "game": 101221,
+      "fen": "8/5q2/5p1k/4r1pp/4r3/2PQN2P/5PP1/3R1K2 b - - 1 41",
+      "key": "ea5a28f4dafdff0c0c1bbeeecdba13d3"
+    },
+    {
+      "game": 101232,
+      "fen": "r1b2rk1/pp1nbppp/1q6/2ppP3/3P1P2/2P5/PBBN2PP/R2Q1RK1 w - - 4 15",
+      "key": "c5c6c4c5e083be48f45d778c52cba859"
+    },
+    {
+      "game": 101241,
+      "fen": "4qrk1/3Q2pp/p7/1p2p3/1b2B3/1P2BP2/P4KPP/3R4 w - - 0 34",
+      "key": "2d6660dd93ddcd6dc67702f801cc28a6"
+    },
+    {
+      "game": 101256,
+      "fen": "r3qr1k/2pb2pp/pp1b1n2/3Pnp2/2PNp3/PB2P3/1BP1QPPP/R4RK1 w - - 4 17",
+      "key": "c59ae7f3d409e63b795a6c77d2c04d27"
+    },
+    {
+      "game": 101258,
+      "fen": "r2r2k1/pp3p1p/2p1bp2/2P5/PP4P1/5B2/5PP1/R2R2K1 b - - 2 22",
+      "key": "d8fa4cb08ba842b9764016d1bc691cfa"
+    },
+    {
+      "game": 101262,
+      "fen": "8/1b4r1/pp6/2p1Q2k/2P5/7P/PP4P1/7K b - - 9 41",
+      "key": "6fd0e0802edb576edd8d25a94c27161d"
+    },
+    {
+      "game": 101269,
+      "fen": "r1bk1br1/ppp5/2n5/3Nq2p/2P1p1p1/3P4/PP3PPP/RNBQ1RK1 b - - 0 13",
+      "key": "5799b490d4ab3c80d9fac384703dd5f6"
+    },
+    {
+      "game": 101276,
+      "fen": "2kr3r/pppqnppp/6n1/2bP2N1/8/2N5/PP3PPP/R1BQR1K1 w - - 1 13",
+      "key": "c652db9ed1b03cbb57a04e9b5d5befa3"
+    },
+    {
+      "game": 101295,
+      "fen": "1r4k1/2p1rpbp/1n4p1/3p4/1P1P4/P2BP2P/1B3PP1/R3K2R w KQ - 0 19",
+      "key": "7c13def346b1844292d8bf85467d3ba2"
+    },
+    {
+      "game": 101305,
+      "fen": "1r5r/p1pk1ppp/p1n2n2/P3b3/3P4/4BN1P/5PP1/R4RK1 w - - 0 20",
+      "key": "3480d6df751d3332675d2b47ed89b58e"
+    },
+    {
+      "game": 101314,
+      "fen": "r3k2r/pppqbpp1/2n2np1/3p2B1/3P4/5N1P/PPPN1PP1/R2QR1K1 b kq - 3 11",
+      "key": "3d5d98ec3d0701b4d6be28e89ca4ccdd"
+    },
+    {
+      "game": 101317,
+      "fen": "2r3kr/ppp1R1p1/1N5p/8/1P6/P7/2P2PPP/4R1K1 b - - 0 24",
+      "key": "f1b9b5057efb05706059324683c2f16e"
+    },
+    {
+      "game": 101327,
+      "fen": "6k1/ppp5/6R1/8/4P2q/P7/1PP2r1P/R6K b - - 0 30",
+      "key": "6b6d4fa96c286c70fdcb7b7e3fa49544"
+    },
+    {
+      "game": 101351,
+      "fen": "2k5/1p4R1/2r4p/p7/1p6/8/P1P5/6K1 w - - 1 35",
+      "key": "ded73e1db944f1a696339bc1314fc481"
+    },
+    {
+      "game": 101366,
+      "fen": "r2q1rk1/pp4bp/2npb1p1/2p1pn2/5P2/N1PP2PP/PP2N1B1/R1BQ1RK1 w - - 2 12",
+      "key": "29dbf104324c404f8e1e99889b33455b"
+    },
+    {
+      "game": 101392,
+      "fen": "1rr2bk1/2qn1p2/b1p1p1p1/p1p1P1Bp/N1Pp3Q/1P1P1N1P/P4PP1/R3R1K1 b - - 1 20",
+      "key": "15f8e28d737161cb4fcb7c5d00687e95"
+    },
+    {
+      "game": 101423,
+      "fen": "rn1q1rk1/ppp1nppp/3b4/3p4/3P4/3Q1N1P/PPP2PP1/RNB1R1K1 b - - 2 9",
+      "key": "866e0e22d6d7a94163f94802329e1153"
+    },
+    {
+      "game": 101428,
+      "fen": "r2qk2r/pp1n1pp1/2pb1np1/3pP3/8/1PN1P3/PBPPB1PP/R2Q1RK1 b kq - 0 11",
+      "key": "48950dd47ca12ae961f79a62d584f3d7"
+    },
+    {
+      "game": 101431,
+      "fen": "r6r/pppk2pp/2nn4/8/8/2P2N2/P1P1RPPP/R1B3K1 w - - 3 16",
+      "key": "8df46b0b8ace9824dd373c9afbcd3520"
+    },
+    {
+      "game": 101438,
+      "fen": "8/1p2kp1p/2rpr1p1/8/5PP1/2P5/PP3K1P/3RR3 w - - 0 25",
+      "key": "913de824d0fe6fbc1268ac4c57342fa7"
+    },
+    {
+      "game": 101443,
+      "fen": "r1b2rk1/ppp1qp2/2n3p1/2b1p2p/2B1n2Q/2PP2NP/PP3PP1/R1B2RK1 w - - 0 16",
+      "key": "a29324b3f7ef071b74bc9ee98bbf1f12"
+    },
+    {
+      "game": 101457,
+      "fen": "8/p4rpp/1ppPk3/3bPr2/3K4/1P5P/P5P1/4R1R1 w - - 0 31",
+      "key": "5281e16a43fadecc83038c69eac4a6f9"
+    },
+    {
+      "game": 101480,
+      "fen": "r1b2rk1/1pqn1pb1/p2p2pp/8/3B1P2/2N5/PPP1B1PP/3RQRK1 w - - 0 15",
+      "key": "705f3dde49214dcd1b785601e1df4ba6"
+    },
+    {
+      "game": 101485,
+      "fen": "4r2k/7p/6p1/p7/8/P1b3P1/7P/2R3K1 b - - 1 39",
+      "key": "b0b896327fa8ffa4c67c685fcbf38b61"
+    }
+  ],
+  "sha256": "a54640580ea39dc093f2feadd126c32ff406ac4cda927d3a8ffe33de0e8c1348",
+  "note": "Later, disjoint augmentation/evaluation game groups; exact base keys excluded. Original base source/game overlap remains unknown."
+}

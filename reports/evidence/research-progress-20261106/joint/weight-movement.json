@@ -1,0 +1,38 @@
+{
+  "policy_Q_trunk": {
+    "parent_sq": 100593.12822114864,
+    "delta_sq": 11.520827075901776,
+    "tensors": 167,
+    "relative_l2": 0.010701820739180721
+  },
+  "policy_Q_active_heads": {
+    "parent_sq": 1243.508915035136,
+    "delta_sq": 0.054063343760067585,
+    "tensors": 7,
+    "relative_l2": 0.006593666842774114
+  },
+  "policy_Q_unused_heads": {
+    "parent_sq": 121.525228082572,
+    "delta_sq": 0.0,
+    "tensors": 4,
+    "relative_l2": 0.0
+  },
+  "value_trunk": {
+    "parent_sq": 100691.55876842893,
+    "delta_sq": 11.28951012432453,
+    "tensors": 167,
+    "relative_l2": 0.010588660323053903
+  },
+  "value_unused_heads": {
+    "parent_sq": 1244.4902083648399,
+    "delta_sq": 0.0,
+    "tensors": 7,
+    "relative_l2": 0.0
+  },
+  "value_active_heads": {
+    "parent_sq": 120.51694981046322,
+    "delta_sq": 0.020242675987717115,
+    "tensors": 4,
+    "relative_l2": 0.012960146061834123
+  }
+}

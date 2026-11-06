@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "rows": 520000,
+  "counts": {
+    "train": 500000,
+    "val": 10000,
+    "test": 10000
+  },
+  "source_games": 22953,
+  "all_histories_legal": true,
+  "all_keys_match_histories": true,
+  "old_key_overlap": 0,
+  "duplicate_keys": 0,
+  "source_game_cross_split_overlap": 0,
+  "cohort_sha256": "469667653030722e8fe504d511ff50547a2ca4efe96999e2205b7a9c2e8b1b14",
+  "database_snapshot": true,
+  "seconds": 60.563923902998795,
+  "teacher_labels_ready": false
+}

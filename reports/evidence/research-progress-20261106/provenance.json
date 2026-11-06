@@ -1,0 +1,206 @@
+{
+  "schema": 1,
+  "as_of": "2026-11-06",
+  "records": [
+    {
+      "file": "joint/exposure.json",
+      "source": "output/joint-deep-analysis-20261103/checkpoint-and-exposure.json",
+      "source_sha256": "cc170efe878b7be596a9cdfe680a5d5e9fe1e0067d337d0eaa1ace1fba59a22e",
+      "exported_sha256": "95e6fbb8d2c3cf37490930806c2f3089a3e2d86c1965a561b25b000d859358bc"
+    },
+    {
+      "file": "joint/data-audit.json",
+      "source": "output/joint-deep-analysis-20261103/data-audit.json",
+      "source_sha256": "a9acd3630bf3feea1cfa0bf5c3ea37edb799c82b2dfebebf254fdc598a146e12",
+      "exported_sha256": "5182dfd1bf01b18912496dfec511dfc2ca8ed32e910d6fc48426b9a20c0d5f94"
+    },
+    {
+      "file": "joint/search-assessment.json",
+      "source": "output/joint-deep-analysis-20261103/search-assessment.json",
+      "source_sha256": "09043515d722ccbde953607d36e94fca94c48d106be8cdc2f8b657730d8ddd3b",
+      "exported_sha256": "87c20af0625fd6614bf2ff62e257f3e15a6a4db6b2b1a15418e4fda9d9e596d9"
+    },
+    {
+      "file": "joint/weight-movement.json",
+      "source": "output/joint-deep-analysis-20261103/weight-movement-summary.json",
+      "source_sha256": "789525dc11edd89de44d7fbc54705d38c687e67575cc8c318490d4aac4e3ba70",
+      "exported_sha256": "0a9cf03b490261768beb00c169a55881a55829aee15cef723df28b751863e5a1"
+    },
+    {
+      "file": "dynamic/candidate-audit.json",
+      "source": "output/dynamic-curriculum-20261103/new-elite/full-audit.json",
+      "source_sha256": "dd5f2c1d1064fd481abad51b4ecd340ad36943afb114c989bfb8f9a7d53cc321",
+      "exported_sha256": "69e38b88bf6eb29bc061faebecbd21e89a2f0a03488056691f08b824fc6577ed"
+    },
+    {
+      "file": "dynamic/candidate-manifest.json",
+      "source": "output/dynamic-curriculum-20261103/new-elite/candidate-manifest.json",
+      "source_sha256": "5e89e29102f10b050266ff792c9396c0e9b65f51e3336b967762d4ac85aa2db3",
+      "exported_sha256": "dfab90ebbaf4ee564ee9d418429207a34db76fe2a3477a727ad31dc2caeaeb5d"
+    },
+    {
+      "file": "pawn/run-summary.json",
+      "source": "output/pawn-20m-20261103/run-summary.json",
+      "source_sha256": "66b3cff51ff4f0b901e2ffefa744ece2145a622b6226d10e8fc5cfbbb5c29184",
+      "exported_sha256": "0f950b3e3a7660e0f5609a169b7ee202c5dff0f65fb00fc4618e5140e3625ee5"
+    },
+    {
+      "file": "pawn/arena-analysis.json",
+      "source": "output/pawn-arena-20261104/analysis.json",
+      "source_sha256": "058458454ebffd4acd8d415bf54b9db9a4d9e55c49104629860e32796c8c691c",
+      "exported_sha256": "058458454ebffd4acd8d415bf54b9db9a4d9e55c49104629860e32796c8c691c"
+    },
+    {
+      "file": "pawn/critical-confirmation.json",
+      "source": "output/pawn-arena-20261104/critical-confirmation.json",
+      "source_sha256": "9252abdc9733ff676eb3d77e4e3c9f744a48dd879f9f3ed72724fa0de2085a82",
+      "exported_sha256": "de3dd1195bf637582c9cb67048f345797a6e51dbce6b3db636b1de9e414ab7ef"
+    },
+    {
+      "file": "pawn/search-work-analysis.json",
+      "source": "output/pawn-arena-20261104/search-work-analysis.json",
+      "source_sha256": "6eebac7ba94316829b29af82d7296b94dfee2de8ec392c7c58c30ad5328a1257",
+      "exported_sha256": "b55201f5f9909807b208fb418b97e249ee5fc0fc6faed3be386bad88f593a2b8"
+    },
+    {
+      "file": "lichess/cleaning-completion.json",
+      "source": "data/lichess-depth24-knodes1000-clean-10m-20261104/completion.json",
+      "source_sha256": "6879d52045bfe06e3fe554817b50aceea398f92d69925118fc5870ba37a411b4",
+      "exported_sha256": "d2f6bfce30f067d6dff0b0931a8b5ac91f52305aca94fca34081d191c95ceca9"
+    },
+    {
+      "file": "lichess/ablation-results.json",
+      "source": "output/lichess-joint-epoch1-20261104/auto4000/results/results.json",
+      "source_sha256": "20a78b7c3cb611c240546ac5ff3a4b6fdcac7940822c31d85a4fea32b63c65a2",
+      "exported_sha256": "4fea4d2f1789fd416495714938e7889f584d2f2550ff4503fa388ec8794dedad"
+    },
+    {
+      "file": "lichess/gradient-diagnosis.json",
+      "source": "output/lichess-joint-epoch1-20261104/auto4000/results/gradient-diagnosis.json",
+      "source_sha256": "c70e1f2f0a2ac3f00cf3d716f690c952203291fe4da95ba209a61ee5cbd5add3",
+      "exported_sha256": "062aa8b64db23143d29a01de6af974c06a816a17171efb2868b7c34b69d3e567"
+    },
+    {
+      "file": "lichess/collector-complete.json",
+      "source": "output/lichess-joint-epoch1-20261104/auto4000/results/collector-complete.json",
+      "source_sha256": "478a80988131f30ea9a2899565f6d28a080dbe8a94195ad0e650c64aeb4c7df8",
+      "exported_sha256": "50f1bfc07678f17a9a0b73298b84481dd9c007ace4899d4371b6f1421e7ad397"
+    },
+    {
+      "file": "lichess/local-d-results.json",
+      "source": "output/lichess-local-d-20261105/results.json",
+      "source_sha256": "789489aa1022dfb497da8db5de1ca585e5f21a077ad652c1e69eae2ed309d0ab",
+      "exported_sha256": "35da2f634b9e68f292bfd3b58a4791890eabbb93d6518f703b4b366c22ca5cb8"
+    },
+    {
+      "file": "lichess/search-audit-512.json",
+      "source": "output/lichess-search-audit-512-20261105/results.json",
+      "source_sha256": "5cfdbb0df09f4cc267ee375ffc9bd4e1cf194e34f1de7d3ba6047d6886bbcf83",
+      "exported_sha256": "5cfdbb0df09f4cc267ee375ffc9bd4e1cf194e34f1de7d3ba6047d6886bbcf83"
+    },
+    {
+      "file": "lichess/failure-mechanisms.json",
+      "source": "output/lichess-five-failure-mechanisms-20261105/final-analysis.json",
+      "source_sha256": "4ebc751b5d11838b5fc73461a18225900254690ca2ff8e2735e140f9ebef666a",
+      "exported_sha256": "2c2218bbd108f3bf7c8ce63cc682d805092646f3725801d9ea079f9c2503c576"
+    },
+    {
+      "file": "lichess/repair-plan.json",
+      "source": "output/lichess-five-failure-mechanisms-20261105/repair-plan.json",
+      "source_sha256": "e8d6fc1c27d1e9b26684c62c3c7cb13b80aa8512c7eaf09272de5143b8410aff",
+      "exported_sha256": "e8d6fc1c27d1e9b26684c62c3c7cb13b80aa8512c7eaf09272de5143b8410aff"
+    },
+    {
+      "file": "lichess/manual-weight-probes.json",
+      "source": "output/lichess-five-failure-mechanisms-20261105/manual-weight-probes/results.json",
+      "source_sha256": "724d4f1cc487f66ee05d705d8d8e086d6dd1c27f90718c91e63b6c6d27e384df",
+      "exported_sha256": "5b2ac9a0979ac9fc095fa0fac3dc1ae204c049eef42addd61636891ab33cef39"
+    },
+    {
+      "file": "repair100/results.json",
+      "source": "output/lichess-local-repair-pilot-20261105/results.json",
+      "source_sha256": "19de0806bfd036eca12ebd47b16234f689b9202ffa9af47453de25a02d9033a8",
+      "exported_sha256": "19de0806bfd036eca12ebd47b16234f689b9202ffa9af47453de25a02d9033a8"
+    },
+    {
+      "file": "repair100/data-ready.json",
+      "source": "output/lichess-local-repair-pilot-20261105/data-ready.json",
+      "source_sha256": "9edd9395014742592d1f85f49333c6e6c961992a4a976330c662ba7f1a53ba8a",
+      "exported_sha256": "9edd9395014742592d1f85f49333c6e6c961992a4a976330c662ba7f1a53ba8a"
+    },
+    {
+      "file": "repair100/initial-validation.json",
+      "source": "output/lichess-local-repair-pilot-20261105/initial-validation.json",
+      "source_sha256": "aead1f7bcdfb3117068433faf39e84592702a27cea148c8bb75f9baa8a765548",
+      "exported_sha256": "aead1f7bcdfb3117068433faf39e84592702a27cea148c8bb75f9baa8a765548"
+    },
+    {
+      "file": "repair100/parameter-movement-step5.json",
+      "source": "output/lichess-local-repair-pilot-20261105/parameter-movement-step5.json",
+      "source_sha256": "29050eba2b37ccd7e3a2123c250aa347173ced2359734228f326a7549263f1d9",
+      "exported_sha256": "29050eba2b37ccd7e3a2123c250aa347173ced2359734228f326a7549263f1d9"
+    },
+    {
+      "file": "repair100/verification.json",
+      "source": "output/lichess-local-repair-pilot-20261105/delivery-verification.json",
+      "source_sha256": "7e371a7e54ed84e37567be3c305c5347f8ede15817fe8a874874dd7fe5b34506",
+      "exported_sha256": "7e371a7e54ed84e37567be3c305c5347f8ede15817fe8a874874dd7fe5b34506"
+    },
+    {
+      "file": "repair100/data-checkpoint-verification.json",
+      "source": "output/lichess-local-repair-pilot-20261105/delivery-data-checkpoint-verification.json",
+      "source_sha256": "552609c07b178bedf442899aab2beb4c0c7640e89d6220b20e7c5d008cc29656",
+      "exported_sha256": "552609c07b178bedf442899aab2beb4c0c7640e89d6220b20e7c5d008cc29656"
+    },
+    {
+      "file": "repair100/interpretation.json",
+      "source": "output/lichess-local-repair-pilot-20261105/delivery-summary.json",
+      "source_sha256": "eef50acc64d15677969ef0371ac4f0c496faafda52b63ccf32b7e075d3f2a176",
+      "exported_sha256": "eef50acc64d15677969ef0371ac4f0c496faafda52b63ccf32b7e075d3f2a176"
+    },
+    {
+      "file": "lichess/coherent-teachers/147.json",
+      "source": "output/lichess-five-failure-mechanisms-20261105/coherent-teachers/147.json",
+      "source_sha256": "7aa65fff70b3a2997656e4c9a7834f434ca81d3220c4bf3ee990a461babb4508",
+      "exported_sha256": "7aa65fff70b3a2997656e4c9a7834f434ca81d3220c4bf3ee990a461babb4508"
+    },
+    {
+      "file": "lichess/coherent-teachers/296.json",
+      "source": "output/lichess-five-failure-mechanisms-20261105/coherent-teachers/296.json",
+      "source_sha256": "4deba5d5f83a103037fbba725eb45aab7737ead5184450312787e2e1440d413a",
+      "exported_sha256": "4deba5d5f83a103037fbba725eb45aab7737ead5184450312787e2e1440d413a"
+    },
+    {
+      "file": "lichess/coherent-teachers/302.json",
+      "source": "output/lichess-five-failure-mechanisms-20261105/coherent-teachers/302.json",
+      "source_sha256": "d46d1bcdc1794a1f48486c6ff299e71b262bada92913226588a507620a7d5f66",
+      "exported_sha256": "d46d1bcdc1794a1f48486c6ff299e71b262bada92913226588a507620a7d5f66"
+    },
+    {
+      "file": "lichess/coherent-teachers/386.json",
+      "source": "output/lichess-five-failure-mechanisms-20261105/coherent-teachers/386.json",
+      "source_sha256": "92fb114bf6a9aac806480e9b7feeb85fa525051bbfc5ba21509b521273bdf7d8",
+      "exported_sha256": "92fb114bf6a9aac806480e9b7feeb85fa525051bbfc5ba21509b521273bdf7d8"
+    },
+    {
+      "file": "lichess/coherent-teachers/420.json",
+      "source": "output/lichess-five-failure-mechanisms-20261105/coherent-teachers/420.json",
+      "source_sha256": "52813dc88b9a75715065044a8764d14d9d666ffd2d899a8a19f2f62ee5ce377a",
+      "exported_sha256": "52813dc88b9a75715065044a8764d14d9d666ffd2d899a8a19f2f62ee5ce377a"
+    }
+  ],
+  "transformations": [
+    "Normalize repository/home/private Drive path strings recursively; preserve numeric values and outcome fields."
+  ],
+  "scope": "Curated experiment summaries and evaluation evidence, not training data or an artifact bundle.",
+  "excluded": [
+    "weights",
+    "optimizer tensors",
+    "training datasets",
+    "runtime logs",
+    "credentials",
+    "handoffs"
+  ],
+  "lichess_original_test_labels_used": false,
+  "automatic_model_promotion": false
+}

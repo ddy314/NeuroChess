@@ -1,0 +1,270 @@
+{
+  "nodes": 2000,
+  "opening": 2,
+  "contender_color": "black",
+  "fen": "r2qk2r/pp2bppp/2np1n2/4p1B1/6b1/3P1N2/PPP1BPPP/RN1Q1RK1 w kq - 3 9",
+  "score": 1.0,
+  "result": "0-1",
+  "termination": "CHECKMATE",
+  "plies": 42,
+  "decisions": [
+    {
+      "seconds": 0.49543455899402034,
+      "large_positions": 1513,
+      "root": {
+        "new_simulations": 1691
+      }
+    },
+    {
+      "seconds": 0.49489288400218356,
+      "large_positions": 1504,
+      "root": {
+        "new_simulations": 1882
+      }
+    },
+    {
+      "seconds": 0.495620718007558,
+      "large_positions": 1480,
+      "root": {
+        "new_simulations": 2268
+      }
+    },
+    {
+      "seconds": 0.49500775600608904,
+      "large_positions": 1480,
+      "root": {
+        "new_simulations": 2399
+      }
+    },
+    {
+      "seconds": 0.4953594050020911,
+      "large_positions": 1472,
+      "root": {
+        "new_simulations": 2747
+      }
+    },
+    {
+      "seconds": 0.49631582199072,
+      "large_positions": 1504,
+      "root": {
+        "new_simulations": 2189
+      }
+    },
+    {
+      "seconds": 0.4949367029912537,
+      "large_positions": 1488,
+      "root": {
+        "new_simulations": 2166
+      }
+    },
+    {
+      "seconds": 0.49617595100426115,
+      "large_positions": 1504,
+      "root": {
+        "new_simulations": 1739
+      }
+    },
+    {
+      "seconds": 0.4965726749942405,
+      "large_positions": 1504,
+      "root": {
+        "new_simulations": 1709
+      }
+    },
+    {
+      "seconds": 0.4951568990072701,
+      "large_positions": 1504,
+      "root": {
+        "new_simulations": 1726
+      }
+    },
+    {
+      "seconds": 0.49568108399398625,
+      "large_positions": 1504,
+      "root": {
+        "new_simulations": 1641
+      }
+    },
+    {
+      "seconds": 0.49566466599935666,
+      "large_positions": 1504,
+      "root": {
+        "new_simulations": 1644
+      }
+    },
+    {
+      "seconds": 0.49475790199358016,
+      "large_positions": 1496,
+      "root": {
+        "new_simulations": 1701
+      }
+    },
+    {
+      "seconds": 0.4956091850035591,
+      "large_positions": 1504,
+      "root": {
+        "new_simulations": 1662
+      }
+    },
+    {
+      "seconds": 0.4952033629961079,
+      "large_positions": 1504,
+      "root": {
+        "new_simulations": 1672
+      }
+    },
+    {
+      "seconds": 0.49659321299986914,
+      "large_positions": 1504,
+      "root": {
+        "new_simulations": 1796
+      }
+    },
+    {
+      "seconds": 0.4949057990015717,
+      "large_positions": 1488,
+      "root": {
+        "new_simulations": 2301
+      }
+    },
+    {
+      "seconds": 0.49513757099339273,
+      "large_positions": 1496,
+      "root": {
+        "new_simulations": 2442
+      }
+    },
+    {
+      "seconds": 0.00017551200289744884,
+      "large_positions": 0,
+      "root": {
+        "new_simulations": 0
+      }
+    },
+    {
+      "seconds": 0.0001206339948112145,
+      "large_positions": 0,
+      "root": {
+        "new_simulations": 0
+      }
+    },
+    {
+      "seconds": 0.00010907699470408261,
+      "large_positions": 0,
+      "root": {
+        "new_simulations": 0
+      }
+    }
+  ],
+  "opponent_decisions": [
+    {
+      "nodes": 2000,
+      "depth": 6
+    },
+    {
+      "nodes": 2000,
+      "depth": 8
+    },
+    {
+      "nodes": 2000,
+      "depth": 9
+    },
+    {
+      "nodes": 2000,
+      "depth": 8
+    },
+    {
+      "nodes": 2000,
+      "depth": 8
+    },
+    {
+      "nodes": 2002,
+      "depth": 8
+    },
+    {
+      "nodes": 2003,
+      "depth": 6
+    },
+    {
+      "nodes": 2000,
+      "depth": 5
+    },
+    {
+      "nodes": 2000,
+      "depth": 6
+    },
+    {
+      "nodes": 2000,
+      "depth": 8
+    },
+    {
+      "nodes": 2000,
+      "depth": 8
+    },
+    {
+      "nodes": 2000,
+      "depth": 10
+    },
+    {
+      "nodes": 2003,
+      "depth": 9
+    },
+    {
+      "nodes": 2007,
+      "depth": 6
+    },
+    {
+      "nodes": 2004,
+      "depth": 4
+    },
+    {
+      "nodes": 2002,
+      "depth": 9
+    },
+    {
+      "nodes": 2000,
+      "depth": 8
+    },
+    {
+      "nodes": 2001,
+      "depth": 9
+    },
+    {
+      "nodes": 2001,
+      "depth": 9
+    },
+    {
+      "nodes": 1979,
+      "depth": 50
+    },
+    {
+      "nodes": 490,
+      "depth": 245
+    }
+  ],
+  "stats": {
+    "choices": 21,
+    "leaf_evaluations": 33985,
+    "completed_simulations": 35375,
+    "terminal_leaves": 1391,
+    "pruned_root_edges": 455,
+    "proven_loss_skips": 197220,
+    "mate_proofs": 2017,
+    "max_depth": 16,
+    "depth_limit_hits": 0,
+    "tree_reuses": 20,
+    "retained_nodes": 12152,
+    "inference_batches": 7533,
+    "native_seconds": 0.24399459634150844,
+    "inference_seconds": 8.395166040907498,
+    "bridge_seconds": 0.004092673028935678,
+    "time_stops": 18,
+    "physical_inference_batches": 3370,
+    "inference_cache": {
+      "requested_positions": 33985,
+      "forward_positions": 26953,
+      "cache_hits": 6990,
+      "batch_duplicates": 42
+    }
+  }
+}

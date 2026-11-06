@@ -1,0 +1,71 @@
+{
+  "args": {
+    "pgn": "data/source/lichess-2013-01.pgn.zst",
+    "stockfish": "local/stockfish/stockfish/stockfish-ubuntu-x86-64-avx2",
+    "key_db": "data/evals-v2-5m/keys.sqlite",
+    "out": "output/puct-10x-20261031/fresh-openings",
+    "after_game": 100869,
+    "pairs": 8,
+    "seed": 110103
+  },
+  "roots": [
+    {
+      "game": 100943,
+      "ply": 16,
+      "fen": "rn1qkbnr/p2b2pp/4pp2/1p6/2pP4/2N2N2/1P1BPPPP/R2QKB1R w KQkq - 0 9",
+      "key": "05c3a35833b40c77b4da457e7f8f97ac",
+      "teacher_cp": 86
+    },
+    {
+      "game": 100952,
+      "ply": 23,
+      "fen": "rn1q1rk1/4bppp/b1p1pn2/p5B1/Np1PP3/1P1B1N2/P1Q2PPP/2KR3R b - - 2 12",
+      "key": "8fd2e8b6c3f08ad1a65342699363ce6e",
+      "teacher_cp": -37
+    },
+    {
+      "game": 100955,
+      "ply": 23,
+      "fen": "r2q1rk1/pp3ppp/1bn3n1/3p4/6b1/1NP2N1P/PP2BPP1/R1BQ1RK1 b - - 0 12",
+      "key": "22a70696e7f879f4cdd529a5b89c9185",
+      "teacher_cp": 23
+    },
+    {
+      "game": 100965,
+      "ply": 24,
+      "fen": "r2q1rk1/pp3pbp/3pbnp1/4pn2/2P5/P1N1PNB1/1PQ2PPP/R3KB1R w KQ - 3 13",
+      "key": "343208839fd1cdd227dd1ee0966a38ae",
+      "teacher_cp": -65
+    },
+    {
+      "game": 100969,
+      "ply": 18,
+      "fen": "r1bq1rk1/pp2bppp/2n2n2/3p4/8/2NB1N2/PPP2PPP/R1BQR1K1 w - - 6 10",
+      "key": "954deabe08e031b7ba84ec92f7aaed09",
+      "teacher_cp": 41
+    },
+    {
+      "game": 100974,
+      "ply": 22,
+      "fen": "r3k2r/pp2ppnp/1qnp2p1/6P1/3PP1b1/1P6/P2QNP1P/RN2KB1R w KQkq - 5 12",
+      "key": "938dee76bc1eb9ef7570cf7b4974a4c6",
+      "teacher_cp": -26
+    },
+    {
+      "game": 100975,
+      "ply": 18,
+      "fen": "r1b2rk1/pp3ppp/2n1pn2/q2p4/1bP5/2N1PN2/PP1BBPPP/R2QK2R w KQ d6 0 10",
+      "key": "83ce0e81ef7179a7c4548291b4b54a17",
+      "teacher_cp": 74
+    },
+    {
+      "game": 100980,
+      "ply": 18,
+      "fen": "r1bq1rk1/pp2bppp/2n2n2/3pN3/3p1P2/2PB4/PP4PP/RNBQ1RK1 w - - 0 10",
+      "key": "7b2b0f57b988e411027a876bf450245a",
+      "teacher_cp": -100
+    }
+  ],
+  "sha256": "d334967c0a4b4cf24f000b3e181d49e4d3cd57b759d242880db1d002c5bb9072",
+  "note": "One new source game per opening; ply16..24,teacher50k abs cp<=100,old base exact keys excluded. Both colors. Selection never uses tested-player outputs."
+}

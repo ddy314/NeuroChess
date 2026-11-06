@@ -42,21 +42,24 @@ def paired_groups(before,after,jobs,seed=20261101):
 
 def main():
     p=argparse.ArgumentParser();p.add_argument('--jobs',required=True);p.add_argument('--checkpoint',action='append',required=True);p.add_argument('--out',required=True)
+    p.add_argument('--search-config',help='Native PUCT configuration JSON')
     a=p.parse_args();torch.set_num_threads(4);torch.set_float32_matmul_precision('high')
+    search_options=json.loads(Path(a.search_config).read_text()) if a.search_config else dict(simulations=512,leaf_batch_size=64)
     jobs=[json.loads(l) for l in Path(a.jobs).read_text().splitlines() if json.loads(l)['split']=='test']
     if len(jobs)!=2000:raise ValueError('Expected 2000 frozen test positions')
     # Frozen deterministic 256 roots; no model outputs used to pick them.
     search_jobs=sorted(jobs,key=lambda j:hashlib.sha256(('search-v4:'+j['key']).encode()).digest())[:256]
     report=dict(protocol='First-move success against source only-move solutions; any immediate checkmate accepted. No teacher used by student at inference.',
         jobs_sha256=hashlib.file_digest(open(a.jobs,'rb'),'sha256').hexdigest(),search_keys=[j['key'] for j in search_jobs],
-        search_simulations=512,results=[],limitations=['First-move accuracy is not whole-puzzle solution accuracy or Elo.'])
+        search_config=search_options,results=[],limitations=['First-move accuracy is not whole-puzzle solution accuracy or Elo.'])
     outcomes={}
     for checkpoint in a.checkpoint:
         model,state=load_model(checkpoint,'cuda');del state;network=MultiheadPlayer(model,'cuda');entry={'checkpoint':checkpoint,
             'sha256':hashlib.file_digest(open(checkpoint,'rb'),'sha256').hexdigest()};outcomes[checkpoint]={}
         for mode,subset in [('direct',jobs),('search',search_jobs)]:
-            player=network if mode=='direct' else NativeMCTSPlayer(network,simulations=512,leaf_batch_size=64)
+            player=network if mode=='direct' else NativeMCTSPlayer(network,**search_options)
             predictions=[];flags=[];chunk=64 if mode=='direct' else 16
+            if mode=='search' and search_options.get('time_limit') is not None:chunk=1
             for start in range(0,len(subset),chunk):
                 group=subset[start:start+chunk];moves=player.choose_many([board_for(j) for j in group])
                 predictions.extend(m.uci() for m in moves);flags.extend(correct(j,m) for j,m in zip(group,moves))

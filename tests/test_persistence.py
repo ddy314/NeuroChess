@@ -62,3 +62,14 @@ def test_interrupted_copy_keeps_previous_checkpoint(tmp_path, monkeypatch):
         RunMirror(source, destination, destination.parent).sync()
     assert (destination / 'last.pt').read_bytes() == b'old checkpoint'
     assert not (destination / 'status.json').exists()
+
+
+def test_input_caches_are_excluded_but_model_and_status_are_persisted(tmp_path,monkeypatch):
+ from neurochess.persistence import RunMirror
+ source=tmp_path/'source';destination=tmp_path/'save';source.mkdir();destination.mkdir()
+ (source/'data').mkdir();(source/'data/input.npy').write_bytes(b'input-cache')
+ (source/'model.pt').write_bytes(b'model');(source/'status.json').write_text('{}')
+ monkeypatch.setattr('os.path.ismount',lambda p:True)
+ RunMirror(source,destination,tmp_path,exclude_top_level=['data']).sync()
+ assert not (destination/'data').exists()
+ assert (destination/'model.pt').read_bytes()==b'model' and (destination/'status.json').exists()

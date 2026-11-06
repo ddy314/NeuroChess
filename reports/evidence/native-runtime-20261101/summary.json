@@ -1,0 +1,131 @@
+{
+  "status": "experimental; baseline not replaced",
+  "search_summary": {
+    "0": {
+      "median_seconds": {
+        "native": 0.27298267600000004,
+        "python_native_nn": 0.27552831250000054,
+        "python_original": 0.28031003399996735
+      },
+      "speedup_over_original": 1.0268418425203192,
+      "original_move_agreement": 16,
+      "samples": 16,
+      "paired_geomean_speedup": 1.0202300237381374,
+      "paired_speedup_bootstrap95": [
+        0.9892023169590273,
+        1.049871917600059
+      ]
+    },
+    "32768": {
+      "median_seconds": {
+        "native": 0.2516059525,
+        "python_native_nn": 0.2533492514999125,
+        "python_original": 0.2578743105000285
+      },
+      "speedup_over_original": 1.0249133930964074,
+      "original_move_agreement": 16,
+      "samples": 16,
+      "paired_geomean_speedup": 1.0357387219285639,
+      "paired_speedup_bootstrap95": [
+        1.0119976574000804,
+        1.0584068983765167
+      ]
+    },
+    "native_500ms": {
+      "median_simulations": 1048.0,
+      "p95_seconds": 0.4965305085,
+      "maximum_seconds": 0.497016429
+    },
+    "python_original_500ms": {
+      "median_simulations": 979.0,
+      "p95_seconds": 0.495613546249956,
+      "maximum_seconds": 0.4957441909996305
+    }
+  },
+  "source_sha256": {
+    "neurochess/native/native_player.cpp": "0d23030f4fe4a4e57a15ee870acc818a8675d2357b5f27dbad2794df4f89758a",
+    "neurochess/native/trt_inference.cu": "71bf95d8bac4378383088b8b47b49e045bf82f1afa10d4fa777225191e0b55fc",
+    "neurochess/native/trt_inference.hpp": "605c442f4fd5bb5fb386bcd3b7ef9596a3ac8d77e1067d714d10879258909857",
+    "neurochess/native/CMakeLists.txt": "130fa562076663c6801b25a0f71e7cd3140e52ce233b61eff1d347e050d4d4b9",
+    "neurochess/native/mcts_pipeline.cpp": "e2edec8798c85508c491365af83b96b78fad61284a5e910de470162c3bcc339f",
+    "neurochess/native/chess_rules.hpp": "ad49eacd5e73ec9c8f701169940c7c8e942a53992ce808e1b396d400bb97626d",
+    "neurochess/native/vendor/chess.hpp": "90b34a9cdefb96f0f63f88c92e80769c9466eb3c067fae672e787d7fe51e0228",
+    "neurochess/pipeline_mcts.py": "b225036e4fa26cd172fbbaf589b77791080f7466841ae788b4c8fe79d219c5d0",
+    "neurochess/fused_heads.py": "9708b650d4f97f788db882822ac9e599492b991843152f06104c8d0b5de63ade",
+    "neurochess/tensorrt_graph.py": "4757352fb51909881f4d8aff598c77422b98017a9eaf660ed4d240d4a471642b",
+    "scripts/benchmark_native_runtime.py": "2de6f3d322f882d342f4d86d34d906781eb5a38856e52e48f2c99f18b1c15aa1"
+  },
+  "engine_sha256": "1b1213289aa79d30b116a6b08130ad8138aec0fc7fb9ce453e0df6a400d66ac8",
+  "binary_sha256": "bd56adb71fe30b02b3df0c2ec4739efcee9cbafc1cde4bc5896b0949ebd96cae",
+  "library_sha256": "8c46b58a619830f31672a9f84a75d218cf42e18da22925782c9cce39de518d0f",
+  "synthetic": [
+    {
+      "batch": 1,
+      "passed": true
+    },
+    {
+      "batch": 7,
+      "passed": true
+    },
+    {
+      "batch": 8,
+      "passed": true
+    }
+  ],
+  "output_parity": [
+    {
+      "batch": 8,
+      "max_fused_error": 2.384185791015625e-07,
+      "max_raw_error": 5.960464477539063e-08,
+      "support_equal": true
+    },
+    {
+      "batch": 1,
+      "max_fused_error": 1.1920928955078125e-07,
+      "max_raw_error": 3.725290298461914e-09,
+      "support_equal": true
+    },
+    {
+      "batch": 7,
+      "max_fused_error": 2.384185791015625e-07,
+      "max_raw_error": 5.960464477539063e-08,
+      "support_equal": true
+    },
+    {
+      "batch": 2,
+      "max_fused_error": 1.1920928955078125e-07,
+      "max_raw_error": 7.450580596923828e-09,
+      "support_equal": true
+    },
+    {
+      "batch": 6,
+      "max_fused_error": 2.384185791015625e-07,
+      "max_raw_error": 5.960464477539063e-08,
+      "support_equal": true
+    },
+    {
+      "batch": 3,
+      "max_fused_error": 2.384185791015625e-07,
+      "max_raw_error": 7.450580596923828e-09,
+      "support_equal": true
+    },
+    {
+      "batch": 5,
+      "max_fused_error": 2.384185791015625e-07,
+      "max_raw_error": 5.960464477539063e-08,
+      "support_equal": true
+    },
+    {
+      "batch": 4,
+      "max_fused_error": 2.384185791015625e-07,
+      "max_raw_error": 5.960464477539063e-08,
+      "support_equal": true
+    }
+  ],
+  "gpu_load_before": "55 %, 2587 MiB",
+  "gpu_load_after": "44 %, 2259 MiB",
+  "executable_dependencies": "\tlinux-vdso.so.1 (0x00007fdd599c7000)\n\tlibnc_inference.so => output/native-runtime-20261101/build/libnc_inference.so (0x00007fdd59858000)\n\tlibstdc++.so.6 => /usr/lib/libstdc++.so.6 (0x00007fdd59400000)\n\tlibm.so.6 => /usr/lib/libm.so.6 (0x00007fdd59721000)\n\tlibgcc_s.so.1 => /usr/lib/libgcc_s.so.1 (0x00007fdd596f4000)\n\tlibc.so.6 => /usr/lib/libc.so.6 (0x00007fdd59000000)\n\tlibnvinfer.so.11 => output/puct-10x-20261031/trt-deps/tensorrt_libs/libnvinfer.so.11 (0x00007fdd2d400000)\n\tlibnvinfer_plugin.so.11 => output/puct-10x-20261031/trt-deps/tensorrt_libs/libnvinfer_plugin.so.11 (0x00007fdd2a600000)\n\tlibcudart.so.13 => /opt/cuda/lib64/libcudart.so.13 (0x00007fdd2a200000)\n\t/lib64/ld-linux-x86-64.so.2 => /usr/lib64/ld-linux-x86-64.so.2 (0x00007fdd599c9000)\n\tlibdl.so.2 => /usr/lib/libdl.so.2 (0x00007fdd596ed000)\n\tlibpthread.so.0 => /usr/lib/libpthread.so.0 (0x00007fdd596e6000)\n\tlibrt.so.1 => /usr/lib/librt.so.1 (0x00007fdd596e1000)\n",
+  "native_process_tests": 7,
+  "compressed_sha256": "334a598679653e0ff8c30128a71ed4530c997cdbb7962a17436c47dce8bcae5e",
+  "note": "One identical TensorRT plan. Existing Python/Triton heads versus C++/CUDA heads. Fixed-node controls also compare identical native inference with different schedulers. Startup excluded; current background GPU load may affect timings."
+}

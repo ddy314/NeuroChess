@@ -1,0 +1,27 @@
+{
+  "sources": [
+    "output/correction-safety-20261031/tactical-roots/roots.fen",
+    "output/puct-2s-20261031/final-roots/roots.fen",
+    "output/puct-10x-20261031/confirmation-roots/roots.fen"
+  ],
+  "groups": [
+    {
+      "kind": "tactical",
+      "start": 0,
+      "count": 32
+    },
+    {
+      "kind": "old_floor",
+      "start": 32,
+      "count": 16
+    },
+    {
+      "kind": "confirmation_final_source",
+      "start": 48,
+      "count": 64
+    }
+  ],
+  "positions": 112,
+  "sha256": "baca6477b00428c80cc6102b840519e10f3c842a2a9ec4f11fb252a8a9b5be23",
+  "note": "No parameter changes after candidate freeze; rechecks final exception-guard revision as well as existing tactical floor."
+}

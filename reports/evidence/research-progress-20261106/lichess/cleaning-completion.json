@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "counts": {
+    "train": 9800000,
+    "val": 100000,
+    "test": 100000
+  },
+  "unique_positions": 10000000,
+  "historical_or_heldout_overlap": 0,
+  "duplicate_keys": 0,
+  "cross_split_position_overlap": 0,
+  "all_training_rows_numeric_audit": true,
+  "all_selected_pvs_legally_replayed_before_publication": true,
+  "reconstructed_rows": 9932,
+  "verified_persistent_files": {
+    "plan.json": "9cf6e008aff5b62635ec506f383fd186e8bb651aeb2152d6e14f96e67d753822",
+    "cleaning-spec.json": "9c0702843b0e37cad43f36ea02beeda7f2a9efc5557471c93fc6e7be4ef5c84a",
+    "sampling-plan.json": "9c1bf7a1f5db90f239aa26bd0f9023ceacd6fd4e7da6832fc0b8611b94bd79b1",
+    "exclusion-audit.json": "4067ec8a26c64547ce1624923d2bc53ec9895373004201a265702bcfd20e6a77",
+    "excluded-keys.npy": "93e186707bc7964ebc803894bdfe1a5a10748fc961c033c26440eecd1bfa14ab",
+    "source.tar.gz": "ef17c858828d80c016bc86b3804764c8ffd4518ba1e803aaf46c1829c7176cf6"
+  },
+  "game_independence": "unavailable from evaluation cache",
+  "default_promoted": false,
+  "training_started": false,
+  "finished_at": 1793774145.1536493,
+  "seconds": 6457.944436788559
+}
