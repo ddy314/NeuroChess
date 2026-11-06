@@ -1,0 +1,37 @@
+{
+  "as_of": "2026-11-06",
+  "code_commit": "720172877587131cba9543432695b6f1515fcda3",
+  "working_tree_cpu_tests": {
+    "passed": 299,
+    "skipped": 11,
+    "seconds": 37.7
+  },
+  "source_only_cpu_tests": {
+    "passed": 294,
+    "skipped": 16,
+    "seconds": 28.46
+  },
+  "prepared_source_tree": "62a571969aec64058675bf7d569eb5af630af6e6",
+  "source_paths_compared": 289,
+  "source_manifest_sha256": "8973638ffc758f6eed896e4bebf31af77adb97f8b1f74190e7f21d86a5e83914",
+  "source_tree_matches_final_source": true,
+  "native_pipeline_ubsan": {
+    "passed": true,
+    "result": "partial backup, cancellation, virtual loss and budget invariants passed"
+  },
+  "checks": {
+    "python_compilation": true,
+    "documentation_links": true,
+    "evidence_provenance": true,
+    "credential_and_artifact_scan": true,
+    "baseline_fingerprints_unchanged": true
+  },
+  "limits": [
+    "CPU tests only; optional CUDA/TensorRT integration cases skipped.",
+    "The source-only checkout also lacks the unbundled Stockfish binaries; real teacher integration cases skip explicitly.",
+    "Mocked quality-gate unit tests still execute without an installed engine.",
+    "Native shared libraries were rebuilt only in the isolated source directory; the frozen local libmcts was not replaced.",
+    "The prepared tree excludes this receipt; subsequent differences are documentation/ignore metadata, with all source/config bytes compared.",
+    "No new training, model promotion, cloud allocation, or strength experiment."
+  ]
+}

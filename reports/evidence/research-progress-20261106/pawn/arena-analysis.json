@@ -1,0 +1,53 @@
+{
+  "complete": false,
+  "pgn_replays_verified": 9,
+  "truncated": 0,
+  "counts": {
+    "wins": 4,
+    "draws": 1,
+    "losses": 4
+  },
+  "paired_score": 0.4375,
+  "paired_bootstrap95": [
+    0.125,
+    0.6875
+  ],
+  "paired_hoeffding95": [
+    0.0,
+    1.0
+  ],
+  "latency_seconds": {
+    "baseline": {
+      "median": 1.9727180815000338,
+      "p95": 1.987999983549912,
+      "maximum": 1.9956726010000239,
+      "moves": 514
+    },
+    "pawn": {
+      "median": 1.944526942000266,
+      "p95": 1.9776488703999349,
+      "maximum": 1.9882629969997652,
+      "moves": 515
+    }
+  },
+  "frozen_48": {
+    "baseline": {
+      "mean_cp_regret": 6.041666666666667,
+      "at_least_100cp": 0
+    },
+    "pawn": {
+      "mean_cp_regret": 21.854166666666668,
+      "at_least_100cp": 2
+    }
+  },
+  "baseline_config_and_fingerprints_verified": true,
+  "opening_pairs_verified": 4,
+  "no_model_promotion": true,
+  "scope": "Finite paired comparison of final PAWN model to locked puct-2s-v1 on one L4; not a PAWN causal ablation, absolute Elo estimate or universal non-regression proof. Frozen scores use shared finite 1M-node Stockfish16 candidate-union searches.",
+  "stopped_by_user": true,
+  "planned_games": 16,
+  "completed_games": 9,
+  "interrupted_game_excluded": true,
+  "raw_score": 0.5,
+  "cloud_active_sessions": 0
+}

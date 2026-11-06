@@ -1,0 +1,2273 @@
+{
+  "completed": true,
+  "candidates": [
+    {
+      "alpha": 0.25,
+      "path": "{repo}/output/lichess-five-failure-mechanisms-20261105/manual-weight-probes/alpha-0.25.pt",
+      "sha256": "6213a20359e775003e013538329bfe4700bcb7f785d587c0f8ba408ef53f30ad",
+      "metric_gate_original": {
+        "passed": true,
+        "checks": {
+          "new/loss": true,
+          "new/Q": true,
+          "new/value": true,
+          "new/top1": true,
+          "new/winning": true,
+          "new/neutral": true,
+          "new/losing": true,
+          "old_core/loss": true,
+          "old_core/Q": true,
+          "old_core/value": true,
+          "old_core/policy": true,
+          "old_core/value_CE": true,
+          "old_core/top1": true,
+          "old_core/winning": true,
+          "old_core/neutral": true,
+          "old_core/losing": true,
+          "old_general/loss": true,
+          "old_general/Q": true,
+          "old_general/value": true,
+          "old_general/policy": true,
+          "old_general/value_CE": true,
+          "old_general/top1": true,
+          "old_general/winning": true,
+          "old_general/neutral": true,
+          "old_general/losing": true
+        },
+        "failed": []
+      },
+      "metric_gate_local_parent": {
+        "passed": true,
+        "checks": {
+          "new/loss": true,
+          "new/Q": true,
+          "new/value": true,
+          "new/top1": true,
+          "new/winning": true,
+          "new/neutral": true,
+          "new/losing": true,
+          "old_core/loss": true,
+          "old_core/Q": true,
+          "old_core/value": true,
+          "old_core/policy": true,
+          "old_core/value_CE": true,
+          "old_core/top1": true,
+          "old_core/winning": true,
+          "old_core/neutral": true,
+          "old_core/losing": true,
+          "old_general/loss": true,
+          "old_general/Q": true,
+          "old_general/value": true,
+          "old_general/policy": true,
+          "old_general/value_CE": true,
+          "old_general/top1": true,
+          "old_general/winning": true,
+          "old_general/neutral": true,
+          "old_general/losing": true
+        },
+        "failed": []
+      },
+      "validation": {
+        "new": {
+          "positions": 8192,
+          "loss": 2.604891396127641,
+          "policy_loss": 2.0797008932568133,
+          "q_loss": 0.12255381132126786,
+          "value_loss": 0.46391358657274395,
+          "top1": 0.3829345703125,
+          "q_mae": 0.23012949564381063,
+          "value_mae": 0.23793128819524156,
+          "value_strata": {
+            "winning": {
+              "n": 2069,
+              "mae": 0.2768970670263157
+            },
+            "neutral": {
+              "n": 4370,
+              "mae": 0.19710585263771382
+            },
+            "losing": {
+              "n": 1753,
+              "mae": 0.2937139219573087
+            }
+          }
+        },
+        "old_core": {
+          "positions": 8192,
+          "loss": 2.5408730544149876,
+          "policy_loss": 2.013910337816924,
+          "q_loss": 0.11481709705549292,
+          "value_loss": 0.46955416339915246,
+          "top1": 0.4254150390625,
+          "q_mae": 0.2196308572653365,
+          "value_mae": 0.2232114389498605,
+          "value_strata": {
+            "winning": {
+              "n": 2116,
+              "mae": 0.29648668860703253
+            },
+            "neutral": {
+              "n": 4387,
+              "mae": 0.14558549906719553
+            },
+            "losing": {
+              "n": 1689,
+              "mae": 0.33303652479395474
+            }
+          }
+        },
+        "old_general": {
+          "positions": 4096,
+          "loss": 2.4012807235121727,
+          "policy_loss": 1.9751930749043822,
+          "q_loss": 0.09194199701596517,
+          "value_loss": 0.3801166519988328,
+          "top1": 0.437744140625,
+          "q_mae": 0.18308993533324086,
+          "value_mae": 0.1788749640731453,
+          "value_strata": {
+            "winning": {
+              "n": 1146,
+              "mae": 0.22843209769329736
+            },
+            "neutral": {
+              "n": 2241,
+              "mae": 0.11786840382382849
+            },
+            "losing": {
+              "n": 709,
+              "mae": 0.29160165855837056
+            }
+          }
+        }
+      },
+      "fresh_validation": {
+        "positions": 4096,
+        "loss": 2.568380845710635,
+        "policy_loss": 2.045742092654109,
+        "q_loss": 0.11761537293205038,
+        "value_loss": 0.4638310666196048,
+        "top1": 0.390380859375,
+        "q_mae": 0.2251149154412848,
+        "value_mae": 0.23577232527787828,
+        "value_strata": {
+          "winning": {
+            "n": 1046,
+            "mae": 0.29459169295831916
+          },
+          "neutral": {
+            "n": 2168,
+            "mae": 0.19466417205463699
+          },
+          "losing": {
+            "n": 882,
+            "mae": 0.26706191438700067
+          }
+        }
+      },
+      "searches": [
+        {
+          "index": 147,
+          "group": "failure",
+          "move": "g7f6",
+          "regret": 77,
+          "parent_delta": 77,
+          "introduced_blunder": false,
+          "root": {
+            "move": "g7f6",
+            "simulations": 2179,
+            "new_simulations": 2179,
+            "retained_visits": 0,
+            "nodes": 2229,
+            "proven_value": null,
+            "leaders": [
+              {
+                "move": "g7f6",
+                "visits": 880,
+                "q": -0.803111,
+                "prior": 0.298918,
+                "pruned": false
+              },
+              {
+                "move": "h7f6",
+                "visits": 870,
+                "q": -0.790203,
+                "prior": 0.16228,
+                "pruned": false
+              },
+              {
+                "move": "e7f6",
+                "visits": 249,
+                "q": -0.832279,
+                "prior": 0.179892,
+                "pruned": false
+              },
+              {
+                "move": "d5d4",
+                "visits": 91,
+                "q": -0.881059,
+                "prior": 0.134698,
+                "pruned": false
+              },
+              {
+                "move": "e7b4",
+                "visits": 27,
+                "q": -0.957301,
+                "prior": 0.0653906,
+                "pruned": false
+              }
+            ],
+            "elapsed_seconds": 1.972882068999752,
+            "time_stopped": true,
+            "time_limit": 2.0,
+            "time_overrun": false
+          },
+          "extra_teacher": null
+        },
+        {
+          "index": 296,
+          "group": "failure",
+          "move": "f3e3",
+          "regret": 0,
+          "parent_delta": 0,
+          "introduced_blunder": false,
+          "root": {
+            "move": "f3e3",
+            "simulations": 2495,
+            "new_simulations": 2495,
+            "retained_visits": 0,
+            "nodes": 2493,
+            "proven_value": null,
+            "leaders": [
+              {
+                "move": "f3e3",
+                "visits": 1123,
+                "q": -0.258735,
+                "prior": 0.401038,
+                "pruned": false
+              },
+              {
+                "move": "d4c5",
+                "visits": 808,
+                "q": -0.275251,
+                "prior": 0.13062,
+                "pruned": false
+              },
+              {
+                "move": "f3g3",
+                "visits": 183,
+                "q": -0.29289,
+                "prior": 0.0608749,
+                "pruned": false
+              },
+              {
+                "move": "a2a4",
+                "visits": 175,
+                "q": -0.336996,
+                "prior": 0.168125,
+                "pruned": false
+              },
+              {
+                "move": "f3d3",
+                "visits": 72,
+                "q": -0.274534,
+                "prior": 0.00512513,
+                "pruned": false
+              }
+            ],
+            "elapsed_seconds": 1.9726300799993624,
+            "time_stopped": true,
+            "time_limit": 2.0,
+            "time_overrun": false
+          },
+          "extra_teacher": null
+        },
+        {
+          "index": 302,
+          "group": "failure",
+          "move": "d5b5",
+          "regret": 0,
+          "parent_delta": 0,
+          "introduced_blunder": false,
+          "root": {
+            "move": "d5b5",
+            "simulations": 2105,
+            "new_simulations": 2105,
+            "retained_visits": 0,
+            "nodes": 2107,
+            "proven_value": null,
+            "leaders": [
+              {
+                "move": "d5b5",
+                "visits": 1084,
+                "q": 0.0800712,
+                "prior": 0.254592,
+                "pruned": false
+              },
+              {
+                "move": "a7a6",
+                "visits": 931,
+                "q": -0.0967916,
+                "prior": 0.118484,
+                "pruned": false
+              },
+              {
+                "move": "h7h5",
+                "visits": 24,
+                "q": -0.419191,
+                "prior": 0.104162,
+                "pruned": false
+              },
+              {
+                "move": "h7h6",
+                "visits": 12,
+                "q": -0.313667,
+                "prior": 0.0449558,
+                "pruned": false
+              },
+              {
+                "move": "b7c6",
+                "visits": 10,
+                "q": -0.401722,
+                "prior": 0.0523805,
+                "pruned": false
+              }
+            ],
+            "elapsed_seconds": 1.981875706002029,
+            "time_stopped": true,
+            "time_limit": 2.0,
+            "time_overrun": false
+          },
+          "extra_teacher": null
+        },
+        {
+          "index": 386,
+          "group": "failure",
+          "move": "e2e1q",
+          "regret": 564,
+          "parent_delta": 544,
+          "introduced_blunder": true,
+          "root": {
+            "move": "e2e1q",
+            "simulations": 3467,
+            "new_simulations": 3467,
+            "retained_visits": 0,
+            "nodes": 3475,
+            "proven_value": null,
+            "leaders": [
+              {
+                "move": "e2e1q",
+                "visits": 956,
+                "q": 0.0997598,
+                "prior": 0.227465,
+                "pruned": false
+              },
+              {
+                "move": "e2e1r",
+                "visits": 931,
+                "q": 0.116625,
+                "prior": 0.0857164,
+                "pruned": false
+              },
+              {
+                "move": "d3e5",
+                "visits": 514,
+                "q": 0.25834,
+                "prior": 0.0329657,
+                "pruned": false
+              },
+              {
+                "move": "e2e1n",
+                "visits": 254,
+                "q": 0.111926,
+                "prior": 0.0258751,
+                "pruned": false
+              },
+              {
+                "move": "d3b2",
+                "visits": 219,
+                "q": 0.0260118,
+                "prior": 0.232384,
+                "pruned": false
+              }
+            ],
+            "elapsed_seconds": 1.9548776319970784,
+            "time_stopped": true,
+            "time_limit": 2.0,
+            "time_overrun": false
+          },
+          "extra_teacher": null
+        },
+        {
+          "index": 420,
+          "group": "failure",
+          "move": "a4c6",
+          "regret": 495,
+          "parent_delta": 495,
+          "introduced_blunder": true,
+          "root": {
+            "move": "a4c6",
+            "simulations": 2826,
+            "new_simulations": 2826,
+            "retained_visits": 0,
+            "nodes": 2827,
+            "proven_value": null,
+            "leaders": [
+              {
+                "move": "a4c6",
+                "visits": 913,
+                "q": -0.665722,
+                "prior": 0.126046,
+                "pruned": false
+              },
+              {
+                "move": "a6a5",
+                "visits": 825,
+                "q": -0.656022,
+                "prior": 0.130158,
+                "pruned": false
+              },
+              {
+                "move": "a4d1",
+                "visits": 316,
+                "q": -0.679986,
+                "prior": 0.0838329,
+                "pruned": false
+              },
+              {
+                "move": "a4e8",
+                "visits": 178,
+                "q": -0.705411,
+                "prior": 0.101921,
+                "pruned": false
+              },
+              {
+                "move": "a4b5",
+                "visits": 165,
+                "q": -0.707608,
+                "prior": 0.0955579,
+                "pruned": false
+              }
+            ],
+            "elapsed_seconds": 1.9450053539985674,
+            "time_stopped": true,
+            "time_limit": 2.0,
+            "time_overrun": false
+          },
+          "extra_teacher": null
+        },
+        {
+          "index": 215,
+          "group": "retained_control",
+          "move": "e8g8",
+          "regret": 33,
+          "parent_delta": 0,
+          "introduced_blunder": false,
+          "root": {
+            "move": "e8g8",
+            "simulations": 2634,
+            "new_simulations": 2634,
+            "retained_visits": 0,
+            "nodes": 2635,
+            "proven_value": null,
+            "leaders": [
+              {
+                "move": "e8g8",
+                "visits": 815,
+                "q": -0.158263,
+                "prior": 0.221743,
+                "pruned": false
+              },
+              {
+                "move": "c6e5",
+                "visits": 664,
+                "q": -0.158936,
+                "prior": 0.197709,
+                "pruned": false
+              },
+              {
+                "move": "d8d7",
+                "visits": 369,
+                "q": -0.145889,
+                "prior": 0.0493976,
+                "pruned": false
+              },
+              {
+                "move": "a8b8",
+                "visits": 225,
+                "q": -0.184032,
+                "prior": 0.151589,
+                "pruned": false
+              },
+              {
+                "move": "g7e5",
+                "visits": 224,
+                "q": -0.196481,
+                "prior": 0.132931,
+                "pruned": false
+              }
+            ],
+            "elapsed_seconds": 1.9377628399997775,
+            "time_stopped": true,
+            "time_limit": 2.0,
+            "time_overrun": false
+          },
+          "extra_teacher": null
+        },
+        {
+          "index": 276,
+          "group": "retained_control",
+          "move": "b4b3",
+          "regret": 14,
+          "parent_delta": 0,
+          "introduced_blunder": false,
+          "root": {
+            "move": "b4b3",
+            "simulations": 3388,
+            "new_simulations": 3388,
+            "retained_visits": 0,
+            "nodes": 3389,
+            "proven_value": null,
+            "leaders": [
+              {
+                "move": "b4b3",
+                "visits": 1381,
+                "q": 0.128193,
+                "prior": 0.27938,
+                "pruned": false
+              },
+              {
+                "move": "h6g6",
+                "visits": 682,
+                "q": 0.125069,
+                "prior": 0.153692,
+                "pruned": false
+              },
+              {
+                "move": "g7g5",
+                "visits": 561,
+                "q": 0.127218,
+                "prior": 0.138416,
+                "pruned": false
+              },
+              {
+                "move": "b1b2",
+                "visits": 275,
+                "q": 0.0863294,
+                "prior": 0.137947,
+                "pruned": false
+              },
+              {
+                "move": "b1b3",
+                "visits": 228,
+                "q": 0.10803,
+                "prior": 0.0746309,
+                "pruned": false
+              }
+            ],
+            "elapsed_seconds": 1.9481194590007362,
+            "time_stopped": true,
+            "time_limit": 2.0,
+            "time_overrun": false
+          },
+          "extra_teacher": null
+        },
+        {
+          "index": 363,
+          "group": "retained_control",
+          "move": "f8g7",
+          "regret": 1,
+          "parent_delta": 0,
+          "introduced_blunder": false,
+          "root": {
+            "move": "f8g7",
+            "simulations": 3021,
+            "new_simulations": 3021,
+            "retained_visits": 0,
+            "nodes": 3022,
+            "proven_value": null,
+            "leaders": [
+              {
+                "move": "f8g7",
+                "visits": 1159,
+                "q": -0.260599,
+                "prior": 0.183973,
+                "pruned": false
+              },
+              {
+                "move": "a6a5",
+                "visits": 966,
+                "q": -0.247832,
+                "prior": 0.0582343,
+                "pruned": false
+              },
+              {
+                "move": "h5h4",
+                "visits": 213,
+                "q": -0.343215,
+                "prior": 0.147401,
+                "pruned": false
+              },
+              {
+                "move": "f8e7",
+                "visits": 209,
+                "q": -0.347536,
+                "prior": 0.167583,
+                "pruned": false
+              },
+              {
+                "move": "f6d7",
+                "visits": 165,
+                "q": -0.378027,
+                "prior": 0.203983,
+                "pruned": false
+              }
+            ],
+            "elapsed_seconds": 1.9396605900001305,
+            "time_stopped": true,
+            "time_limit": 2.0,
+            "time_overrun": false
+          },
+          "extra_teacher": null
+        },
+        {
+          "index": 469,
+          "group": "retained_control",
+          "move": "c3c2",
+          "regret": 165,
+          "parent_delta": 0,
+          "introduced_blunder": false,
+          "root": {
+            "move": "c3c2",
+            "simulations": 2867,
+            "new_simulations": 2867,
+            "retained_visits": 0,
+            "nodes": 2887,
+            "proven_value": null,
+            "leaders": [
+              {
+                "move": "c3c2",
+                "visits": 636,
+                "q": 0.825073,
+                "prior": 0.0874948,
+                "pruned": false
+              },
+              {
+                "move": "b3c4",
+                "visits": 519,
+                "q": 0.802799,
+                "prior": 0.15943,
+                "pruned": false
+              },
+              {
+                "move": "c3d4",
+                "visits": 310,
+                "q": 0.815531,
+                "prior": 0.0558178,
+                "pruned": false
+              },
+              {
+                "move": "c3b2",
+                "visits": 283,
+                "q": 0.826045,
+                "prior": 0.0363746,
+                "pruned": false
+              },
+              {
+                "move": "b3c2",
+                "visits": 226,
+                "q": 0.770156,
+                "prior": 0.0975933,
+                "pruned": false
+              }
+            ],
+            "elapsed_seconds": 1.9618224119985825,
+            "time_stopped": true,
+            "time_limit": 2.0,
+            "time_overrun": false
+          },
+          "extra_teacher": null
+        },
+        {
+          "index": 470,
+          "group": "retained_control",
+          "move": "e5d5",
+          "regret": 36,
+          "parent_delta": 0,
+          "introduced_blunder": false,
+          "root": {
+            "move": "e5d5",
+            "simulations": 3003,
+            "new_simulations": 3003,
+            "retained_visits": 0,
+            "nodes": 3004,
+            "proven_value": null,
+            "leaders": [
+              {
+                "move": "e5d5",
+                "visits": 613,
+                "q": -0.989951,
+                "prior": 0.242938,
+                "pruned": false
+              },
+              {
+                "move": "e5f5",
+                "visits": 415,
+                "q": -0.983441,
+                "prior": 0.131757,
+                "pruned": false
+              },
+              {
+                "move": "c2g2",
+                "visits": 384,
+                "q": -0.969612,
+                "prior": 0.0564304,
+                "pruned": false
+              },
+              {
+                "move": "e5d6",
+                "visits": 330,
+                "q": -0.989422,
+                "prior": 0.128828,
+                "pruned": false
+              },
+              {
+                "move": "c2c1",
+                "visits": 288,
+                "q": -0.982832,
+                "prior": 0.0889081,
+                "pruned": false
+              }
+            ],
+            "elapsed_seconds": 1.9583748180011753,
+            "time_stopped": true,
+            "time_limit": 2.0,
+            "time_overrun": false
+          },
+          "extra_teacher": null
+        }
+      ],
+      "five_failure_regressions": [
+        386,
+        420
+      ],
+      "retained_control_regressions": [],
+      "original_search_gate_scope": "Ten selected diagnostic roots only, full512 qualification not run",
+      "optimizer_steps": 0,
+      "default_promoted": false
+    },
+    {
+      "alpha": 0.5,
+      "path": "{repo}/output/lichess-five-failure-mechanisms-20261105/manual-weight-probes/alpha-0.50.pt",
+      "sha256": "1c20eb1e87a36a8d298fa4718480ec847a63ca1544e17a4ea1e2519eacb0981d",
+      "metric_gate_original": {
+        "passed": true,
+        "checks": {
+          "new/loss": true,
+          "new/Q": true,
+          "new/value": true,
+          "new/top1": true,
+          "new/winning": true,
+          "new/neutral": true,
+          "new/losing": true,
+          "old_core/loss": true,
+          "old_core/Q": true,
+          "old_core/value": true,
+          "old_core/policy": true,
+          "old_core/value_CE": true,
+          "old_core/top1": true,
+          "old_core/winning": true,
+          "old_core/neutral": true,
+          "old_core/losing": true,
+          "old_general/loss": true,
+          "old_general/Q": true,
+          "old_general/value": true,
+          "old_general/policy": true,
+          "old_general/value_CE": true,
+          "old_general/top1": true,
+          "old_general/winning": true,
+          "old_general/neutral": true,
+          "old_general/losing": true
+        },
+        "failed": []
+      },
+      "metric_gate_local_parent": {
+        "passed": true,
+        "checks": {
+          "new/loss": true,
+          "new/Q": true,
+          "new/value": true,
+          "new/top1": true,
+          "new/winning": true,
+          "new/neutral": true,
+          "new/losing": true,
+          "old_core/loss": true,
+          "old_core/Q": true,
+          "old_core/value": true,
+          "old_core/policy": true,
+          "old_core/value_CE": true,
+          "old_core/top1": true,
+          "old_core/winning": true,
+          "old_core/neutral": true,
+          "old_core/losing": true,
+          "old_general/loss": true,
+          "old_general/Q": true,
+          "old_general/value": true,
+          "old_general/policy": true,
+          "old_general/value_CE": true,
+          "old_general/top1": true,
+          "old_general/winning": true,
+          "old_general/neutral": true,
+          "old_general/losing": true
+        },
+        "failed": []
+      },
+      "validation": {
+        "new": {
+          "positions": 8192,
+          "loss": 2.599485281854868,
+          "policy_loss": 2.0759917302057147,
+          "q_loss": 0.12128466046124231,
+          "value_loss": 0.46285122144035995,
+          "top1": 0.3817138671875,
+          "q_mae": 0.2284768302398253,
+          "value_mae": 0.23744890002528507,
+          "value_strata": {
+            "winning": {
+              "n": 2069,
+              "mae": 0.2773889342449883
+            },
+            "neutral": {
+              "n": 4370,
+              "mae": 0.19766582286683843
+            },
+            "losing": {
+              "n": 1753,
+              "mae": 0.2894831934547465
+            }
+          }
+        },
+        "old_core": {
+          "positions": 8192,
+          "loss": 2.53832985740155,
+          "policy_loss": 2.0119868172332644,
+          "q_loss": 0.1146169680141611,
+          "value_loss": 0.4690345640992746,
+          "top1": 0.4254150390625,
+          "q_mae": 0.21943234975702547,
+          "value_mae": 0.22310703477801042,
+          "value_strata": {
+            "winning": {
+              "n": 2116,
+              "mae": 0.2969566406171579
+            },
+            "neutral": {
+              "n": 4387,
+              "mae": 0.1465147301242983
+            },
+            "losing": {
+              "n": 1689,
+              "mae": 0.3295278012434924
+            }
+          }
+        },
+        "old_general": {
+          "positions": 4096,
+          "loss": 2.4003388807177544,
+          "policy_loss": 1.9742348520085216,
+          "q_loss": 0.09191775364161003,
+          "value_loss": 0.3801451596664265,
+          "top1": 0.436767578125,
+          "q_mae": 0.1831152586969884,
+          "value_mae": 0.1789827002696711,
+          "value_strata": {
+            "winning": {
+              "n": 1146,
+              "mae": 0.22907308131833456
+            },
+            "neutral": {
+              "n": 2241,
+              "mae": 0.1187861601052002
+            },
+            "losing": {
+              "n": 709,
+              "mae": 0.2882871711114356
+            }
+          }
+        }
+      },
+      "fresh_validation": {
+        "positions": 4096,
+        "loss": 2.563756173476577,
+        "policy_loss": 2.0423664059489965,
+        "q_loss": 0.11644827033160254,
+        "value_loss": 0.4631656361743808,
+        "top1": 0.392333984375,
+        "q_mae": 0.22358888577822172,
+        "value_mae": 0.2354212229392374,
+        "value_strata": {
+          "winning": {
+            "n": 1046,
+            "mae": 0.2954195435559573
+          },
+          "neutral": {
+            "n": 2168,
+            "mae": 0.19531433590989805
+          },
+          "losing": {
+            "n": 882,
+            "mae": 0.26285148111896384
+          }
+        }
+      },
+      "searches": [
+        {
+          "index": 147,
+          "group": "failure",
+          "move": "g7f6",
+          "regret": 77,
+          "parent_delta": 77,
+          "introduced_blunder": false,
+          "root": {
+            "move": "g7f6",
+            "simulations": 2198,
+            "new_simulations": 2198,
+            "retained_visits": 0,
+            "nodes": 2245,
+            "proven_value": null,
+            "leaders": [
+              {
+                "move": "g7f6",
+                "visits": 993,
+                "q": -0.814389,
+                "prior": 0.292577,
+                "pruned": false
+              },
+              {
+                "move": "h7f6",
+                "visits": 741,
+                "q": -0.799722,
+                "prior": 0.162545,
+                "pruned": false
+              },
+              {
+                "move": "e7f6",
+                "visits": 270,
+                "q": -0.842337,
+                "prior": 0.180645,
+                "pruned": false
+              },
+              {
+                "move": "d5d4",
+                "visits": 99,
+                "q": -0.892624,
+                "prior": 0.138115,
+                "pruned": false
+              },
+              {
+                "move": "e7b4",
+                "visits": 29,
+                "q": -0.959207,
+                "prior": 0.06601,
+                "pruned": false
+              }
+            ],
+            "elapsed_seconds": 1.9672769389981113,
+            "time_stopped": true,
+            "time_limit": 2.0,
+            "time_overrun": false
+          },
+          "extra_teacher": null
+        },
+        {
+          "index": 296,
+          "group": "failure",
+          "move": "f3e3",
+          "regret": 0,
+          "parent_delta": 0,
+          "introduced_blunder": false,
+          "root": {
+            "move": "f3e3",
+            "simulations": 2427,
+            "new_simulations": 2427,
+            "retained_visits": 0,
+            "nodes": 2426,
+            "proven_value": null,
+            "leaders": [
+              {
+                "move": "f3e3",
+                "visits": 987,
+                "q": -0.254848,
+                "prior": 0.379683,
+                "pruned": false
+              },
+              {
+                "move": "d4c5",
+                "visits": 869,
+                "q": -0.268856,
+                "prior": 0.131602,
+                "pruned": false
+              },
+              {
+                "move": "f3g3",
+                "visits": 185,
+                "q": -0.280123,
+                "prior": 0.063243,
+                "pruned": false
+              },
+              {
+                "move": "a2a4",
+                "visits": 177,
+                "q": -0.332242,
+                "prior": 0.172041,
+                "pruned": false
+              },
+              {
+                "move": "f3d3",
+                "visits": 76,
+                "q": -0.267651,
+                "prior": 0.00566786,
+                "pruned": false
+              }
+            ],
+            "elapsed_seconds": 1.9454781280001043,
+            "time_stopped": true,
+            "time_limit": 2.0,
+            "time_overrun": false
+          },
+          "extra_teacher": null
+        },
+        {
+          "index": 302,
+          "group": "failure",
+          "move": "d5b5",
+          "regret": 0,
+          "parent_delta": 0,
+          "introduced_blunder": false,
+          "root": {
+            "move": "d5b5",
+            "simulations": 2106,
+            "new_simulations": 2106,
+            "retained_visits": 0,
+            "nodes": 2108,
+            "proven_value": null,
+            "leaders": [
+              {
+                "move": "d5b5",
+                "visits": 1097,
+                "q": 0.0847429,
+                "prior": 0.249062,
+                "pruned": false
+              },
+              {
+                "move": "a7a6",
+                "visits": 915,
+                "q": -0.093746,
+                "prior": 0.117204,
+                "pruned": false
+              },
+              {
+                "move": "h7h5",
+                "visits": 24,
+                "q": -0.424201,
+                "prior": 0.10444,
+                "pruned": false
+              },
+              {
+                "move": "b7c6",
+                "visits": 13,
+                "q": -0.364319,
+                "prior": 0.0525722,
+                "pruned": false
+              },
+              {
+                "move": "h7h6",
+                "visits": 13,
+                "q": -0.305345,
+                "prior": 0.0454546,
+                "pruned": false
+              }
+            ],
+            "elapsed_seconds": 1.9827435560000595,
+            "time_stopped": true,
+            "time_limit": 2.0,
+            "time_overrun": false
+          },
+          "extra_teacher": null
+        },
+        {
+          "index": 386,
+          "group": "failure",
+          "move": "e2e1r",
+          "regret": 564,
+          "parent_delta": 544,
+          "introduced_blunder": true,
+          "root": {
+            "move": "e2e1r",
+            "simulations": 3477,
+            "new_simulations": 3477,
+            "retained_visits": 0,
+            "nodes": 3485,
+            "proven_value": null,
+            "leaders": [
+              {
+                "move": "e2e1r",
+                "visits": 970,
+                "q": 0.115982,
+                "prior": 0.0855088,
+                "pruned": false
+              },
+              {
+                "move": "e2e1q",
+                "visits": 936,
+                "q": 0.100658,
+                "prior": 0.215294,
+                "pruned": false
+              },
+              {
+                "move": "d3e5",
+                "visits": 572,
+                "q": 0.270208,
+                "prior": 0.0340113,
+                "pruned": false
+              },
+              {
+                "move": "d3b2",
+                "visits": 219,
+                "q": 0.0265029,
+                "prior": 0.2295,
+                "pruned": false
+              },
+              {
+                "move": "e2e1n",
+                "visits": 177,
+                "q": 0.0982928,
+                "prior": 0.0258744,
+                "pruned": false
+              }
+            ],
+            "elapsed_seconds": 1.9613752410004963,
+            "time_stopped": true,
+            "time_limit": 2.0,
+            "time_overrun": false
+          },
+          "extra_teacher": null
+        },
+        {
+          "index": 420,
+          "group": "failure",
+          "move": "a4c6",
+          "regret": 495,
+          "parent_delta": 495,
+          "introduced_blunder": true,
+          "root": {
+            "move": "a4c6",
+            "simulations": 2890,
+            "new_simulations": 2890,
+            "retained_visits": 0,
+            "nodes": 2891,
+            "proven_value": null,
+            "leaders": [
+              {
+                "move": "a4c6",
+                "visits": 923,
+                "q": -0.666351,
+                "prior": 0.126189,
+                "pruned": false
+              },
+              {
+                "move": "a6a5",
+                "visits": 827,
+                "q": -0.656227,
+                "prior": 0.124525,
+                "pruned": false
+              },
+              {
+                "move": "a4d1",
+                "visits": 329,
+                "q": -0.682343,
+                "prior": 0.0860452,
+                "pruned": false
+              },
+              {
+                "move": "a4e8",
+                "visits": 186,
+                "q": -0.707938,
+                "prior": 0.103339,
+                "pruned": false
+              },
+              {
+                "move": "a4d7",
+                "visits": 154,
+                "q": -0.699358,
+                "prior": 0.0797344,
+                "pruned": false
+              }
+            ],
+            "elapsed_seconds": 1.9703314250000403,
+            "time_stopped": true,
+            "time_limit": 2.0,
+            "time_overrun": false
+          },
+          "extra_teacher": null
+        },
+        {
+          "index": 215,
+          "group": "retained_control",
+          "move": "e8g8",
+          "regret": 33,
+          "parent_delta": 0,
+          "introduced_blunder": false,
+          "root": {
+            "move": "e8g8",
+            "simulations": 2634,
+            "new_simulations": 2634,
+            "retained_visits": 0,
+            "nodes": 2635,
+            "proven_value": null,
+            "leaders": [
+              {
+                "move": "e8g8",
+                "visits": 771,
+                "q": -0.16335,
+                "prior": 0.219193,
+                "pruned": false
+              },
+              {
+                "move": "c6e5",
+                "visits": 666,
+                "q": -0.160027,
+                "prior": 0.195048,
+                "pruned": false
+              },
+              {
+                "move": "d8d7",
+                "visits": 375,
+                "q": -0.152502,
+                "prior": 0.0508163,
+                "pruned": false
+              },
+              {
+                "move": "a8b8",
+                "visits": 251,
+                "q": -0.192911,
+                "prior": 0.152186,
+                "pruned": false
+              },
+              {
+                "move": "g7e5",
+                "visits": 226,
+                "q": -0.200382,
+                "prior": 0.131872,
+                "pruned": false
+              }
+            ],
+            "elapsed_seconds": 1.931549904998974,
+            "time_stopped": true,
+            "time_limit": 2.0,
+            "time_overrun": false
+          },
+          "extra_teacher": null
+        },
+        {
+          "index": 276,
+          "group": "retained_control",
+          "move": "b4b3",
+          "regret": 14,
+          "parent_delta": 0,
+          "introduced_blunder": false,
+          "root": {
+            "move": "b4b3",
+            "simulations": 3387,
+            "new_simulations": 3387,
+            "retained_visits": 0,
+            "nodes": 3388,
+            "proven_value": null,
+            "leaders": [
+              {
+                "move": "b4b3",
+                "visits": 1345,
+                "q": 0.127228,
+                "prior": 0.27139,
+                "pruned": false
+              },
+              {
+                "move": "h6g6",
+                "visits": 675,
+                "q": 0.124324,
+                "prior": 0.15134,
+                "pruned": false
+              },
+              {
+                "move": "g7g5",
+                "visits": 556,
+                "q": 0.126943,
+                "prior": 0.137079,
+                "pruned": false
+              },
+              {
+                "move": "b1b2",
+                "visits": 295,
+                "q": 0.0893542,
+                "prior": 0.141598,
+                "pruned": false
+              },
+              {
+                "move": "b1b3",
+                "visits": 242,
+                "q": 0.108644,
+                "prior": 0.0777335,
+                "pruned": false
+              }
+            ],
+            "elapsed_seconds": 1.9577451490004023,
+            "time_stopped": true,
+            "time_limit": 2.0,
+            "time_overrun": false
+          },
+          "extra_teacher": null
+        },
+        {
+          "index": 363,
+          "group": "retained_control",
+          "move": "f8g7",
+          "regret": 1,
+          "parent_delta": 0,
+          "introduced_blunder": false,
+          "root": {
+            "move": "f8g7",
+            "simulations": 3021,
+            "new_simulations": 3021,
+            "retained_visits": 0,
+            "nodes": 3022,
+            "proven_value": null,
+            "leaders": [
+              {
+                "move": "f8g7",
+                "visits": 1131,
+                "q": -0.259769,
+                "prior": 0.181828,
+                "pruned": false
+              },
+              {
+                "move": "a6a5",
+                "visits": 989,
+                "q": -0.249689,
+                "prior": 0.0594458,
+                "pruned": false
+              },
+              {
+                "move": "h5h4",
+                "visits": 209,
+                "q": -0.342844,
+                "prior": 0.146726,
+                "pruned": false
+              },
+              {
+                "move": "f8e7",
+                "visits": 202,
+                "q": -0.351275,
+                "prior": 0.168719,
+                "pruned": false
+              },
+              {
+                "move": "f6d7",
+                "visits": 162,
+                "q": -0.380289,
+                "prior": 0.203342,
+                "pruned": false
+              }
+            ],
+            "elapsed_seconds": 1.9480940350003948,
+            "time_stopped": true,
+            "time_limit": 2.0,
+            "time_overrun": false
+          },
+          "extra_teacher": null
+        },
+        {
+          "index": 469,
+          "group": "retained_control",
+          "move": "c3c2",
+          "regret": 165,
+          "parent_delta": 0,
+          "introduced_blunder": false,
+          "root": {
+            "move": "c3c2",
+            "simulations": 2870,
+            "new_simulations": 2870,
+            "retained_visits": 0,
+            "nodes": 2891,
+            "proven_value": null,
+            "leaders": [
+              {
+                "move": "c3c2",
+                "visits": 614,
+                "q": 0.838475,
+                "prior": 0.0859474,
+                "pruned": false
+              },
+              {
+                "move": "b3c4",
+                "visits": 487,
+                "q": 0.805186,
+                "prior": 0.158242,
+                "pruned": false
+              },
+              {
+                "move": "c3d4",
+                "visits": 311,
+                "q": 0.814828,
+                "prior": 0.0560681,
+                "pruned": false
+              },
+              {
+                "move": "c3b2",
+                "visits": 292,
+                "q": 0.839558,
+                "prior": 0.0371131,
+                "pruned": false
+              },
+              {
+                "move": "c3d3",
+                "visits": 225,
+                "q": 0.791123,
+                "prior": 0.0756323,
+                "pruned": false
+              }
+            ],
+            "elapsed_seconds": 1.9682522809998773,
+            "time_stopped": true,
+            "time_limit": 2.0,
+            "time_overrun": false
+          },
+          "extra_teacher": null
+        },
+        {
+          "index": 470,
+          "group": "retained_control",
+          "move": "e5d5",
+          "regret": 36,
+          "parent_delta": 0,
+          "introduced_blunder": false,
+          "root": {
+            "move": "e5d5",
+            "simulations": 2939,
+            "new_simulations": 2939,
+            "retained_visits": 0,
+            "nodes": 2940,
+            "proven_value": null,
+            "leaders": [
+              {
+                "move": "e5d5",
+                "visits": 606,
+                "q": -0.989703,
+                "prior": 0.236864,
+                "pruned": false
+              },
+              {
+                "move": "e5f5",
+                "visits": 413,
+                "q": -0.983656,
+                "prior": 0.131257,
+                "pruned": false
+              },
+              {
+                "move": "c2g2",
+                "visits": 361,
+                "q": -0.970321,
+                "prior": 0.0542721,
+                "pruned": false
+              },
+              {
+                "move": "e5d6",
+                "visits": 326,
+                "q": -0.989984,
+                "prior": 0.128784,
+                "pruned": false
+              },
+              {
+                "move": "e5f6",
+                "visits": 273,
+                "q": -0.984635,
+                "prior": 0.0922165,
+                "pruned": false
+              }
+            ],
+            "elapsed_seconds": 1.9361770950017672,
+            "time_stopped": true,
+            "time_limit": 2.0,
+            "time_overrun": false
+          },
+          "extra_teacher": null
+        }
+      ],
+      "five_failure_regressions": [
+        386,
+        420
+      ],
+      "retained_control_regressions": [],
+      "original_search_gate_scope": "Ten selected diagnostic roots only, full512 qualification not run",
+      "optimizer_steps": 0,
+      "default_promoted": false
+    },
+    {
+      "alpha": 0.75,
+      "path": "{repo}/output/lichess-five-failure-mechanisms-20261105/manual-weight-probes/alpha-0.75.pt",
+      "sha256": "a43c147a2ff35396f230e93d5c3a11e83388ee4425c48f0afcd85823217fced1",
+      "metric_gate_original": {
+        "passed": true,
+        "checks": {
+          "new/loss": true,
+          "new/Q": true,
+          "new/value": true,
+          "new/top1": true,
+          "new/winning": true,
+          "new/neutral": true,
+          "new/losing": true,
+          "old_core/loss": true,
+          "old_core/Q": true,
+          "old_core/value": true,
+          "old_core/policy": true,
+          "old_core/value_CE": true,
+          "old_core/top1": true,
+          "old_core/winning": true,
+          "old_core/neutral": true,
+          "old_core/losing": true,
+          "old_general/loss": true,
+          "old_general/Q": true,
+          "old_general/value": true,
+          "old_general/policy": true,
+          "old_general/value_CE": true,
+          "old_general/top1": true,
+          "old_general/winning": true,
+          "old_general/neutral": true,
+          "old_general/losing": true
+        },
+        "failed": []
+      },
+      "metric_gate_local_parent": {
+        "passed": true,
+        "checks": {
+          "new/loss": true,
+          "new/Q": true,
+          "new/value": true,
+          "new/top1": true,
+          "new/winning": true,
+          "new/neutral": true,
+          "new/losing": true,
+          "old_core/loss": true,
+          "old_core/Q": true,
+          "old_core/value": true,
+          "old_core/policy": true,
+          "old_core/value_CE": true,
+          "old_core/top1": true,
+          "old_core/winning": true,
+          "old_core/neutral": true,
+          "old_core/losing": true,
+          "old_general/loss": true,
+          "old_general/Q": true,
+          "old_general/value": true,
+          "old_general/policy": true,
+          "old_general/value_CE": true,
+          "old_general/top1": true,
+          "old_general/winning": true,
+          "old_general/neutral": true,
+          "old_general/losing": true
+        },
+        "failed": []
+      },
+      "validation": {
+        "new": {
+          "positions": 8192,
+          "loss": 2.5951891923323274,
+          "policy_loss": 2.073087596334517,
+          "q_loss": 0.12019961728947237,
+          "value_loss": 0.4620017793495208,
+          "top1": 0.38134765625,
+          "q_mae": 0.22694477938081087,
+          "value_mae": 0.23703307945110907,
+          "value_strata": {
+            "winning": {
+              "n": 2069,
+              "mae": 0.2779091407959932
+            },
+            "neutral": {
+              "n": 4370,
+              "mae": 0.1982941507510745
+            },
+            "losing": {
+              "n": 1753,
+              "mae": 0.28535968954613805
+            }
+          }
+        },
+        "old_core": {
+          "positions": 8192,
+          "loss": 2.5366139682009816,
+          "policy_loss": 2.0106758680194616,
+          "q_loss": 0.11460521200206131,
+          "value_loss": 0.4686354947043583,
+          "top1": 0.4246826171875,
+          "q_mae": 0.21938538684525302,
+          "value_mae": 0.22304187986289037,
+          "value_strata": {
+            "winning": {
+              "n": 2116,
+              "mae": 0.29738992688797117
+            },
+            "neutral": {
+              "n": 4387,
+              "mae": 0.14754796295584624
+            },
+            "losing": {
+              "n": 1689,
+              "mae": 0.3259852463318848
+            }
+          }
+        },
+        "old_general": {
+          "positions": 4096,
+          "loss": 2.399753467179835,
+          "policy_loss": 1.9735119109973311,
+          "q_loss": 0.09201916612801142,
+          "value_loss": 0.3802319732494652,
+          "top1": 0.43603515625,
+          "q_mae": 0.18329037985598898,
+          "value_mae": 0.17906977445727534,
+          "value_strata": {
+            "winning": {
+              "n": 1146,
+              "mae": 0.22959950236021745
+            },
+            "neutral": {
+              "n": 2241,
+              "mae": 0.1196946972496525
+            },
+            "losing": {
+              "n": 709,
+              "mae": 0.2850676303747805
+            }
+          }
+        }
+      },
+      "fresh_validation": {
+        "positions": 4096,
+        "loss": 2.559960190206766,
+        "policy_loss": 2.0396903194487095,
+        "q_loss": 0.11547651176806539,
+        "value_loss": 0.4625316283199936,
+        "top1": 0.393798828125,
+        "q_mae": 0.22223345541000653,
+        "value_mae": 0.2351318766977215,
+        "value_strata": {
+          "winning": {
+            "n": 1046,
+            "mae": 0.29617805345372133
+          },
+          "neutral": {
+            "n": 2168,
+            "mae": 0.19609638419407385
+          },
+          "losing": {
+            "n": 882,
+            "mae": 0.25868589808222525
+          }
+        }
+      },
+      "searches": [
+        {
+          "index": 147,
+          "group": "failure",
+          "move": "g7f6",
+          "regret": 77,
+          "parent_delta": 77,
+          "introduced_blunder": false,
+          "root": {
+            "move": "g7f6",
+            "simulations": 2205,
+            "new_simulations": 2205,
+            "retained_visits": 0,
+            "nodes": 2257,
+            "proven_value": null,
+            "leaders": [
+              {
+                "move": "g7f6",
+                "visits": 1038,
+                "q": -0.816116,
+                "prior": 0.287915,
+                "pruned": false
+              },
+              {
+                "move": "h7f6",
+                "visits": 698,
+                "q": -0.805685,
+                "prior": 0.160892,
+                "pruned": false
+              },
+              {
+                "move": "e7f6",
+                "visits": 273,
+                "q": -0.845249,
+                "prior": 0.182406,
+                "pruned": false
+              },
+              {
+                "move": "d5d4",
+                "visits": 100,
+                "q": -0.896204,
+                "prior": 0.138894,
+                "pruned": false
+              },
+              {
+                "move": "e7b4",
+                "visits": 29,
+                "q": -0.9621,
+                "prior": 0.0666988,
+                "pruned": false
+              }
+            ],
+            "elapsed_seconds": 1.9627583949986729,
+            "time_stopped": true,
+            "time_limit": 2.0,
+            "time_overrun": false
+          },
+          "extra_teacher": null
+        },
+        {
+          "index": 296,
+          "group": "failure",
+          "move": "f3e3",
+          "regret": 0,
+          "parent_delta": 0,
+          "introduced_blunder": false,
+          "root": {
+            "move": "f3e3",
+            "simulations": 2426,
+            "new_simulations": 2426,
+            "retained_visits": 0,
+            "nodes": 2425,
+            "proven_value": null,
+            "leaders": [
+              {
+                "move": "f3e3",
+                "visits": 987,
+                "q": -0.255702,
+                "prior": 0.358054,
+                "pruned": false
+              },
+              {
+                "move": "d4c5",
+                "visits": 842,
+                "q": -0.272251,
+                "prior": 0.132891,
+                "pruned": false
+              },
+              {
+                "move": "a2a4",
+                "visits": 196,
+                "q": -0.32442,
+                "prior": 0.17609,
+                "pruned": false
+              },
+              {
+                "move": "f3g3",
+                "visits": 196,
+                "q": -0.286,
+                "prior": 0.0650885,
+                "pruned": false
+              },
+              {
+                "move": "f3d3",
+                "visits": 74,
+                "q": -0.273906,
+                "prior": 0.00630436,
+                "pruned": false
+              }
+            ],
+            "elapsed_seconds": 1.9651745390001452,
+            "time_stopped": true,
+            "time_limit": 2.0,
+            "time_overrun": false
+          },
+          "extra_teacher": null
+        },
+        {
+          "index": 302,
+          "group": "failure",
+          "move": "d5b5",
+          "regret": 0,
+          "parent_delta": 0,
+          "introduced_blunder": false,
+          "root": {
+            "move": "d5b5",
+            "simulations": 2060,
+            "new_simulations": 2060,
+            "retained_visits": 0,
+            "nodes": 2062,
+            "proven_value": null,
+            "leaders": [
+              {
+                "move": "d5b5",
+                "visits": 1052,
+                "q": 0.0784057,
+                "prior": 0.244977,
+                "pruned": false
+              },
+              {
+                "move": "a7a6",
+                "visits": 909,
+                "q": -0.099652,
+                "prior": 0.115354,
+                "pruned": false
+              },
+              {
+                "move": "h7h5",
+                "visits": 27,
+                "q": -0.398848,
+                "prior": 0.105223,
+                "pruned": false
+              },
+              {
+                "move": "b7c6",
+                "visits": 13,
+                "q": -0.368344,
+                "prior": 0.0528176,
+                "pruned": false
+              },
+              {
+                "move": "h7h6",
+                "visits": 13,
+                "q": -0.310437,
+                "prior": 0.0462736,
+                "pruned": false
+              }
+            ],
+            "elapsed_seconds": 1.9558224239990523,
+            "time_stopped": true,
+            "time_limit": 2.0,
+            "time_overrun": false
+          },
+          "extra_teacher": null
+        },
+        {
+          "index": 386,
+          "group": "failure",
+          "move": "e2e1r",
+          "regret": 564,
+          "parent_delta": 544,
+          "introduced_blunder": true,
+          "root": {
+            "move": "e2e1r",
+            "simulations": 3493,
+            "new_simulations": 3493,
+            "retained_visits": 0,
+            "nodes": 3501,
+            "proven_value": null,
+            "leaders": [
+              {
+                "move": "e2e1r",
+                "visits": 1052,
+                "q": 0.11361,
+                "prior": 0.0842025,
+                "pruned": false
+              },
+              {
+                "move": "e2e1q",
+                "visits": 976,
+                "q": 0.0998174,
+                "prior": 0.202742,
+                "pruned": false
+              },
+              {
+                "move": "d3e5",
+                "visits": 504,
+                "q": 0.269157,
+                "prior": 0.0345981,
+                "pruned": false
+              },
+              {
+                "move": "d3b2",
+                "visits": 208,
+                "q": 0.0172077,
+                "prior": 0.226764,
+                "pruned": false
+              },
+              {
+                "move": "d3b4",
+                "visits": 180,
+                "q": 0.0786734,
+                "prior": 0.0540069,
+                "pruned": false
+              }
+            ],
+            "elapsed_seconds": 1.9557826989985188,
+            "time_stopped": true,
+            "time_limit": 2.0,
+            "time_overrun": false
+          },
+          "extra_teacher": null
+        },
+        {
+          "index": 420,
+          "group": "failure",
+          "move": "a4c6",
+          "regret": 495,
+          "parent_delta": 495,
+          "introduced_blunder": true,
+          "root": {
+            "move": "a4c6",
+            "simulations": 2954,
+            "new_simulations": 2954,
+            "retained_visits": 0,
+            "nodes": 2955,
+            "proven_value": null,
+            "leaders": [
+              {
+                "move": "a4c6",
+                "visits": 1130,
+                "q": -0.663436,
+                "prior": 0.126393,
+                "pruned": false
+              },
+              {
+                "move": "a6a5",
+                "visits": 651,
+                "q": -0.662518,
+                "prior": 0.119366,
+                "pruned": false
+              },
+              {
+                "move": "a4d1",
+                "visits": 360,
+                "q": -0.68095,
+                "prior": 0.0884293,
+                "pruned": false
+              },
+              {
+                "move": "a4e8",
+                "visits": 195,
+                "q": -0.705353,
+                "prior": 0.105044,
+                "pruned": false
+              },
+              {
+                "move": "a4b5",
+                "visits": 154,
+                "q": -0.71292,
+                "prior": 0.0936392,
+                "pruned": false
+              }
+            ],
+            "elapsed_seconds": 1.9664934360007464,
+            "time_stopped": true,
+            "time_limit": 2.0,
+            "time_overrun": false
+          },
+          "extra_teacher": null
+        },
+        {
+          "index": 215,
+          "group": "retained_control",
+          "move": "e8g8",
+          "regret": 33,
+          "parent_delta": 0,
+          "introduced_blunder": false,
+          "root": {
+            "move": "e8g8",
+            "simulations": 2634,
+            "new_simulations": 2634,
+            "retained_visits": 0,
+            "nodes": 2635,
+            "proven_value": null,
+            "leaders": [
+              {
+                "move": "e8g8",
+                "visits": 778,
+                "q": -0.165413,
+                "prior": 0.220419,
+                "pruned": false
+              },
+              {
+                "move": "c6e5",
+                "visits": 674,
+                "q": -0.163071,
+                "prior": 0.19008,
+                "pruned": false
+              },
+              {
+                "move": "d8d7",
+                "visits": 367,
+                "q": -0.153171,
+                "prior": 0.0517513,
+                "pruned": false
+              },
+              {
+                "move": "a8b8",
+                "visits": 252,
+                "q": -0.199523,
+                "prior": 0.152734,
+                "pruned": false
+              },
+              {
+                "move": "g7e5",
+                "visits": 219,
+                "q": -0.203018,
+                "prior": 0.131155,
+                "pruned": false
+              }
+            ],
+            "elapsed_seconds": 1.9294005740011926,
+            "time_stopped": true,
+            "time_limit": 2.0,
+            "time_overrun": false
+          },
+          "extra_teacher": null
+        },
+        {
+          "index": 276,
+          "group": "retained_control",
+          "move": "b4b3",
+          "regret": 14,
+          "parent_delta": 0,
+          "introduced_blunder": false,
+          "root": {
+            "move": "b4b3",
+            "simulations": 3387,
+            "new_simulations": 3387,
+            "retained_visits": 0,
+            "nodes": 3388,
+            "proven_value": null,
+            "leaders": [
+              {
+                "move": "b4b3",
+                "visits": 1285,
+                "q": 0.123756,
+                "prior": 0.262186,
+                "pruned": false
+              },
+              {
+                "move": "h6g6",
+                "visits": 665,
+                "q": 0.119226,
+                "prior": 0.149505,
+                "pruned": false
+              },
+              {
+                "move": "g7g5",
+                "visits": 569,
+                "q": 0.128263,
+                "prior": 0.13514,
+                "pruned": false
+              },
+              {
+                "move": "b1b2",
+                "visits": 330,
+                "q": 0.0909944,
+                "prior": 0.145809,
+                "pruned": false
+              },
+              {
+                "move": "b1b3",
+                "visits": 254,
+                "q": 0.105787,
+                "prior": 0.0812797,
+                "pruned": false
+              }
+            ],
+            "elapsed_seconds": 1.952979254998354,
+            "time_stopped": true,
+            "time_limit": 2.0,
+            "time_overrun": false
+          },
+          "extra_teacher": null
+        },
+        {
+          "index": 363,
+          "group": "retained_control",
+          "move": "f8g7",
+          "regret": 1,
+          "parent_delta": 0,
+          "introduced_blunder": false,
+          "root": {
+            "move": "f8g7",
+            "simulations": 3085,
+            "new_simulations": 3085,
+            "retained_visits": 0,
+            "nodes": 3086,
+            "proven_value": null,
+            "leaders": [
+              {
+                "move": "f8g7",
+                "visits": 1215,
+                "q": -0.257818,
+                "prior": 0.179956,
+                "pruned": false
+              },
+              {
+                "move": "a6a5",
+                "visits": 1020,
+                "q": -0.24883,
+                "prior": 0.0609736,
+                "pruned": false
+              },
+              {
+                "move": "h5h4",
+                "visits": 231,
+                "q": -0.339835,
+                "prior": 0.146743,
+                "pruned": false
+              },
+              {
+                "move": "f8e7",
+                "visits": 199,
+                "q": -0.354433,
+                "prior": 0.168068,
+                "pruned": false
+              },
+              {
+                "move": "f6d7",
+                "visits": 166,
+                "q": -0.378106,
+                "prior": 0.202014,
+                "pruned": false
+              }
+            ],
+            "elapsed_seconds": 1.954136248001305,
+            "time_stopped": true,
+            "time_limit": 2.0,
+            "time_overrun": false
+          },
+          "extra_teacher": null
+        },
+        {
+          "index": 469,
+          "group": "retained_control",
+          "move": "c3c2",
+          "regret": 165,
+          "parent_delta": 0,
+          "introduced_blunder": false,
+          "root": {
+            "move": "c3c2",
+            "simulations": 2870,
+            "new_simulations": 2870,
+            "retained_visits": 0,
+            "nodes": 2891,
+            "proven_value": null,
+            "leaders": [
+              {
+                "move": "c3c2",
+                "visits": 612,
+                "q": 0.838959,
+                "prior": 0.0845111,
+                "pruned": false
+              },
+              {
+                "move": "b3c4",
+                "visits": 467,
+                "q": 0.805319,
+                "prior": 0.15535,
+                "pruned": false
+              },
+              {
+                "move": "c3b2",
+                "visits": 292,
+                "q": 0.837433,
+                "prior": 0.0378507,
+                "pruned": false
+              },
+              {
+                "move": "c3d4",
+                "visits": 290,
+                "q": 0.817579,
+                "prior": 0.0570987,
+                "pruned": false
+              },
+              {
+                "move": "b3c2",
+                "visits": 233,
+                "q": 0.783532,
+                "prior": 0.0990784,
+                "pruned": false
+              }
+            ],
+            "elapsed_seconds": 1.9659861649997765,
+            "time_stopped": true,
+            "time_limit": 2.0,
+            "time_overrun": false
+          },
+          "extra_teacher": null
+        },
+        {
+          "index": 470,
+          "group": "retained_control",
+          "move": "e5d5",
+          "regret": 36,
+          "parent_delta": 0,
+          "introduced_blunder": false,
+          "root": {
+            "move": "e5d5",
+            "simulations": 2940,
+            "new_simulations": 2940,
+            "retained_visits": 0,
+            "nodes": 2941,
+            "proven_value": null,
+            "leaders": [
+              {
+                "move": "e5d5",
+                "visits": 594,
+                "q": -0.989675,
+                "prior": 0.232538,
+                "pruned": false
+              },
+              {
+                "move": "e5f5",
+                "visits": 411,
+                "q": -0.98362,
+                "prior": 0.1303,
+                "pruned": false
+              },
+              {
+                "move": "c2g2",
+                "visits": 355,
+                "q": -0.969921,
+                "prior": 0.0517802,
+                "pruned": false
+              },
+              {
+                "move": "e5d6",
+                "visits": 330,
+                "q": -0.989795,
+                "prior": 0.129766,
+                "pruned": false
+              },
+              {
+                "move": "e5f6",
+                "visits": 267,
+                "q": -0.985898,
+                "prior": 0.0929373,
+                "pruned": false
+              }
+            ],
+            "elapsed_seconds": 1.9396501180017367,
+            "time_stopped": true,
+            "time_limit": 2.0,
+            "time_overrun": false
+          },
+          "extra_teacher": null
+        }
+      ],
+      "five_failure_regressions": [
+        386,
+        420
+      ],
+      "retained_control_regressions": [],
+      "original_search_gate_scope": "Ten selected diagnostic roots only, full512 qualification not run",
+      "optimizer_steps": 0,
+      "default_promoted": false
+    }
+  ],
+  "automatic_selection": false,
+  "training_resumed": false,
+  "optimizer_steps": 0
+}

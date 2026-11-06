@@ -1,0 +1,149 @@
+{
+  "model": "e4ed8978db91eeef8360c4dea87faf7a4f826325bce45aa7efc024692d585ef7",
+  "cumulative_step": 15500,
+  "search": {
+    "name": "trt-graph-pipeline-0.5s",
+    "backend": "tensorrt-int8graph",
+    "engine": "pipeline",
+    "options": {
+      "simulations": 16384,
+      "leaf_batch_size": 8,
+      "time_limit": 0.5,
+      "time_margin": 0.006,
+      "inference_cache_size": 32768,
+      "tree_reuse": true,
+      "c_puct": 1.5,
+      "fpu_reduction": 0.2,
+      "initial_width": 6,
+      "widening": 1.5,
+      "root_keep": 12,
+      "prune_after": 0.75,
+      "max_depth": 128,
+      "pending_loss_guard": true
+    }
+  },
+  "stockfish": {
+    "name": "Stockfish 18",
+    "author": "the Stockfish developers (see AUTHORS file)"
+  },
+  "requested_nodes": [
+    1500,
+    2000
+  ],
+  "audit": {
+    "verified_games": 20,
+    "scheduled": 20,
+    "complete": true,
+    "summary": {
+      "1500": {
+        "games": 10,
+        "completed": 10,
+        "wins": 4,
+        "draws": 1,
+        "losses": 5,
+        "truncated": 0,
+        "completed_pairs": 5,
+        "score": 0.45
+      },
+      "2000": {
+        "games": 10,
+        "completed": 10,
+        "wins": 5,
+        "draws": 1,
+        "losses": 4,
+        "truncated": 0,
+        "completed_pairs": 5,
+        "score": 0.55
+      }
+    },
+    "latency": {
+      "model_moves": 1007,
+      "mean": 0.46054611162051834,
+      "median": 0.49515232599515,
+      "p95": 0.4965063961048145,
+      "maximum": 0.49674075600341894,
+      "over_budget": 0
+    },
+    "inference": {
+      "total_network_inputs": 1387601,
+      "median_network_inputs": 1496.0,
+      "median_simulations": 1899.0
+    },
+    "note": "Legal PGN replay, claimable outcomes, colors, budgets, model fingerprint and actual inference/simulation counters reconciled. Counts are from model perspective."
+  },
+  "paired_uncertainty": {
+    "1500": {
+      "scheduled": 10,
+      "attempted": 10,
+      "completed": 10,
+      "truncated": 0,
+      "wins": 4,
+      "draws": 1,
+      "losses": 5,
+      "independent_completed_pairs": 5,
+      "paired_score": 0.45,
+      "score_bootstrap95": [
+        0.15,
+        0.75
+      ],
+      "relative_elo": -34.86007028756008,
+      "relative_elo_bootstrap95": [
+        -301.33106666344463,
+        190.84850188786498
+      ],
+      "score_hoeffding95": [
+        0.0,
+        1.0
+      ],
+      "relative_elo_hoeffding95": [
+        null,
+        null
+      ],
+      "pentanomial": [
+        1,
+        1,
+        2,
+        0,
+        1
+      ],
+      "rating_note": "Relative to this opponent, budgets and opening distribution only. Bootstrap pairs, not individual games. Null Elo endpoints mean unbounded; identical pair outcomes make bootstrap degenerate; consult conservative interval."
+    },
+    "2000": {
+      "scheduled": 10,
+      "attempted": 10,
+      "completed": 10,
+      "truncated": 0,
+      "wins": 5,
+      "draws": 1,
+      "losses": 4,
+      "independent_completed_pairs": 5,
+      "paired_score": 0.55,
+      "score_bootstrap95": [
+        0.25,
+        0.8
+      ],
+      "relative_elo": 34.860070287560106,
+      "relative_elo_bootstrap95": [
+        -190.84850188786498,
+        240.823996531185
+      ],
+      "score_hoeffding95": [
+        0.0,
+        1.0
+      ],
+      "relative_elo_hoeffding95": [
+        null,
+        null
+      ],
+      "pentanomial": [
+        1,
+        0,
+        2,
+        1,
+        1
+      ],
+      "rating_note": "Relative to this opponent, budgets and opening distribution only. Bootstrap pairs, not individual games. Null Elo endpoints mean unbounded; identical pair outcomes make bootstrap degenerate; consult conservative interval."
+    }
+  },
+  "rating_claim": "20 fixed-budget games only; no absolute/human Elo estimate."
+}

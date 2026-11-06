@@ -1,0 +1,6 @@
+{
+  "python": "3.13.11",
+  "torch": "2.14.0",
+  "triton": "3.8.0",
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU, 615.78.08"
+}

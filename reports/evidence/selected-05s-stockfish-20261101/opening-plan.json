@@ -1,0 +1,50 @@
+{
+  "args": {
+    "pgn": "data/source/lichess-2013-01.pgn.zst",
+    "stockfish": "local/stockfish/stockfish/stockfish-ubuntu-x86-64-avx2",
+    "key_db": "data/evals-v2-5m/keys.sqlite",
+    "out": "output/selected-05s-sf-20261101/openings",
+    "after_game": 101683,
+    "pairs": 5,
+    "seed": 110113
+  },
+  "roots": [
+    {
+      "game": 101697,
+      "ply": 23,
+      "fen": "r1bqk2r/3nbnpp/2pp1p2/1p2p3/p3P1P1/P1NPBP2/1PPQBN1P/2KR3R b kq - 0 12",
+      "key": "b37f2aae8e7be81d633d34e018a878e2",
+      "teacher_cp": 38
+    },
+    {
+      "game": 101703,
+      "ply": 17,
+      "fen": "r3kbnr/pp1b1ppp/1np1p3/8/4P3/1BN1BN2/PPP2PPP/R2K3R b kq - 7 9",
+      "key": "559e0361b08e56c34b1ff094ba6b7548",
+      "teacher_cp": -68
+    },
+    {
+      "game": 101712,
+      "ply": 16,
+      "fen": "r2qk2r/pp2bppp/2np1n2/4p1B1/6b1/3P1N2/PPP1BPPP/RN1Q1RK1 w kq - 3 9",
+      "key": "412c407b8fdc2d2e52bee2c840a42834",
+      "teacher_cp": -23
+    },
+    {
+      "game": 101750,
+      "ply": 22,
+      "fen": "r1bqr1k1/pp1n1ppp/2pb4/4p3/3pP1P1/2NP4/PPPBB1PP/R2Q1RK1 w - - 0 12",
+      "key": "0319eead2c448f61a5ed17001841f4f9",
+      "teacher_cp": -74
+    },
+    {
+      "game": 101752,
+      "ply": 17,
+      "fen": "r1bqkb1r/p4ppp/2p2n2/3p4/8/3B3P/PPP2PP1/RNBQ1RK1 b kq - 1 9",
+      "key": "1ca4e0b6f07df410f64bd00de0244868",
+      "teacher_cp": -27
+    }
+  ],
+  "sha256": "fd751fa2423b9af44e3e61f7b34bcf64705939166a7cd028ddf615be67674aee",
+  "note": "One new source game per opening; ply16..24,teacher50k abs cp<=100,old base exact keys excluded. Both colors. Selection never uses tested-player outputs."
+}

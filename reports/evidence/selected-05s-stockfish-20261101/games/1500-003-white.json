@@ -1,0 +1,662 @@
+{
+  "nodes": 1500,
+  "opening": 3,
+  "contender_color": "white",
+  "fen": "r1bqr1k1/pp1n1ppp/2pb4/4p3/3pP1P1/2NP4/PPPBB1PP/R2Q1RK1 w - - 0 12",
+  "score": 0.5,
+  "result": "1/2-1/2",
+  "termination": "THREEFOLD_REPETITION",
+  "plies": 113,
+  "decisions": [
+    {
+      "seconds": 0.49521581499720924,
+      "large_positions": 1513,
+      "root": {
+        "new_simulations": 1719
+      }
+    },
+    {
+      "seconds": 0.49557975798961706,
+      "large_positions": 1512,
+      "root": {
+        "new_simulations": 1671
+      }
+    },
+    {
+      "seconds": 0.494438280002214,
+      "large_positions": 1496,
+      "root": {
+        "new_simulations": 1876
+      }
+    },
+    {
+      "seconds": 0.49650124199979473,
+      "large_positions": 1504,
+      "root": {
+        "new_simulations": 1903
+      }
+    },
+    {
+      "seconds": 0.49530085099104326,
+      "large_positions": 1504,
+      "root": {
+        "new_simulations": 1886
+      }
+    },
+    {
+      "seconds": 0.4964438210008666,
+      "large_positions": 1512,
+      "root": {
+        "new_simulations": 1699
+      }
+    },
+    {
+      "seconds": 0.49509047099854797,
+      "large_positions": 1504,
+      "root": {
+        "new_simulations": 1709
+      }
+    },
+    {
+      "seconds": 0.4962158230046043,
+      "large_positions": 1504,
+      "root": {
+        "new_simulations": 1661
+      }
+    },
+    {
+      "seconds": 0.4940947800059803,
+      "large_positions": 1489,
+      "root": {
+        "new_simulations": 1900
+      }
+    },
+    {
+      "seconds": 0.494184822004172,
+      "large_positions": 1496,
+      "root": {
+        "new_simulations": 1739
+      }
+    },
+    {
+      "seconds": 0.4966001180000603,
+      "large_positions": 1496,
+      "root": {
+        "new_simulations": 1764
+      }
+    },
+    {
+      "seconds": 0.4943357679876499,
+      "large_positions": 1488,
+      "root": {
+        "new_simulations": 1965
+      }
+    },
+    {
+      "seconds": 0.49522863399761263,
+      "large_positions": 1461,
+      "root": {
+        "new_simulations": 2670
+      }
+    },
+    {
+      "seconds": 0.495963061999646,
+      "large_positions": 1510,
+      "root": {
+        "new_simulations": 1663
+      }
+    },
+    {
+      "seconds": 0.49624585499987006,
+      "large_positions": 1487,
+      "root": {
+        "new_simulations": 1973
+      }
+    },
+    {
+      "seconds": 0.4949766760109924,
+      "large_positions": 1503,
+      "root": {
+        "new_simulations": 1676
+      }
+    },
+    {
+      "seconds": 0.4941711889987346,
+      "large_positions": 1496,
+      "root": {
+        "new_simulations": 1700
+      }
+    },
+    {
+      "seconds": 0.4959529890038539,
+      "large_positions": 1504,
+      "root": {
+        "new_simulations": 1739
+      }
+    },
+    {
+      "seconds": 0.4948777640092885,
+      "large_positions": 1500,
+      "root": {
+        "new_simulations": 1699
+      }
+    },
+    {
+      "seconds": 0.4942500269971788,
+      "large_positions": 1503,
+      "root": {
+        "new_simulations": 1611
+      }
+    },
+    {
+      "seconds": 0.4942777560063405,
+      "large_positions": 1504,
+      "root": {
+        "new_simulations": 1618
+      }
+    },
+    {
+      "seconds": 0.49543453099613544,
+      "large_positions": 1496,
+      "root": {
+        "new_simulations": 1986
+      }
+    },
+    {
+      "seconds": 0.49526030699780677,
+      "large_positions": 1496,
+      "root": {
+        "new_simulations": 1858
+      }
+    },
+    {
+      "seconds": 0.49447462300304323,
+      "large_positions": 1480,
+      "root": {
+        "new_simulations": 2298
+      }
+    },
+    {
+      "seconds": 0.4949781420000363,
+      "large_positions": 1496,
+      "root": {
+        "new_simulations": 1916
+      }
+    },
+    {
+      "seconds": 0.4941070420027245,
+      "large_positions": 1496,
+      "root": {
+        "new_simulations": 1880
+      }
+    },
+    {
+      "seconds": 0.4957556890003616,
+      "large_positions": 1496,
+      "root": {
+        "new_simulations": 1963
+      }
+    },
+    {
+      "seconds": 0.4954532219999237,
+      "large_positions": 1496,
+      "root": {
+        "new_simulations": 1925
+      }
+    },
+    {
+      "seconds": 0.4961024859949248,
+      "large_positions": 1502,
+      "root": {
+        "new_simulations": 1731
+      }
+    },
+    {
+      "seconds": 0.49479386300663464,
+      "large_positions": 1504,
+      "root": {
+        "new_simulations": 1865
+      }
+    },
+    {
+      "seconds": 0.4951604809903074,
+      "large_positions": 1511,
+      "root": {
+        "new_simulations": 1709
+      }
+    },
+    {
+      "seconds": 0.4960995989968069,
+      "large_positions": 1520,
+      "root": {
+        "new_simulations": 1749
+      }
+    },
+    {
+      "seconds": 0.49506517899862956,
+      "large_positions": 1504,
+      "root": {
+        "new_simulations": 1771
+      }
+    },
+    {
+      "seconds": 0.49410786399676,
+      "large_positions": 1512,
+      "root": {
+        "new_simulations": 1660
+      }
+    },
+    {
+      "seconds": 0.49524579900025856,
+      "large_positions": 1512,
+      "root": {
+        "new_simulations": 1778
+      }
+    },
+    {
+      "seconds": 0.49490446799609344,
+      "large_positions": 1514,
+      "root": {
+        "new_simulations": 1695
+      }
+    },
+    {
+      "seconds": 0.49434914501034655,
+      "large_positions": 1504,
+      "root": {
+        "new_simulations": 1914
+      }
+    },
+    {
+      "seconds": 0.4941662589990301,
+      "large_positions": 1504,
+      "root": {
+        "new_simulations": 1843
+      }
+    },
+    {
+      "seconds": 0.4949649079935625,
+      "large_positions": 1496,
+      "root": {
+        "new_simulations": 2030
+      }
+    },
+    {
+      "seconds": 0.4963810149929486,
+      "large_positions": 1504,
+      "root": {
+        "new_simulations": 2028
+      }
+    },
+    {
+      "seconds": 0.49580255600449163,
+      "large_positions": 1512,
+      "root": {
+        "new_simulations": 1823
+      }
+    },
+    {
+      "seconds": 0.49544690900074784,
+      "large_positions": 1504,
+      "root": {
+        "new_simulations": 1816
+      }
+    },
+    {
+      "seconds": 0.4947175419947598,
+      "large_positions": 1480,
+      "root": {
+        "new_simulations": 2633
+      }
+    },
+    {
+      "seconds": 0.49511142700794153,
+      "large_positions": 1494,
+      "root": {
+        "new_simulations": 2276
+      }
+    },
+    {
+      "seconds": 0.49585463099356275,
+      "large_positions": 1496,
+      "root": {
+        "new_simulations": 2067
+      }
+    },
+    {
+      "seconds": 0.4949636489909608,
+      "large_positions": 1488,
+      "root": {
+        "new_simulations": 2430
+      }
+    },
+    {
+      "seconds": 0.49472313400474377,
+      "large_positions": 1488,
+      "root": {
+        "new_simulations": 2277
+      }
+    },
+    {
+      "seconds": 0.49451729000429623,
+      "large_positions": 1496,
+      "root": {
+        "new_simulations": 1978
+      }
+    },
+    {
+      "seconds": 0.49651572899892926,
+      "large_positions": 1472,
+      "root": {
+        "new_simulations": 3567
+      }
+    },
+    {
+      "seconds": 0.49641660699853674,
+      "large_positions": 1456,
+      "root": {
+        "new_simulations": 4195
+      }
+    },
+    {
+      "seconds": 0.49423054700309876,
+      "large_positions": 1456,
+      "root": {
+        "new_simulations": 3980
+      }
+    },
+    {
+      "seconds": 0.04213643899129238,
+      "large_positions": 124,
+      "root": {
+        "new_simulations": 310
+      }
+    },
+    {
+      "seconds": 0.49493405400426127,
+      "large_positions": 1480,
+      "root": {
+        "new_simulations": 2995
+      }
+    },
+    {
+      "seconds": 0.0761559000093257,
+      "large_positions": 225,
+      "root": {
+        "new_simulations": 454
+      }
+    },
+    {
+      "seconds": 0.4476697389909532,
+      "large_positions": 1293,
+      "root": {
+        "new_simulations": 4373
+      }
+    },
+    {
+      "seconds": 0.01299748600285966,
+      "large_positions": 29,
+      "root": {
+        "new_simulations": 342
+      }
+    },
+    {
+      "seconds": 0.005678800007444806,
+      "large_positions": 14,
+      "root": {
+        "new_simulations": 7203
+      }
+    }
+  ],
+  "opponent_decisions": [
+    {
+      "nodes": 1500,
+      "depth": 6
+    },
+    {
+      "nodes": 1500,
+      "depth": 8
+    },
+    {
+      "nodes": 1500,
+      "depth": 7
+    },
+    {
+      "nodes": 1501,
+      "depth": 7
+    },
+    {
+      "nodes": 1501,
+      "depth": 9
+    },
+    {
+      "nodes": 1502,
+      "depth": 8
+    },
+    {
+      "nodes": 1501,
+      "depth": 9
+    },
+    {
+      "nodes": 1501,
+      "depth": 7
+    },
+    {
+      "nodes": 1500,
+      "depth": 8
+    },
+    {
+      "nodes": 1501,
+      "depth": 7
+    },
+    {
+      "nodes": 1500,
+      "depth": 8
+    },
+    {
+      "nodes": 1500,
+      "depth": 9
+    },
+    {
+      "nodes": 1500,
+      "depth": 8
+    },
+    {
+      "nodes": 1500,
+      "depth": 9
+    },
+    {
+      "nodes": 1500,
+      "depth": 9
+    },
+    {
+      "nodes": 1500,
+      "depth": 9
+    },
+    {
+      "nodes": 1501,
+      "depth": 9
+    },
+    {
+      "nodes": 1500,
+      "depth": 9
+    },
+    {
+      "nodes": 1500,
+      "depth": 9
+    },
+    {
+      "nodes": 1500,
+      "depth": 9
+    },
+    {
+      "nodes": 1500,
+      "depth": 10
+    },
+    {
+      "nodes": 1500,
+      "depth": 10
+    },
+    {
+      "nodes": 1500,
+      "depth": 10
+    },
+    {
+      "nodes": 1502,
+      "depth": 11
+    },
+    {
+      "nodes": 1500,
+      "depth": 10
+    },
+    {
+      "nodes": 1501,
+      "depth": 11
+    },
+    {
+      "nodes": 1501,
+      "depth": 11
+    },
+    {
+      "nodes": 1500,
+      "depth": 11
+    },
+    {
+      "nodes": 1500,
+      "depth": 9
+    },
+    {
+      "nodes": 1501,
+      "depth": 10
+    },
+    {
+      "nodes": 1500,
+      "depth": 11
+    },
+    {
+      "nodes": 1500,
+      "depth": 10
+    },
+    {
+      "nodes": 1513,
+      "depth": 10
+    },
+    {
+      "nodes": 1500,
+      "depth": 10
+    },
+    {
+      "nodes": 1500,
+      "depth": 9
+    },
+    {
+      "nodes": 1500,
+      "depth": 9
+    },
+    {
+      "nodes": 1508,
+      "depth": 10
+    },
+    {
+      "nodes": 1500,
+      "depth": 9
+    },
+    {
+      "nodes": 1502,
+      "depth": 9
+    },
+    {
+      "nodes": 1500,
+      "depth": 9
+    },
+    {
+      "nodes": 1500,
+      "depth": 10
+    },
+    {
+      "nodes": 1500,
+      "depth": 11
+    },
+    {
+      "nodes": 1500,
+      "depth": 10
+    },
+    {
+      "nodes": 1500,
+      "depth": 9
+    },
+    {
+      "nodes": 1500,
+      "depth": 10
+    },
+    {
+      "nodes": 1500,
+      "depth": 9
+    },
+    {
+      "nodes": 1500,
+      "depth": 9
+    },
+    {
+      "nodes": 1509,
+      "depth": 9
+    },
+    {
+      "nodes": 1500,
+      "depth": 10
+    },
+    {
+      "nodes": 1500,
+      "depth": 9
+    },
+    {
+      "nodes": 1500,
+      "depth": 9
+    },
+    {
+      "nodes": 1501,
+      "depth": 8
+    },
+    {
+      "nodes": 1501,
+      "depth": 9
+    },
+    {
+      "nodes": 1506,
+      "depth": 9
+    },
+    {
+      "nodes": 1500,
+      "depth": 9
+    },
+    {
+      "nodes": 1503,
+      "depth": 9
+    }
+  ],
+  "stats": {
+    "choices": 57,
+    "leaf_evaluations": 109205,
+    "completed_simulations": 118159,
+    "terminal_leaves": 8955,
+    "pruned_root_edges": 853,
+    "proven_loss_skips": 163337,
+    "mate_proofs": 2198,
+    "max_depth": 18,
+    "depth_limit_hits": 0,
+    "tree_reuses": 56,
+    "retained_nodes": 21547,
+    "inference_batches": 26148,
+    "native_seconds": 0.6727017357334262,
+    "inference_seconds": 24.8168794024823,
+    "bridge_seconds": 0.007399331982014701,
+    "time_stops": 52,
+    "physical_inference_batches": 9957,
+    "inference_cache": {
+      "requested_positions": 109220,
+      "forward_positions": 79536,
+      "cache_hits": 29382,
+      "batch_duplicates": 287
+    }
+  }
+}

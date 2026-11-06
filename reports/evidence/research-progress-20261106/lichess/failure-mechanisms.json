@@ -1,0 +1,566 @@
+{
+  "completed": true,
+  "cases": {
+    "147": {
+      "index": 147,
+      "budget": 2106,
+      "teacher_depth24_exact": true,
+      "observed_old_move": "h7f6",
+      "observed_new_move": "g7f6",
+      "old_regret": 0,
+      "new_regret": 77,
+      "delta": 77,
+      "all_new_reproduces_extra_regression": false,
+      "factorial_cells": {
+        "000": {
+          "move": "h7f6",
+          "regret": 0
+        },
+        "001": {
+          "move": "h7f6",
+          "regret": 0
+        },
+        "010": {
+          "move": "g7f6",
+          "regret": 77
+        },
+        "011": {
+          "move": "h7f6",
+          "regret": 0
+        },
+        "100": {
+          "move": "h7f6",
+          "regret": 0
+        },
+        "101": {
+          "move": "g7f6",
+          "regret": 77
+        },
+        "110": {
+          "move": "g7f6",
+          "regret": 77
+        },
+        "111": {
+          "move": "g7f6",
+          "regret": 77
+        }
+      },
+      "rollback_residual_regret": {
+        "Policy": 0,
+        "Q": 77,
+        "Value": 77,
+        "Value_MLP_only": 77,
+        "Value_trunk_only": 77
+      },
+      "routing": {
+        "old_leaf_FPU": {
+          "move": "g7f6",
+          "regret": 77
+        },
+        "old_confidence": {
+          "move": "g7f6",
+          "regret": 77
+        },
+        "old_value_Q_seed": {
+          "move": "g7f6",
+          "regret": 77
+        },
+        "old_V_root_input_only": {
+          "move": "g7f6",
+          "regret": 77
+        }
+      },
+      "shapley_allocation": {
+        "Policy": 38.5,
+        "Q": 38.5,
+        "Value": 0.0
+      },
+      "shapley_scope": "Exact decomposition on five postselected cases; conditional work budget, not general importance or causal training diagnosis",
+      "score_domain": "centipawns",
+      "all_exact": true
+    },
+    "296": {
+      "index": 296,
+      "budget": 2417,
+      "teacher_depth24_exact": true,
+      "observed_old_move": "f3e3",
+      "observed_new_move": "d4c5",
+      "old_regret": 0,
+      "new_regret": 183,
+      "delta": 183,
+      "all_new_reproduces_extra_regression": true,
+      "factorial_cells": {
+        "000": {
+          "move": "f3e3",
+          "regret": 0
+        },
+        "001": {
+          "move": "f3e3",
+          "regret": 0
+        },
+        "010": {
+          "move": "f3e3",
+          "regret": 0
+        },
+        "011": {
+          "move": "f3e3",
+          "regret": 0
+        },
+        "100": {
+          "move": "f3e3",
+          "regret": 0
+        },
+        "101": {
+          "move": "d4c5",
+          "regret": 183
+        },
+        "110": {
+          "move": "f3e3",
+          "regret": 0
+        },
+        "111": {
+          "move": "d4c5",
+          "regret": 183
+        }
+      },
+      "rollback_residual_regret": {
+        "Policy": 0,
+        "Q": 183,
+        "Value": 0,
+        "Value_MLP_only": 183,
+        "Value_trunk_only": 0
+      },
+      "routing": {
+        "old_leaf_FPU": {
+          "move": "f3e3",
+          "regret": 0
+        },
+        "old_confidence": {
+          "move": "d4c5",
+          "regret": 183
+        },
+        "old_value_Q_seed": {
+          "move": "d4c5",
+          "regret": 183
+        },
+        "old_V_root_input_only": {
+          "move": "d4c5",
+          "regret": 183
+        }
+      },
+      "shapley_allocation": {
+        "Policy": 91.5,
+        "Q": 0.0,
+        "Value": 91.5
+      },
+      "shapley_scope": "Exact decomposition on five postselected cases; conditional work budget, not general importance or causal training diagnosis",
+      "score_domain": "centipawns",
+      "all_exact": true
+    },
+    "302": {
+      "index": 302,
+      "budget": 2040,
+      "teacher_depth24_exact": true,
+      "observed_old_move": "d5b5",
+      "observed_new_move": "a7a6",
+      "old_regret": 0,
+      "new_regret": 138,
+      "delta": 138,
+      "all_new_reproduces_extra_regression": true,
+      "factorial_cells": {
+        "000": {
+          "move": "d5b5",
+          "regret": 0
+        },
+        "001": {
+          "move": "d5b5",
+          "regret": 0
+        },
+        "010": {
+          "move": "d5b5",
+          "regret": 0
+        },
+        "011": {
+          "move": "d5b5",
+          "regret": 0
+        },
+        "100": {
+          "move": "d5b5",
+          "regret": 0
+        },
+        "101": {
+          "move": "d5b5",
+          "regret": 0
+        },
+        "110": {
+          "move": "d5b5",
+          "regret": 0
+        },
+        "111": {
+          "move": "a7a6",
+          "regret": 138
+        }
+      },
+      "rollback_residual_regret": {
+        "Policy": 0,
+        "Q": 0,
+        "Value": 0,
+        "Value_MLP_only": 0,
+        "Value_trunk_only": 0
+      },
+      "routing": {
+        "old_leaf_FPU": {
+          "move": "d5b5",
+          "regret": 0
+        },
+        "old_confidence": {
+          "move": "a7a6",
+          "regret": 138
+        },
+        "old_value_Q_seed": {
+          "move": "a7a6",
+          "regret": 138
+        },
+        "old_V_root_input_only": {
+          "move": "a7a6",
+          "regret": 138
+        }
+      },
+      "shapley_allocation": {
+        "Policy": 46.0,
+        "Q": 46.0,
+        "Value": 46.0
+      },
+      "shapley_scope": "Exact decomposition on five postselected cases; conditional work budget, not general importance or causal training diagnosis",
+      "score_domain": "centipawns",
+      "all_exact": true
+    },
+    "386": {
+      "index": 386,
+      "budget": 3330,
+      "teacher_depth24_exact": true,
+      "observed_old_move": "d3e5",
+      "observed_new_move": "e2e1r",
+      "old_regret": 20,
+      "new_regret": 564,
+      "delta": 544,
+      "all_new_reproduces_extra_regression": true,
+      "factorial_cells": {
+        "000": {
+          "move": "d3e5",
+          "regret": 20
+        },
+        "001": {
+          "move": "e2e1q",
+          "regret": 564
+        },
+        "010": {
+          "move": "e2e1q",
+          "regret": 564
+        },
+        "011": {
+          "move": "e2e1q",
+          "regret": 564
+        },
+        "100": {
+          "move": "e2e1r",
+          "regret": 564
+        },
+        "101": {
+          "move": "e2e1r",
+          "regret": 564
+        },
+        "110": {
+          "move": "e2e1r",
+          "regret": 564
+        },
+        "111": {
+          "move": "e2e1r",
+          "regret": 564
+        }
+      },
+      "rollback_residual_regret": {
+        "Policy": 564,
+        "Q": 564,
+        "Value": 564,
+        "Value_MLP_only": 564,
+        "Value_trunk_only": 564
+      },
+      "routing": {
+        "old_leaf_FPU": {
+          "move": "e2e1r",
+          "regret": 564
+        },
+        "old_confidence": {
+          "move": "e2e1r",
+          "regret": 564
+        },
+        "old_value_Q_seed": {
+          "move": "e2e1r",
+          "regret": 564
+        },
+        "old_V_root_input_only": {
+          "move": "e2e1r",
+          "regret": 564
+        }
+      },
+      "shapley_allocation": {
+        "Policy": 181.33333333333331,
+        "Q": 181.33333333333331,
+        "Value": 181.33333333333331
+      },
+      "shapley_scope": "Exact decomposition on five postselected cases; conditional work budget, not general importance or causal training diagnosis",
+      "score_domain": "centipawns",
+      "all_exact": true
+    },
+    "420": {
+      "index": 420,
+      "budget": 2762,
+      "teacher_depth24_exact": true,
+      "observed_old_move": "a6a5",
+      "observed_new_move": "a4c6",
+      "old_regret": 0,
+      "new_regret": 99080,
+      "delta": 99080,
+      "all_new_reproduces_extra_regression": true,
+      "factorial_cells": {
+        "000": {
+          "move": "a6a5",
+          "regret": 0
+        },
+        "001": {
+          "move": "a4c6",
+          "regret": 99080
+        },
+        "010": {
+          "move": "a4c6",
+          "regret": 99080
+        },
+        "011": {
+          "move": "a4c6",
+          "regret": 99080
+        },
+        "100": {
+          "move": "a4c6",
+          "regret": 99080
+        },
+        "101": {
+          "move": "a4c6",
+          "regret": 99080
+        },
+        "110": {
+          "move": "a4c6",
+          "regret": 99080
+        },
+        "111": {
+          "move": "a4c6",
+          "regret": 99080
+        }
+      },
+      "rollback_residual_regret": {
+        "Policy": 99080,
+        "Q": 99080,
+        "Value": 99080,
+        "Value_MLP_only": 99080,
+        "Value_trunk_only": 99080
+      },
+      "routing": {
+        "old_leaf_FPU": {
+          "move": "a4c6",
+          "regret": 99080
+        },
+        "old_confidence": {
+          "move": "a4c6",
+          "regret": 99080
+        },
+        "old_value_Q_seed": {
+          "move": "a4c6",
+          "regret": 99080
+        },
+        "old_V_root_input_only": {
+          "move": "a4c6",
+          "regret": 99080
+        }
+      },
+      "shapley_scope": "Exact decomposition on five postselected cases; conditional work budget, not general importance or causal training diagnosis",
+      "score_domain": "mate_ordering_surrogate",
+      "all_exact": true,
+      "surrogate_shapley_allocation": {
+        "Policy": 33026.666666666664,
+        "Q": 33026.666666666664,
+        "Value": 33026.666666666664
+      },
+      "shapley_allocation": null,
+      "warning": "Do not interpret delta or surrogate allocation as CP or proof parent branch avoids defeat."
+    }
+  },
+  "manual_weight_trials": [
+    {
+      "alpha": 0.25,
+      "path": "{repo}/output/lichess-five-failure-mechanisms-20261105/manual-weight-probes/alpha-0.25.pt",
+      "sha256": "6213a20359e775003e013538329bfe4700bcb7f785d587c0f8ba408ef53f30ad",
+      "metric_gate_original": true,
+      "metric_gate_local_parent": true,
+      "remaining_regressions": [
+        386,
+        420
+      ],
+      "retained_control_regressions": [],
+      "fresh_validation": {
+        "positions": 4096,
+        "loss": 2.568380845710635,
+        "policy_loss": 2.045742092654109,
+        "q_loss": 0.11761537293205038,
+        "value_loss": 0.4638310666196048,
+        "top1": 0.390380859375,
+        "q_mae": 0.2251149154412848,
+        "value_mae": 0.23577232527787828,
+        "value_strata": {
+          "winning": {
+            "n": 1046,
+            "mae": 0.29459169295831916
+          },
+          "neutral": {
+            "n": 2168,
+            "mae": 0.19466417205463699
+          },
+          "losing": {
+            "n": 882,
+            "mae": 0.26706191438700067
+          }
+        }
+      },
+      "adopted": false
+    },
+    {
+      "alpha": 0.5,
+      "path": "{repo}/output/lichess-five-failure-mechanisms-20261105/manual-weight-probes/alpha-0.50.pt",
+      "sha256": "1c20eb1e87a36a8d298fa4718480ec847a63ca1544e17a4ea1e2519eacb0981d",
+      "metric_gate_original": true,
+      "metric_gate_local_parent": true,
+      "remaining_regressions": [
+        386,
+        420
+      ],
+      "retained_control_regressions": [],
+      "fresh_validation": {
+        "positions": 4096,
+        "loss": 2.563756173476577,
+        "policy_loss": 2.0423664059489965,
+        "q_loss": 0.11644827033160254,
+        "value_loss": 0.4631656361743808,
+        "top1": 0.392333984375,
+        "q_mae": 0.22358888577822172,
+        "value_mae": 0.2354212229392374,
+        "value_strata": {
+          "winning": {
+            "n": 1046,
+            "mae": 0.2954195435559573
+          },
+          "neutral": {
+            "n": 2168,
+            "mae": 0.19531433590989805
+          },
+          "losing": {
+            "n": 882,
+            "mae": 0.26285148111896384
+          }
+        }
+      },
+      "adopted": false
+    },
+    {
+      "alpha": 0.75,
+      "path": "{repo}/output/lichess-five-failure-mechanisms-20261105/manual-weight-probes/alpha-0.75.pt",
+      "sha256": "a43c147a2ff35396f230e93d5c3a11e83388ee4425c48f0afcd85823217fced1",
+      "metric_gate_original": true,
+      "metric_gate_local_parent": true,
+      "remaining_regressions": [
+        386,
+        420
+      ],
+      "retained_control_regressions": [],
+      "fresh_validation": {
+        "positions": 4096,
+        "loss": 2.559960190206766,
+        "policy_loss": 2.0396903194487095,
+        "q_loss": 0.11547651176806539,
+        "value_loss": 0.4625316283199936,
+        "top1": 0.393798828125,
+        "q_mae": 0.22223345541000653,
+        "value_mae": 0.2351318766977215,
+        "value_strata": {
+          "winning": {
+            "n": 1046,
+            "mae": 0.29617805345372133
+          },
+          "neutral": {
+            "n": 2168,
+            "mae": 0.19609638419407385
+          },
+          "losing": {
+            "n": 882,
+            "mae": 0.25868589808222525
+          }
+        }
+      },
+      "adopted": false
+    }
+  ],
+  "selected_node_probe_exact": {
+    "n": 36,
+    "parent_mae": 0.545128256307708,
+    "candidate_mae": 0.48880171881119416,
+    "scope": "Maximum-drift selected visited FENs,1M finite teacher, not independent population or outcomes"
+  },
+  "offline_root_rule": {
+    "method": "Exploratory max backed-up root Q among cached top5 visit leaders, unpruned, at least25% leader visits; preserve solved root decisions. Retrospective diagnostic only, no engine/source change. Unknown teacher moves remain unknown.",
+    "random": {
+      "n": 384,
+      "changed": 101,
+      "teacher_covered": 340,
+      "introduced_in_covered": [
+        112,
+        124,
+        224,
+        289,
+        342,
+        348
+      ],
+      "cp_exact_introduced": [
+        112,
+        124,
+        224,
+        342
+      ]
+    },
+    "hard": {
+      "n": 128,
+      "changed": 48,
+      "teacher_covered": 103,
+      "introduced_in_covered": [
+        481
+      ],
+      "cp_exact_introduced": []
+    }
+  },
+  "manual_candidates_adopted": false,
+  "optimizer_steps": 0,
+  "main_training_resumed": false,
+  "default_promoted": false,
+  "qualification_change": "147:5M111cp gap became20M77cp, below original absolute100cp error criterion. 420:160M complete-depth25 found candidate mate-20, parent still large negative CP; no CP subtraction or claim parent is nonlosing.",
+  "manifests": {
+    ".": {
+      "files": 215,
+      "report_sha256": "c2b57d512420ad46ab6a5f4e2c452d6edfcec493a75df0cc86bbec3b2df42c23"
+    },
+    "review": {
+      "files": 6,
+      "report_sha256": "8b2331dccd9469125f43a829f21ef3cfc01c188216d9a005deb8e3d38177fabb"
+    },
+    "manual-weight-probes": {
+      "files": 11,
+      "report_sha256": "724d4f1cc487f66ee05d705d8d8e086d6dd1c27f90718c91e63b6c6d27e384df"
+    }
+  }
+}

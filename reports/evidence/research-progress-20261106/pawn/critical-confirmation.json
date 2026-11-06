@@ -1,0 +1,86 @@
+[
+  {
+    "index": 9,
+    "nodes": 2000000,
+    "labels": {
+      "c2c7": {
+        "cp": -8,
+        "mate": null,
+        "depth": 21
+      },
+      "f2h2": {
+        "cp": -66,
+        "mate": null,
+        "depth": 21
+      },
+      "d4d3": {
+        "cp": -632,
+        "mate": null,
+        "depth": 21
+      }
+    }
+  },
+  {
+    "index": 9,
+    "nodes": 5000000,
+    "labels": {
+      "c2c7": {
+        "cp": -7,
+        "mate": null,
+        "depth": 24
+      },
+      "f2h2": {
+        "cp": -46,
+        "mate": null,
+        "depth": 24
+      },
+      "d4d3": {
+        "cp": -626,
+        "mate": null,
+        "depth": 23
+      }
+    }
+  },
+  {
+    "index": 19,
+    "nodes": 2000000,
+    "labels": {
+      "a1d1": {
+        "cp": -142,
+        "mate": null,
+        "depth": 21
+      },
+      "g2c2": {
+        "cp": -151,
+        "mate": null,
+        "depth": 21
+      },
+      "g2e2": {
+        "cp": -249,
+        "mate": null,
+        "depth": 20
+      }
+    }
+  },
+  {
+    "index": 19,
+    "nodes": 5000000,
+    "labels": {
+      "a1d1": {
+        "cp": -149,
+        "mate": null,
+        "depth": 24
+      },
+      "g2c2": {
+        "cp": -153,
+        "mate": null,
+        "depth": 23
+      },
+      "g2e2": {
+        "cp": -251,
+        "mate": null,
+        "depth": 23
+      }
+    }
+  }
+]

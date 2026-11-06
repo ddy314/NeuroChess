@@ -1,0 +1,13 @@
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "trt-graph-pipeline-b8"]
+[Black "baseline"]
+[Result "0-1"]
+[FEN "rn1q1rk1/4bppp/b1p1pn2/p5B1/Np1PP3/1P1B1N2/P1Q2PPP/2KR3R b - - 2 12"]
+[SetUp "1"]
+[Termination "CHECKMATE"]
+
+12... Bxd3 13. Qxd3 Nbd7 14. Bxf6 Bxf6 15. h4 Nb6 16. Nxb6 Qxb6 17. e5 Be7 18. Ng5 g6 19. Nxh7 a4 20. h5 axb3 21. hxg6 bxa2 22. Kb2 Ra3 23. g7 a1=Q+ 24. Rxa1 Rxd3 25. Nf6+ Bxf6 26. exf6 Qxd4+ 27. Kb1 Rb3+ 28. Kc1 Rc3+ 29. Kb1 Qd3+ 30. Kb2 Qc2# 0-1
+

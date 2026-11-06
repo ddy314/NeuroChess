@@ -1,0 +1,97 @@
+{
+  "datasets": {
+    "new_val": {
+      "n": 3000,
+      "unique_keys": 3000,
+      "legal_moves_mean": 30.56833333333333,
+      "annotated_moves_mean": 3.9546666666666668,
+      "q_label_coverage": 0.12937135379750286,
+      "target_value_strata": {
+        "winning": 641,
+        "neutral": 1779,
+        "losing": 580
+      },
+      "saturated_q_target_fraction": 0.2738536749831423,
+      "source_games": 132
+    },
+    "new_test": {
+      "n": 3000,
+      "unique_keys": 3000,
+      "legal_moves_mean": 29.867,
+      "annotated_moves_mean": 3.949666666666667,
+      "q_label_coverage": 0.13224182765817347,
+      "target_value_strata": {
+        "winning": 700,
+        "neutral": 1700,
+        "losing": 600
+      },
+      "saturated_q_target_fraction": 0.2970714828255549,
+      "source_games": 125
+    },
+    "new_train": {
+      "n": 3000,
+      "unique_keys": 3000,
+      "legal_moves_mean": 30.134,
+      "annotated_moves_mean": 4.049333333333333,
+      "q_label_coverage": 0.1343775580186279,
+      "target_value_strata": {
+        "winning": 632,
+        "neutral": 1800,
+        "losing": 568
+      },
+      "saturated_q_target_fraction": 0.27107342772472837,
+      "source_games": 2792
+    },
+    "mistakes_train": {
+      "n": 1000,
+      "unique_keys": 1000,
+      "legal_moves_mean": 31.053,
+      "annotated_moves_mean": 4.645,
+      "q_label_coverage": 0.14958297104949603,
+      "target_value_strata": {
+        "winning": 271,
+        "neutral": 531,
+        "losing": 198
+      },
+      "saturated_q_target_fraction": 0.2363832077502691,
+      "source_games": 870
+    },
+    "old_val": {
+      "n": 4096,
+      "unique_keys": 4096,
+      "legal_moves_mean": 29.46826171875,
+      "annotated_moves_mean": 3.358154296875,
+      "q_label_coverage": 0.11395834368941692,
+      "target_value_strata": {
+        "winning": 1146,
+        "neutral": 2241,
+        "losing": 709
+      },
+      "saturated_q_target_fraction": 0.3766630316248637
+    },
+    "old_train": {
+      "n": 2048,
+      "unique_keys": 2048,
+      "legal_moves_mean": 29.4931640625,
+      "annotated_moves_mean": 3.3232421875,
+      "q_label_coverage": 0.11267838813284328,
+      "target_value_strata": {
+        "winning": 488,
+        "neutral": 1115,
+        "losing": 445
+      },
+      "saturated_q_target_fraction": 0.3568909785483397
+    }
+  },
+  "search_roots": 96,
+  "search_unique_games": 96,
+  "search_selection": "Up to32 distinct games per teacher-value stratum, RNG20261103; selected before model outputs",
+  "old_source_game_ids": "Unavailable; old-set uncertainty cannot be clustered by original game",
+  "expected_exposure": {
+    "old_general": 1280000,
+    "new_general": 1280000,
+    "mistake_oversampling": 640000,
+    "new_general_equivalent_passes": 2.7085590465872156,
+    "mistake_extra_equivalent_passes": 40.606560497430365
+  }
+}

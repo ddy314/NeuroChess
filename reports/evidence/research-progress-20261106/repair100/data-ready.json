@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "unique_repair_nodes": 256,
+  "root_groups": 64,
+  "clean_unique": 16000,
+  "exact_heldout_old_or_regression_overlap": 0,
+  "node_targets_all_three_heads": true,
+  "original_game_independence": "Unavailable in Lichess eval source; exact canonical keys and root groups verified",
+  "files_sha256": {
+    "clean.npy": "56c2968b8a525fdcfbe3c7e17615ee53cccf31fd83a80c10eae095aea64ab9c1",
+    "roots.npy": "5b51dca3b9d3fc250a5fc5a62f77a644e7a2c5d225d6e74693e1f1e74a32caa1",
+    "repair.npy": "2cb5b1d3eecc8eda0ba66716555ccc558892c670d2c6d71d275979b7186aab44",
+    "repair-cp.npy": "3f49b9400ce58472ae91c0c970f4601c4da6c73c7ad3bf21d09125ac058bbc98",
+    "repair-trusted.npy": "0535bf3f5fd962eed2ca025b56556676f03e2bb93ed96d53b3d01b19ed25e85e",
+    "accepted-labels.json": "d3cfed0c5017e1ca325640eed233a1af8f3c24807c71476f769599a80d62077d",
+    "exclusions.npy": "c99efbe69c68e4a2c6bd1d342ef8c80a72ea7515f138ff0ba26e4bdbbe4bd475",
+    "replay-exclusions.npy": "04cf21c1a7a500e0f83634f942728be43358e975eca99b477e7a6cfd0f9413bf",
+    "previous-presentations.npy": "4bf8f3bf04fab97d7da264d8f4b009d9e213c0f7c62f3af27e32282c0dbd4351",
+    "previous-presentations-excluded.json": "f85e0e8f54ff9f9a2949c1e98aaddeed5f0d75e3bf54e4d3d2922906fa2374e1",
+    "node-jobs.json": "f3c84edfe5c358d3801fe7becb85484dd99c3df06265674cc1423ed11288192b"
+  },
+  "plan_sha256": "cbd1bc54938c79f3846bc998ee60a44c2ce7c340c0b914d9ec462d613c3656e4"
+}

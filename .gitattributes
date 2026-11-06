@@ -1,0 +1,2 @@
+# PGN records conventionally end with a blank game separator; preserve evidence.
+*.pgn whitespace=-blank-at-eof

@@ -1,0 +1,108 @@
+{
+  "branches": {
+    "D": {
+      "status": "not-triggered",
+      "completed_updates": 0,
+      "reason": {
+        "run_D": false,
+        "checks": {
+          "conflicting_batches": false,
+          "dominant_conflict": false,
+          "material_norm": true,
+          "adam_improves_consistently": true,
+          "adam_improvement_material": true
+        },
+        "rule": {
+          "batches": 16,
+          "minimum_conflicting_batches": 12,
+          "minimum_median_conflict_share": 0.6,
+          "minimum_median_norm_ratio": 0.25,
+          "minimum_adam_improvement_batches": 12,
+          "minimum_median_adam_gain": 0.05
+        },
+        "scope": "Predeclared conservative operational trigger; not proof of causality or future validation improvement"
+      }
+    }
+  },
+  "diagnostic_decision": {
+    "run_D": false,
+    "checks": {
+      "conflicting_batches": false,
+      "dominant_conflict": false,
+      "material_norm": true,
+      "adam_improves_consistently": true,
+      "adam_improvement_material": true
+    },
+    "rule": {
+      "batches": 16,
+      "minimum_conflicting_batches": 12,
+      "minimum_median_conflict_share": 0.6,
+      "minimum_median_norm_ratio": 0.25,
+      "minimum_adam_improvement_batches": 12,
+      "minimum_median_adam_gain": 0.05
+    },
+    "scope": "Predeclared conservative operational trigger; not proof of causality or future validation improvement"
+  },
+  "paired_vs_A": {},
+  "experiment_plan": {
+    "variant": "D",
+    "diagnostic_batches": 16,
+    "diagnostic_rule": {
+      "batches": 16,
+      "minimum_conflicting_batches": 12,
+      "minimum_median_conflict_share": 0.6,
+      "minimum_median_norm_ratio": 0.25,
+      "minimum_adam_improvement_batches": 12,
+      "minimum_median_adam_gain": 0.05
+    },
+    "value_kl_weight": 2.0,
+    "value_kl_schedule": "constant 2 from first D update",
+    "effective_batch": 1024,
+    "new_per_batch": 768,
+    "replay_per_batch": 256,
+    "diagnostic_and_training_microbatch": 32,
+    "validation_microbatch": 32,
+    "lr_schedule": "Original cosine schedule, no multiplier",
+    "balance_strength": 1.0,
+    "target_updates": 500,
+    "metric_gates": [
+      100,
+      250,
+      500
+    ],
+    "search_gates": [
+      100,
+      500
+    ],
+    "original_guard": {
+      "old_loss_relative": 0.01,
+      "old_policy_relative": 0.01,
+      "old_value_relative": 0.02,
+      "old_top1_drop": 0.005,
+      "old_q_mae_increase": 0.005,
+      "old_value_mae_increase": 0.005,
+      "old_value_stratum_increase": 0.01,
+      "new_loss_relative": 0.01,
+      "new_q_mae_increase": 0.01,
+      "new_value_mae_increase": 0.01
+    },
+    "original_checkpoint_sha256": {
+      "last.pt": "7e62cea5558ae39dc2cc4925de7768cec18f2fd40ca1784aa6c1131420948655",
+      "best.pt": "0349e95e9d93f9018043ccb7b2b47a2c6a8192505d3b30853d7652f844aef5ee"
+    },
+    "hardware": "Local existing GPU; original frozen weights/configuration unchanged",
+    "limitations": [
+      "Different GPU, torch and microbatch from L4 A/B/C; not a strictly same-runtime paired training trial",
+      "16 batches and development gates cannot prove causality, Elo, or generalization"
+    ],
+    "original_test_labels_used": false,
+    "main_training_resumes_automatically": false,
+    "automatic_promotion": false
+  },
+  "main_step": 4000,
+  "main_training_resumed": false,
+  "automatic_promotion": false,
+  "test_labels_evaluated": false,
+  "finished_at": 1793859489.767011,
+  "hardware": "NVIDIA GeForce RTX 4060 Laptop GPU"
+}

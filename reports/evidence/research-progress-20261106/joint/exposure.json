@@ -1,0 +1,94 @@
+{
+  "final_full_sha256": "7a9d1ef8a82036a9534863178720301d7bf9d881f1bb253376da36c0825325f5",
+  "final_compact_sha256": "99931bbb7f68a812e226364c9636a3725599a54dcc3affb0cc206a48318c4d3a",
+  "step": 13000,
+  "joint_updates": 10000,
+  "optimizer_retained_in": "{home}/Downloads/last-003.pt",
+  "sampler_rng_exact_match": true,
+  "exact_exposure": {
+    "old": {
+      "draws": 1280000,
+      "unique": 1128978,
+      "never_seen": 3871022,
+      "max_repeats": 6,
+      "mean_repeats": 0.256
+    },
+    "new": {
+      "draws": 1280000,
+      "unique": 441018,
+      "never_seen": 31558,
+      "max_repeats": 14,
+      "mean_repeats": 2.7085590465872156
+    },
+    "mistake": {
+      "draws": 640000,
+      "unique": 15761,
+      "never_seen": 0,
+      "max_repeats": 68,
+      "mean_repeats": 40.606560497430365
+    }
+  },
+  "coverage_history": [
+    {
+      "step": 1000,
+      "old": 126436,
+      "new": 112092,
+      "mistake": 15496
+    },
+    {
+      "step": 2000,
+      "old": 249580,
+      "new": 197512,
+      "mistake": 15754
+    },
+    {
+      "step": 3000,
+      "old": 369545,
+      "new": 262735,
+      "mistake": 15761
+    },
+    {
+      "step": 4000,
+      "old": 486570,
+      "new": 312455,
+      "mistake": 15761
+    },
+    {
+      "step": 5000,
+      "old": 600614,
+      "new": 350233,
+      "mistake": 15761
+    },
+    {
+      "step": 6000,
+      "old": 711646,
+      "new": 379431,
+      "mistake": 15761
+    },
+    {
+      "step": 7000,
+      "old": 820029,
+      "new": 401423,
+      "mistake": 15761
+    },
+    {
+      "step": 8000,
+      "old": 925667,
+      "new": 418135,
+      "mistake": 15761
+    },
+    {
+      "step": 9000,
+      "old": 1028726,
+      "new": 431094,
+      "mistake": 15761
+    },
+    {
+      "step": 10000,
+      "old": 1128978,
+      "new": 441018,
+      "mistake": 15761
+    }
+  ],
+  "verified_at": 1793702059.3713098
+}

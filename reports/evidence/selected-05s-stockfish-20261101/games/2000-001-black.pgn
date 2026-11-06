@@ -1,0 +1,16 @@
+[Event "NeuroChess optimized 0.5s fixed-node arena"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "2"]
+[White "Stockfish 18-nodes2000"]
+[Black "NeuroChess-selected-PUCT-0.5s"]
+[Result "1/2-1/2"]
+[FEN "r3kbnr/pp1b1ppp/1np1p3/8/4P3/1BN1BN2/PPP2PPP/R2K3R b kq - 7 9"]
+[SetUp "1"]
+[SFNodes "2000"]
+[SearchSeconds "0.5"]
+[ModelSHA256 "e4ed8978db91eeef8360c4dea87faf7a4f826325bce45aa7efc024692d585ef7"]
+[Termination "THREEFOLD_REPETITION"]
+
+9... Nf6 10. Ke2 Bb4 11. Nd2 Ng4 12. Bf4 f6 13. a4 e5 14. Bg3 h5 15. a5 h4 16. axb6 a5 17. h3 hxg3 18. hxg4 Ke7 19. Rxh8 Rxh8 20. Kf3 gxf2 21. Kxf2 Rh4 22. Nc4 Bc5+ 23. Kf3 Bxg4+ 24. Kg3 g5 25. Na4 Bd4 26. c3 Be2 27. cxd4 Rxe4 28. Nc5 Rxd4 29. Nxa5 f5 30. Nxc6+ bxc6 31. b7 Rb4 32. Ra4 Rb5 33. Ra5 Rb4 34. Ra4 Rb5 35. Ra5 Rb4 1/2-1/2
+

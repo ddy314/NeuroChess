@@ -1,0 +1,23 @@
+{
+  "candidate": "trt-graph-pipeline-b8",
+  "samples": 112,
+  "baseline_p95": 1.9805217229055416,
+  "candidate_p95": 0.19641636634914902,
+  "speedup": 10.083282568138815,
+  "speed_ok": true,
+  "mean_cp_change": -4.544444444444444,
+  "cp_change_bootstrap95": [
+    -14.222222222222221,
+    3.077777777777778
+  ],
+  "introduced_blunders": [],
+  "introduced_mate_failures": [],
+  "position_ok": false,
+  "arena_ok": false,
+  "promote": false,
+  "reasons": [
+    "Frozen position quality floor failed or evidence incomplete",
+    "No sufficient paired direct-play evidence against frozen2s baseline"
+  ],
+  "note": "This is a conservative empirical promotion gate, not a mathematical guarantee over every chess position. Do not relax the locked floor to pass a candidate."
+}

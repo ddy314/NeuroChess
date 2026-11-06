@@ -1,0 +1,54 @@
+{
+  "seconds": 4.1400671410083305,
+  "validation": [
+    {
+      "batch": 1,
+      "graph_matches_same_engine": true,
+      "original_policy_top1_agreement": 0,
+      "max_value_difference": 0.006680995225906372
+    },
+    {
+      "batch": 2,
+      "graph_matches_same_engine": true,
+      "original_policy_top1_agreement": 1,
+      "max_value_difference": 0.0055522620677948
+    },
+    {
+      "batch": 3,
+      "graph_matches_same_engine": true,
+      "original_policy_top1_agreement": 2,
+      "max_value_difference": 0.0055522620677948
+    },
+    {
+      "batch": 4,
+      "graph_matches_same_engine": true,
+      "original_policy_top1_agreement": 3,
+      "max_value_difference": 0.010110080242156982
+    },
+    {
+      "batch": 5,
+      "graph_matches_same_engine": true,
+      "original_policy_top1_agreement": 4,
+      "max_value_difference": 0.009668499231338501
+    },
+    {
+      "batch": 6,
+      "graph_matches_same_engine": true,
+      "original_policy_top1_agreement": 4,
+      "max_value_difference": 0.008842453360557556
+    },
+    {
+      "batch": 7,
+      "graph_matches_same_engine": true,
+      "original_policy_top1_agreement": 5,
+      "max_value_difference": 0.00846603512763977
+    },
+    {
+      "batch": 8,
+      "graph_matches_same_engine": true,
+      "original_policy_top1_agreement": 6,
+      "max_value_difference": 0.00846603512763977
+    }
+  ],
+  "build_seconds": 29.840555319999112
+}

@@ -1,0 +1,333 @@
+{
+  "samples": 64,
+  "same_moves": 61,
+  "cp_samples": 61,
+  "int8_minus_bf16_cp": -3.4918032786885247,
+  "paired_bootstrap95": [
+    -13.081967213114755,
+    3.7704918032786887
+  ],
+  "rows": [
+    {
+      "index": 0,
+      "same_move": true,
+      "cp_change": null
+    },
+    {
+      "index": 1,
+      "same_move": true,
+      "cp_change": 0
+    },
+    {
+      "index": 2,
+      "same_move": true,
+      "cp_change": 0
+    },
+    {
+      "index": 3,
+      "same_move": true,
+      "cp_change": 0
+    },
+    {
+      "index": 4,
+      "same_move": true,
+      "cp_change": 0
+    },
+    {
+      "index": 5,
+      "same_move": true,
+      "cp_change": 0
+    },
+    {
+      "index": 6,
+      "same_move": true,
+      "cp_change": 0
+    },
+    {
+      "index": 7,
+      "same_move": false,
+      "cp_change": -93
+    },
+    {
+      "index": 8,
+      "same_move": true,
+      "cp_change": 0
+    },
+    {
+      "index": 9,
+      "same_move": true,
+      "cp_change": 0
+    },
+    {
+      "index": 10,
+      "same_move": true,
+      "cp_change": 0
+    },
+    {
+      "index": 11,
+      "same_move": true,
+      "cp_change": 0
+    },
+    {
+      "index": 12,
+      "same_move": true,
+      "cp_change": 0
+    },
+    {
+      "index": 13,
+      "same_move": true,
+      "cp_change": 0
+    },
+    {
+      "index": 14,
+      "same_move": false,
+      "cp_change": -235
+    },
+    {
+      "index": 15,
+      "same_move": true,
+      "cp_change": 0
+    },
+    {
+      "index": 16,
+      "same_move": true,
+      "cp_change": 0
+    },
+    {
+      "index": 17,
+      "same_move": true,
+      "cp_change": 0
+    },
+    {
+      "index": 18,
+      "same_move": true,
+      "cp_change": 0
+    },
+    {
+      "index": 19,
+      "same_move": true,
+      "cp_change": 0
+    },
+    {
+      "index": 20,
+      "same_move": true,
+      "cp_change": 0
+    },
+    {
+      "index": 21,
+      "same_move": true,
+      "cp_change": 0
+    },
+    {
+      "index": 22,
+      "same_move": true,
+      "cp_change": 0
+    },
+    {
+      "index": 23,
+      "same_move": true,
+      "cp_change": 0
+    },
+    {
+      "index": 24,
+      "same_move": true,
+      "cp_change": 0
+    },
+    {
+      "index": 25,
+      "same_move": true,
+      "cp_change": 0
+    },
+    {
+      "index": 26,
+      "same_move": true,
+      "cp_change": 0
+    },
+    {
+      "index": 27,
+      "same_move": true,
+      "cp_change": 0
+    },
+    {
+      "index": 28,
+      "same_move": true,
+      "cp_change": 0
+    },
+    {
+      "index": 29,
+      "same_move": true,
+      "cp_change": 0
+    },
+    {
+      "index": 30,
+      "same_move": false,
+      "cp_change": 115
+    },
+    {
+      "index": 31,
+      "same_move": true,
+      "cp_change": 0
+    },
+    {
+      "index": 32,
+      "same_move": true,
+      "cp_change": null
+    },
+    {
+      "index": 33,
+      "same_move": true,
+      "cp_change": 0
+    },
+    {
+      "index": 34,
+      "same_move": true,
+      "cp_change": 0
+    },
+    {
+      "index": 35,
+      "same_move": true,
+      "cp_change": 0
+    },
+    {
+      "index": 36,
+      "same_move": true,
+      "cp_change": 0
+    },
+    {
+      "index": 37,
+      "same_move": true,
+      "cp_change": 0
+    },
+    {
+      "index": 38,
+      "same_move": true,
+      "cp_change": null
+    },
+    {
+      "index": 39,
+      "same_move": true,
+      "cp_change": 0
+    },
+    {
+      "index": 40,
+      "same_move": true,
+      "cp_change": 0
+    },
+    {
+      "index": 41,
+      "same_move": true,
+      "cp_change": 0
+    },
+    {
+      "index": 42,
+      "same_move": true,
+      "cp_change": 0
+    },
+    {
+      "index": 43,
+      "same_move": true,
+      "cp_change": 0
+    },
+    {
+      "index": 44,
+      "same_move": true,
+      "cp_change": 0
+    },
+    {
+      "index": 45,
+      "same_move": true,
+      "cp_change": 0
+    },
+    {
+      "index": 46,
+      "same_move": true,
+      "cp_change": 0
+    },
+    {
+      "index": 47,
+      "same_move": true,
+      "cp_change": 0
+    },
+    {
+      "index": 48,
+      "same_move": true,
+      "cp_change": 0
+    },
+    {
+      "index": 49,
+      "same_move": true,
+      "cp_change": 0
+    },
+    {
+      "index": 50,
+      "same_move": true,
+      "cp_change": 0
+    },
+    {
+      "index": 51,
+      "same_move": true,
+      "cp_change": 0
+    },
+    {
+      "index": 52,
+      "same_move": true,
+      "cp_change": 0
+    },
+    {
+      "index": 53,
+      "same_move": true,
+      "cp_change": 0
+    },
+    {
+      "index": 54,
+      "same_move": true,
+      "cp_change": 0
+    },
+    {
+      "index": 55,
+      "same_move": true,
+      "cp_change": 0
+    },
+    {
+      "index": 56,
+      "same_move": true,
+      "cp_change": 0
+    },
+    {
+      "index": 57,
+      "same_move": true,
+      "cp_change": 0
+    },
+    {
+      "index": 58,
+      "same_move": true,
+      "cp_change": 0
+    },
+    {
+      "index": 59,
+      "same_move": true,
+      "cp_change": 0
+    },
+    {
+      "index": 60,
+      "same_move": true,
+      "cp_change": 0
+    },
+    {
+      "index": 61,
+      "same_move": true,
+      "cp_change": 0
+    },
+    {
+      "index": 62,
+      "same_move": true,
+      "cp_change": 0
+    },
+    {
+      "index": 63,
+      "same_move": true,
+      "cp_change": 0
+    }
+  ],
+  "note": "Same maximum768 simulations and batch8 pipeline. This isolates quantized inference approximately; branch order/cache hits can differ. Negative CP change favors quantization; interval does not establish superiority."
+}

@@ -1,0 +1,68 @@
+{
+  "checkpoint": "output/local-sf-sweep-20261031/model/selected.pt",
+  "checkpoint_sha256": "e4ed8978db91eeef8360c4dea87faf7a4f826325bce45aa7efc024692d585ef7",
+  "checkpoint_step": 1000,
+  "origin_step": 14500,
+  "cumulative_step": 15500,
+  "engine_sha256": "1b1213289aa79d30b116a6b08130ad8138aec0fc7fb9ce453e0df6a400d66ac8",
+  "search": {
+    "name": "trt-graph-pipeline-0.5s",
+    "backend": "tensorrt-int8graph",
+    "engine": "pipeline",
+    "options": {
+      "simulations": 16384,
+      "leaf_batch_size": 8,
+      "time_limit": 0.5,
+      "time_margin": 0.006,
+      "inference_cache_size": 32768,
+      "tree_reuse": true,
+      "c_puct": 1.5,
+      "fpu_reduction": 0.2,
+      "initial_width": 6,
+      "widening": 1.5,
+      "root_keep": 12,
+      "prune_after": 0.75,
+      "max_depth": 128,
+      "pending_loss_guard": true
+    }
+  },
+  "nodes": [
+    1500,
+    2000
+  ],
+  "pairs": 5,
+  "openings": [
+    "r1bqk2r/3nbnpp/2pp1p2/1p2p3/p3P1P1/P1NPBP2/1PPQBN1P/2KR3R b kq - 0 12",
+    "r3kbnr/pp1b1ppp/1np1p3/8/4P3/1BN1BN2/PPP2PPP/R2K3R b kq - 7 9",
+    "r2qk2r/pp2bppp/2np1n2/4p1B1/6b1/3P1N2/PPP1BPPP/RN1Q1RK1 w kq - 3 9",
+    "r1bqr1k1/pp1n1ppp/2pb4/4p3/3pP1P1/2NP4/PPPBB1PP/R2Q1RK1 w - - 0 12",
+    "r1bqkb1r/p4ppp/2p2n2/3p4/8/3B3P/PPP2PP1/RNBQ1RK1 b kq - 1 9"
+  ],
+  "stockfish": {
+    "name": "Stockfish 18",
+    "author": "the Stockfish developers (see AUTHORS file)"
+  },
+  "stockfish_sha256": "6b087694916228c905a5e14db74cca8c7e5643602226af1fa5d42353c455b9f9",
+  "stockfish_options": {
+    "Threads": 1,
+    "Hash": 64,
+    "Skill Level": 20,
+    "UCI_LimitStrength": false
+  },
+  "source_sha256": {
+    "neurochess/pipeline_mcts.py": "b225036e4fa26cd172fbbaf589b77791080f7466841ae788b4c8fe79d219c5d0",
+    "neurochess/native/mcts_pipeline.cpp": "e2edec8798c85508c491365af83b96b78fad61284a5e910de470162c3bcc339f",
+    "neurochess/native/libmcts_pipeline.so": "988324464e7bbc571dc2bfea995e53eff2653b397eab6c60aac0f994a0ebc876",
+    "neurochess/tensorrt_inference.py": "fe752129cccc69ecf62c2435b5b828a9fae95f740c217e808a2bbb2a1c90dc82",
+    "neurochess/tensorrt_graph.py": "4757352fb51909881f4d8aff598c77422b98017a9eaf660ed4d240d4a471642b",
+    "neurochess/fused_heads.py": "9708b650d4f97f788db882822ac9e599492b991843152f06104c8d0b5de63ade",
+    "neurochess/cuda_inference.py": "6782513fb8ffc9e7b387f8a5ddb59abcf90ba5d166812d721d8eb97396590d95",
+    "neurochess/model.py": "135d2a442447fadd0c33a01a15a7242846eb86ac18baf60352039c91a0fc914e",
+    "neurochess/multihead.py": "fa4de66022042abb76823af02115337cf9fee44184174406d852fd032dad48d7",
+    "scripts/fast_fixed_node_arena.py": "322d170b642a4d94e5164df5e1e5edecbb428759759b822cf68a8e969388acad"
+  },
+  "max_plies": 1000,
+  "protocol": "Serial games; five fixed openings swapped colors at each node budget. Fresh player/cache and cleared Stockfish hash each game. Claimable terminal outcomes; truncated games never draws.",
+  "precision": "INT8 Transformer blocks, BF16 heads, CUDA Graph; freshly calibrated from this selected checkpoint",
+  "rating_claim": "Fixed-node match results only; no absolute/human Elo estimate."
+}

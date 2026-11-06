@@ -1,0 +1,41 @@
+{
+  "verified_games": 20,
+  "scheduled": 20,
+  "complete": true,
+  "summary": {
+    "1500": {
+      "games": 10,
+      "completed": 10,
+      "wins": 4,
+      "draws": 1,
+      "losses": 5,
+      "truncated": 0,
+      "completed_pairs": 5,
+      "score": 0.45
+    },
+    "2000": {
+      "games": 10,
+      "completed": 10,
+      "wins": 5,
+      "draws": 1,
+      "losses": 4,
+      "truncated": 0,
+      "completed_pairs": 5,
+      "score": 0.55
+    }
+  },
+  "latency": {
+    "model_moves": 1007,
+    "mean": 0.46054611162051834,
+    "median": 0.49515232599515,
+    "p95": 0.4965063961048145,
+    "maximum": 0.49674075600341894,
+    "over_budget": 0
+  },
+  "inference": {
+    "total_network_inputs": 1387601,
+    "median_network_inputs": 1496.0,
+    "median_simulations": 1899.0
+  },
+  "note": "Legal PGN replay, claimable outcomes, colors, budgets, model fingerprint and actual inference/simulation counters reconciled. Counts are from model perspective."
+}

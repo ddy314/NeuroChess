@@ -1,0 +1,332 @@
+{
+  "nodes": 2000,
+  "opening": 1,
+  "contender_color": "black",
+  "fen": "r3kbnr/pp1b1ppp/1np1p3/8/4P3/1BN1BN2/PPP2PPP/R2K3R b kq - 7 9",
+  "score": 0.5,
+  "result": "1/2-1/2",
+  "termination": "THREEFOLD_REPETITION",
+  "plies": 53,
+  "decisions": [
+    {
+      "seconds": 0.4944790540030226,
+      "large_positions": 1521,
+      "root": {
+        "new_simulations": 1650
+      }
+    },
+    {
+      "seconds": 0.49609882599906996,
+      "large_positions": 1520,
+      "root": {
+        "new_simulations": 1679
+      }
+    },
+    {
+      "seconds": 0.49486049500410445,
+      "large_positions": 1504,
+      "root": {
+        "new_simulations": 1737
+      }
+    },
+    {
+      "seconds": 0.4946933559986064,
+      "large_positions": 1512,
+      "root": {
+        "new_simulations": 1777
+      }
+    },
+    {
+      "seconds": 0.49413729600200895,
+      "large_positions": 1512,
+      "root": {
+        "new_simulations": 1730
+      }
+    },
+    {
+      "seconds": 0.49668590299552307,
+      "large_positions": 1512,
+      "root": {
+        "new_simulations": 1941
+      }
+    },
+    {
+      "seconds": 0.49424996599555016,
+      "large_positions": 1512,
+      "root": {
+        "new_simulations": 1701
+      }
+    },
+    {
+      "seconds": 0.49595560699526686,
+      "large_positions": 1512,
+      "root": {
+        "new_simulations": 1747
+      }
+    },
+    {
+      "seconds": 0.4943602040002588,
+      "large_positions": 1512,
+      "root": {
+        "new_simulations": 1647
+      }
+    },
+    {
+      "seconds": 0.495555229994352,
+      "large_positions": 1512,
+      "root": {
+        "new_simulations": 1703
+      }
+    },
+    {
+      "seconds": 0.4963928919896716,
+      "large_positions": 1504,
+      "root": {
+        "new_simulations": 1788
+      }
+    },
+    {
+      "seconds": 0.49642416900314856,
+      "large_positions": 1520,
+      "root": {
+        "new_simulations": 1685
+      }
+    },
+    {
+      "seconds": 0.4941977630078327,
+      "large_positions": 1504,
+      "root": {
+        "new_simulations": 1746
+      }
+    },
+    {
+      "seconds": 0.4964821280009346,
+      "large_positions": 1512,
+      "root": {
+        "new_simulations": 1711
+      }
+    },
+    {
+      "seconds": 0.4952070740109775,
+      "large_positions": 1520,
+      "root": {
+        "new_simulations": 1755
+      }
+    },
+    {
+      "seconds": 0.49438184799510054,
+      "large_positions": 1502,
+      "root": {
+        "new_simulations": 1704
+      }
+    },
+    {
+      "seconds": 0.49523516499903053,
+      "large_positions": 1490,
+      "root": {
+        "new_simulations": 1788
+      }
+    },
+    {
+      "seconds": 0.49411512099322863,
+      "large_positions": 1496,
+      "root": {
+        "new_simulations": 1936
+      }
+    },
+    {
+      "seconds": 0.4941141890012659,
+      "large_positions": 1504,
+      "root": {
+        "new_simulations": 1955
+      }
+    },
+    {
+      "seconds": 0.49450162300490774,
+      "large_positions": 1512,
+      "root": {
+        "new_simulations": 1747
+      }
+    },
+    {
+      "seconds": 0.4959679810126545,
+      "large_positions": 1520,
+      "root": {
+        "new_simulations": 1795
+      }
+    },
+    {
+      "seconds": 0.49420949099294376,
+      "large_positions": 1504,
+      "root": {
+        "new_simulations": 1773
+      }
+    },
+    {
+      "seconds": 0.495514877999085,
+      "large_positions": 1512,
+      "root": {
+        "new_simulations": 1849
+      }
+    },
+    {
+      "seconds": 0.49476832400250714,
+      "large_positions": 1504,
+      "root": {
+        "new_simulations": 2114
+      }
+    },
+    {
+      "seconds": 0.4956725429947255,
+      "large_positions": 1492,
+      "root": {
+        "new_simulations": 2559
+      }
+    },
+    {
+      "seconds": 0.4965593759989133,
+      "large_positions": 1483,
+      "root": {
+        "new_simulations": 2988
+      }
+    },
+    {
+      "seconds": 0.0024908170016715303,
+      "large_positions": 0,
+      "root": {
+        "new_simulations": 16384
+      }
+    }
+  ],
+  "opponent_decisions": [
+    {
+      "nodes": 2000,
+      "depth": 7
+    },
+    {
+      "nodes": 2000,
+      "depth": 6
+    },
+    {
+      "nodes": 2000,
+      "depth": 8
+    },
+    {
+      "nodes": 2000,
+      "depth": 9
+    },
+    {
+      "nodes": 2000,
+      "depth": 10
+    },
+    {
+      "nodes": 2001,
+      "depth": 9
+    },
+    {
+      "nodes": 2000,
+      "depth": 8
+    },
+    {
+      "nodes": 2001,
+      "depth": 10
+    },
+    {
+      "nodes": 2000,
+      "depth": 10
+    },
+    {
+      "nodes": 2000,
+      "depth": 9
+    },
+    {
+      "nodes": 2002,
+      "depth": 8
+    },
+    {
+      "nodes": 2000,
+      "depth": 11
+    },
+    {
+      "nodes": 2000,
+      "depth": 10
+    },
+    {
+      "nodes": 2000,
+      "depth": 11
+    },
+    {
+      "nodes": 2000,
+      "depth": 11
+    },
+    {
+      "nodes": 2000,
+      "depth": 11
+    },
+    {
+      "nodes": 2000,
+      "depth": 10
+    },
+    {
+      "nodes": 2000,
+      "depth": 11
+    },
+    {
+      "nodes": 2008,
+      "depth": 10
+    },
+    {
+      "nodes": 2000,
+      "depth": 11
+    },
+    {
+      "nodes": 2002,
+      "depth": 10
+    },
+    {
+      "nodes": 2001,
+      "depth": 11
+    },
+    {
+      "nodes": 2002,
+      "depth": 11
+    },
+    {
+      "nodes": 2001,
+      "depth": 10
+    },
+    {
+      "nodes": 2000,
+      "depth": 11
+    },
+    {
+      "nodes": 2001,
+      "depth": 10
+    }
+  ],
+  "stats": {
+    "choices": 27,
+    "leaf_evaluations": 48182,
+    "completed_simulations": 64589,
+    "terminal_leaves": 16408,
+    "pruned_root_edges": 445,
+    "proven_loss_skips": 4284,
+    "mate_proofs": 172,
+    "max_depth": 16,
+    "depth_limit_hits": 0,
+    "tree_reuses": 26,
+    "retained_nodes": 15053,
+    "inference_batches": 10407,
+    "native_seconds": 0.28473612204834353,
+    "inference_seconds": 12.221168048054096,
+    "bridge_seconds": 0.004155963004450314,
+    "time_stops": 26,
+    "physical_inference_batches": 4907,
+    "inference_cache": {
+      "requested_positions": 48195,
+      "forward_positions": 39208,
+      "cache_hits": 8938,
+      "batch_duplicates": 36
+    }
+  }
+}

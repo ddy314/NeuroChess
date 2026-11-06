@@ -1,0 +1,72 @@
+{
+  "state": "complete",
+  "data": {
+    "train": 20000000,
+    "unique_train": 20000000,
+    "heldout_position_overlap": 0,
+    "prior_position_overlap": 0,
+    "compressed_bytes": 2081426174,
+    "validation": 4096,
+    "test": 4096,
+    "completed_at": 1793728361.4077106,
+    "elapsed_seconds": 8628.335050106049,
+    "default_promoted": false
+  },
+  "training": {
+    "pawn_updates": 6429,
+    "positions": 6582592,
+    "target_positions": 6582592,
+    "pilot_passed": true,
+    "pawn_positions": 4936944,
+    "replay_positions": 1645648,
+    "final_validation": {
+      "pawn": {
+        "step": 6429,
+        "split": "pawn",
+        "positions": 4096,
+        "loss": 2.6330868527293205,
+        "policy_loss": 2.299422636628151,
+        "q_loss": 0.07417934265686199,
+        "value_loss": 0.2965745257679373,
+        "top1": 0.354736328125,
+        "q_mae": 0.13965099646093077,
+        "value_mae": 0.14082725683692843
+      },
+      "general": {
+        "step": 6429,
+        "split": "general",
+        "positions": 4096,
+        "loss": 2.4417050294578075,
+        "policy_loss": 1.99496029317379,
+        "q_loss": 0.09888921357924119,
+        "value_loss": 0.3973001353442669,
+        "top1": 0.435302734375,
+        "q_mae": 0.18968937484535986,
+        "value_mae": 0.19069390266668051
+      }
+    },
+    "checkpoint_sha256": "fc6cace9e86c44d8b35b54f8bc76c93ada0994e3a975cd8e8f02c3ac671e8ebc",
+    "seconds": 28624.068414211273,
+    "default_promoted": false,
+    "playing_strength_improvement_established": false
+  },
+  "validation_comparison": {
+    "pawn": {
+      "loss_before": 2.8441837579011917,
+      "loss_after": 2.6330868527293205,
+      "loss_relative_change": -0.07422055786143922,
+      "top1_before": 0.34814453125,
+      "top1_after": 0.354736328125
+    },
+    "general": {
+      "loss_before": 2.3854698687791824,
+      "loss_after": 2.4417050294578075,
+      "loss_relative_change": 0.02357403940189129,
+      "top1_before": 0.44580078125,
+      "top1_after": 0.435302734375
+    }
+  },
+  "final_general_loss_within_initial_2percent_tolerance": false,
+  "default_promoted": false,
+  "playing_strength_improvement_established": false
+}
