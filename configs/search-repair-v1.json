@@ -1,0 +1,48 @@
+{
+  "name": "search-repair-v1",
+  "status": "prepared-not-launched",
+  "cloud_training_allowed_now": false,
+  "training_runs": 1,
+  "old_only_control_run": false,
+  "parent_checkpoint": "MyDrive/neurochess/fresh-v4-training/fresh/best.pt",
+  "parent_sha256": "343d19699d86f3e0b8e2ff1a9cf3237a403fb25c4e0af98ad7d63a72d6c78247",
+  "updates": 500,
+  "effective_batch": 1024,
+  "lr": 3e-06,
+  "data": {
+    "reuse_all_adjudicated_solver_root_labels": true,
+    "derived_family_limits": {
+      "train": 25000,
+      "val": 2000,
+      "frozen_test": 0
+    },
+    "line_plies": 4,
+    "wrong_candidate_children_per_root": 2,
+    "independent_teacher_required": true,
+    "value_counts_per_stratum": {
+      "train": 10000,
+      "val": 500
+    },
+    "value_threshold": 0.25,
+    "surplus_solver_roots": "policy-only; Q/value masked",
+    "insufficient_strata": "fail readiness; never repeat, flip or inherit labels",
+    "novel_root_count_increase_claim": false,
+    "frozen_test": "exclude all frozen test groups and keys; keep original test untouched"
+  },
+  "validation": [
+    "balanced search-state validation by value stratum",
+    "original general-position validation; checkpoint eligibility must retain general value calibration"
+  ],
+  "checks_before_gpu": [
+    "source family isolation and canonical deduplication",
+    "exact real-state label counts and target convention SHA",
+    "curated source quality-gate label digest; preserve unresolved policy-only roots",
+    "balanced value strata and original frozen exclusions",
+    "single-run command and persistence/auto-stop verified"
+  ],
+  "evaluation_budget": {
+    "full_games": 0,
+    "diagnostic_roots_max": 20,
+    "no_automatic_model_promotion": true
+  }
+}

@@ -69,11 +69,18 @@ def main():
     marker=MOUNT/'MyDrive/neurochess-data/fresh-v4-500k-ready.json'
     if not marker.exists():raise RuntimeError('Audited data not ready; refuse idle GPU wait')
     ready=json.loads(marker.read_text());copy(marker,WORK/'data-delivery.json')
+    quality=ready.get('quality_gate',{})
+    if not quality.get('complete') or quality.get('rows')!=512000 or quality.get('unsupported_source_conflicts')!=0:
+        raise ValueError('Teacher/source quality gate missing or incomplete; refuse GPU training')
     archive=WORK/'data.tar.gz'
     if not archive.exists():copy(MOUNT/'MyDrive/neurochess-data/fresh-v4-500k.tar.gz',archive)
     if sha(archive)!=ready['archive_sha256']:raise ValueError('Fresh data delivery SHA differs')
     if not (WORK/'data/trainval/manifest.json').exists():
         with tarfile.open(archive) as tar:tar.extractall(WORK,filter='data')
+    if sha(WORK/'quality-gate.json')!=ready['quality_gate_sha256']:
+        raise ValueError('Teacher/source quality gate SHA differs')
+    if json.loads((WORK/'quality-gate.json').read_text())!=quality:
+        raise ValueError('Delivered quality proof differs from frozen ready marker')
     core=ROOT/'data/evals-v2-5m';core.parent.mkdir(exist_ok=True)
     if not (core/'manifest.json').exists():
         old_archive=WORK/'core.tar.gz';copy(MOUNT/'MyDrive/neurochess-data/evals-v2-5m.tar.gz',old_archive)
@@ -124,7 +131,8 @@ def main():
         phase[0]='frozen-puzzle-evaluation'
         with (WORK/'puzzle-evaluation.log').open('a') as log:
             subprocess.run([sys.executable,'scripts/eval_fresh_puzzles.py','--jobs',str(WORK/'jobs.jsonl'),'--out',str(WORK/'puzzle-evaluation.json'),
-                '--checkpoint',str(parent),'--checkpoint',str(WORK/'control/best.pt'),'--checkpoint',str(WORK/'fresh/best.pt')],check=True,stdout=log,stderr=subprocess.STDOUT)
+                '--checkpoint',str(parent),'--checkpoint',str(WORK/'control/best.pt'),'--checkpoint',str(WORK/'fresh/best.pt'),
+                '--search-config',str(ROOT/plan['evaluation']['search_config'])],check=True,stdout=log,stderr=subprocess.STDOUT)
         phase[0]='frozen-blunder-evaluation'
         with (WORK/'blunder-evaluation.log').open('a') as log:
             subprocess.run([sys.executable,'scripts/eval_fresh_blunders.py','--puzzle-result',str(WORK/'puzzle-evaluation.json'),
@@ -138,7 +146,8 @@ def main():
                 if out.exists():out.rename(out.with_name(name+'-interrupted-'+str(int(time.time()))))
                 with (WORK/f'evaluation-{name}.log').open('a') as log:
                     subprocess.run([sys.executable,'scripts/multihead_arena.py','--checkpoint',str(checkpoint),'--openings',str(openings),
-                        '--stockfish',str(ROOT/'bin/stockfish'),'--out',str(out),'--pairs','32','--batch-games','16','--nodes','1000','--simulations','512'],check=True,stdout=log,stderr=subprocess.STDOUT)
+                        '--stockfish',str(ROOT/'bin/stockfish'),'--out',str(out),'--pairs','32','--batch-games','16','--nodes','1000',
+                        '--search-config',str(ROOT/plan['evaluation']['search_config'])],check=True,stdout=log,stderr=subprocess.STDOUT)
             proof=verify_arena(out,64,checkpoint);atomic_json(WORK/f'evaluation-{name}-verification.json',proof);sync()
         phase[0]='complete';atomic_json(WORK/'pipeline-status.json',dict(phase='complete',updated_at=time.time(),default_promoted=False))
     except Exception as error:
@@ -155,4 +164,5 @@ def main():
         from neurochess.autostop import request_unassign,find_runtime_address
         request_unassign(find_runtime_address())
 
-if __name__=='__main__':main()
+if __name__=='__main__':
+    raise RuntimeError('The two-arm fresh-v4 launcher is retired by user instruction. Use the single-run search-repair plan after data readiness and new cloud authorization; historical A/B code remains frozen in code-resumed.tar.gz.')

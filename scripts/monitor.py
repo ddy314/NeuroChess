@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Open the dashboard of an existing Colab training session."""
 import argparse
+import hashlib
 import json
 import os
 from pathlib import Path
@@ -54,6 +55,11 @@ def main():
     if not key.exists():
         subprocess.run(['ssh-keygen', '-q', '-t', 'ed25519', '-N', '', '-f', str(key)], check=True)
     control = state / f'{args.session}-{args.port}.sock'
+    # OpenSSH appends a temporary suffix while creating a Unix control socket.
+    # Long experiment names otherwise exceed the platform's 108-byte limit.
+    if len(os.fsencode(control)) > 80:
+        digest = hashlib.sha256(f'{args.session}:{args.port}'.encode()).hexdigest()[:16]
+        control = state / f'ssh-{digest}.sock'
     if args.tunnel:
         proxy = ' '.join(shlex.quote(s) for s in
                          [COLAB, 'ssh', '--proxy-mode', '-s', args.session,

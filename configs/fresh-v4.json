@@ -32,7 +32,9 @@
   "evaluation": {
     "stockfish_nodes": 1000,
     "pairs": 32,
-    "simulations": 512
+    "simulations": 16384,
+    "search_config": "configs/puct-2s-local.json",
+    "search_protocol": "frozen puct-2s-v1 configuration on L4; no default-model promotion or claim of baseline quality equivalence"
   },
   "sources": {
     "puzzles": "https://database.lichess.org/lichess_db_puzzle.csv.zst",
@@ -44,7 +46,14 @@
   "teacher_instances_after_selection": 2,
   "test_protocol": {
     "first_move_direct_positions": 2000,
-    "first_move_puct512_positions": 256,
-    "source_game_group_bootstrap": true
+    "source_game_group_bootstrap": true,
+    "first_move_puct2s_positions": 256
+  },
+  "source_teacher_quality_gate": {
+    "threshold_cp": 30,
+    "teacher_nodes": 1000000,
+    "coarse_nodes": 100000,
+    "unresolved": "source-policy-only; Q and value masked",
+    "preserve_original_labels": true
   }
 }

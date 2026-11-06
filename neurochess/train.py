@@ -30,7 +30,12 @@ def losses(outputs, batch, q_weight=1., value_weight=.5):
 
 def load_model(path, device):
     ckpt = torch.load(path, map_location='cpu', weights_only=False)
-    model = ChessModel(ModelConfig(**ckpt['model_config'])).to(device)
+    if ckpt.get('architecture')=='policy_value_pair_v1':
+        from .policy_value_pair import PolicyValuePair
+        model=PolicyValuePair(ModelConfig(**ckpt['model_config'])).to(device)
+        model.set_value_training(ckpt.get('value_training_mode','head'))
+    else:
+        model = ChessModel(ModelConfig(**ckpt['model_config'])).to(device)
     model.load_state_dict(ckpt['model'])
     return model, ckpt
 

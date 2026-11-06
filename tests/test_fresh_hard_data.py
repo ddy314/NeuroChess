@@ -24,6 +24,8 @@ def test_solver_root_follows_setup_and_complete_solution_legal():
 def test_source_game_group_is_independent_of_ply_and_player_token():
  assert f.group_id('https://lichess.org/abcdefgh1234#25')=='abcdefgh'
  assert f.group_id('https://lichess.org/abcdefgh/black#25')=='abcdefgh'
+ assert f.group_id('https://lichess.org/game/abcdefgh/black#25')=='abcdefgh'
+ assert f.group_id('https://lichess.org/game/abcdefgh#25')=='abcdefgh'
  assert f.group_split(f.group_id('https://lichess.org/abcdefgh#2'),37)==f.group_split(f.group_id('https://lichess.org/abcdefgh#99'),37)
 
 
