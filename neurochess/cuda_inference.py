@@ -24,10 +24,7 @@ class CudaGraphMultiheadPlayer(MultiheadPlayer):
                 tokens=torch.zeros((n,64),dtype=torch.uint8,device=device)
                 meta=torch.zeros((n,12),dtype=torch.float32,device=device)
                 moves=torch.zeros((n,256),dtype=torch.int16,device=device)
-                def forward():
-                    with torch.autocast('cuda',dtype=torch.bfloat16,cache_enabled=False):
-                        p,q,w=self.model(tokens,meta,moves)
-                    return torch.cat([p,q,w.softmax(-1)],dim=1)
+                def forward():return self.device_forward(tokens,meta,moves)
                 with torch.cuda.stream(stream):
                     for _ in range(3):forward()
                 torch.cuda.current_stream().wait_stream(stream)
@@ -35,6 +32,11 @@ class CudaGraphMultiheadPlayer(MultiheadPlayer):
                 with torch.cuda.graph(graph):output=forward()
                 self.graphs[n]=(graph,tokens,meta,moves,output)
             torch.cuda.synchronize(device)
+
+    def device_forward(self,tokens,meta,moves):
+        with torch.autocast('cuda',dtype=torch.bfloat16,cache_enabled=False):
+            p,q,w=self.model(tokens,meta,moves)
+        return torch.cat([p,q,w.softmax(-1)],dim=1)
 
     @torch.inference_mode()
     def raw_outputs(self,tokens,meta,moves):
