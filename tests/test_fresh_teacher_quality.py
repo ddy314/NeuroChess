@@ -69,7 +69,8 @@ def test_gate_preserves_originals_is_resumable_and_scans_every_row(tmp_path,monk
  bad,payload,meta=fixture();db.execute('INSERT INTO labels VALUES (?,?,?,?)',(bad['key'],'train',payload,json.dumps(meta)))
  good,good_payload,good_meta=fixture('d2d4','d7d5','g8f6',-200,-100)
  db.execute('INSERT INTO labels VALUES (?,?,?,?)',(good['key'],'val',good_payload,json.dumps(good_meta)));db.commit()
- engine=ROOT/'local/stockfish/stockfish/stockfish-ubuntu-x86-64-avx2'
+ # The process is mocked above; only its persistent identity needs a real file.
+ engine=tmp_path/'mock-stockfish';engine.write_bytes(b'mocked teacher identity')
  proof=q.quality_gate(db,[bad,good],str(engine),tmp_path/'quality',workers=1)
  assert proof['rows']==2 and proof['reviewed']==1 and proof['unresolved_source_policy_only']==1
  assert proof['unsupported_source_conflicts']==0
