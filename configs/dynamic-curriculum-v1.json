@@ -1,0 +1,50 @@
+{
+  "schema": 2,
+  "model": "output/joint-deep-analysis-20261103/final-weights.pt",
+  "model_sha256": "99931bbb7f68a812e226364c9636a3725599a54dcc3affb0cc206a48318c4d3a",
+  "teacher_binary": "output/dynamic-curriculum-20261103/engines/stockfish/stockfish-ubuntu-x86-64-avxvnni",
+  "teacher": {
+    "supervision_schema": 2,
+    "early_stop_when_any_target_is_stable": true,
+    "seed_nodes": 10000,
+    "screen_nodes": 30000,
+    "confirm_nodes": [100000, 300000, 1000000, 3000000],
+    "minimum_confirm_nodes": 300000,
+    "stability_cp": 30,
+    "wdl_stability": 0.02,
+    "easy_audit_fraction": 0.02,
+    "policy_requires_all_candidates_cp_stable": true,
+    "Q_requires_each_action_wdl_stable": true,
+    "value_requires_best_wdl_stable": true,
+    "independent_hash_reset_each_budget": true,
+    "unrestricted_value_guard": true,
+    "value_guard_nodes": [100000, 300000]
+  },
+  "successor_plies": [1, 2, 3, 4],
+  "student_successors": "Student root move, SF best reply, student continuation, SF best reply; independent labels at every ply. Teacher PV replay is retained separately.",
+  "max_exposures_per_canonical_position_per_training_run": 8,
+  "next_training": {
+    "branches": 1,
+    "heads": ["policy", "Q", "value"],
+    "effective_batch": 320,
+    "mixture_positions": {"old": 160, "new": 96, "frontier": 32, "mistake": 32},
+    "loss_mode": "available-target-normalized-v2",
+    "initial_update_budget": 2000,
+    "planned_total_update_budget": 10000,
+    "refresh_every_updates": 500,
+    "new_pool": "Independent model-blind uniform source sample with forced teacher confirmation; never alias the mistake pool as general replay",
+    "training_authorized_by_this_script": false,
+    "automatic_default_promotion": false
+  },
+  "scale": {
+    "primary_mistakes": "Qualified policy regret>=100cp or qualified value error>=0.25; Q-only cases reported separately",
+    "target_verified_novel_mistake_roots": 100000,
+    "target_independent_uniform_replay_roots": 160000,
+    "minimum_qualified_general_roots_for_10000_updates_at_cap8": 120000,
+    "stretch_verified_novel_mistake_roots": 1000000,
+    "descendants_count_as_additional_novel_roots": false,
+    "require_sustained_end_to_end_benchmark": true,
+    "require_independent_deeper_teacher_audit": true,
+    "automatic_100x_expansion": false
+  }
+}
