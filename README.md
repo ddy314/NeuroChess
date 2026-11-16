@@ -1,52 +1,40 @@
 # NeuroChess
 
-NeuroChess is a chess engine built around a 155.7 million parameter Transformer and PUCT tree search. The network evaluates positions and legal moves. A C++ and CUDA runtime runs the search and TensorRT inference through the Universal Chess Interface (UCI).
+NeuroChess is a chess engine built around a 155.7M-parameter Transformer and PUCT tree search. Instead of a convolutional board tower, it encodes the 64 squares as tokens, scores all legal moves in a single forward pass with policy, action-value, and win/draw/loss heads, and searches through a native C++/CUDA engine powered by INT8 TensorRT inference.
 
-[Download the model](https://github.com/ddy314/NeuroChess/releases/tag/model-v1) · [Training history](docs/TRAINING.md) · [Evaluation](docs/EVALUATION.md) · [Model and runtime](docs/MODEL.md)
+[Download the model](https://github.com/ddy314/NeuroChess/releases/tag/model-v1) · [Model and engine](docs/MODEL.md) · [Evaluation](docs/EVALUATION.md) · [Training](docs/TRAINING.md)
 
-## At a glance
+## How it works
 
-| | |
+| Component | Design |
 |---|---|
-| Network | 16 Transformer layers, 896 channels, 14 attention heads |
-| Outputs | Move policy, action values, and win/draw/loss probabilities |
-| Model | Joint training checkpoint at step 13,750; 56.32 million sample presentations in that run |
-| Search | Batched PUCT with a neural evaluation cache |
-| Runtime | PyTorch for network inspection; C++17, CUDA and TensorRT for UCI play |
-| Model file | 622,819,723 bytes |
+| Backbone | 16-layer pre-norm Transformer (896 channels, 14 heads, 155.7M parameters) |
+| Input | Side-to-move square tokens (64 squares), position metadata, and legal move IDs |
+| Policy head | Scores every legal move simultaneously from source, destination, and promotion embeddings |
+| Action-value head | Cross-attends each legal move to the board to predict a 128-bin value distribution over `[-1, 1]` |
+| Value head | Predicts win, draw, and loss probabilities for the side to move |
+| Search | Batched C++ PUCT with Q-guided priors, LRU evaluation cache, and subtree reuse |
+| Runtime | C++17, CUDA Graphs, TensorRT INT8, and UCI |
 
-The model was selected using held-out policy, action-value and value losses. Its search playing quality awaits the direct promotion test against the project's locked two-second baseline. The [evaluation guide](docs/EVALUATION.md) describes the match results and their scope.
-
-## Training
-
-The project trained the network in several stages. The final joint run starts from a frozen earlier network and a separately trained action-value head. Step numbers belong to their respective runs.
-
-```mermaid
-flowchart LR
-    A[Human games<br/>10,000 updates] --> B[Stockfish supervision<br/>7,500 cumulative updates]
-    B --> C[Curriculum training<br/>15,500 cumulative updates]
-    C -.->|Earlier model lineage| D[Frozen search baseline]
-    D --> E[Action-value head training]
-    D --> F[Joint policy, action-value<br/>and value training]
-    E --> F
-    F --> G[Selected checkpoint<br/>13,750 joint-run updates]
-```
-
-The final run sampled earlier Stockfish-labelled and replay data, ChessBench, and six- and seven-piece Syzygy positions. It also used Stockfish corrections. The planned sampling mix was 45%, 15%, 25%, 12%, and 3%, respectively. The selected checkpoint saw 56.32 million presentations; a position can appear more than once. [Training history](docs/TRAINING.md) covers the data, training stages, selection and available records.
+During search, the C++ engine folds the per-move action-value predictions into the search priors (`--q-prior-beta`), batches uncached leaf positions with virtual loss, executes INT8 TensorRT inference via CUDA Graphs, and reuses the surviving search subtree across consecutive moves.
 
 ## Results
 
-The following experiment used the released checkpoint, INT8 TensorRT inference and Stockfish 18 with one thread. Each opening was played with both colours. The equivalent-node estimate depends on the opening set and the fitted model.
+In paired-opening matches against Stockfish 18 (1 thread, 64 MB hash, full strength), NeuroChess scales consistently with search budget:
 
-| Search simulations per move | Estimated Stockfish nodes per move | 90% paired resampling interval | Games |
+| NeuroChess simulations / move | Games | Equal-score Stockfish 18 budget | 90% paired bootstrap interval |
 |---:|---:|---:|---:|
-| 8,192 | 7,981 | 5,782–10,361 | 128 |
+| 256 | 64 | 1,602 nodes / move | 1,210–1,996 nodes |
+| 2,048 | 64 | 4,685 nodes / move | 3,811–5,860 nodes |
+| 8,192 | 128 | 7,981 nodes / move | 5,782–10,361 nodes |
 
-On an RTX 4060 Laptop GPU, a 12-position comparison at 8,192 simulations measured median move times of 1.65 seconds for the native runtime and 1.90 seconds for the Python runtime using TensorRT. The two runs selected the same move on 11 positions. See [evaluation](docs/EVALUATION.md) for the protocol, evidence and search baseline.
+On an NVIDIA RTX 4060 Laptop GPU at 8,192 simulations per move, the native C++/TensorRT engine runs in **1.65 s median** (**2.19 s P95**) per move. See [Evaluation](docs/EVALUATION.md) for the per-level score breakdown and latency comparison.
 
-## Get started
+## Quick start
 
-Python 3.11 or later is required. Install a PyTorch build suitable for your system. Download the model from the [model release](https://github.com/ddy314/NeuroChess/releases/tag/model-v1).
+### Evaluate a position
+
+Requires Python 3.11 or later.
 
 ```bash
 git clone https://github.com/ddy314/NeuroChess.git
@@ -55,38 +43,43 @@ python -m venv .venv
 source .venv/bin/activate
 pip install -e '.[dev]'
 mkdir -p models
-curl -L -o models/neurochess-13750.pt https://github.com/ddy314/NeuroChess/releases/download/model-v1/neurochess-13750.pt
-echo '910e517774770754500ff3ad6b66380d0bf3d36f5e1f85f7b2451407b95c18a7  models/neurochess-13750.pt' | sha256sum -c -
+curl -L -o models/neurochess-13750.pt \
+  https://github.com/ddy314/NeuroChess/releases/download/model-v1/neurochess-13750.pt
 python -m neurochess.predict --model models/neurochess-13750.pt
 ```
 
-The last command evaluates the starting position with the network. Use `--fen '<FEN>'` to inspect another position and `--device cpu` to select the CPU.
+This evaluates the starting position with the raw network (no tree search) and prints the side-to-move WDL probabilities along with each top move's prior probability and expected action value `Q`. Pass `--fen '<FEN>'` for another position or `--device cpu` to run on CPU.
 
-### Build the UCI engine
+### Play over UCI
 
-The engine requires an NVIDIA GPU, a compatible CUDA Toolkit, CMake 3.24 or later, a C++17 compiler, and TensorRT headers, libraries and Python bindings. Install the TensorRT Python package that matches the local SDK. Export the model on the target machine:
+The native engine requires an NVIDIA GPU, CUDA Toolkit, TensorRT 10+, CMake 3.24+, and a C++17 compiler. Install the `tensorrt` Python package matching your local TensorRT SDK, then export the TensorRT plan and build the engine on the target machine:
 
 ```bash
 pip install -e '.[export]'
 python -m neurochess.export --model models/neurochess-13750.pt --out models/
 cmake -S engine -B engine/build -DTENSORRT_ROOT=/path/to/TensorRT
 cmake --build engine/build -j
+```
+
+Launch the UCI engine:
+
+```bash
 ./engine/build/neurochess --engine models/neurochess-13750-int8.plan \
   --uci --history-free --batch 16 --q-prior-beta 2 --cache 32768 \
   --time -1 --simulations 8192
 ```
 
-Add the executable and arguments to a UCI-compatible chess interface. TensorRT plans depend on the target environment. Export details and hardware requirements are in [model and runtime](docs/MODEL.md).
+Register this command in any UCI-compatible chess GUI. See [Model and engine](docs/MODEL.md) for architecture details, quantization, and search options.
 
 ## Repository
 
-| Path | Contents |
+| Directory | Contents |
 |---|---|
-| [`neurochess/`](neurochess/) | Model, board encoding, prediction and TensorRT export |
-| [`engine/`](engine/) | Native UCI engine, search and inference runtime |
-| [`docs/`](docs/) | Training, evaluation and model documentation |
-| [`tests/`](tests/) | Model and optional UCI integration tests |
+| [`neurochess/`](neurochess/) | Transformer model, board encoding, Python evaluation, and TensorRT INT8 export |
+| [`engine/`](engine/) | Native C++/CUDA UCI engine, PUCT search, and TensorRT runtime |
+| [`docs/`](docs/) | Architecture, evaluation, and training documentation |
+| [`tests/`](tests/) | Model unit tests and UCI integration tests |
 
-Run `pytest -q` for the available tests. Set `NEUROCHESS_PLAN` to a built TensorRT plan to enable UCI integration tests. The current repository contains inference and search code; historical training code is available in [the pre-cleanup revision](https://github.com/ddy314/NeuroChess/tree/6681cc3).
+Run `pytest -q` for the model tests. UCI integration tests run automatically once `engine/build/neurochess` and `models/neurochess-13750-int8.plan` exist (override paths with `NEUROCHESS_ENGINE` and `NEUROCHESS_PLAN`).
 
-Move generation uses [Disservin/chess-library](https://github.com/Disservin/chess-library), included under its MIT license.
+Move generation uses [Disservin/chess-library](https://github.com/Disservin/chess-library) under the MIT license.
