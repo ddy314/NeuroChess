@@ -2,7 +2,7 @@
 
 ## Playing strength vs. Stockfish 18
 
-NeuroChess (`neurochess-13750.pt`, INT8 TensorRT engine) was tested against Stockfish 18 (`Threads=1`, `Hash=64 MB`, `Skill Level 20`) using color-paired openings (each opening played twice with colors reversed). NeuroChess used batch size 16, `--q-prior-beta 2`, and a 32,768-entry evaluation cache.
+NeuroChess (INT8 TensorRT engine) was tested against Stockfish 18 (`Threads=1`, 64 MB transposition table, `Skill Level 20`) using color-paired openings (each opening played twice with colors reversed). NeuroChess used batch size 16, `--q-prior-beta 2`, and a 32,768-entry evaluation cache.
 
 ### Scaling with simulation budget
 
@@ -21,11 +21,7 @@ NeuroChess (`neurochess-13750.pt`, INT8 TensorRT engine) was tested against Stoc
 | 16,000 nodes / move | 12 | 43.8% |
 | 32,000 nodes / move | 16 | 20.3% |
 
-Across the lower simulation budgets, NeuroChess scored 66.7% / 43.8% / 12.5% against 1k / 2k / 4k Stockfish nodes at 256 simulations, and 84.4% / 50.0% / 34.4% / 12.5% against 2k / 4k / 8k / 16k Stockfish nodes at 2,048 simulations.
-
-### Search vs. raw network policy
-
-Tree search drives a large jump in playing strength over single-pass policy output. On an earlier engine-supervised checkpoint tested against 1,000-node Stockfish 18 (64 games each), raw network moves scored 1W / 9D / 54L (8.6%), whereas adding 512 simulations of PUCT search raised the score to 29W / 14D / 21L (56.3%).
+At lower search budgets, NeuroChess scored 66.7% / 43.8% / 12.5% against 1,000 / 2,000 / 4,000 Stockfish nodes at 256 simulations, and 84.4% / 50.0% / 34.4% / 12.5% against 2,000 / 4,000 / 8,000 / 16,000 Stockfish nodes at 2,048 simulations.
 
 ## Move latency
 

@@ -1,47 +1,44 @@
 # Training
 
-NeuroChess was trained in stages from human games to engine supervision, targeted curriculum refinement, and finally joint multi-task training with endgame tablebases.
+NeuroChess was trained in four stages across human games, Stockfish analysis, ChessBench positions, and Syzygy endgame tablebases.
 
-## Training pipeline
+## Training stages
 
 ```mermaid
 flowchart LR
-    A[Human games<br/>10,000 updates] --> B[Engine supervision<br/>7,500 updates]
-    B --> C[Curriculum training<br/>8,000 updates]
-    C -.-> D[Base network]
-    D --> F[Joint training<br/>13,750 updates]
-    E[Action-value head<br/>1,250 updates] --> F
+    A[Human pretraining<br/>10,000 steps] --> B[Engine supervision<br/>15,500 steps]
+    B --> D[Joint training<br/>13,750 steps]
+    C[Action-value head<br/>1,250 steps] --> D
 ```
 
-1. **Human-game pretraining (10,000 updates):** Trained on positions and moves from filtered [Lichess](https://database.lichess.org/) rated and broadcast games to bootstrap piece coordination and opening/middlegame priors.
-2. **Engine supervision (7,500 updates):** Switched to Stockfish-labeled policy, action-value, and WDL targets while scaling the dataset from 842k to 5M positions.
-3. **Hard-position curriculum (+8,000 updates):** Ran 4,000 updates mixing engine data with human-policy replay, followed by four 1,000-update waves sampling core engine positions, deeper Stockfish reannotations of difficult positions, and human-policy replay (`70:20:10`). On the fixed 8,457-position validation set, loss fell from `2.5629` (step 1,500) to `2.4178` (step 15,500) and policy top-1 accuracy rose from `42.19%` to `44.19%`.
-4. **Action-value head training (1,250 updates):** Trained the redesigned 128-bin cross-attention `Q` head separately on engine evaluations and Syzygy endgames.
-5. **Joint multi-source training (13,750 updates):** Combined the trained base network and 128-bin `Q` head and trained the full model end-to-end across five data sources plus targeted Stockfish corrections.
+1. **Human-game pretraining (10,000 steps):** Trained on positions and moves from filtered [Lichess](https://database.lichess.org/) rated and broadcast games to learn piece coordination and opening/middlegame priors.
+2. **Engine supervision (15,500 steps):** Trained on Stockfish policy, action-value, and WDL targets across up to 5M positions, combining engine-labeled positions, deeper Stockfish reannotations of difficult positions, and human-policy replay.
+3. **Action-value head training (1,250 steps):** Trained the 128-bin cross-attention `Q` head on Stockfish move evaluations and Syzygy endgames.
+4. **Joint multi-task training (13,750 steps):** Trained the Transformer backbone and all three output heads end-to-end across Stockfish analysis, game replay, ChessBench, and Syzygy endgames at an effective batch size of 4,096 (`56.32M` training samples).
 
-## Joint training data and optimization
+## Training data and optimization
 
-The final joint run mixed five datasets per batch:
+The joint training stage sampled batches from five sources:
 
-| Source | Share | Purpose |
+| Source | Share | Role |
 |---|---:|---|
-| Deep Stockfish analysis | 45% | Broad positional and tactical policy, `Q`, and WDL supervision |
-| Game replay positions | 15% | Retention on human and self-play trajectories |
+| Deep Stockfish analysis | 45% | Policy, action-value, and WDL supervision |
+| Game replay positions | 15% | Retention across human and self-play trajectories |
 | ChessBench | 25% | Large-scale position diversity and evaluation targets |
 | [Syzygy](https://syzygy-tables.info/) 7-piece endgames | 12% | Exact WDL outcomes and optimal-outcome move targets |
 | [Syzygy](https://syzygy-tables.info/) 6-piece endgames | 3% | Exact WDL outcomes and optimal-outcome move targets |
 
-Training ran in FP16 on an NVIDIA L4 with an effective batch size of 4,096 (microbatch size 256), weighting policy, action-value, and WDL losses at `1.0`, `0.5`, and `1.0`. Hidden Transformer matrices used the Muon optimizer, while embeddings, output layers, LayerNorm gains, and biases used Adam.
+Joint training ran in FP16 on an NVIDIA L4 with microbatch size 256 and effective batch size 4,096, weighting policy, action-value, and WDL losses at `1.0`, `0.5`, and `1.0`. Hidden Transformer matrices used the Muon optimizer, while embeddings, output layers, LayerNorm gains, and biases used Adam.
 
-## Validation gains
+## Validation metrics
 
-Comparing the released checkpoint (`neurochess-13750.pt`, step 13,750, 56.32M training samples) against its joint-training starting point shows substantial improvements in value calibration and endgame accuracy across held-out sets:
+Evaluated on held-out validation splits at the end of joint training:
 
-| Validation set | Policy top-1 (before → after) | Value MAE (before → after) | Action-value MAE (before → after) |
+| Held-out split | Policy top-1 | Value MAE | Action-value MAE |
 |---|---:|---:|---:|
-| Engine-labeled positions | 38.7% → 42.6% | 0.238 → 0.140 | 0.218 → 0.136 |
-| Replay positions | 43.6% → 46.4% | 0.222 → 0.142 | 0.205 → 0.133 |
-| 7-piece Syzygy | 91.3% → 94.9% | 0.324 → 0.114 | 0.343 → 0.157 |
-| 6-piece Syzygy | 94.8% → 95.4% | 0.249 → 0.064 | 0.266 → 0.106 |
+| Engine-labeled positions | 42.6% | 0.140 | 0.136 |
+| Replay positions | 46.4% | 0.142 | 0.133 |
+| 7-piece Syzygy endgames | 94.9% | 0.114 | 0.157 |
+| 6-piece Syzygy endgames | 95.4% | 0.064 | 0.106 |
 
-Pretrained weights are hosted on the [release page](https://github.com/ddy314/NeuroChess/releases/tag/model-v1), and historical training scripts are preserved at [revision `6681cc3`](https://github.com/ddy314/NeuroChess/tree/6681cc3).
+The released weights are available on the [release page](https://github.com/ddy314/NeuroChess/releases/tag/model-v1).

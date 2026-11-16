@@ -20,26 +20,26 @@ A 16-layer pre-norm Transformer (`896` channels, `14` attention heads, `GELU` fe
 | **Action value (`Q`)** | Builds a `128`-dim query per legal move (with global board context), cross-attends to the 64 square tokens, and predicts a `128`-bin histogram over `[-1, 1]` | Expected scalar `Q` in `[-1, 1]` per move |
 | **Position value (WDL)** | Projects the mean-pooled 64 square representations through a 2-layer MLP | Win, draw, and loss logits |
 
-Predicting a 128-bin distribution rather than a direct scalar for `Q` stabilizes training on sharp tactical swings and lets the search combine move-level value estimates directly with policy priors.
+Predicting a 128-bin distribution rather than a direct scalar for `Q` stabilizes learning on sharp tactical swings and lets the search combine move-level value estimates directly with policy priors.
 
 ## SmoothQuant and TensorRT INT8 export
 
-The exporter ([`export.py`](../neurochess/export.py)) converts a PyTorch checkpoint into a hardware-tuned TensorRT `.plan` file:
+The exporter ([`export.py`](../neurochess/export.py)) converts the PyTorch checkpoint into a hardware-tuned TensorRT `.plan` file:
 
 1. **Activation calibration**: Runs 1,024 diverse positions from `neurochess/calibration.fen` to measure per-channel activation maxima for all 64 Transformer linear layers (`qkv`, `out`, and the two FFN projections across 16 layers).
 2. **SmoothQuant (`alpha = 0.5`)**: Scales weights and activations per input channel to balance quantization range, then inserts INT8 `QuantizeLinear` / `DequantizeLinear` pairs around the 64 Transformer matrix multiplications in the exported ONNX graph.
 3. **Mixed precision**: Embeddings, LayerNorms, attention softmax, and the policy/Q/WDL heads stay in BF16/FP32.
 
-Because TensorRT plans are compiled for a specific GPU architecture and TensorRT version, always export the `.plan` file on the machine where the engine will run.
+Because TensorRT plans are compiled for a specific GPU architecture and TensorRT version, export the `.plan` file on the machine where the engine will run.
 
 ## Native search and UCI runtime
 
-The native engine ([`main.cpp`](../engine/src/main.cpp), [`mcts.hpp`](../engine/src/mcts.hpp), [`trt_inference.cu`](../engine/src/trt_inference.cu)) eliminates Python overhead during search:
+The native engine ([`main.cpp`](../engine/src/main.cpp), [`mcts.hpp`](../engine/src/mcts.hpp), [`trt_inference.cu`](../engine/src/trt_inference.cu)) runs search and inference entirely in C++/CUDA:
 
-- **Q-guided priors (`--q-prior-beta`)**: A fused CUDA kernel shifts each legal move's policy logit by `beta * (Q - E_p[Q])`, promoting tactically sound moves before search even expands them. Inside the tree, `Q` also provides two virtual observations on unvisited edges before falling back to WDL first-play urgency.
-- **History-free mode (`--history-free`)**: Masks out the halfmove clock, repetition flags, and fullmove number so position evaluations depend purely on board state and maximize cache reuse across transpositions.
-- **Batched PUCT with virtual loss**: Collects up to `--batch` distinct uncached leaves per inference round using virtual loss, deduplicates repeated positions within the batch, and looks up positions in an LRU evaluation cache (default 32,768 entries).
-- **CUDA Graphs**: Pre-captures host-to-device transfers, TensorRT inference, and head-fusion kernels for every batch size `1..batch` to remove kernel-launch latency.
+- **Q-guided priors (`--q-prior-beta`)**: A fused CUDA kernel shifts each legal move's policy logit by `beta * (Q - E_p[Q])`, boosting tactically sound moves before search even expands them. Inside the tree, `Q` also provides two virtual observations on unvisited edges before falling back to WDL first-play urgency.
+- **History-free mode (`--history-free`)**: Masks out the halfmove clock, repetition flags, and fullmove number so evaluations depend purely on board state and maximize cache hits across transpositions.
+- **Batched PUCT with virtual loss**: Collects up to `--batch` distinct uncached leaves per inference round using virtual loss, deduplicates repeated positions within the batch, and checks an LRU evaluation cache (default 32,768 entries).
+- **CUDA Graphs**: Pre-captures host-to-device transfers, TensorRT inference, and head-fusion kernels for every batch size `1..batch` to eliminate kernel-launch overhead.
 - **Tactical proofs & progressive widening**: Detects mates-in-1 on node expansion, propagates exact win/loss proofs up the tree, widens exploration progressively (`6 + 1.5 * sqrt(visits)` moves plus forcing checks, captures, and promotions), prunes weak root moves after 75% of the budget, and reuses the retained subtree across moves.
 
 ### CLI options

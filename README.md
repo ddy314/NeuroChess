@@ -1,10 +1,10 @@
 # NeuroChess
 
-NeuroChess is a chess engine built around a 155.7M-parameter Transformer and PUCT tree search. Instead of a convolutional board tower, it encodes the 64 squares as tokens, scores all legal moves in a single forward pass with policy, action-value, and win/draw/loss heads, and searches through a native C++/CUDA engine powered by INT8 TensorRT inference.
+NeuroChess is a chess engine built around a 155.7M-parameter Transformer and PUCT tree search. It encodes the 64 board squares as tokens, evaluates all legal moves in a single forward pass with policy, action-value, and win/draw/loss heads, and searches through a native C++/CUDA engine with INT8 TensorRT inference over UCI.
 
-[Download the model](https://github.com/ddy314/NeuroChess/releases/tag/model-v1) · [Model and engine](docs/MODEL.md) · [Evaluation](docs/EVALUATION.md) · [Training](docs/TRAINING.md)
+[Download the model](https://github.com/ddy314/NeuroChess/releases/tag/model-v1) · [Model and engine](docs/MODEL.md) · [Training](docs/TRAINING.md) · [Evaluation](docs/EVALUATION.md)
 
-## How it works
+## Architecture
 
 | Component | Design |
 |---|---|
@@ -16,11 +16,11 @@ NeuroChess is a chess engine built around a 155.7M-parameter Transformer and PUC
 | Search | Batched C++ PUCT with Q-guided priors, LRU evaluation cache, and subtree reuse |
 | Runtime | C++17, CUDA Graphs, TensorRT INT8, and UCI |
 
-During search, the C++ engine folds the per-move action-value predictions into the search priors (`--q-prior-beta`), batches uncached leaf positions with virtual loss, executes INT8 TensorRT inference via CUDA Graphs, and reuses the surviving search subtree across consecutive moves.
+During search, the C++ engine folds per-move action-value predictions into the search priors (`--q-prior-beta`), batches uncached leaf positions with virtual loss, runs INT8 TensorRT inference via CUDA Graphs, and reuses the surviving search subtree across consecutive moves.
 
 ## Results
 
-In paired-opening matches against Stockfish 18 (1 thread, 64 MB hash, full strength), NeuroChess scales consistently with search budget:
+In paired-opening matches against Stockfish 18 (1 thread, 64 MB transposition table, full strength), NeuroChess scales consistently with search budget:
 
 | NeuroChess simulations / move | Games | Equal-score Stockfish 18 budget | 90% paired bootstrap interval |
 |---:|---:|---:|---:|
@@ -48,7 +48,7 @@ curl -L -o models/neurochess-13750.pt \
 python -m neurochess.predict --model models/neurochess-13750.pt
 ```
 
-This evaluates the starting position with the raw network (no tree search) and prints the side-to-move WDL probabilities along with each top move's prior probability and expected action value `Q`. Pass `--fen '<FEN>'` for another position or `--device cpu` to run on CPU.
+This evaluates the starting position with the network (no search) and prints the side-to-move win/draw/loss probabilities along with each top move's prior probability and expected action value `Q`. Pass `--fen '<FEN>'` for another position or `--device cpu` to run on CPU.
 
 ### Play over UCI
 
@@ -69,7 +69,7 @@ Launch the UCI engine:
   --time -1 --simulations 8192
 ```
 
-Register this command in any UCI-compatible chess GUI. See [Model and engine](docs/MODEL.md) for architecture details, quantization, and search options.
+Register this command in any UCI-compatible chess GUI. See [Model and engine](docs/MODEL.md) for architecture, quantization, and search details.
 
 ## Repository
 
@@ -77,7 +77,7 @@ Register this command in any UCI-compatible chess GUI. See [Model and engine](do
 |---|---|
 | [`neurochess/`](neurochess/) | Transformer model, board encoding, Python evaluation, and TensorRT INT8 export |
 | [`engine/`](engine/) | Native C++/CUDA UCI engine, PUCT search, and TensorRT runtime |
-| [`docs/`](docs/) | Architecture, evaluation, and training documentation |
+| [`docs/`](docs/) | Architecture, training, and evaluation documentation |
 | [`tests/`](tests/) | Model unit tests and UCI integration tests |
 
 Run `pytest -q` for the model tests. UCI integration tests run automatically once `engine/build/neurochess` and `models/neurochess-13750-int8.plan` exist (override paths with `NEUROCHESS_ENGINE` and `NEUROCHESS_PLAN`).
