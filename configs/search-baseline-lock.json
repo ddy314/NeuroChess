@@ -1,0 +1,41 @@
+{
+  "name": "puct-2s-v1",
+  "checkpoint": "/home/xia/code/chess/output/puct-10x-20261031/frozen-baseline/model.pt",
+  "checkpoint_sha256": "9f197a12be729e70f8d7824ef6de1e743b3dce2033c7cc5bb06ce6a6d8832e5c",
+  "config": {
+    "simulations": 16384,
+    "leaf_batch_size": 64,
+    "time_limit": 2.0,
+    "time_margin": 0.03,
+    "inference_cache_size": 32768,
+    "tree_reuse": true,
+    "c_puct": 1.5,
+    "fpu_reduction": 0.2,
+    "initial_width": 6,
+    "widening": 1.5,
+    "root_keep": 12,
+    "prune_after": 0.75,
+    "max_depth": 128,
+    "pending_loss_guard": true
+  },
+  "source_sha256": {
+    "configs/puct-2s-local.json": "09a07ae267d33f520473197c32091ebbf8f5918bacb3fa633199dc8f32386b2c",
+    "neurochess/native/mcts.cpp": "f5cde72c239ff4fbff054a615dd87f55f827f4932fe40acc92563e6d03681a9e",
+    "neurochess/native/libmcts.so": "645b78752a35c5f8e6d78755764ca1d6b4378a7a238b509884d21ce534999591",
+    "neurochess/native_mcts.py": "69742bb3269b96f8ee3933bcb3316a4b8ab507493ff212313dc86ac401ae7e8a",
+    "neurochess/mcts.py": "82f44483cb793aae677a4de37a9f85a4a1e02cd15de6960777f356fc4e510cf8",
+    "neurochess/multihead.py": "fa4de66022042abb76823af02115337cf9fee44184174406d852fd032dad48d7",
+    "neurochess/model.py": "135d2a442447fadd0c33a01a15a7242846eb86ac18baf60352039c91a0fc914e",
+    "neurochess/inference_cache.py": "65d14015aa33e5a05d27ee73df11b7c537578a85bb1ef0d1cf5a771e5233096e",
+    "neurochess/native/chess_rules.hpp": "ad49eacd5e73ec9c8f701169940c7c8e942a53992ce808e1b396d400bb97626d",
+    "neurochess/native/vendor/chess.hpp": "90b34a9cdefb96f0f63f88c92e80769c9466eb3c067fae672e787d7fe51e0228"
+  },
+  "reference_report": "reports/PUCT_2S_BASELINE_20261031.md",
+  "reference_results": "output/puct-2s-20261031",
+  "target": {
+    "max_p95_seconds": 0.2,
+    "minimum_speedup": 10,
+    "quality": "Must pass frozen tactical/position regression and paired direct-play against frozen2s baseline; never promote a known weaker candidate or reinterpret fewer simulations as strength parity. Finite tests do not prove universal non-regression."
+  },
+  "status": "frozen"
+}

@@ -1,0 +1,52 @@
+{
+  "seed": 20261107,
+  "updates": 15500,
+  "effective_batch": 4096,
+  "microbatch": 256,
+  "warmup": 500,
+  "trunk_muon_lr": 0.0002,
+  "q_muon_lr": 0.001,
+  "q_output_lr": 0.0001,
+  "pv_output_lr": 5e-05,
+  "validate_every": 250,
+  "save_every": 100,
+  "teacher_every": 500,
+  "compile_encoder": true,
+  "parent_sha256": "9f197a12be729e70f8d7824ef6de1e743b3dce2033c7cc5bb06ce6a6d8832e5c",
+  "q_sha256": "a6caa4f15fdd483f059a3cd9975793c6e1230154250aa776bb18bd4c7759a273",
+  "code_sha256": "1acfacdcd5da8d342a7a7d1a82b3c2e3934a8a408f8992b56d69ec57766a46b0",
+  "head_weights": {
+    "policy": 1,
+    "q": 0.5,
+    "value": 1
+  },
+  "target_mixture": {
+    "old_deep": 0.45,
+    "old_replay": 0.15,
+    "chessbench": 0.25,
+    "syzygy7": 0.12,
+    "syzygy6": 0.03
+  },
+  "syzygy": {
+    "seven_families": 100000,
+    "six_families": 25000,
+    "augmentation": 4,
+    "policy": "optimal-outcome set",
+    "value": "exact WDL at fresh clock"
+  },
+  "alignment": {
+    "heldout_keys": 327783,
+    "prior_and_reserved_keys": 19304648,
+    "perspective": "root-side-to-move",
+    "wdl": "sf16 ply32 W-L",
+    "cb_train_min_pieces": 8,
+    "files": {
+      "heldout.npy": "2042b8b73dbd846511b19b01f9e5179fd50558b20e5798349a8191bfbf847189",
+      "exclusions.bin": "daef2c67ba7d7a9e098ec30877de32b705be65f3d0104db1a9a9d2bffa839952",
+      "wdl-lut.bin": "22ea9755e55020cf0e861dcd601c6b25877628da8aab158f854f21f1e0205fbd"
+    }
+  },
+  "promotion": "manual playing-quality gate; frozen locked search baseline unchanged",
+  "companion_optimizer": "Adam for embeddings, output layers, gains, biases; hidden matrices batched Muon",
+  "auto_shutdown": "verified completion or 1h failed idle with verified checkpoint; never provision a new runtime"
+}
