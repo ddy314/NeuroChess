@@ -13,7 +13,7 @@ NeuroChess is a chess engine built around a 155.7 million parameter Transformer 
 | Model | Joint training checkpoint at step 13,750; 56.32 million sample presentations in that run |
 | Search | Batched PUCT with a neural evaluation cache |
 | Runtime | PyTorch for network inspection; C++17, CUDA and TensorRT for UCI play |
-| Model file | 622,819,723 bytes; SHA-256 `910e517774770754500ff3ad6b66380d0bf3d36f5e1f85f7b2451407b95c18a7` |
+| Model file | 622,819,723 bytes |
 
 The model was selected using held-out policy, action-value and value losses. Its search playing quality awaits the direct promotion test against the project's locked two-second baseline. The [evaluation guide](docs/EVALUATION.md) describes the match results and their scope.
 
