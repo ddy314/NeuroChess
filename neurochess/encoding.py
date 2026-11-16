@@ -1,4 +1,8 @@
-import hashlib
+"""Board encoding shared by the network, the exporter and the native engine.
+
+Positions are encoded from the side to move's point of view: for black, ranks
+are flipped (files never are, which keeps castling semantics intact).
+"""
 import chess
 import numpy as np
 
@@ -7,13 +11,14 @@ META_SIZE = 12
 PROMOTIONS = [None, chess.KNIGHT, chess.BISHOP, chess.ROOK, chess.QUEEN]
 
 
-def move_id(move, turn):
+def move_id(move: chess.Move, turn: chess.Color) -> int:
+    """Map a move to ``(from * 64 + to) * 5 + promotion`` in the side-to-move frame."""
     flip = 0 if turn == chess.WHITE else 56
     return ((move.from_square ^ flip) * 64 + (move.to_square ^ flip)) * 5 + PROMOTIONS.index(move.promotion)
 
 
-def encode(board):
-    """Side-to-move frame: black flips ranks, never files (castling semantics)."""
+def encode(board: chess.Board):
+    """Return ``(tokens[64] uint8, meta[12] float32)``."""
     tokens = np.zeros(64, dtype=np.uint8)
     flip = 0 if board.turn else 56
     for square, piece in board.piece_map().items():
@@ -32,17 +37,21 @@ def encode(board):
     return tokens, meta
 
 
-def position_key(board):
-    # Ignore clocks/history so identical boards cannot cross train/validation.
-    return hashlib.blake2b(' '.join(board.fen().split()[:4]).encode(), digest_size=16).digest()
-
-
-def split_for(board):
-    return 'val' if int.from_bytes(position_key(board)[:8], 'little') % 100 == 0 else 'train'
-
-
-def legal_ids(board):
+def legal_ids(board: chess.Board):
+    """Return the legal moves and their ids (int16)."""
     moves = list(board.legal_moves)
     if len(moves) > MAX_MOVES:
         raise ValueError('Legal move capacity exceeded')
     return moves, np.asarray([move_id(m, board.turn) for m in moves], dtype=np.int16)
+
+
+def encode_inputs(board: chess.Board):
+    """Return network inputs ``(tokens, meta, moves[256])`` plus the legal move list.
+
+    ``moves`` is padded with -1 after the legal move ids.
+    """
+    tokens, meta = encode(board)
+    legal, ids = legal_ids(board)
+    moves = np.full(MAX_MOVES, -1, dtype=np.int32)
+    moves[:len(ids)] = ids
+    return tokens, meta, moves, legal

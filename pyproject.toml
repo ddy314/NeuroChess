@@ -4,18 +4,24 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "neurochess"
-version = "0.1.0"
+version = "1.0.0"
+description = "Transformer chess engine with native PUCT search and TensorRT INT8 inference"
+readme = "README.md"
 requires-python = ">=3.11"
-dependencies = ["torch>=2.5", "numpy>=1.26", "python-chess>=1.999", "zstandard>=0.23"]
+dependencies = ["torch>=2.5", "numpy>=1.26", "chess>=1.10"]
 
 [project.optional-dependencies]
+export = ["onnx>=1.17", "ml_dtypes>=0.5"]
 dev = ["pytest>=8"]
+
+[project.urls]
+Repository = "https://github.com/ddy314/NeuroChess"
 
 [tool.setuptools.packages.find]
 include = ["neurochess*"]
 
+[tool.setuptools.package-data]
+neurochess = ["calibration.fen"]
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]
-
-[tool.setuptools.package-data]
-neurochess = ["web/*.html", "web/*.js", "web/*.css", "native/*.cpp", "native/*.hpp", "native/vendor/*"]

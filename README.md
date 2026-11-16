@@ -1,70 +1,156 @@
 # NeuroChess
 
-NeuroChess 是从零实现的国际象棋 AI 系统：用人类棋谱预训练稠密 Transformer，再用 Stockfish 标注监督策略与价值，并结合搜索和配对对局评测棋力。主模型有 **155,000,581 个参数**。项目尚未完成绝对 Elo 标定，不能把固定节点数的 Stockfish 对局结果当作人类等级分。
+**NeuroChess** is a 155M-parameter Transformer chess engine paired with a native C++17 / CUDA PUCT search and TensorRT INT8 inference.
 
-## 训练进展
+A single encoder pass over the 64 board squares produces legal-move policy logits, per-move action-value histograms $Q(s, a) \in [-1, 1]$, and a win / draw / loss evaluation. During search, $Q$ reshapes the PUCT prior via a KL-regularized update $\pi'(a) \propto \pi(a)\exp(\beta\, Q(s, a))$ while a C++ search thread pool drives an asynchronous CUDA-Graph TensorRT pipeline with an out-of-order neural evaluation cache.
 
-以下是截至 **2026-11-06** 的已核验进展。当前保留冻结的最终两秒 PUCT 基线；Lichess 主训练逻辑停在 4000 步，最近修复分支在第 50/100 步被搜索门控停止，没有自动续训或模型晋升。详细记录及可入库的小型证据见 [训练进展与评测](reports/TRAINING_PROGRESS.md)。
+---
 
-| 阶段 | 状态 | 结果与衔接 |
-|---|---|---|
-| 人类棋谱预训练 | 已完成 | 训练 10,000 步，作为后续引擎监督的初始化权重。 |
-| 引擎监督及数据扩容 | 已完成 | 从第 1,500 步接续，训练集扩至 500 万局面，再完成 6,000 次更新；引擎监督累计至 7,500 步。 |
-| 第三阶段 `curriculum-v3` | 已完成 | 保留优化器状态，从 7,500 步再训练 8,000 次更新，达到引擎监督累计第 15,500 步；完成最终验证与两种模式各 64 局对局评测。 |
-| 原 `fresh-v4` A/B 计划 | 历史准备记录 | 原方案没有完整 A/B 闭环的完成证据；后续定向标注与联合训练另立分支，不能据此补记为原计划完成。见 [实验设计](docs/FRESH_V4.md)。 |
-| 定向数据与三头联合训练 | 已完成独立分支 | 以 472,576 个新标注局面、15,761 个错题及旧数据回放完成 10,000 次联合更新；错题实际重复曝光较高，未建立可靠棋力提升或默认晋升。 |
-| 动态错题管线 | 候选审计完成 | 52 万候选、22,953 个来源棋局通过审计；`teacher_labels_ready=false`，生产训练未启动。见 [动态数据说明](docs/DYNAMIC_CURRICULUM.md)。 |
-| PAWN | 数据完成、候选未晋升 | 准备 2,000 万训练根；实际展示 6,582,592 个样本，其中 4,936,944 个 PAWN、1,645,648 个旧回放；旧任务和冻结搜索回归。 |
-| Lichess 官方评估库 | 清洗完成 | depth ≥24、knodes ≥1000，1,000 万唯一局面，按 980 万／10 万／10 万划分 train/val/test。见 [清洗协议](docs/LICHESS_CLEAN_10M.md)。 |
-| Lichess 联合训练及 A/B/C | 主训练暂停、对照完成 | 主训练 4000 步、3,072,000 个新局面；A/B/C 各 500 步，共用后续 384,000 个新局面序列。没有自动选组继续或完成一个 epoch。见 [训练协议](docs/LICHESS_EPOCH1.md)和[对照结果](docs/LICHESS_4000_ABLATION.md)。 |
-| 搜索审计与修复 | 修复未通过 | D 组诊断未触发训练；512 局面审计发现局部退化；独立 256 节点修复在第 50 步监督门控通过、搜索门控失败后停止。见 [审计与修复](docs/LICHESS_SEARCH_REPAIR.md)。 |
-| 原生推理与 10× 搜索优化 | 实现和评测已记录 | CUDA/TensorRT、INT8 Graph 和 C++ 驻留推理已实现；约 0.2 秒候选存在质量回退，速度与保留棋力两项要求尚未同时满足。见 [原生运行时](docs/NATIVE_INFERENCE.md)和[优化报告](reports/PUCT_10X_OPTIMIZATION_20261101.md)。 |
+## Highlights
 
-人类预训练的 10,000 步和引擎监督的累计步数属于不同训练阶段，不能直接相加。第三阶段选中的模型权重及训练数据保存在仓库外；其 SHA-256 和证据记录在[训练进展报告](reports/TRAINING_PROGRESS.md)。
+- **Square-token Transformer (`155,691,271` parameters)** — 16 layers, $d_{\text{model}} = 896$, 14 heads, factorized source / destination / promotion move queries, and a 128-bin Distributional Action-Value ($Q$) head attending to the board encoding.
+- **Joint P / Q / V Checkpoint (`neurochess-13750`)** — jointly trained with Muon + AdamW over 56.3M sample presentations (`step 13,750`, effective batch 4,096) across deep Stockfish multi-PV evaluations, human game replay, ChessBench, and Syzygy tablebases.
+- **Zero-Python UCI Runtime** — standalone C++17 / CUDA executable (`engine/build/neurochess`) speaking standard UCI, with pending-loss virtual visits, an LRU neural cache, SmoothQuant INT8 Transformer matmuls, and per-batch CUDA Graph capture.
 
-后续联合训练、PAWN、Lichess 及本地修复也有各自的初始化、优化器和步数空间，不能把这些步数拼成同一条连续训练曲线。监督 loss、开发局面筛查、固定预算对局和绝对 Elo 分别报告；目前没有测定模型容量上限。
+---
 
-第三阶段对 Stockfish 18、每步 1,000 节点的固定条件测试中，直接策略走法为 **1 胜 9 和 54 负**，每步 512 次 PUCT 搜索为 **29 胜 14 和 21 负**；每种模式 64 局，共 32 个换色开局对。样本有限，搜索和直接走法的计算预算也不同，这些结果不能换算为绝对 Elo。
+## Repository Layout
 
-## 实现
+```text
+.
+├── engine/                         # Standalone C++17 / CUDA UCI engine
+│   ├── CMakeLists.txt
+│   ├── src/
+│   │   ├── main.cpp                # UCI loop, cache, and batch scheduler
+│   │   ├── mcts.hpp                # Native PUCT search core
+│   │   ├── chess_rules.hpp         # Move generation and board encoding
+│   │   ├── trt_inference.hpp
+│   │   └── trt_inference.cu        # TensorRT runtime + CUDA Graph execution
+│   └── third_party/chess-library/  # Vendored Disservin/chess-library (MIT)
+├── neurochess/                     # Minimal Python package (model & TensorRT export)
+│   ├── model.py                    # NeuroChessModel definition & checkpoint loader
+│   ├── encoding.py                 # Side-to-move board & move encoding
+│   ├── predict.py                  # Raw network evaluation CLI (no search)
+│   ├── export.py                   # SmoothQuant INT8 ONNX -> TensorRT builder
+│   └── calibration.fen             # 1,024 calibration positions for INT8 export
+├── tests/                          # Pytest suite (model unit tests + UCI integration)
+└── pyproject.toml
+```
 
-- 16 层、896 维、14 注意力头的棋盘 Transformer；输出合法着法策略、动作价值和局面胜／和／负分布。
-- 人类棋谱过滤、去重和 mmap 分片；Stockfish MultiPV 标注、策略／Q／价值联合监督与人类策略回放。
-- AdamW、梯度累积、FP16/BF16 和可选 `torch.compile`；支持检查点续训及跨数据阶段保留优化器状态。
-- 直接策略、一步展开和原生 C++ PUCT 搜索；对局评测保存棋谱、结果和配对统计。
-- 只读训练看板、周期评测、Drive 持久化及云端任务启动器；包括实验性的最佳优先 Minimax 与搜索诊断。
+---
 
-这是受棋格 Transformer 启发的自主实现，**不是 Chessformer GAB 的逐项复现**。最佳优先 Minimax 和轻量评估器仍属实验研究，不应与已训练主模型混为一谈。
+## Model & Playing Strength
 
-## 安装与验证
+The primary released model is **`neurochess-13750`** (`joint-muon-pqv-13750-v1`):
+
+| Property | Value |
+| :--- | :--- |
+| Architecture | `action_value_histogram_v2` (16L, $d = 896$, 14H, $d_{\text{head}} = 256$, $d_Q = 128$, 128 bins) |
+| Parameters | `155,691,271` |
+| Training step | `13,750` (`56,320,000` presentations, effective batch `4,096`) |
+| Weights SHA-256 | `910e517774770754500ff3ad6b66380d0bf3d36f5e1f85f7b2451407b95c18a7` |
+
+### Fixed-Node Match Results vs. Stockfish 18
+
+Evaluated with the native INT8 TensorRT engine (`--batch 16 --q-prior-beta 2 --cache 32768 --history-free`) across color-paired opening suites against Stockfish 18 at fixed node budgets (not a calibrated human Elo rating):
+
+| PUCT Simulations / Move | Equivalent SF18 Nodes / Move | 90% Paired Resampling Interval | Games |
+| ---: | ---: | ---: | ---: |
+| 256 | ~1,600 | 1,210 – 1,996 | 64 |
+| 2,048 | ~4,700 | 3,811 – 5,860 | 64 |
+| 8,192 | ~8,000 | 5,782 – 10,361 | 128 |
+
+At 8,192 simulations per move on an RTX 4060 Laptop GPU, the native INT8 runtime achieves a median move time of **1.65 s** (P95 **2.19 s**), a **4.6×** end-to-end speedup over eager BF16 PyTorch inference.
+
+> **Search baseline note:** For search optimization work, the locked two-second PUCT quality floor remains documented in `configs/search-baseline-lock.json` and `docs/SEARCH_BASELINE.md` when present in a research checkout. Speed and playing quality are always evaluated and reported separately.
+
+---
+
+## Quick Start
+
+### 1. Python Package (Network Inspection & TensorRT Export)
 
 ```bash
 uv venv .venv --python 3.12
-uv pip install --python .venv/bin/python -e '.[dev]'
-.venv/bin/python scripts/build_native_mcts.py
-.venv/bin/python scripts/build_native_pipeline.py
-.venv/bin/python scripts/build_best_first.py
-.venv/bin/python -m pytest -q
+uv pip install --python .venv/bin/python -e ".[dev]"
 ```
 
-原生规则测试需要本机 C++17 编译器；上述构建不需要 TensorRT 或 CUDA SDK。GPU 训练需使用支持目标 CUDA 设备的 PyTorch。训练数据、外部 Stockfish 二进制和模型权重不随仓库分发。可选 CUDA/TensorRT 集成测试在缺少运行时或引擎计划时跳过；测试通过不等于新的构建获准替换冻结部署基线。
-
-- [训练路线、进展与结果](reports/TRAINING_PROGRESS.md)
-- [第三阶段课程设计](docs/CURRICULUM_V3.md) · [后续新数据实验](docs/FRESH_V4.md)
-- [Lichess 清洗](docs/LICHESS_CLEAN_10M.md) · [联合训练](docs/LICHESS_EPOCH1.md) · [A/B/C](docs/LICHESS_4000_ABLATION.md) · [搜索审计与修复](docs/LICHESS_SEARCH_REPAIR.md)
-- [动态错题管线](docs/DYNAMIC_CURRICULUM.md) · [冻结搜索下限](docs/SEARCH_BASELINE.md)
-- [训练和监控操作](docs/TRAINING.md) · [看板与对局评测](docs/MONITOR.md)
-- [模型设计](docs/DESIGN.md) · [PUCT 搜索](docs/NATIVE_MCTS.md) · [最佳优先 Minimax](docs/BEST_FIRST_MINIMAX.md)
-- [搜索诊断](reports/SEARCH_DIAGNOSIS_20261031.md) · [CP 与排序蒸馏](reports/CP_RANK_FRONTIER_20261031.md) · [CPU 搜索对照](reports/CPU_SPEED_20261031.md)
-
-## 基础训练示例
-
-下面的示例展示数据转换和训练接口；它不会复现上表中完整的多阶段实验。
+Evaluate a position directly with the PyTorch checkpoint (no search):
 
 ```bash
-python -m neurochess.prepare --pgn SOURCE.pgn.zst --out data/human --min-elo 2000 --max-positions 1000000
-python -m neurochess.audit --data data/human
-python -m neurochess.train --data data/human --out runs/human --steps 10000 --batch-size 128 --accum 8
+python -m neurochess.predict --model models/neurochess-13750.pt \
+  --fen "r1bqkbnr/pppp1ppp/2n5/4p3/4P3/5N2/PPPP1PPP/RNBQKB1R w KQkq - 2 3"
 ```
 
-完整训练前应先运行小规模检查，核实数据、吞吐、验证和检查点保存。旧的 [第二阶段说明](docs/phase2.md) 与 [扩容说明](docs/phase2-expanded.md) 描述历史流程，不能当作当前云任务状态。
+```text
+WDL (side to move): 0.057 / 0.942 / 0.001
+move       prior       Q
+Nc3        0.247  +0.025
+d4         0.245  +0.033
+Bc4        0.233  +0.026
+Bb5        0.197  +0.018
+```
+
+Or load the model in Python:
+
+```python
+import chess
+from neurochess import load_model
+from neurochess.predict import evaluate
+
+model = load_model("models/neurochess-13750.pt", device="cuda")
+info = evaluate(model, chess.Board())
+```
+
+### 2. Build the TensorRT INT8 Engine
+
+TensorRT `.plan` files are specific to the target GPU and TensorRT version. To export `neurochess-13750.pt` into a SmoothQuant INT8 engine on your machine (requires `onnx`, `ml_dtypes`, and the `tensorrt` Python wheel):
+
+```bash
+python -m neurochess.export --model models/neurochess-13750.pt --out models/
+```
+
+This calibrates activation maxima over the 1,024 positions in `neurochess/calibration.fen`, quantizes the 64 Transformer matmuls to INT8 while keeping the heads in BF16/FP32, and writes `models/neurochess-13750-int8.plan`.
+
+### 3. Build & Run the Native UCI Engine
+
+Requires a C++17 compiler, CUDA Toolkit, and TensorRT 10+ / 11 headers and libraries:
+
+```bash
+cmake -S engine -B engine/build -DTENSORRT_ROOT=/path/to/TensorRT
+cmake --build engine/build -j
+```
+
+Launch the engine in UCI mode (compatible with Cutechess, En Croissant, Nibbler, Arena, etc.):
+
+```bash
+./engine/build/neurochess \
+  --engine models/neurochess-13750-int8.plan \
+  --uci --history-free --batch 16 --q-prior-beta 2 --cache 32768 \
+  --time -1 --simulations 8192
+```
+
+Or query a single position from the command line:
+
+```bash
+./engine/build/neurochess \
+  --engine models/neurochess-13750-int8.plan \
+  --fen "r1bqkbnr/pppp1ppp/2n5/4p3/4P3/5N2/PPPP1PPP/RNBQKB1R w KQkq - 2 3" \
+  --history-free --batch 16 --q-prior-beta 2 --time -1 --simulations 2048
+```
+
+---
+
+## Testing
+
+```bash
+pytest -q
+```
+
+If `engine/build/neurochess` and a built `.plan` file are present, set `NEUROCHESS_PLAN=models/neurochess-13750-int8.plan` to include the end-to-end UCI integration tests.
+
+---
+
+## Acknowledgments
+
+- Move generation in the native engine uses [Disservin/chess-library](https://github.com/Disservin/chess-library) (MIT License, vendored in `engine/third_party/chess-library/`).
