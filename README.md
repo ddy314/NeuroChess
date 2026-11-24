@@ -3,10 +3,13 @@
 <p align="center">
   <img src="docs/assets/mascot.jpg" alt="NeuroChess mascot" width="200">
 </p>
+<p align="center"><em>“What do you mean, just calculate harder?”</em></p>
 
 NeuroChess is a chess engine built around a 155.7M-parameter Transformer and PUCT tree search. It encodes the 64 board squares as tokens, evaluates all legal moves in a single forward pass with policy, action-value, and win/draw/loss heads, and searches through a native C++/CUDA engine with INT8 TensorRT inference over UCI.
 
 [Download the model](https://github.com/ddy314/NeuroChess/releases/tag/model-v1) · [Model and engine](docs/MODEL.md) · [Training](docs/TRAINING.md) · [Evaluation](docs/EVALUATION.md)
+
+[**EvilChess**](https://github.com/dongxuelian2/EvilChess): 0 trainable parameters, unlimited faith in alpha–beta. Apparently, training is a skill issue.
 
 ## Architecture
 
