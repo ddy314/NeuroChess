@@ -1,7 +1,7 @@
 # NeuroChess
 
 <p align="center">
-  <img src="docs/assets/mascot.jpg" alt="NeuroChess mascot" width="200">
+  <img src="docs/assets/mascot.jpg" alt="NeuroChess mascot" width="440">
 </p>
 <p align="center"><em>“What do you mean, just calculate harder?”</em></p>
 
